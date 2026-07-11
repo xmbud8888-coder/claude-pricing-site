@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 /**
- * 价格自动抓取 / 变更检测管线（多产品版：Claude / ChatGPT / Grok）
+ * 价格自动抓取 / 变更检测管线（配置驱动多产品版，产品清单见 data/prices.json 的 products）
  *
  * ⚠️ 必须从非中国大陆网络运行（apps.apple.com 会按 IP 重定向到 CN 商店，
  *    openai.com / x.ai 对部分地区有 bot 防护）。GitHub Actions 的
  *    ubuntu-latest runner（美国）即可，见 .github/workflows/refresh-prices.yml
  *
  * 做三件事：
- *  1. 抓 Apple App Store 各区页面 → 三产品 × 18 区内购价 → 回填 data/prices.json
- *  2. 抓 Google Play 各区页面 → 三产品 × 18 区内购区间 → 回填
+ *  1. 抓 Apple App Store 各区页面 → 全产品 × 18 区内购价 → 回填 data/prices.json（appleId 缺失时自动经 iTunes Search 发现）
+ *  2. 抓 Google Play 各区页面 → 全产品 × 18 区内购区间 → 回填（playPkg 缺失时按候选包名自动验证）
  *  3. 抓 IMF PPPEX + 公开汇率；监测官方定价页变更（变了 exit 2，CI 开 issue）
  *
  * 用法：node scripts/fetch-prices.mjs [--play-only] [--dry-run]
@@ -25,18 +25,7 @@ const PLAY_ONLY = process.argv.includes("--play-only");
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15";
 
-const APPS = {
-  claude:  { appleId: "6473753684", appleSlug: "claude",  playPkg: "com.anthropic.claude" },
-  chatgpt: { appleId: "6448311069", appleSlug: "chatgpt", playPkg: "com.openai.chatgpt" },
-  grok:    { appleId: "6670324846", appleSlug: "grok",    playPkg: "ai.x.grok" },
-};
-
-// SKU 名 → 档位（顺序即优先级，先匹配先赢；先过年付过滤）
-const TIER_RULES = {
-  claude:  [[/max.*20|20x/i, "max20x"], [/max/i, "max5x"], [/pro/i, "pro"]],
-  chatgpt: [[/\bgo\b/i, "go"], [/plus/i, "plus"], [/\bpro\b/i, "pro"]],
-  grok:    [[/heavy/i, "heavy"], [/super/i, "supergrok"]],
-};
+// 产品与商店配置从 data/prices.json 的 products.*.store / tierRules 读取（配置驱动）
 const ANNUAL_RE = /annual|yearly|\byear\b|年間|年额|연간|jährlich|annuel|anual|yıllık|årlig/i;
 
 const STOREFRONTS = ["us", "jp", "pk", "ca", "ar", "eg", "au", "ph", "in", "tr", "ng", "kr", "mx", "de", "fr", "br", "gb", "dk"];
@@ -115,9 +104,8 @@ function scanForIAP(node, out = []) {
   return out;
 }
 
-async function fetchAppleIAP(appKey, cc) {
-  const { appleId, appleSlug } = APPS[appKey];
-  const url = `https://apps.apple.com/${cc}/app/${appleSlug}/id${appleId}`;
+async function fetchAppleIAP(appleId, cc) {
+  const url = `https://apps.apple.com/${cc}/app/id${appleId}`;
   const { status, url: finalUrl, text } = await get(url);
   if (!finalUrl.includes(`/${cc}/`)) {
     return { ok: false, reason: `redirected to ${finalUrl}（该区未上架或抓取节点地区受限）` };
@@ -202,6 +190,54 @@ async function main() {
     return prod.regions[cc];
   };
 
+  // 从配置构建产品清单（tierRules 字符串 → RegExp）
+  const PRODUCT_KEYS = Object.keys(prices.products);
+  const rulesOf = appKey =>
+    (prices.products[appKey].tierRules || []).map(([re, tier]) => [new RegExp(re, "i"), tier]);
+
+  /* ---------- 商店 ID 自动发现 ---------- */
+  // Apple：iTunes Search API（需海外节点），按开发商正则确认后写回配置
+  async function discoverApple(appKey) {
+    const st = prices.products[appKey].store || {};
+    if (st.appleId || !st.appleSearch) return;
+    try {
+      const url = `https://itunes.apple.com/search?term=${encodeURIComponent(st.appleSearch)}&country=us&entity=software&limit=8`;
+      const { status, text } = await get(url);
+      if (status !== 200) { report.warnings.push(`discoverApple(${appKey}): HTTP ${status}`); return; }
+      const results = JSON.parse(text).results || [];
+      const sellerRe = new RegExp(st.sellerRe || ".", "i");
+      const hit = results.find(r => sellerRe.test(r.sellerName || "") || sellerRe.test(r.artistName || ""));
+      if (hit) {
+        st.appleId = String(hit.trackId);
+        changed = true;
+        report.warnings.push(`discoverApple(${appKey}): 锁定 ${hit.trackName} / ${hit.sellerName || hit.artistName} / id${hit.trackId}`);
+      } else {
+        report.warnings.push(`discoverApple(${appKey}): 未找到开发商匹配（候选：${results.slice(0,3).map(r=>r.trackName+"/"+(r.sellerName||r.artistName)).join("; ")}）`);
+      }
+    } catch (e) { report.warnings.push(`discoverApple(${appKey}): ${e.message}`); }
+  }
+  // Play：逐个候选包名验证（美区页 200 且含内购字段/开发商匹配）
+  async function discoverPlay(appKey) {
+    const st = prices.products[appKey].store || {};
+    if (st.playPkg || !(st.playCandidates || []).length) return;
+    const devRe = new RegExp(st.devRe || ".", "i");
+    for (const pkg of st.playCandidates) {
+      try {
+        const { status, text } = await get(`https://play.google.com/store/apps/details?id=${pkg}&hl=en&gl=US`);
+        if (status === 200 && devRe.test(text)) {
+          st.playPkg = pkg;
+          changed = true;
+          report.warnings.push(`discoverPlay(${appKey}): 锁定 ${pkg}`);
+          return;
+        }
+      } catch {}
+      await sleep(300);
+    }
+    report.warnings.push(`discoverPlay(${appKey}): 候选包名均未命中`);
+  }
+  if (!PLAY_ONLY) for (const k of PRODUCT_KEYS) { await discoverApple(k); await sleep(300); }
+  for (const k of PRODUCT_KEYS) await discoverPlay(k);
+
   // 汇率（本币 → 美元折算）
   let fx = null;
   try {
@@ -217,18 +253,20 @@ async function main() {
 
   const classify = (appKey, name) => {
     if (ANNUAL_RE.test(name)) return null;
-    for (const [re, tier] of TIER_RULES[appKey]) if (re.test(name)) return tier;
+    for (const [re, tier] of rulesOf(appKey)) if (re.test(name)) return tier;
     return null;
   };
 
-  // 1. Apple：三产品 × 18 区（--play-only 时跳过；Apple 需海外节点）
+  // 1. Apple：全产品 × 18 区（--play-only 时跳过；Apple 需海外节点）
   if (!PLAY_ONLY) {
-    for (const appKey of Object.keys(APPS)) {
+    for (const appKey of PRODUCT_KEYS) {
+      const appleId = prices.products[appKey].store?.appleId;
+      if (!appleId) { report.apple[appKey] = { skipped: "无 appleId（待发现）" }; continue; }
       report.apple[appKey] = {};
       let filled = 0;
       for (const cc of STOREFRONTS) {
         let r;
-        try { r = await fetchAppleIAP(appKey, cc); }
+        try { r = await fetchAppleIAP(appleId, cc); }
         catch (e) { r = { ok: false, reason: e.message }; }
         report.apple[appKey][cc] = r;
         if (r.ok) {
@@ -252,19 +290,21 @@ async function main() {
             }
           }
         }
-        await sleep(700);
+        await sleep(500);
       }
       if (filled > 0) setProv(`appstore-${appKey}`, "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算");
     }
   }
 
-  // 2. Google Play：三产品 × 18 区
-  for (const appKey of Object.keys(APPS)) {
+  // 2. Google Play：全产品 × 18 区
+  for (const appKey of PRODUCT_KEYS) {
+    const playPkg = prices.products[appKey].store?.playPkg;
+    if (!playPkg) { report.play[appKey] = { skipped: "无 playPkg（待发现）" }; continue; }
     report.play[appKey] = {};
     let filled = 0;
     for (const gl of STOREFRONTS) {
       let r;
-      try { r = await fetchPlayRange(APPS[appKey].playPkg, gl); }
+      try { r = await fetchPlayRange(playPkg, gl); }
       catch (e) { r = { ok: false, reason: e.message }; }
       report.play[appKey][gl] = r;
       if (r.ok) {
@@ -291,7 +331,7 @@ async function main() {
     } catch (e) { report.imfPPP = { ok: false, reason: e.message }; }
   }
   // PPP 负担 = 本币金额 / PPPEX；美元挂牌区先按市场汇率折成本币
-  for (const appKey of Object.keys(APPS)) {
+  for (const appKey of PRODUCT_KEYS) {
     for (const meta of prices.regionsMeta) {
       const region = prices.products[appKey].regions[meta.cc];
       if (!region || region.localAmount == null || meta.pppex == null) continue;

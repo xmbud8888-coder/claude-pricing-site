@@ -22,6 +22,17 @@ let currentTier = null;
 
 const rowsWithBase = () => R.filter(r => r[P.baseTier] != null);
 
+/* ================= 产品导航（数据驱动） ================= */
+
+function renderProdNav() {
+  const nav = $("prodNav");
+  if (!nav) return;
+  nav.innerHTML = Object.entries(D.products).map(([key, p]) => {
+    const href = key === "claude" ? "index.html" : `${key}.html`;
+    return `<a class="prod-tab ${key === PRODUCT ? "active" : ""}" href="${href}">${p.label}</a>`;
+  }).join("");
+}
+
 /* ================= 产品头摘要 ================= */
 
 function renderHero() {
@@ -298,6 +309,7 @@ async function boot() {
   R = D.regionsMeta.map(m => ({ ...m, ...(P.regions[m.cc] || {}) }));
 
   document.querySelectorAll(".data-date").forEach(el => { el.textContent = D.updatedAt; });
+  renderProdNav();
   renderHero();
   renderTierTabs();
   renderHeatTiles();
