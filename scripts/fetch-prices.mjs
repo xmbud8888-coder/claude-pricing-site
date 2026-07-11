@@ -268,10 +268,30 @@ async function main() {
     const cur = CC_CURRENCY[cc];
     return fx && fx[cur] ? +(num / fx[cur]).toFixed(2) : null;
   };
-  const classify = name =>
-    /max.*20|20x/i.test(name) ? "max20x" :
-    /max/i.test(name) ? "max5x" :
-    /^claude pro|(^|\s)pro(\s|$)/i.test(name) ? "pro" : null;
+  // 只取月付 SKU 进对比表（年付单独记录），避免 Annual 覆盖 Monthly
+  const classify = name => {
+    if (!/monthly/i.test(name)) return null;
+    if (/max.*20|20x/i.test(name)) return "max20x";
+    if (/max/i.test(name)) return "max5x";
+    if (/pro/i.test(name)) return "pro";
+    return null;
+  };
+  // 多币种金额解析：处理 1,234.56 / 1.234,56 / 35,000 / 2.237 等千位/小数写法
+  const parseMoney = s => {
+    let t = String(s).replace(/[^\d.,]/g, "");
+    if (!t) return NaN;
+    const lastDot = t.lastIndexOf("."), lastComma = t.lastIndexOf(",");
+    if (lastDot >= 0 && lastComma >= 0) {
+      const dec = lastDot > lastComma ? "." : ",";
+      t = t.split(dec === "." ? "," : ".").join("");
+      if (dec === ",") t = t.replace(",", ".");
+    } else if (lastComma >= 0) {
+      t = /,\d{1,2}$/.test(t) ? t.replace(",", ".") : t.split(",").join("");
+    } else if (lastDot >= 0) {
+      if (/\.\d{3}$/.test(t)) t = t.split(".").join("");   // 2.237 → 2237（丹麦式千位）
+    }
+    return parseFloat(t);
+  };
 
   // Claude：美区 iosUS + 18 区 regions 高置信回填
   let appleFilled = 0;
@@ -279,11 +299,14 @@ async function main() {
     const r = report.apple.claude[cc];
     if (!r?.ok) continue;
     for (const iap of r.iaps) {
+      // 美区年付单独记录（对比网页年付 $200）
+      if (cc === "us" && /pro/i.test(iap.name) && /annual/i.test(iap.name)) {
+        const n = parseMoney(iap.price);
+        if (n) { prices.claude.iosUS.proAnnual = n; changed = true; }
+      }
       const tier = classify(iap.name);
       if (!tier) continue;
-      // 注意欧洲逗号小数（€22,99）→ 统一成点
-      const numStr = String(iap.price).replace(/[^0-9.,]/g, "").replace(/\.(?=\d{3}\b)/g, "").replace(",", ".");
-      const num = parseFloat(numStr);
+      const num = parseMoney(iap.price);
       if (!num) continue;
       if (cc === "us") { prices.claude.iosUS[tier] = num; changed = true; appleFilled++; }
       const region = prices.claude.regions.find(x => x.cc === cc);
