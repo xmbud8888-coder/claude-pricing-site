@@ -6,6 +6,17 @@
 - 自动管线：GitHub Actions 每日 03:17 UTC（北京 11:17）自动运行，数据变更自动提交
 - 手动触发：Actions → 「价格自动核验」→ Run workflow
 
+## 页面（一产品一页，同对手站结构）
+
+| 页面 | 产品 | 档位 | 数据状态 |
+|---|---|---|---|
+| index.html | Claude | Pro / Max 5x / Max 20x | Apple 17 区 + Play 17 区 + PPP ✅ |
+| chatgpt.html | ChatGPT | Plus / Pro / Go | Apple 17 区 + Play 17 区 + PPP ✅ |
+| grok.html | Grok | SuperGrok / Heavy | Apple 16 区 + Play 17 区 + PPP ✅ |
+
+三页共用 app.js（`<body data-product>` 选产品）与 data/prices.json。
+模板改动后运行 `node scripts/build-pages.mjs` 从 index.html 重新生成另外两页。
+
 ## 功能清单（对手站功能全量对齐 + 超越）
 
 | 功能 | 状态 | 说明 |
