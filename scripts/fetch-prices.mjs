@@ -278,7 +278,7 @@ async function main() {
   };
   // 多币种金额解析：处理 1,234.56 / 1.234,56 / 35,000 / 2.237 等千位/小数写法
   const parseMoney = s => {
-    let t = String(s).replace(/[^\d.,]/g, "");
+    let t = String(s).replace(/[^\d.,]/g, "").replace(/^[.,]+|[.,]+$/g, "");
     if (!t) return NaN;
     const lastDot = t.lastIndexOf("."), lastComma = t.lastIndexOf(",");
     if (lastDot >= 0 && lastComma >= 0) {
