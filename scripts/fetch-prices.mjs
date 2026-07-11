@@ -65,10 +65,25 @@ async function get(url) {
 
 /* ---------- 1. Apple App Store 内购价 ---------- */
 
-// 深度遍历 serialized-server-data，收集「名称 + 价格」形态的内购项
+// 深度遍历 serialized-server-data，收集「名称 + 价格」形态的内购项。
+// Apple 的数据是无键名的嵌套数组，形如 ["Claude Pro", "$19.99", ...]，
+// 同时保留对象形态 {name, price} 的兼容匹配。
+const MONEY_RE = /^(?:US?\$|CA\$|A\$|MX\$|R\$|HK\$|NT\$|\$|€|£|¥|₹|₩|₱|₦|₺|₨|Rs\.?\s?|EGP\s?|TRY\s?|kr\.?\s?|USD|EUR)?\s?[0-9][0-9.,\s]*(?:\s?(?:kr\.?|€|USD))?$/;
+const NAME_RE = /^[A-Za-z][\w\s.+&'-]{2,59}$/;
 function scanForIAP(node, out = []) {
   if (!node || typeof node !== "object") return out;
-  if (Array.isArray(node)) { node.forEach(n => scanForIAP(n, out)); return out; }
+  if (Array.isArray(node)) {
+    // 数组形态：相邻的 [名称, 价格] 字符串对
+    for (let i = 0; i < node.length - 1; i++) {
+      const a = node[i], b = node[i + 1];
+      if (typeof a === "string" && typeof b === "string" &&
+          NAME_RE.test(a.trim()) && MONEY_RE.test(b.trim()) && /\d/.test(b)) {
+        out.push({ name: a.trim(), price: b.trim() });
+      }
+    }
+    node.forEach(n => scanForIAP(n, out));
+    return out;
+  }
   const name = node.name || node.title;
   const price = node.priceFormatted || node.formattedPrice || node.price;
   if (typeof name === "string" && price != null && String(price).match(/[\d.,]/)) {
@@ -259,19 +274,22 @@ async function main() {
     /^claude pro|(^|\s)pro(\s|$)/i.test(name) ? "pro" : null;
 
   // Claude：美区 iosUS + 18 区 regions 高置信回填
+  let appleFilled = 0;
   for (const cc of Object.keys(report.apple.claude || {})) {
     const r = report.apple.claude[cc];
     if (!r?.ok) continue;
     for (const iap of r.iaps) {
       const tier = classify(iap.name);
       if (!tier) continue;
-      const num = parseFloat(String(iap.price).replace(/[^0-9.]/g, ""));
+      // 注意欧洲逗号小数（€22,99）→ 统一成点
+      const numStr = String(iap.price).replace(/[^0-9.,]/g, "").replace(/\.(?=\d{3}\b)/g, "").replace(",", ".");
+      const num = parseFloat(numStr);
       if (!num) continue;
-      if (cc === "us") { prices.claude.iosUS[tier] = num; changed = true; }
+      if (cc === "us") { prices.claude.iosUS[tier] = num; changed = true; appleFilled++; }
       const region = prices.claude.regions.find(x => x.cc === cc);
       if (region) {
         const usd = toUSD(num, cc);
-        if (usd != null) { region[tier] = usd; changed = true; }
+        if (usd != null) { region[tier] = usd; changed = true; appleFilled++; }
         if (tier === "pro") {
           region.local = String(iap.price).trim();
           region.localAmount = num;   // 本币数值，供 PPP 折算（local/pppex）
@@ -280,8 +298,8 @@ async function main() {
       }
     }
   }
-  // 回填成功后更新来源账本状态
-  if (changed) {
+  // 仅当确实回填了 Apple 数据才把账本转已核验
+  if (appleFilled > 0) {
     const prov = (prices.provenance || []).find(p => p.key === "appstore");
     if (prov) {
       prov.status = "verified";
