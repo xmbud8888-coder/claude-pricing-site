@@ -104,7 +104,7 @@ function scanForIAP(node, out = []) {
   return out;
 }
 
-async function fetchAppleIAP(appleId, cc) {
+async function fetchAppleIAP(appleId, cc, keepRe) {
   const url = `https://apps.apple.com/${cc}/app/id${appleId}`;
   const { status, url: finalUrl, text } = await get(url);
   if (!finalUrl.includes(`/${cc}/`)) {
@@ -115,8 +115,9 @@ async function fetchAppleIAP(appleId, cc) {
   if (!m) return { ok: false, reason: "未找到 serialized-server-data（页面结构可能已变）" };
   try {
     const iaps = scanForIAP(JSON.parse(m[1]))
-      .filter(x => /pro|max|plus|super|premium|go|month|年|月/i.test(x.name))
-      .filter((x, i, arr) => arr.findIndex(y => y.name === x.name && y.price === x.price) === i);
+      .filter(x => (keepRe || /pro|max|plus|super|premium|go|month|membership|会员|年|月/i).test(x.name))
+      .filter((x, i, arr) => arr.findIndex(y => y.name === x.name && y.price === x.price) === i)
+      .slice(0, 40);
     if (!iaps.length) {
       const probe = [...new Set([...text.matchAll(/(?:US?\$|€|£|¥|₩|₹|₺|₦|₱|₨|kr\.?|R\$)\s?[\d.,]+|[\d.,]+\s?원/g)].map(x => x[0]))].slice(0, 8);
       return { ok: true, iaps, probe };
@@ -206,7 +207,10 @@ async function main() {
       if (status !== 200) { report.warnings.push(`discoverApple(${appKey}): HTTP ${status}`); return; }
       const results = JSON.parse(text).results || [];
       const sellerRe = new RegExp(st.sellerRe || ".", "i");
-      const hit = results.find(r => sellerRe.test(r.sellerName || "") || sellerRe.test(r.artistName || ""));
+      const nameRe = st.nameRe ? new RegExp(st.nameRe, "i") : null;
+      const hit = results.find(r =>
+        (sellerRe.test(r.sellerName || "") || sellerRe.test(r.artistName || "")) &&
+        (!nameRe || nameRe.test(r.trackName || "")));
       if (hit) {
         st.appleId = String(hit.trackId);
         changed = true;
@@ -262,11 +266,15 @@ async function main() {
     for (const appKey of PRODUCT_KEYS) {
       const appleId = prices.products[appKey].store?.appleId;
       if (!appleId) { report.apple[appKey] = { skipped: "无 appleId（待发现）" }; continue; }
+      // SKU 预过滤 = 该产品档位规则 ∪ 通用订阅词（避免窄过滤漏掉 c.ai+ / 中文会员名等）
+      const keepRe = new RegExp(
+        (prices.products[appKey].tierRules || []).map(x => x[0]).concat(
+          ["pro","max","plus","super","premium","go","month","membership","会员","年","月"]).join("|"), "i");
       report.apple[appKey] = {};
       let filled = 0;
       for (const cc of STOREFRONTS) {
         let r;
-        try { r = await fetchAppleIAP(appleId, cc); }
+        try { r = await fetchAppleIAP(appleId, cc, keepRe); }
         catch (e) { r = { ok: false, reason: e.message }; }
         report.apple[appKey][cc] = r;
         if (r.ok) {

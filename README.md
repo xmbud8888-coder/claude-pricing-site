@@ -6,16 +6,30 @@
 - 自动管线：GitHub Actions 每日 03:17 UTC（北京 11:17）自动运行，数据变更自动提交
 - 手动触发：Actions → 「价格自动核验」→ Run workflow
 
-## 页面（一产品一页，同对手站结构）
+## 页面（一产品一页，同对手站结构；配置驱动）
 
-| 页面 | 产品 | 档位 | 数据状态 |
-|---|---|---|---|
-| index.html | Claude | Pro / Max 5x / Max 20x | Apple 17 区 + Play 17 区 + PPP ✅ |
-| chatgpt.html | ChatGPT | Plus / Pro / Go | Apple 17 区 + Play 17 区 + PPP ✅ |
-| grok.html | Grok | SuperGrok / Heavy | Apple 16 区 + Play 17 区 + PPP ✅ |
+产品清单在 `data/prices.json` 的 `products` 里维护——加产品只需加一段配置
+（label / tiers / tierRules / store 候选），管线自动发现商店 ID 并抓价，
+`node scripts/build-pages.mjs` 自动生成页面。
 
-三页共用 app.js（`<body data-product>` 选产品）与 data/prices.json。
-模板改动后运行 `node scripts/build-pages.mjs` 从 index.html 重新生成另外两页。
+| 页面 | 产品 | 档位 |
+|---|---|---|
+| index.html | Claude | Pro / Max 5x / Max 20x |
+| chatgpt.html | ChatGPT | Plus / Pro / Go |
+| grok.html | Grok | SuperGrok / SuperGrok Heavy |
+| gemini.html | Gemini | AI Pro / AI Ultra |
+| perplexity.html | Perplexity | Pro / Max |
+| copilot.html | Copilot | Pro |
+| capcut.html | CapCut | Pro |
+| characterai.html | Character.AI | c.ai+ |
+| suno.html | Suno | Pro / Premier |
+| kling.html | Kling AI | Standard / Pro / Premier |
+| sora.html | Sora | Plus / Pro |
+| kimi.html | Kimi | Pro |
+| glm.html | GLM | Pro |
+| leonardo.html | Leonardo AI | Apprentice / Artisan / Maestro |
+| manus.html | Manus | Pro |
+| catcosplay.html | CatCosplay | Pro |
 
 ## 功能清单（对手站功能全量对齐 + 超越）
 

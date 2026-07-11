@@ -258,9 +258,8 @@
         "sora"
       ],
       "label": "Sora · App Store 各区内购价",
-      "status": "verified",
-      "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-      "verifiedAt": "2026-07-11"
+      "status": "pending",
+      "source": "apps.apple.com 各区商店页，待管线抓取"
     },
     {
       "key": "play-sora",
@@ -1145,7 +1144,7 @@
           "ultra"
         ],
         [
-          "pro|premium",
+          "pro|premium|ai plan",
           "pro"
         ]
       ],
@@ -1982,137 +1981,18 @@
         ]
       ],
       "store": {
-        "appleId": "6448311069",
+        "appleId": null,
         "playPkg": null,
         "appleSearch": "Sora by OpenAI",
         "sellerRe": "OpenAI",
         "playCandidates": [
           "com.openai.sora"
         ],
-        "devRe": "OpenAI"
+        "devRe": "OpenAI",
+        "nameRe": "sora"
       },
       "web": null,
-      "regions": {
-        "us": {
-          "plus": 19.99,
-          "local": "$19.99",
-          "localAmount": 19.99,
-          "pro": 200,
-          "ppp": 19.99
-        },
-        "jp": {
-          "plus": 18.54,
-          "local": "¥3,000",
-          "localAmount": 3000,
-          "pro": 185.45,
-          "ppp": 32.15
-        },
-        "pk": {
-          "plus": 17.61,
-          "local": "Rs 4,900.00",
-          "localAmount": 4900,
-          "pro": 179.34,
-          "ppp": 69.18
-        },
-        "ca": {
-          "plus": 17.66,
-          "local": "$24.99",
-          "localAmount": 24.99,
-          "pro": 175.93,
-          "ppp": 21.29
-        },
-        "ar": {
-          "plus": 19.99,
-          "local": "USD 19.99",
-          "localAmount": 19.99,
-          "pro": 100,
-          "ppp": 40.88
-        },
-        "eg": {
-          "plus": 20.15,
-          "local": "EGP 999.99",
-          "localAmount": 999.99,
-          "pro": 201.54,
-          "ppp": 120.6
-        },
-        "au": {
-          "plus": 20.84,
-          "local": "$29.99",
-          "localAmount": 29.99,
-          "pro": 208.52,
-          "ppp": 20.87
-        },
-        "ph": {
-          "plus": 16.23,
-          "local": "₱ 999.00",
-          "localAmount": 999,
-          "pro": 162.26,
-          "ppp": 51.98
-        },
-        "in": {
-          "plus": 20.95,
-          "local": "₹ 1,999",
-          "localAmount": 1999,
-          "pro": 112.1,
-          "ppp": 98.26
-        },
-        "tr": {
-          "plus": 21.29,
-          "local": "₺999,99",
-          "localAmount": 999.99,
-          "pro": 212.86,
-          "ppp": 49.49
-        },
-        "ng": {
-          "plus": 22.83,
-          "local": "₦ 31,500.00",
-          "localAmount": 31500,
-          "pro": 105.03,
-          "ppp": 144.27
-        },
-        "mx": {
-          "plus": 22.8,
-          "local": "$399.00",
-          "localAmount": 399,
-          "pro": 228.56,
-          "ppp": 37.97
-        },
-        "de": {
-          "plus": 26.26,
-          "local": "22,99 €",
-          "localAmount": 22.99,
-          "pro": 117.63,
-          "ppp": 31.84
-        },
-        "fr": {
-          "plus": 26.26,
-          "local": "22,99 €",
-          "localAmount": 22.99,
-          "pro": 261.54,
-          "ppp": 35.7
-        },
-        "br": {
-          "plus": 19.53,
-          "local": "R$ 99,90",
-          "localAmount": 99.9,
-          "pro": 195.5,
-          "ppp": 38.23
-        },
-        "gb": {
-          "plus": 26.8,
-          "local": "£19.99",
-          "localAmount": 19.99,
-          "pro": 268.11,
-          "ppp": 30.06
-        },
-        "dk": {
-          "plus": 27.4,
-          "local": "179,00 kr",
-          "localAmount": 179,
-          "pro": 120.76,
-          "ppp": 30.44
-        }
-      }
+      "regions": {}
     },
     "kimi": {
       "label": "Kimi",
@@ -2127,7 +2007,7 @@
       ],
       "tierRules": [
         [
-          "pro|plus|premium",
+          "pro|plus|premium|会员|member",
           "pro"
         ]
       ],
@@ -2232,33 +2112,17 @@
       "label": "Leonardo AI",
       "developer": "Leonardo Interactive",
       "site": "https://leonardo.ai/",
-      "baseTier": "apprentice",
+      "baseTier": "premium",
       "tiers": [
         {
-          "key": "apprentice",
-          "label": "Apprentice"
-        },
-        {
-          "key": "artisan",
-          "label": "Artisan"
-        },
-        {
-          "key": "maestro",
-          "label": "Maestro"
+          "key": "premium",
+          "label": "Premium"
         }
       ],
       "tierRules": [
         [
-          "maestro",
-          "maestro"
-        ],
-        [
-          "artisan",
-          "artisan"
-        ],
-        [
-          "apprentice",
-          "apprentice"
+          "premium",
+          "premium"
         ]
       ],
       "store": {
