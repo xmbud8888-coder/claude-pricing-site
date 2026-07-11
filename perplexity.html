@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026 各国 Perplexity 价格对比 | Perplexity 哪个国家最便宜</title>
 <meta name="description" content="比较 Perplexity 订阅（Pro / Max）在全球 App Store 与 Google Play 各区域的价格：最便宜/最贵国家排行、完整价格表、购买力对比、换区订阅指南。数据每日自动抓取官方商店页核验。">
-<link rel="stylesheet" href="style.css?v=3d2">
+<link rel="stylesheet" href="style.css?v=g2">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 </head>
 <body data-product="perplexity">
@@ -65,11 +65,12 @@
           <button class="share-btn" id="shareBtn">分享</button>
         </div>
       </div>
-      <div id="scene3d" class="scene3d" hidden>
-        <div class="scene3d-stage" id="scene3dStage">
-          <div class="scene3d-plane" id="scene3dPlane"></div>
+      <div id="scene3d" class="globe-wrap" hidden>
+        <div class="globe-stage" id="globeStage">
+          <canvas id="globeCanvas"></canvas>
+          <div class="globe-tip" id="globeTip" hidden></div>
         </div>
-        <p class="fine scene3d-hint">拖拽旋转 · 柱高 = 价格 · 颜色 = 相对美区贵/便宜</p>
+        <p class="fine scene3d-hint">拖拽旋转地球 · 光柱高度 = 价格 · <span class="gl-cheap">蓝</span> = 比美区便宜 · <span class="gl-hot">红</span> = 更贵 · 悬停光柱看详情</p>
       </div>
       <div id="heatTiles" class="heat-grid"></div>
       <p class="fine heat-legend">相对美区基准：<span class="hl-chip heat-cheap">更便宜</span><span class="hl-chip heat-base">±5%</span><span class="hl-chip heat-warm">+5~20%</span><span class="hl-chip heat-hot">+20% 以上</span></p>
@@ -240,6 +241,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=3d2"></script>
+<script src="app.js?v=g2"></script>
 </body>
 </html>

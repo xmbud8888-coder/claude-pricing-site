@@ -72,92 +72,286 @@ function renderTierTabs() {
       });
       currentTier = btn.dataset.plan;
       renderRegionChart();
-      update3DColumns();   // 3D 柱高随档位平滑变形
+      globeSetTier();      // 地球光柱随档位平滑变形
+      renderHeatTiles();   // 平面热力砖同步档位
     });
   });
 }
 
-/* ================= 3D 价格柱状地形（纯 CSS 3D，零依赖） ================= */
+/* ================= 3D 地球价格光柱（手写正交投影，零依赖） ================= */
 
 const heatCls = (v, us) => {
   if (v == null || us == null) return "heat-none";
   const d = (v - us) / us * 100;
   return d <= -5 ? "heat-cheap" : d < 5 ? "heat-base" : d < 20 ? "heat-warm" : "heat-hot";
 };
+// 深色舞台上的发散语义色（蓝=便宜 / 灰=基准 / 橙=贵 / 红=更贵）
+const GLOBE_COLORS = {
+  "heat-cheap": { line: "#4da3ff", glow: "rgba(77,163,255,.45)" },
+  "heat-base":  { line: "#b7bcc4", glow: "rgba(183,188,196,.30)" },
+  "heat-warm":  { line: "#ffb340", glow: "rgba(255,179,64,.40)" },
+  "heat-hot":   { line: "#ff5f57", glow: "rgba(255,95,87,.45)" },
+  "heat-none":  { line: "#5a5f68", glow: "rgba(90,95,104,.25)" },
+};
 
-function build3DMap() {
-  const plane = $("scene3dPlane");
-  if (!plane) return;
-  // 固定槽位（贵→便宜排一次：高柱在视觉后排不遮挡矮柱；档位切换只变高度不换位）
-  const order = [...R].sort((a, b) => (b[P.baseTier] ?? -1) - (a[P.baseTier] ?? -1));
-  plane.innerHTML = order.map(r => `
-    <div class="c3 heat-none" data-cc="${r.cc}" style="--h:6px">
-      <div class="face s1"></div>
-      <div class="face s2"></div>
-      <div class="face top"><span class="lbl"><span>${r.flag}</span><b>—</b></span></div>
-    </div>`).join("");
-  update3DColumns();
-}
+const globe = {
+  dots: null,
+  markers: [],
+  yaw: 4.2, pitch: 0.42,
+  vyaw: 0, dragging: false, hoverCC: null,
+  raf: 0, visible: false, reduced: matchMedia("(prefers-reduced-motion: reduce)").matches,
+  _buckets: [[], [], [], []],   // 帧间复用，避免每帧分配
+  _proj: [],
+};
 
-function update3DColumns() {
-  const plane = $("scene3dPlane");
-  if (!plane || plane.hidden) { /* 仍更新，切回 3D 时状态正确 */ }
-  const key = currentTier || P.baseTier;
-  const vals = R.map(r => r[key]).filter(v => v != null);
-  const us = R.find(r => r.cc === "us")?.[key];
-  const max = Math.max(...vals);
-  const H_MAX = 170;
-  plane.querySelectorAll(".c3").forEach(col => {
-    const r = R.find(x => x.cc === col.dataset.cc);
-    const v = r?.[key];
-    col.className = "c3 " + heatCls(v, us);
-    const lbl = col.querySelector(".lbl b");
-    if (v == null) {
-      col.style.setProperty("--h", "6px");
-      lbl.textContent = "—";
-      col.title = `${r.name} · 待核验`;
-    } else {
-      const h = max > 0 ? (v / max) * H_MAX : 0;   // 从零等比，不夸大价差
-      col.style.setProperty("--h", h.toFixed(1) + "px");
-      lbl.textContent = fmtUSD(v, 0);
-      col.title = `${r.name} · ${fmtUSD(v)}${us ? `（vs 美区 ${v === us ? "基准" : (v > us ? "+" : "") + Math.round((v - us) / us * 100) + "%"}）` : ""}`;
+async function initGlobe() {
+  const canvas = $("globeCanvas");
+  if (!canvas) return;
+  try {
+    const res = await fetch("assets/globe-dots.json?v=g2");
+    const flat = await res.json();          // [lat, lon, ...]
+    const n = flat.length / 2;
+    globe.dots = new Float32Array(n * 3);
+    for (let i = 0; i < n; i++) {
+      const la = flat[i * 2] * Math.PI / 180, lo = flat[i * 2 + 1] * Math.PI / 180;
+      globe.dots[i * 3]     = Math.cos(la) * Math.sin(lo);
+      globe.dots[i * 3 + 1] = Math.sin(la);
+      globe.dots[i * 3 + 2] = Math.cos(la) * Math.cos(lo);
     }
-  });
+  } catch { /* 点阵加载失败则只画光柱 */ }
+
+  buildGlobeMarkers();
+  bindGlobeInput(canvas);
+
+  // 仅在可见时渲染：不可见 → 循环自停（tickGlobe 顶部清零 raf），可见 → 重启
+  new IntersectionObserver(es => {
+    globe.visible = es[0].isIntersecting && !$("scene3d").hidden;
+    if (globe.visible && !globe.raf) tickGlobe();
+  }).observe(canvas);
 }
 
-function init3DDrag() {
-  const stage = $("scene3dStage"), scene = $("scene3d");
-  if (!stage) return;
-  let dragging = false, startX = 0, startRz = -38;
-  const getRz = () => parseFloat(getComputedStyle(scene).getPropertyValue("--rz")) || -38;
+function buildGlobeMarkers() {
+  const key = currentTier || P.baseTier;
+  const us = R.find(r => r.cc === "us")?.[key];
+  const vals = R.map(r => r[key]).filter(v => v != null);
+  const max = vals.length ? Math.max(...vals) : 1;
+  const prev = Object.fromEntries(globe.markers.map(m => [m.cc, m.h]));
+  globe.markers = R.filter(r => r.lat != null).map(r => {
+    const la = r.lat * Math.PI / 180, lo = r.lon * Math.PI / 180;
+    const v = r[key];
+    return {
+      cc: r.cc, name: r.name, flag: r.flag, price: v,
+      vec: [Math.cos(la) * Math.sin(lo), Math.sin(la), Math.cos(la) * Math.cos(lo)],
+      h: prev[r.cc] ?? 0,
+      hTarget: v != null ? 0.06 + (v / max) * 0.34 : 0.02,
+      color: GLOBE_COLORS[heatCls(v, us)],
+      deltaTxt: (v != null && us) ? (v === us ? "基准" : (v > us ? "+" : "") + Math.round((v - us) / us * 100) + "% vs 美区") : "待核验",
+    };
+  });
+  const withV = globe.markers.filter(m => m.price != null).sort((a, b) => a.price - b.price);
+  globe.markers.forEach(m => m.tag = null);
+  if (withV.length > 1) { withV[0].tag = "min"; withV[withV.length - 1].tag = "max"; }
+}
+function globeSetTier() { buildGlobeMarkers(); }
+
+function rotXY(v, cy, sy, cp, sp) {   // 传入预计算的 cos/sin，帧内零重复三角函数
+  const x1 = v[0] * cy + v[2] * sy, z1 = -v[0] * sy + v[2] * cy;
+  return [x1, v[1] * cp - z1 * sp, v[1] * sp + z1 * cp];
+}
+
+function tickGlobe() {
+  if (!globe.visible) { globe.raf = 0; return; }   // 循环真正停止，可被重启
+  globe.raf = requestAnimationFrame(tickGlobe);
+  const canvas = $("globeCanvas"), stage = $("globeStage");
+  const dpr = Math.min(2, devicePixelRatio || 1);
+  const W = stage.clientWidth, H = stage.clientHeight;
+  if (!W || !H) return;                             // 折叠/切换视图的空帧守卫
+  const bw = Math.round(W * dpr), bh = Math.round(H * dpr);
+  if (canvas.width !== bw || canvas.height !== bh) { canvas.width = bw; canvas.height = bh; }
+  const x = canvas.getContext("2d");
+  x.setTransform(dpr, 0, 0, dpr, 0, 0);
+  x.clearRect(0, 0, W, H);
+
+  if (!globe.dragging) {
+    globe.yaw += globe.vyaw;
+    globe.vyaw *= 0.94;
+    if (!globe.reduced && !globe.hoverCC && Math.abs(globe.vyaw) < 0.0004) globe.yaw += 0.0011;
+  }
+
+  const cx = W / 2, cyc = H / 2 + 6;
+  const Rpx = Math.min(W, H) / 2 - 64;
+  if (Rpx <= 0) return;
+  // 本帧三角函数只算一次
+  const cy0 = Math.cos(globe.yaw), sy0 = Math.sin(globe.yaw);
+  const cp0 = Math.cos(globe.pitch), sp0 = Math.sin(globe.pitch);
+
+  // 球体底盘 + 大气边缘
+  const disc = x.createRadialGradient(cx - Rpx * .35, cyc - Rpx * .4, Rpx * .1, cx, cyc, Rpx);
+  disc.addColorStop(0, "rgba(56,74,110,.38)");
+  disc.addColorStop(.75, "rgba(24,34,56,.22)");
+  disc.addColorStop(1, "rgba(10,16,30,.05)");
+  x.fillStyle = disc;
+  x.beginPath(); x.arc(cx, cyc, Rpx, 0, 7); x.fill();
+  x.strokeStyle = "rgba(96,140,220,.28)"; x.lineWidth = 1.2;
+  x.beginPath(); x.arc(cx, cyc, Rpx + .5, 0, 7); x.stroke();
+
+  // 陆地点阵：内联标量旋转（零分配），4 桶批量绘制
+  if (globe.dots) {
+    const bks = globe._buckets;
+    for (let b = 0; b < 4; b++) bks[b].length = 0;
+    const d = globe.dots;
+    for (let i = 0; i < d.length; i += 3) {
+      const vx = d[i], vy = d[i + 1], vz = d[i + 2];
+      const x1 = vx * cy0 + vz * sy0, z1 = -vx * sy0 + vz * cy0;
+      const y2 = vy * cp0 - z1 * sp0, z2 = vy * sp0 + z1 * cp0;
+      if (z2 < 0.03) continue;
+      bks[Math.min(3, z2 * 4 | 0)].push(cx + x1 * Rpx, cyc - y2 * Rpx);
+    }
+    const alphas = [.16, .28, .44, .60];
+    for (let b = 0; b < 4; b++) {
+      x.fillStyle = `rgba(148,177,224,${alphas[b]})`;
+      x.beginPath();
+      const pts = bks[b];
+      for (let i = 0; i < pts.length; i += 2) x.rect(pts[i] - .8, pts[i + 1] - .8, 1.7, 1.7);
+      x.fill();
+    }
+  }
+
+  // 价格光柱（先远后近；18 根，量小保留渐变美术）
+  const proj = globe._proj;
+  proj.length = 0;
+  for (const m of globe.markers) {
+    m.h += (m.hTarget - m.h) * 0.10;
+    const b = rotXY(m.vec, cy0, sy0, cp0, sp0);
+    if (b[2] < -0.05) continue;
+    const t = 1 + m.h;
+    proj.push({ m, z: b[2],
+      bx: cx + b[0] * Rpx, by: cyc - b[1] * Rpx,
+      tx: cx + b[0] * Rpx * t, ty: cyc - b[1] * Rpx * t });
+  }
+  proj.sort((a, b) => a.z - b.z);
+  for (const p of proj) {
+    const { m } = p, edge = Math.max(0.25, Math.min(1, p.z * 1.6));
+    const hovered = globe.hoverCC === m.cc;
+    const g = x.createLinearGradient(p.bx, p.by, p.tx, p.ty);
+    g.addColorStop(0, "rgba(255,255,255,0)");
+    g.addColorStop(1, m.color.line);
+    x.strokeStyle = g;
+    x.globalAlpha = edge * (hovered ? 1 : .9);
+    x.lineWidth = hovered ? 3 : 2;
+    x.lineCap = "round";
+    x.beginPath(); x.moveTo(p.bx, p.by); x.lineTo(p.tx, p.ty); x.stroke();
+    const glow = x.createRadialGradient(p.tx, p.ty, 0, p.tx, p.ty, hovered ? 13 : 9);
+    glow.addColorStop(0, m.color.glow); glow.addColorStop(1, "rgba(0,0,0,0)");
+    x.fillStyle = glow;
+    x.beginPath(); x.arc(p.tx, p.ty, hovered ? 13 : 9, 0, 7); x.fill();
+    x.fillStyle = m.color.line;
+    x.beginPath(); x.arc(p.tx, p.ty, hovered ? 3.2 : 2.4, 0, 7); x.fill();
+    x.globalAlpha = 1;
+  }
+  // 极值/悬停标签
+  x.textAlign = "center"; x.textBaseline = "bottom";
+  for (const p of proj) {
+    const { m } = p;
+    if (!(m.tag || globe.hoverCC === m.cc) || p.z < 0.15 || m.price == null) continue;
+    x.font = "600 12px system-ui, -apple-system, sans-serif";
+    x.fillStyle = "rgba(245,245,247,.92)";
+    x.shadowColor = "rgba(0,0,0,.8)"; x.shadowBlur = 6;
+    x.fillText(`${m.flag} ${fmtUSD(m.price, 0)}`, p.tx, p.ty - 12);
+    x.shadowBlur = 0;
+  }
+}
+
+function globePickAt(mx, my) {
+  let best = null, bestD = 20;
+  for (const p of globe._proj) {
+    const d = Math.hypot(p.tx - mx, p.ty - my);
+    if (d < bestD) { bestD = d; best = p; }
+  }
+  return best;
+}
+
+function globeShowTip(p, stage, tip) {
+  const W = stage.clientWidth;
+  tip.hidden = false;
+  tip.classList.toggle("below", p.ty < 76);                       // 球顶附近翻到下方，避免被裁
+  tip.style.left = Math.max(78, Math.min(W - 78, p.tx)) + "px";   // 水平钳制在舞台内
+  tip.style.top = p.ty + "px";
+  tip.innerHTML = p.m.price != null
+    ? `${p.m.flag} ${p.m.name} <b>${fmtUSD(p.m.price)}</b><br><span class="gt-delta">${p.m.deltaTxt}</span>`
+    : `${p.m.flag} ${p.m.name}<br><span class="gt-delta">待核验</span>`;
+}
+
+function bindGlobeInput(canvas) {
+  const stage = $("globeStage"), tip = $("globeTip");
+  let downX = 0, downY = 0, lastX = 0, lastY = 0, moved = false, downAt = 0;
   stage.addEventListener("pointerdown", e => {
-    dragging = true; startX = e.clientX; startRz = getRz();
+    downX = lastX = e.clientX; downY = lastY = e.clientY;
+    moved = false; downAt = Date.now();
+    globe.vyaw = 0;
     stage.setPointerCapture(e.pointerId);
   });
   stage.addEventListener("pointermove", e => {
-    if (!dragging) return;
-    const rz = Math.max(-80, Math.min(5, startRz + (e.clientX - startX) * 0.25));
-    scene.style.setProperty("--rz", rz + "deg");
+    const rect = stage.getBoundingClientRect();
+    if (downAt) {
+      // 超过 6px 才进入拖拽态（保住移动端 tap 拾取）
+      if (!moved && Math.hypot(e.clientX - downX, e.clientY - downY) > 6) {
+        moved = true; globe.dragging = true;
+      }
+      if (globe.dragging) {
+        const dx = e.clientX - lastX, dy = e.clientY - lastY;
+        globe.yaw += dx * 0.005; globe.vyaw = dx * 0.0009;
+        globe.pitch = Math.max(-0.9, Math.min(0.9, globe.pitch + dy * 0.004));
+        lastX = e.clientX; lastY = e.clientY;
+        return;
+      }
+    }
+    if (e.pointerType === "touch") return;   // 触摸的拾取走 tap（pointerup）
+    // 鼠标悬停拾取
+    const best = globePickAt(e.clientX - rect.left, e.clientY - rect.top);
+    globe.hoverCC = best?.m.cc || null;
+    stage.style.cursor = best ? "pointer" : "grab";
+    if (best) globeShowTip(best, stage, tip); else tip.hidden = true;
   });
-  ["pointerup", "pointercancel"].forEach(ev => stage.addEventListener(ev, () => { dragging = false; }));
+  stage.addEventListener("pointerup", e => {
+    const wasTap = !moved && Date.now() - downAt < 500;
+    globe.dragging = false; downAt = 0;
+    if (wasTap && e.pointerType === "touch") {
+      const rect = stage.getBoundingClientRect();
+      const best = globePickAt(e.clientX - rect.left, e.clientY - rect.top);
+      globe.hoverCC = best?.m.cc || null;
+      if (best) globeShowTip(best, stage, tip); else tip.hidden = true;
+    }
+  });
+  stage.addEventListener("pointercancel", () => { globe.dragging = false; downAt = 0; });
+  stage.addEventListener("pointerleave", e => {
+    globe.dragging = false; downAt = 0;
+    if (e.pointerType !== "touch") { globe.hoverCC = null; tip.hidden = true; }
+  });
 }
+
+/* ================= 视图切换（3D 地球 / 平面） ================= */
 
 function initMapView() {
   const seg = $("mapViewSeg");
   if (!seg) return;
-  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const saved = localStorage.getItem("mapView");
-  let view = saved || ((innerWidth > 700 && !reduced && rowsWithBase().length) ? "3d" : "2d");
+  const lsGet = k => { try { return localStorage.getItem(k); } catch { return null; } };
+  const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
+  const saved = lsGet("mapView");
+  let view = saved || ((innerWidth > 700 && rowsWithBase().length) ? "3d" : "2d");
   const apply = v => {
     view = v;
-    localStorage.setItem("mapView", v);
+    lsSet("mapView", v);
     $("scene3d").hidden = v !== "3d";
     $("heatTiles").hidden = v === "3d";
     seg.querySelectorAll(".seg-btn").forEach(b => {
       b.classList.toggle("active", b.dataset.view === v);
       b.setAttribute("aria-selected", b.dataset.view === v ? "true" : "false");
     });
-    if (v === "3d") update3DColumns();
+    // 同步渲染循环状态（不等 IntersectionObserver 的下一帧通知）
+    globe.visible = v === "3d";
+    if (v === "3d") { globeSetTier(); if (!globe.raf) tickGlobe(); }
+    else renderHeatTiles();
   };
   seg.querySelectorAll(".seg-btn").forEach(b =>
     b.addEventListener("click", () => apply(b.dataset.view)));
@@ -168,14 +362,15 @@ function initMapView() {
 
 function renderHeatTiles() {
   const el = $("heatTiles");
-  const us = R.find(r => r.cc === "us")?.[P.baseTier];
-  const rows = rowsWithBase();
+  const key = currentTier || P.baseTier;
+  const us = R.find(r => r.cc === "us")?.[key];
+  const rows = R.filter(r => r[key] != null);
   if (!rows.length || us == null) {
     el.innerHTML = `<p class="fine">各区价格由管线核验后显示（每日自动运行）。</p>`;
     return;
   }
-  el.innerHTML = [...rows].sort((a, b) => a[P.baseTier] - b[P.baseTier]).map(r => {
-    const v = r[P.baseTier];
+  el.innerHTML = [...rows].sort((a, b) => a[key] - b[key]).map(r => {
+    const v = r[key];
     const d = (v - us) / us * 100;
     const cls = d <= -5 ? "heat-cheap" : d < 5 ? "heat-base" : d < 20 ? "heat-warm" : "heat-hot";
     const txt = d === 0 ? "基准" : (d > 0 ? "+" : "") + d.toFixed(0) + "%";
@@ -400,8 +595,7 @@ async function boot() {
   renderProdNav();
   renderHero();
   renderTierTabs();
-  build3DMap();
-  init3DDrag();
+  initGlobe();
   initMapView();
   renderHeatTiles();
   renderRegionChart();
