@@ -1,0 +1,36 @@
+{
+  "_note": "第三方转述数据（来源：竞品站转述的 App Store 挂牌价 + 训练知识中的通行订阅价）。仅供抓价管线首跑时交叉比对合理性，绝不直接进入 prices.json / 站点展示。管线从官方页面抓到实价后，本文件可删除。",
+  "_recordedAt": "2026-07-11",
+  "appStoreClaudeUSD": {
+    "iosUS": { "pro": 20.0, "max5x": 124.99 },
+    "regionsPro": {
+      "pk": { "usd": 17.61, "local": "₨4,900" },
+      "jp": { "usd": 18.54, "local": "¥3,000" },
+      "ca": { "usd": 19.78, "local": "CA$28" },
+      "ar": { "usd": 20.0,  "local": "US$20" },
+      "us": { "usd": 20.0,  "local": "$20" },
+      "eg": { "usd": 20.15, "local": "E£999.99" },
+      "au": { "usd": 20.85, "local": "A$30" },
+      "ph": { "usd": 20.95, "local": "₱1,290" },
+      "in": { "usd": 20.95, "local": "₹1,999" },
+      "tr": { "usd": 21.29, "local": "₺999.99" },
+      "ng": { "usd": 21.67, "local": "₦29,900" },
+      "kr": { "usd": 21.96, "local": "₩33,000" },
+      "mx": { "usd": 22.80, "local": "MXN399" },
+      "de": { "usd": 25.13, "local": "€22" },
+      "fr": { "usd": 25.13, "local": "€22" },
+      "br": { "usd": 25.40, "local": "R$129.9" },
+      "gb": { "usd": 26.81, "local": "£20" },
+      "dk": { "usd": 27.40, "local": "kr 179" }
+    },
+    "regionsMax5x": {
+      "pk": 125.43, "jp": 123.63, "ca": 127.17, "ar": 124.99, "us": 124.99, "eg": 141.08,
+      "au": 139.01, "ph": 129.78, "in": 135.16, "tr": 149.0, "ng": 144.9, "kr": 132.4,
+      "mx": 142.83, "de": 171.31, "fr": 171.31, "br": 156.4, "gb": 167.56, "dk": 152.9
+    }
+  },
+  "subsCommonKnowledge": {
+    "chatgpt": { "plus": 20, "pro": 200, "businessAnnualPerSeat": 25, "businessMonthlyPerSeat": 30 },
+    "grok": { "superGrok": 30, "superGrokHeavy": 300 }
+  }
+}

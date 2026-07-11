@@ -1,0 +1,94 @@
+{
+  "ranAt": "2026-07-11T18:44:03.409Z",
+  "apple": {},
+  "watch": {},
+  "warnings": [],
+  "play": {
+    "claude": {
+      "us": {
+        "ok": true,
+        "range": "$20.00 - $279.99"
+      },
+      "jp": {
+        "ok": true,
+        "range": "¥3,400 - ¥42,500"
+      },
+      "pk": {
+        "ok": true,
+        "range": "Rs 4,900 - Rs 61,250"
+      },
+      "ca": {
+        "ok": true,
+        "range": "$28.00 - $350.00"
+      },
+      "ar": {
+        "ok": false,
+        "reason": "页面无 In-app purchases 字段"
+      },
+      "eg": {
+        "ok": true,
+        "range": "EGP 1,099.99 - EGP 13,749.88"
+      },
+      "au": {
+        "ok": true,
+        "range": "$33.99 - $424.88"
+      },
+      "ph": {
+        "ok": true,
+        "range": "₱1,300.00 - ₱16,250.00"
+      },
+      "in": {
+        "ok": true,
+        "range": "₹1,999.00 - ₹24,987.50"
+      },
+      "tr": {
+        "ok": true,
+        "range": "TRY 799.99 - TRY 9,999.88"
+      },
+      "ng": {
+        "ok": true,
+        "range": "₦33,500.00 - ₦418,750.00"
+      },
+      "kr": {
+        "ok": true,
+        "range": "₩30,000 - ₩375,000"
+      },
+      "mx": {
+        "ok": true,
+        "range": "MX$399.00 - MX$4,987.50"
+      },
+      "de": {
+        "ok": true,
+        "range": "€22.00 - €275.00"
+      },
+      "fr": {
+        "ok": true,
+        "range": "€22.00 - €275.00"
+      },
+      "br": {
+        "ok": true,
+        "range": "R$110.00 - R$1,375.00"
+      },
+      "gb": {
+        "ok": true,
+        "range": "£18.00 - £225.00"
+      },
+      "dk": {
+        "ok": true,
+        "range": "179,00 kr. - 2.237,50 kr."
+      }
+    },
+    "chatgpt": {
+      "us": {
+        "ok": true,
+        "range": "$8.00 - $200.00"
+      }
+    },
+    "grok": {
+      "us": {
+        "ok": true,
+        "range": "$4.99 - $299.99"
+      }
+    }
+  }
+}

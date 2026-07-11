@@ -1,0 +1,56 @@
+name: 价格自动核验
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # 每天 03:17 UTC（北京 11:17）
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest   # 美国节点：apps.apple.com / openai / x.ai 均可达
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 抓取并核验价格
+        id: fetch
+        continue-on-error: true
+        run: node scripts/fetch-prices.mjs
+
+      - name: 提交数据更新
+        run: |
+          git config user.name "price-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "chore: 自动更新价格数据 $(date -u +%F)"
+          git push
+
+      - name: 定价页变更 → 开 issue 提醒
+        if: steps.fetch.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = '自动核验发现官方定价页发生变化，请复核并更新 `data/prices.json`。\n\n';
+            try {
+              const r = JSON.parse(fs.readFileSync('data/fetch-report.json', 'utf-8'));
+              for (const [k, v] of Object.entries(r.watch || {})) {
+                if (v.changedSinceLastRun) {
+                  body += `### ${k}\n新增: ${JSON.stringify(v.added)}\n移除: ${JSON.stringify(v.removed)}\n\n`;
+                }
+              }
+            } catch (e) { body += '（fetch-report.json 读取失败：' + e.message + '）'; }
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `⚠️ 官方定价变更 ${new Date().toISOString().slice(0,10)}`,
+              body,
+              labels: ['price-change'],
+            });

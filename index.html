@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude 价格全览 2026 · 订阅 / API / 各国对比 — 诚实版定价指南</title>
+<meta name="description" content="Claude 订阅（Pro / Max / Team）与 API 全模型价格对比，网页版 vs App Store 渠道价差、各国价格、成本计算器。数据逐项核验，注明来源与日期。">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap topnav-in">
+    <a class="brand" href="#top">
+      <span class="brand-mark">¤</span>
+      <span class="brand-name">Claude 定价站</span>
+    </a>
+    <div class="navlinks">
+      <a href="#plans">订阅对比</a>
+      <a href="#channels">渠道价差</a>
+      <a href="#api">API 价格</a>
+      <a href="#calc">计算器</a>
+      <a href="#regions">各国价格</a>
+      <a href="#howto">换区指南</a>
+      <a href="#market">GPT/Grok</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="hero-kicker">数据版本 <span class="data-date">—</span> · 来源：各官方定价页 + 每日自动核验管线 · 非官方站点</p>
+    <h1>订 Claude，最便宜的方式<br><em>不是换区。</em></h1>
+    <p class="hero-sub">
+      多数"各国价格对比"站不会告诉你两件事：它们列的是含苹果抽成（15–30%）的 App Store 内购价；
+      而且它们的数字大多互相转述、无人核验。
+      <strong>本站只展示核验自官方页面的价格</strong>——网页年付 Pro $17/月、Max 20x $200/月，
+      每个数字都能点开来源；核验不到的，宁可标"待核验"也不猜数。
+    </p>
+    <div class="stat-row">
+      <div class="stat-tile">
+        <div class="stat-label">Pro 最优价（网页年付）</div>
+        <div class="stat-value">$17<span class="stat-unit">/月</span></div>
+        <div class="stat-note">月付 $20 · 年付 $200 一次扣 · 官方已核验</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">Max 官方价（网页）</div>
+        <div class="stat-value">$100<span class="stat-unit">/月起</span></div>
+        <div class="stat-note">5x $100 · 20x $200 · 官方帮助中心核验</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">API 最新一代模型</div>
+        <div class="stat-value">7 款<span class="stat-unit">在售</span></div>
+        <div class="stat-note">含 Fable 5 · Sonnet 5 限时价至 08-31</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- 快速结论 -->
+<section class="section" id="tldr">
+  <div class="wrap">
+    <h2>30 秒结论</h2>
+    <div class="tldr-grid">
+      <div class="card">
+        <div class="card-num">1</div>
+        <h3>个人订阅：直接网页年付</h3>
+        <p>Pro 年付 <strong>$17/月</strong>、Max 5x <strong>$100/月</strong>、Max 20x <strong>$200/月</strong>——都在 claude.ai 网页端订（官方已核验）。App Store 内购价含苹果 15–30% 抽成，通常更贵，换区还有额外风险。</p>
+      </div>
+      <div class="card">
+        <div class="card-num">2</div>
+        <h3>API 省钱靠机制，不靠换区</h3>
+        <p>Batch API 一律 <strong>5 折</strong>；Prompt Caching 命中部分约 <strong>1 折</strong>；Sonnet 5 限时价 <strong>$2/$10</strong>（2026-08-31 截止）。这三项叠加的降本远超任何"跨区技巧"。</p>
+      </div>
+      <div class="card">
+        <div class="card-num">3</div>
+        <h3>重度 Claude Code 用户选 Max</h3>
+        <p>Pro 含 Claude Code 但额度有限；Max 5x / 20x 的用量约为 Pro 的 5 倍 / 20 倍。每天写码数小时以上，Max 5x 通常比按 API 计费更划算。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 订阅计划对比 -->
+<section class="section" id="plans">
+  <div class="wrap">
+    <h2>订阅计划对比<span class="h2-tag">官方网页价</span></h2>
+    <p class="section-sub">来源：claude.com/pricing · 核验于 2026-07-11。以官方页面实时价格为准。</p>
+    <div class="table-scroll">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th>计划</th>
+            <th>月付</th>
+            <th>年付折合</th>
+            <th>用量</th>
+            <th>Claude Code</th>
+            <th>适合谁</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="plan-name">Free</td>
+            <td class="num">$0</td>
+            <td class="num">—</td>
+            <td>基础额度</td>
+            <td>—</td>
+            <td>先体验模型能力</td>
+          </tr>
+          <tr class="row-hl">
+            <td class="plan-name">Pro <span class="badge badge-accent">最常选</span></td>
+            <td class="num">$20</td>
+            <td class="num strong">$17/月</td>
+            <td>约 Free 的数倍</td>
+            <td>✓ 含基础额度</td>
+            <td>日常对话 + 轻中度写码</td>
+          </tr>
+          <tr>
+            <td class="plan-name">Max 5x</td>
+            <td class="num">$100</td>
+            <td class="num">—</td>
+            <td>约 Pro 的 5 倍</td>
+            <td>✓ 高额度</td>
+            <td>每天数小时 Claude Code</td>
+          </tr>
+          <tr>
+            <td class="plan-name">Max 20x</td>
+            <td class="num">$200</td>
+            <td class="num">—</td>
+            <td>约 Pro 的 20 倍</td>
+            <td>✓ 最高档</td>
+            <td>全天候重度 / 多项目并行</td>
+          </tr>
+          <tr>
+            <td class="plan-name">Team 标准席</td>
+            <td class="num">$25/席</td>
+            <td class="num">$20/席/月</td>
+            <td>团队协作 + 管理台</td>
+            <td>—</td>
+            <td>5 人起的小团队</td>
+          </tr>
+          <tr>
+            <td class="plan-name">Team 高级席</td>
+            <td class="num">$125/席</td>
+            <td class="num">$100/席/月</td>
+            <td>含 Claude Code 高额度</td>
+            <td>✓ 高额度</td>
+            <td>团队里的工程师席位</td>
+          </tr>
+          <tr>
+            <td class="plan-name">Enterprise</td>
+            <td class="num" colspan="2">席位价 + API 用量计费</td>
+            <td>SSO / 审计 / 合规</td>
+            <td>可配置</td>
+            <td>大型组织</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine">用量额度按滚动窗口动态管理（存在每 5 小时与每周上限），各档具体额度以 Anthropic 官方帮助文档为准，本站不虚构具体小时数。</p>
+  </div>
+</section>
+
+<!-- 渠道价差 -->
+<section class="section" id="channels">
+  <div class="wrap">
+    <h2>同一个订阅，三种价格<span class="h2-tag">渠道价差</span></h2>
+    <p class="section-sub">App Store 内购价含苹果 15–30% 抽成，普遍高于网页直订。网页价已官方核验；iOS 挂牌价由管线抓取 Apple 商店页核验后展示——不转述第三方数字。</p>
+    <div class="channel-grid channel-grid-4">
+      <div class="channel-card">
+        <h3>Pro（美区）</h3>
+        <div class="chan-bars" id="chanPro"></div>
+        <p class="fine">网页年付比月付便宜 <strong>15%</strong>。</p>
+      </div>
+      <div class="channel-card">
+        <h3>Max 5x（美区）</h3>
+        <div class="chan-bars" id="chanMax"></div>
+        <p class="fine" id="chanMaxNote"></p>
+      </div>
+      <div class="channel-card">
+        <h3>Max 20x（美区）</h3>
+        <div class="chan-bars" id="chanMax20"></div>
+        <p class="fine" id="chanMax20Note"></p>
+      </div>
+      <div class="channel-card note-card">
+        <h3>为什么会这样？</h3>
+        <p>苹果对应用内购抽成 15–30%，开发商普遍把这部分成本加进 iOS 价格。Google Play 与网页价差因地区而异，下单前以商店实际挂牌为准。</p>
+        <p><strong>结论：任何平台，先去 claude.ai 网页端看一眼再订。</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- API 定价 -->
+<section class="section" id="api">
+  <div class="wrap">
+    <h2>API 定价<span class="h2-tag">每百万 token</span></h2>
+    <p class="section-sub">来源：Anthropic 官方文档 · 核验于 2026-07-11。所有在售新一代模型，不含已弃用型号（见表末折叠）。</p>
+    <div class="callout">
+      <strong>⏰ 限时：</strong>Claude Sonnet 5 介绍价 <strong>$2 输入 / $10 输出</strong>，2026 年 8 月 31 日截止，之后恢复 $3 / $15。
+    </div>
+    <div class="table-scroll">
+      <table class="cmp-table api-table">
+        <thead>
+          <tr>
+            <th>模型</th>
+            <th>输入 $/M</th>
+            <th>输出 $/M</th>
+            <th>缓存读 $/M</th>
+            <th>Batch 输入/输出</th>
+            <th>上下文</th>
+            <th>最大输出</th>
+          </tr>
+        </thead>
+        <tbody id="apiTableBody"><!-- JS 渲染 --></tbody>
+      </table>
+    </div>
+    <details class="legacy-details">
+      <summary>旧一代模型（仍在售 / 即将退役）</summary>
+      <div class="table-scroll">
+        <table class="cmp-table">
+          <thead><tr><th>模型</th><th>输入 $/M</th><th>输出 $/M</th><th>状态</th></tr></thead>
+          <tbody>
+            <tr><td>Claude Opus 4.5</td><td class="num">$5</td><td class="num">$25</td><td>在售</td></tr>
+            <tr><td>Claude Sonnet 4.5</td><td class="num">$3</td><td class="num">$15</td><td>在售</td></tr>
+            <tr><td>Claude Opus 4.1</td><td class="num">$15</td><td class="num">$75</td><td>已弃用 · 2026-08-05 退役</td></tr>
+            <tr><td>Claude Haiku 3</td><td class="num">$0.25</td><td class="num">$1.25</td><td>已弃用 · 2026-04-19 退役</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+    <div class="mech-grid">
+      <div class="mech-card">
+        <h3>Prompt Caching</h3>
+        <p>缓存命中读取约 <strong>0.1×</strong> 输入价；写入溢价 1.25×（5 分钟 TTL）或 2×（1 小时 TTL）。系统提示词长、多轮对话的场景可省最多 ~90% 输入成本。</p>
+      </div>
+      <div class="mech-card">
+        <h3>Batch API</h3>
+        <p>异步批处理一律 <strong>5 折</strong>，24 小时内完成。适合离线任务：批量分类、摘要、评测。可与缓存叠加。</p>
+      </div>
+      <div class="mech-card">
+        <h3>长上下文不加价</h3>
+        <p>当前新一代模型 1M 上下文按标准价计费，没有长上下文溢价。Haiku 4.5 为 200K。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 计算器 -->
+<section class="section" id="calc">
+  <div class="wrap">
+    <h2>API 成本计算器</h2>
+    <p class="section-sub">按你的调用形态估算月成本，并横向对比全部模型。估算不含缓存写入溢价（首写 +25%）。</p>
+    <div class="calc-grid">
+      <div class="calc-controls">
+        <label class="ctl">
+          <span>模型</span>
+          <select id="calcModel"></select>
+        </label>
+        <label class="ctl">
+          <span>每次请求输入 <b id="vIn">8K</b> tokens</span>
+          <input type="range" id="calcIn" min="1" max="200" value="8" step="1">
+        </label>
+        <label class="ctl">
+          <span>每次请求输出 <b id="vOut">1K</b> tokens</span>
+          <input type="range" id="calcOut" min="1" max="64" value="1" step="1">
+        </label>
+        <label class="ctl">
+          <span>每天请求数 <b id="vReq">200</b></span>
+          <input type="range" id="calcReq" min="10" max="5000" value="200" step="10">
+        </label>
+        <label class="ctl">
+          <span>缓存命中率 <b id="vCache">0%</b></span>
+          <input type="range" id="calcCache" min="0" max="90" value="0" step="5">
+        </label>
+        <label class="ctl ctl-check">
+          <input type="checkbox" id="calcBatch">
+          <span>走 Batch API（5 折）</span>
+        </label>
+        <label class="ctl ctl-check">
+          <input type="checkbox" id="calcIntro" checked>
+          <span>Sonnet 5 按限时价 $2/$10 计（至 08-31）</span>
+        </label>
+      </div>
+      <div class="calc-result">
+        <div class="stat-tile stat-big">
+          <div class="stat-label" id="calcResultLabel">预计月成本</div>
+          <div class="stat-value" id="calcTotal">$—</div>
+          <div class="stat-note" id="calcBreak">—</div>
+        </div>
+        <div class="calc-compare">
+          <div class="chart-head">
+            <h3>同样用量下各模型月成本</h3>
+          </div>
+          <div id="calcBars" class="hbar-chart"></div>
+        </div>
+        <p class="fine" id="calcHint"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Claude Code 选档 -->
+<section class="section" id="cc">
+  <div class="wrap">
+    <h2>写代码该买哪一档？<span class="h2-tag">Claude Code</span></h2>
+    <div class="cc-grid">
+      <div class="cc-card">
+        <div class="cc-tier">Pro · $17–20/月</div>
+        <h3>轻中度</h3>
+        <p>每天 1–2 小时以内的辅助编码、改 bug、看代码。额度紧张时高峰期会碰到限流。</p>
+      </div>
+      <div class="cc-card cc-featured">
+        <div class="cc-tier">Max 5x · $100/月</div>
+        <h3>日常主力 <span class="badge badge-accent">多数工程师的选择</span></h3>
+        <p>每天数小时连续使用、agent 任务、并行会话。等效 API 用量通常远超 $100，套餐更划算。</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-tier">Max 20x · $200/月</div>
+        <h3>重度 / 全天候</h3>
+        <p>多项目并行、长时间自主 agent、团队级个人产出。基本不用担心限流。</p>
+      </div>
+    </div>
+    <p class="fine">各档具体限额由官方按滚动窗口动态调整（5 小时窗口 + 每周上限），以 Anthropic 帮助中心当期说明为准。判断标准很简单：<strong>连续两周被限流 ≥3 次，就该升档</strong>。</p>
+  </div>
+</section>
+
+<!-- 各国价格 -->
+<section class="section" id="regions">
+  <div class="wrap">
+    <h2>各国商店价格<span class="h2-tag">App Store + Google Play · 18 区</span></h2>
+    <p class="section-sub">追踪 18 个国家/地区在苹果与谷歌两个商店的 Claude 挂牌价。<strong>本站不转述第三方数据</strong>：全部由自动管线直接抓取官方商店页核验后展示，未核验的显示"待核验"。</p>
+
+    <div class="honest-box">
+      <strong>先看这个再看表：</strong>换区订阅需要对应区的支付方式（常见是礼品卡）、可能违反商店条款、存在订阅中断与账号风险。
+      商店内购价含平台抽成，通常不低于网页直订（Pro 年付 $17/月、Max 5x $100/月，均已官方核验）。
+      <strong>真正需要看这张表的人：本来就居住/收款在这些地区的用户。</strong>
+    </div>
+
+    <div class="chart-head">
+      <div class="seg" id="storeSeg" role="tablist" aria-label="商店">
+        <button class="seg-btn active" data-store="appstore" role="tab" aria-selected="true"> App Store</button>
+        <button class="seg-btn" data-store="play" role="tab" aria-selected="false">▶ Google Play</button>
+      </div>
+      <button class="share-btn" id="shareBtn">分享价格卡片</button>
+    </div>
+
+    <!-- App Store 视图 -->
+    <div id="viewAppstore">
+      <div class="chart-head">
+        <h3 id="regionChartTitle">Pro 各区月价（美元折算）</h3>
+        <div class="seg" role="tablist" aria-label="订阅方案">
+          <button class="seg-btn active" data-plan="pro" role="tab" aria-selected="true">Pro</button>
+          <button class="seg-btn" data-plan="max5x" role="tab" aria-selected="false">Max 5x</button>
+          <button class="seg-btn" data-plan="max20x" role="tab" aria-selected="false">Max 20x</button>
+        </div>
+      </div>
+      <div id="regionChart" class="hbar-chart region-chart"></div>
+      <p class="fine chart-legend-line">
+        <span class="lg-item"><span class="lg-swatch"></span>App Store 挂牌价</span>
+        <span class="lg-item"><span class="lg-line lg-line-web"></span>网页直订价</span>
+        <span class="lg-item"><span class="lg-line lg-line-us"></span>美区基准</span>
+      </p>
+
+      <h3 class="block-h">价格热力图<span class="fine-inline">相对美区基准</span></h3>
+      <div id="heatTiles" class="heat-grid"></div>
+
+      <div class="top3-grid">
+        <div class="top3-card">
+          <h3>↓ 最便宜的 3 个地区</h3>
+          <ol id="top3Cheap" class="top3-list"></ol>
+        </div>
+        <div class="top3-card">
+          <h3>↑ 最贵的 3 个地区</h3>
+          <ol id="top3Rich" class="top3-list"></ol>
+        </div>
+      </div>
+
+      <div class="table-scroll">
+        <table class="cmp-table region-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>地区</th>
+              <th>Pro（美元）</th>
+              <th>本币价</th>
+              <th>Max 5x（美元）</th>
+              <th>vs 美区</th>
+              <th>税费备注</th>
+              <th>风险</th>
+              <th>账单地址</th>
+            </tr>
+          </thead>
+          <tbody id="regionTableBody"><!-- JS 渲染 --></tbody>
+        </table>
+      </div>
+      <p class="fine">价格为含税挂牌价折美元；"vs 美区"按 Pro 价计算。各区价格与本币值由管线抓取 Apple 商店页后回填并标注核验日期；税率与风险栏为编辑整理的参考信息。</p>
+
+      <h3 class="block-h">定价 vs 本地购买力<span class="fine-inline">空心 = 标价 · 实心 = 按 IMF 购买力平价折算的本地实际负担</span></h3>
+      <div id="pppChart" class="ppp-chart"></div>
+    </div>
+
+    <!-- Google Play 视图 -->
+    <div id="viewPlay" hidden>
+      <div class="callout" style="margin-bottom:16px">
+        Google Play 商店页公示的是<strong>内购价格区间</strong>（最低档 ≈ Pro 月付，最高档为最贵 SKU），不公示逐档明细。区间为该区本币原文，含 Google 渠道抽成。
+      </div>
+      <div class="table-scroll">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>地区</th>
+              <th>内购价格区间（本币）</th>
+              <th>状态</th>
+            </tr>
+          </thead>
+          <tbody id="playTableBody"><!-- JS 渲染 --></tbody>
+        </table>
+      </div>
+      <p class="fine">来源：play.google.com 各区商店页（hl=en&gl=区码）管线直抓。阿根廷区 Play 页面不公示内购信息，如实标注。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 换区订阅操作指南 -->
+<section class="section" id="howto">
+  <div class="wrap">
+    <h2>换区订阅操作指南<span class="h2-tag">仅供确需换区的用户</span></h2>
+    <p class="section-sub">再说一次：多数人网页直订更便宜、更安全。以下步骤适用于确实居住/收款在目标地区，或已充分了解风险仍要操作的用户。</p>
+    <div class="howto-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>准备目标区 Apple ID</h3>
+        <p>新注册一个目标地区的 Apple ID（推荐，风险隔离），或在「设置 → 媒体与购买项目 → 国家/地区」中更改现有账户地区（需先取消所有订阅、花完余额）。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>填写当地账单地址</h3>
+        <p>改区时需要一个格式合法的当地地址和电话。可用地址生成器按目标地区生成：</p>
+        <div class="chips" id="addrChips"><!-- JS 渲染 --></div>
+        <p class="fine">生成器为第三方工具（randaddress.com），与本站无关；丹麦、埃及暂无对应生成页。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>解决支付方式</h3>
+        <p>换区后原有支付方式通常失效。最通用的方案是购买该区 App Store <strong>礼品卡</strong>充值（认准正规渠道，谨防低价卡诈骗和黑卡）。部分地区支持当地发行的银行卡。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3>App 内完成订阅</h3>
+        <p>用该账户登录 App Store 下载 Claude，在 App 内购买订阅，费用从礼品卡余额扣除。到期续费同样依赖余额，记得提前充值以免订阅中断。</p>
+      </div>
+    </div>
+    <div class="honest-box" style="margin-top:20px">
+      <strong>风险自负清单：</strong>虚构账单地址违反 Apple 服务条款，账户可能被限制；礼品卡渠道存在诈骗风险；Anthropic 按地区提供服务，异常支付特征可能触发风控；汇率波动可能抹平价差。
+      <strong>算一笔账再动手：</strong>相对网页年付 $17/月，多数地区换区是负收益。
+    </div>
+  </div>
+</section>
+
+<!-- GPT / Grok 行情 -->
+<section class="section" id="market">
+  <div class="wrap">
+    <h2>ChatGPT 与 Grok 行情<span class="h2-tag">跨家对比</span></h2>
+    <p class="section-sub">
+      横向看三家主力模型的 API 价格与订阅档位。每组数据都带核验状态：
+      <span class="vb vb-ok">已核验 + 日期</span> 表示从官方页面原文抓到的现价；
+      <span class="vb vb-wait">待管线核验</span> 表示官网有 bot 防护，本站按规则<strong>不展示未核验数字</strong>，待海外管线抓到后自动显示。
+    </p>
+
+    <div class="calc-compare" style="margin-bottom:20px">
+      <div class="chart-head">
+        <h3>旗舰模型 API 价格对比（$/百万 token）</h3>
+        <div class="cross-legend">
+          <span class="lg-item"><span class="lg-swatch"></span>输入</span>
+          <span class="lg-item"><span class="lg-swatch lg-swatch-out"></span>输出</span>
+        </div>
+      </div>
+      <div id="crossChart" class="cross-chart"></div>
+    </div>
+
+    <div class="vendor-grid">
+      <div class="vendor-card">
+        <h3>ChatGPT / OpenAI</h3>
+        <div id="openaiSubs"></div>
+        <div id="openaiApi"></div>
+      </div>
+      <div class="vendor-card">
+        <h3>Grok / xAI</h3>
+        <div id="xaiSubs"></div>
+        <div id="xaiApi"></div>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:14px">对比口径提示：三家的订阅额度规则、模型能力与上下文长度差异很大，单看单价会误导——API 选型请结合任务实测；订阅档位请结合你的日用量。</p>
+  </div>
+</section>
+
+<!-- 数据来源账本 -->
+<section class="section" id="sources">
+  <div class="wrap">
+    <h2>数据来源账本<span class="h2-tag">每个数字可追溯</span></h2>
+    <p class="section-sub">本站规则：<strong>价格必须核验自官方来源才展示</strong>。下表是全站每一组数据的来源、核验方式与状态；标"待核验"的组，页面上对应位置不显示数字，管线抓到官方页面后自动回填。</p>
+    <div class="table-scroll">
+      <table class="cmp-table">
+        <thead>
+          <tr><th>数据组</th><th>状态</th><th>官方来源</th></tr>
+        </thead>
+        <tbody id="provTableBody"><!-- JS 渲染 --></tbody>
+      </table>
+    </div>
+    <p class="fine">核验方式：已核验 = 从官方页面原文抓取比对；待核验 = 目标页面对本站抓取节点有访问限制（bot 防护 / 地区重定向），待海外管线节点抓取。管线同时对全部官方定价页做每日变更检测，官网改价会自动报警。</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <h2>常见问题</h2>
+    <div class="faq-list">
+      <details>
+        <summary>中国大陆可以直接订阅 Claude 吗？</summary>
+        <p>Anthropic 目前不向中国大陆提供服务，注册需要受支持地区的手机号，支付需要海外发行的银行卡。这是官方政策限制，本站不提供绕过方法。如果你在受支持地区有合法的居住、工作或收款关系，按该地区正常订阅即可。</p>
+      </details>
+      <details>
+        <summary>为什么网页版比 App Store 便宜？</summary>
+        <p>苹果对应用内购抽成 15–30%，Anthropic 与多数订阅制产品一样把这部分成本反映在 iOS 内购价上。在 claude.ai 网页端订阅后，App 内直接登录使用，功能没有区别。iOS 各档具体挂牌价以管线核验后的渠道价差板块为准。</p>
+      </details>
+      <details>
+        <summary>换区买便宜订阅到底有什么风险？</summary>
+        <p>三层风险：① 商店条款——虚构账单地址违反 Apple 服务条款，账号可能被限制；② 支付——换区后原支付方式失效，需持续购买该区礼品卡；③ 服务——Anthropic 按账号所在地区提供服务，异常支付特征可能触发风控。App Store 价含苹果抽成，相对网页年付 $17/月，省下的差价通常不值得这些风险。</p>
+      </details>
+      <details>
+        <summary>订阅和 API 怎么选？</summary>
+        <p>固定月费换固定额度 = 订阅；按量付费 = API。经验法则：日常对话 + 编码助手用订阅（Pro/Max），可预估、可控；生产系统、批量任务、自建产品用 API，配合 Batch（5 折）和缓存（~1 折读取）优化。两者不互斥，很多工程师是 Max 订阅 + 生产 API 并行。</p>
+      </details>
+      <details>
+        <summary>Sonnet 5 限时价结束后会怎样？</summary>
+        <p>2026-08-31 后输入/输出从 $2/$10 恢复到 $3/$15。如果你有大批量离线任务，可以考虑在截止前用 Batch API（叠加后相当于 $1/$5）跑完。</p>
+      </details>
+      <details>
+        <summary>Pro / Max 订阅能用最强的模型吗？</summary>
+        <p>订阅档位决定的是用量额度和功能入口，可用模型以产品内实际列表为准。最新旗舰模型（如 Fable 5）的开放范围与档位要求以官方公告为准，本站不做保证性描述。</p>
+      </details>
+      <details>
+        <summary>这个站和 Anthropic 什么关系？数据多久更新？</summary>
+        <p>没有关系——这是独立的第三方信息站，不接受跨区代购类广告。价格数据集中在一份数据文件里，由每日运行的自动抓取管线核验（数据版本 <span class="data-date">—</span>），来源为各家官方定价页与 App Store 公开挂牌价。每个数字都标注核验状态，官网价格一变动管线会自动报警。发现数据过期请联系我们更正。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p><strong>数据来源：</strong>claude.com/pricing（订阅价，核验 2026-07-11）· Anthropic 官方开发者文档（API 价，核验 2026-07-11）· developers.openai.com（OpenAI API 价，抓取 2026-07-12）· docs.x.ai（xAI API 价，抓取 2026-07-12）· Apple App Store 各区挂牌价（2026-07）· 汇率为公开市场价。全部价格数据集中于 <code>data/prices.json</code>，由自动抓取管线每日核验（<span class="data-date">—</span> 为当前数据版本）。</p>
+    <p>本站为独立第三方信息站，与 Anthropic、OpenAI、xAI 均无关联。Claude / ChatGPT / Grok 为各自公司商标。地址生成器为第三方工具，本站不对其服务负责。价格可能变动，下单前请以官方页面为准。</p>
+    <p class="fine">© 2026 Claude 定价站 · 只推荐合规省钱路径</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
