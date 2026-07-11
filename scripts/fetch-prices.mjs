@@ -48,7 +48,7 @@ const CC_ISO3 = {
 // 官方定价页监测清单
 const WATCH_PAGES = [
   { key: "claude-pricing", url: "https://claude.com/pricing" },
-  { key: "anthropic-api-docs", url: "https://platform.claude.com/docs/en/pricing.md" },
+  { key: "anthropic-api-docs", url: "https://platform.claude.com/docs/en/about-claude/models/overview.md" },
   { key: "openai-api-pricing", url: "https://developers.openai.com/api/docs/pricing" },
   { key: "xai-models", url: "https://docs.x.ai/docs/models" },
 ];
@@ -69,7 +69,7 @@ async function get(url) {
 // Apple 的数据是无键名的嵌套数组，形如 ["Claude Pro", "$19.99", ...]，
 // 同时保留对象形态 {name, price} 的兼容匹配。
 const MONEY_RE = /^(?:US?\$|CA\$|A\$|MX\$|R\$|HK\$|NT\$|\$|€|£|¥|₹|₩|₱|₦|₺|₨|Rs\.?\s?|EGP\s?|TRY\s?|kr\.?\s?|USD|EUR)?\s?[0-9][0-9.,\s]*(?:\s?(?:kr\.?|€|USD))?$/;
-const NAME_RE = /^[A-Za-z][\w\s.+&'-]{2,59}$/;
+const NAME_RE = /^[\p{L}][\p{L}\p{N}\s.+&'\-–—:：]{2,59}$/u;
 function scanForIAP(node, out = []) {
   if (!node || typeof node !== "object") return out;
   if (Array.isArray(node)) {
@@ -268,9 +268,10 @@ async function main() {
     const cur = CC_CURRENCY[cc];
     return fx && fx[cur] ? +(num / fx[cur]).toFixed(2) : null;
   };
-  // 只取月付 SKU 进对比表（年付单独记录），避免 Annual 覆盖 Monthly
+  // 月付 SKU 进对比表（排除各语言的年付标记），避免 Annual 覆盖 Monthly
+  const ANNUAL_RE = /annual|yearly|\byear\b|年間|年额|연간|jährlich|annuel|anual|yıllık|årlig/i;
   const classify = name => {
-    if (!/monthly/i.test(name)) return null;
+    if (ANNUAL_RE.test(name)) return null;
     if (/max.*20|20x/i.test(name)) return "max20x";
     if (/max/i.test(name)) return "max5x";
     if (/pro/i.test(name)) return "pro";
