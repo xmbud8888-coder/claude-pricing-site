@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-07-11T19:05:07.719Z",
+  "ranAt": "2026-07-11T19:08:52.714Z",
   "apple": {
     "claude": {
       "us": {
@@ -107,16 +107,16 @@
         "ok": true,
         "iaps": [
           {
-            "name": "Claude Pro - Monthly",
-            "price": "EGP 999.99"
+            "name": "Claude Max 20x - Monthly",
+            "price": "EGP 12,999.99"
           },
           {
             "name": "Claude Max 5x - Monthly",
             "price": "EGP 6,999.99"
           },
           {
-            "name": "Claude Max 20x - Monthly",
-            "price": "EGP 12,999.99"
+            "name": "Claude Pro - Monthly",
+            "price": "EGP 999.99"
           }
         ]
       },
@@ -404,8 +404,11 @@
       "removed": []
     },
     "anthropic-api-docs": {
-      "ok": false,
-      "reason": "HTTP 404"
+      "ok": true,
+      "hash": "ae46f8a9b0f46d78",
+      "changedSinceLastRun": false,
+      "added": [],
+      "removed": []
     },
     "openai-api-pricing": {
       "ok": true,
