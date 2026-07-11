@@ -301,8 +301,7 @@ function renderPlayTable() {
 function renderPPP() {
   const el = $("pppChart");
   const rows = D.claude.regions
-    .filter(r => r.pro != null && r.localAmount != null && r.pppex != null)
-    .map(r => ({ ...r, ppp: r.localAmount / r.pppex }))
+    .filter(r => r.pro != null && r.ppp != null)
     .sort((a, b) => b.ppp - a.ppp);
   if (!rows.length) {
     el.innerHTML = `<p class="fine">购买力对比需要「各区价格（Apple 管线）+ IMF 购买力换算率」两组数据核验后显示。</p>`;

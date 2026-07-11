@@ -109,6 +109,11 @@ async function fetchAppleIAP(appKey, cc) {
       // 过滤到订阅类条目，去噪
       .filter(x => /pro|max|plus|super|premium|month|年|月/i.test(x.name))
       .filter((x, i, arr) => arr.findIndex(y => y.name === x.name && y.price === x.price) === i);
+    if (!iaps.length) {
+      // 诊断探针：该区页面里出现过哪些金额样式（供人工判断结构差异/是否未公示）
+      const probe = [...new Set([...text.matchAll(/(?:US?\$|€|£|¥|₩|₹|₺|₦|₱|₨|kr\.?|R\$)\s?[\d.,]+|[\d.,]+\s?원/g)].map(x => x[0]))].slice(0, 8);
+      return { ok: true, iaps, probe };
+    }
     return { ok: true, iaps };
   } catch (e) {
     return { ok: false, reason: "JSON 解析失败: " + e.message };
@@ -322,6 +327,20 @@ async function main() {
       }
     }
   }
+  // PPP 负担（国际元）= 本币金额 / PPPEX；美元挂牌区（如阿根廷）先按市场汇率折成本币
+  const PPP_LOCAL_CUR = { ar: "ARS" };
+  for (const region of prices.claude.regions) {
+    if (region.localAmount == null || region.pppex == null) continue;
+    let lcu = region.localAmount;
+    const cur = PPP_LOCAL_CUR[region.cc];
+    if (cur) {
+      if (!fx || !fx[cur]) continue;
+      lcu = region.localAmount * fx[cur];
+    }
+    region.ppp = +(lcu / region.pppex).toFixed(2);
+    changed = true;
+  }
+
   // 仅当确实回填了 Apple 数据才把账本转已核验
   if (appleFilled > 0) {
     const prov = (prices.provenance || []).find(p => p.key === "appstore");
