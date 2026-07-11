@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 各国 Claude 价格对比 | Claude 哪个国家最便宜</title>
-<meta name="description" content="比较 Claude 订阅在全球 App Store 与 Google Play 各区域的价格：最便宜/最贵国家排行、完整价格表、购买力对比、换区订阅指南。数据每日自动抓取官方商店页核验。">
+<title>2026 各国 ChatGPT 价格对比 | ChatGPT 哪个国家最便宜</title>
+<meta name="description" content="比较 ChatGPT 订阅（Plus / Pro / Go）在全球 App Store 与 Google Play 各区域的价格：最便宜/最贵国家排行、完整价格表、购买力对比、换区订阅指南。数据每日自动抓取官方商店页核验。">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 </head>
-<body data-product="claude">
+<body data-product="chatgpt">
 
 <nav class="topnav">
   <div class="wrap topnav-in">
@@ -30,8 +30,8 @@
 <!-- 产品切换（对齐对手站的产品导航） -->
 <div class="prodnav">
   <div class="wrap prodnav-in">
-    <a class="prod-tab active" href="index.html">Claude</a>
-    <a class="prod-tab" href="chatgpt.html">ChatGPT</a>
+    <a class="prod-tab" href="index.html">Claude</a>
+    <a class="prod-tab active" href="chatgpt.html">ChatGPT</a>
     <a class="prod-tab" href="grok.html">Grok</a>
   </div>
 </div>
@@ -42,10 +42,10 @@
 <header class="app-hero" id="top">
   <div class="wrap">
     <div class="app-head">
-      <div class="app-icon">✳</div>
+      <div class="app-icon">◎</div>
       <div>
-        <h1><a href="https://claude.ai/" rel="noopener" target="_blank">Claude 全球定价</a></h1>
-        <p class="app-dev">开发者：Anthropic</p>
+        <h1><a href="https://chatgpt.com/" rel="noopener" target="_blank">ChatGPT 全球定价</a></h1>
+        <p class="app-dev">开发者：OpenAI</p>
       </div>
     </div>
     <p class="app-summary" id="heroSummary">
@@ -60,7 +60,7 @@
   <div class="wrap">
     <div class="panel">
       <div class="chart-head">
-        <h2 class="panel-h">Claude 全球价格地图</h2>
+        <h2 class="panel-h">ChatGPT 全球价格地图</h2>
         <div class="head-tools">
           <div class="seg" id="tierSeg" role="tablist" aria-label="订阅方案"></div>
           <button class="share-btn" id="shareBtn">分享</button>
@@ -84,11 +84,11 @@
   <div class="wrap">
     <div class="top3-grid">
       <div class="top3-card">
-        <h2 class="panel-h">↓ Claude 最便宜的国家</h2>
+        <h2 class="panel-h">↓ ChatGPT 最便宜的国家</h2>
         <ol id="top3Cheap" class="top3-list"></ol>
       </div>
       <div class="top3-card">
-        <h2 class="panel-h">↑ Claude 最贵的国家</h2>
+        <h2 class="panel-h">↑ ChatGPT 最贵的国家</h2>
         <ol id="top3Rich" class="top3-list"></ol>
       </div>
     </div>
@@ -136,7 +136,7 @@
   <div class="wrap">
     <div class="panel">
       <div class="chart-head">
-        <h2 class="panel-h">Claude 定价 vs 本地购买力</h2>
+        <h2 class="panel-h">ChatGPT 定价 vs 本地购买力</h2>
       </div>
       <p class="fine" style="margin:0 0 16px">空心圆 = 标价 · 实心圆 = 按购买力平价折算后的本地实际负担 · 美国 = 基准（IMF PPPEX 官方数据）</p>
       <div id="pppChart" class="ppp-chart-inner"></div>
@@ -170,7 +170,7 @@
       <div class="step-card">
         <div class="step-num">4</div>
         <h3>App 内完成订阅</h3>
-        <p>用该账户登录 App Store 下载 Claude，在 App 内购买订阅，费用从礼品卡余额扣除。到期续费同样依赖余额，记得提前充值以免订阅中断。</p>
+        <p>用该账户登录 App Store 下载 ChatGPT，在 App 内购买订阅，费用从礼品卡余额扣除。到期续费同样依赖余额，记得提前充值以免订阅中断。</p>
       </div>
     </div>
   </div>
@@ -179,22 +179,22 @@
 <!-- FAQ -->
 <section class="section" id="faq">
   <div class="wrap">
-    <h2>Claude 订阅定价 FAQ</h2>
+    <h2>ChatGPT 订阅定价 FAQ</h2>
     <div class="faq-list">
       <details>
-        <summary>哪个国家的 Claude 订阅最便宜？</summary>
+        <summary>哪个国家的 ChatGPT 订阅最便宜？</summary>
         <p id="faqCheapest">见上方"最便宜的国家"排行，数据每日自动核验更新。</p>
       </details>
       <details>
-        <summary>为什么 Claude 在英国和欧洲这么贵？</summary>
-        <p>欧洲各国 20–25% 的增值税直接计入挂牌价，叠加汇率因素，使英国、德国、法国、丹麦等地明显高于美区基准。比较全球价格可以帮你找到更具性价比的订阅地区。</p>
+        <summary>为什么 ChatGPT 在英国和欧洲这么贵？</summary>
+        <p>欧洲各国 20–25% 的增值税直接计入挂牌价，叠加汇率因素，通常使欧洲地区高于美区基准。比较全球价格可以帮你找到更具性价比的订阅地区。</p>
       </details>
       <details>
         <summary>切换 App Store 地区有风险吗？</summary>
         <p>有三层风险：① 虚构账单地址违反 Apple 服务条款，账号可能被限制；② 换区后原支付方式失效，需持续购买该区礼品卡（礼品卡渠道存在诈骗风险）；③ 异常支付特征可能触发服务风控。表中"风险"列标注了各区所需条件，请自行评估。</p>
       </details>
       <details>
-        <summary>Claude 在 Google Play、网页版和 App Store 之间有价格差异吗？</summary>
+        <summary>ChatGPT 在 Google Play、网页版和 App Store 之间有价格差异吗？</summary>
         <p>通常有。官网网页直订一般最便宜（已核验的网页价见价格表下方注释）；App Store 内购含苹果 15–30% 抽成，普遍更高；Google Play 各区内购区间见上方板块。同一账号在任何平台登录使用，功能没有区别。</p>
       </details>
       <details>
@@ -203,7 +203,7 @@
       </details>
       <details>
         <summary>本站的数据来自哪里？多久更新？</summary>
-        <p>价格数据由自动管线每日直接抓取 Apple App Store 与 Google Play 各区官方商店页；订阅网页价核验自 claude.com/pricing 与官方帮助中心；购买力数据来自 IMF DataMapper（PPPEX）；汇率取公开市场价。每组数据的来源与核验日期见页尾"数据来源账本"，官方改价时管线自动报警。本站为独立第三方站点，与 Anthropic 无关联。</p>
+        <p>价格数据由自动管线每日直接抓取 Apple App Store 与 Google Play 各区官方商店页；购买力数据来自 IMF DataMapper（PPPEX）；汇率取公开市场价。每组数据的来源与核验日期见页尾"数据来源账本"，官方改价时管线自动报警。本站为独立第三方站点，与 OpenAI 无关联。</p>
       </details>
     </div>
   </div>
@@ -229,8 +229,8 @@
 
 <footer class="footer">
   <div class="wrap">
-    <p>价格数据来自 Apple App Store 与 Google Play 官方商店页（管线每日直抓）；订阅网页价来自 claude.com/pricing；购买力（PPP）数据来自 IMF DataMapper；汇率取自公开市场数据。最近核验：<span class="data-date">—</span>。</p>
-    <p>本站为独立第三方信息站，与 Anthropic 无关联。Claude 是 Anthropic 的商标。地址生成器为第三方工具，本站不对其服务负责。价格可能变动，下单前请以官方页面为准。</p>
+    <p>价格数据来自 Apple App Store 与 Google Play 官方商店页（管线每日直抓）；购买力（PPP）数据来自 IMF DataMapper；汇率取自公开市场数据。最近核验：<span class="data-date">—</span>。</p>
+    <p>本站为独立第三方信息站，与 OpenAI 无关联。ChatGPT 是 OpenAI 的商标。地址生成器为第三方工具，本站不对其服务负责。价格可能变动，下单前请以官方页面为准。</p>
     <p class="fine">© 2026 Claude 定价站</p>
   </div>
 </footer>
