@@ -1,7 +1,120 @@
 {
-  "ranAt": "2026-07-11T18:44:03.409Z",
-  "apple": {},
-  "watch": {},
+  "ranAt": "2026-07-11T18:52:55.952Z",
+  "apple": {
+    "claude": {
+      "us": {
+        "ok": true,
+        "iaps": []
+      },
+      "jp": {
+        "ok": true,
+        "iaps": []
+      },
+      "pk": {
+        "ok": true,
+        "iaps": []
+      },
+      "ca": {
+        "ok": true,
+        "iaps": []
+      },
+      "ar": {
+        "ok": true,
+        "iaps": []
+      },
+      "eg": {
+        "ok": true,
+        "iaps": []
+      },
+      "au": {
+        "ok": true,
+        "iaps": []
+      },
+      "ph": {
+        "ok": true,
+        "iaps": []
+      },
+      "in": {
+        "ok": true,
+        "iaps": []
+      },
+      "tr": {
+        "ok": true,
+        "iaps": []
+      },
+      "ng": {
+        "ok": true,
+        "iaps": []
+      },
+      "kr": {
+        "ok": true,
+        "iaps": []
+      },
+      "mx": {
+        "ok": true,
+        "iaps": []
+      },
+      "de": {
+        "ok": true,
+        "iaps": []
+      },
+      "fr": {
+        "ok": true,
+        "iaps": []
+      },
+      "br": {
+        "ok": true,
+        "iaps": []
+      },
+      "gb": {
+        "ok": true,
+        "iaps": []
+      },
+      "dk": {
+        "ok": true,
+        "iaps": []
+      }
+    },
+    "chatgpt": {
+      "us": {
+        "ok": true,
+        "iaps": []
+      }
+    },
+    "grok": {
+      "us": {
+        "ok": true,
+        "iaps": []
+      }
+    }
+  },
+  "watch": {
+    "claude-pricing": {
+      "ok": true,
+      "hash": "ae4c2a9e12a9260d",
+      "changedSinceLastRun": false,
+      "added": [],
+      "removed": []
+    },
+    "anthropic-api-docs": {
+      "ok": false,
+      "reason": "HTTP 404"
+    },
+    "openai-api-pricing": {
+      "ok": true,
+      "hash": "26b462f86191ff83",
+      "changedSinceLastRun": false,
+      "added": [],
+      "removed": []
+    },
+    "xai-models": {
+      "ok": true,
+      "hash": "94e033c5bbb98455",
+      "changedSinceLastRun": false,
+      "added": [],
+      "removed": []
+    }
+  },
   "warnings": [],
   "play": {
     "claude": {
@@ -90,5 +203,9 @@
         "range": "$4.99 - $299.99"
       }
     }
+  },
+  "imfPPP": {
+    "ok": true,
+    "year": "2026"
   }
 }

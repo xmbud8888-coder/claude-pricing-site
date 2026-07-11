@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12",
+  "updatedAt": "2026-07-11",
   "policy": "所有数字必须核验自官方来源才展示；未核验的字段为 null，由管线抓官方页面后回填",
   "provenance": [
     {
@@ -63,8 +63,9 @@
     {
       "key": "imf-ppp",
       "label": "购买力平价换算率（PPP 对比用）",
-      "status": "pending",
-      "source": "IMF DataMapper API（PPPEX 隐含换算率），待管线抓取"
+      "status": "verified",
+      "source": "IMF DataMapper API（PPPEX，2026 年值）",
+      "verifiedAt": "2026-07-11"
     }
   ],
   "claude": {
@@ -159,7 +160,7 @@
         "riskNote": "",
         "play": "$20.00 - $279.99",
         "localAmount": null,
-        "pppex": null
+        "pppex": 1
       },
       {
         "flag": "🇯🇵",
@@ -175,7 +176,7 @@
         "riskNote": "",
         "play": "¥3,400 - ¥42,500",
         "localAmount": null,
-        "pppex": null
+        "pppex": 93.306
       },
       {
         "flag": "🇵🇰",
@@ -191,7 +192,7 @@
         "riskNote": "需本地账单地址、IP 与礼品卡",
         "play": "Rs 4,900 - Rs 61,250",
         "localAmount": null,
-        "pppex": null
+        "pppex": 70.827
       },
       {
         "flag": "🇨🇦",
@@ -207,7 +208,7 @@
         "riskNote": "",
         "play": "$28.00 - $350.00",
         "localAmount": null,
-        "pppex": null
+        "pppex": 1.174
       },
       {
         "flag": "🇦🇷",
@@ -223,7 +224,7 @@
         "riskNote": "需本地账单地址、IP 与礼品卡",
         "play": null,
         "localAmount": null,
-        "pppex": null
+        "pppex": 728.957
       },
       {
         "flag": "🇪🇬",
@@ -239,7 +240,7 @@
         "riskNote": "需本地账单地址、IP 与礼品卡",
         "play": "EGP 1,099.99 - EGP 13,749.88",
         "localAmount": null,
-        "pppex": null
+        "pppex": 8.292
       },
       {
         "flag": "🇦🇺",
@@ -255,7 +256,7 @@
         "riskNote": "",
         "play": "$33.99 - $424.88",
         "localAmount": null,
-        "pppex": null
+        "pppex": 1.437
       },
       {
         "flag": "🇵🇭",
@@ -271,7 +272,7 @@
         "riskNote": "",
         "play": "₱1,300.00 - ₱16,250.00",
         "localAmount": null,
-        "pppex": null
+        "pppex": 19.218
       },
       {
         "flag": "🇮🇳",
@@ -287,7 +288,7 @@
         "riskNote": "",
         "play": "₹1,999.00 - ₹24,987.50",
         "localAmount": null,
-        "pppex": null
+        "pppex": 20.343
       },
       {
         "flag": "🇹🇷",
@@ -303,7 +304,7 @@
         "riskNote": "需本地账单地址、IP 与礼品卡",
         "play": "TRY 799.99 - TRY 9,999.88",
         "localAmount": null,
-        "pppex": null
+        "pppex": 20.204
       },
       {
         "flag": "🇳🇬",
@@ -319,7 +320,7 @@
         "riskNote": "需本地账单地址、IP 与礼品卡",
         "play": "₦33,500.00 - ₦418,750.00",
         "localAmount": null,
-        "pppex": null
+        "pppex": 218.339
       },
       {
         "flag": "🇰🇷",
@@ -335,7 +336,7 @@
         "riskNote": "",
         "play": "₩30,000 - ₩375,000",
         "localAmount": null,
-        "pppex": null
+        "pppex": 787.181
       },
       {
         "flag": "🇲🇽",
@@ -351,7 +352,7 @@
         "riskNote": "",
         "play": "MX$399.00 - MX$4,987.50",
         "localAmount": null,
-        "pppex": null
+        "pppex": 10.507
       },
       {
         "flag": "🇩🇪",
@@ -367,7 +368,7 @@
         "riskNote": "",
         "play": "€22.00 - €275.00",
         "localAmount": null,
-        "pppex": null
+        "pppex": 0.722
       },
       {
         "flag": "🇫🇷",
@@ -383,7 +384,7 @@
         "riskNote": "",
         "play": "€22.00 - €275.00",
         "localAmount": null,
-        "pppex": null
+        "pppex": 0.644
       },
       {
         "flag": "🇧🇷",
@@ -399,7 +400,7 @@
         "riskNote": "",
         "play": "R$110.00 - R$1,375.00",
         "localAmount": null,
-        "pppex": null
+        "pppex": 2.613
       },
       {
         "flag": "🇬🇧",
@@ -415,7 +416,7 @@
         "riskNote": "",
         "play": "£18.00 - £225.00",
         "localAmount": null,
-        "pppex": null
+        "pppex": 0.665
       },
       {
         "flag": "🇩🇰",
@@ -431,7 +432,7 @@
         "riskNote": "",
         "play": "179,00 kr. - 2.237,50 kr.",
         "localAmount": null,
-        "pppex": null
+        "pppex": 5.881
       }
     ]
   },
@@ -511,7 +512,7 @@
     },
     "playUS": {
       "range": "$8.00 - $200.00",
-      "verifiedAt": "2026-07-12",
+      "verifiedAt": "2026-07-11",
       "source": "play.google.com 美区商店页"
     }
   },
@@ -564,7 +565,7 @@
     },
     "playUS": {
       "range": "$4.99 - $299.99",
-      "verifiedAt": "2026-07-12",
+      "verifiedAt": "2026-07-11",
       "source": "play.google.com 美区商店页"
     }
   }
