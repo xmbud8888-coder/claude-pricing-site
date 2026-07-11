@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026 各国 CapCut 价格对比 | CapCut 哪个国家最便宜</title>
 <meta name="description" content="比较 CapCut 订阅（Pro）在全球 App Store 与 Google Play 各区域的价格：最便宜/最贵国家排行、完整价格表、购买力对比、换区订阅指南。数据每日自动抓取官方商店页核验。">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3d2">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 </head>
 <body data-product="capcut">
@@ -58,8 +58,18 @@
         <h2 class="panel-h">CapCut 全球价格地图</h2>
         <div class="head-tools">
           <div class="seg" id="tierSeg" role="tablist" aria-label="订阅方案"></div>
+          <div class="seg" id="mapViewSeg" role="tablist" aria-label="视图">
+            <button class="seg-btn" data-view="3d" role="tab">3D</button>
+            <button class="seg-btn" data-view="2d" role="tab">平面</button>
+          </div>
           <button class="share-btn" id="shareBtn">分享</button>
         </div>
+      </div>
+      <div id="scene3d" class="scene3d" hidden>
+        <div class="scene3d-stage" id="scene3dStage">
+          <div class="scene3d-plane" id="scene3dPlane"></div>
+        </div>
+        <p class="fine scene3d-hint">拖拽旋转 · 柱高 = 价格 · 颜色 = 相对美区贵/便宜</p>
       </div>
       <div id="heatTiles" class="heat-grid"></div>
       <p class="fine heat-legend">相对美区基准：<span class="hl-chip heat-cheap">更便宜</span><span class="hl-chip heat-base">±5%</span><span class="hl-chip heat-warm">+5~20%</span><span class="hl-chip heat-hot">+20% 以上</span></p>
@@ -230,6 +240,6 @@
   </div>
 </footer>
 
-<script src="app.js"></script>
+<script src="app.js?v=3d2"></script>
 </body>
 </html>

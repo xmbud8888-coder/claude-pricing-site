@@ -38,6 +38,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 64px; }
 body {
   margin: 0;
@@ -111,6 +112,77 @@ b, strong { font-weight: 650; }
 .heat-legend { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 12px 0 4px; }
 .hl-chip { display: inline-block; border-radius: 5px; padding: 1px 8px; font-size: 11.5px; border: 1px solid var(--border); }
 .ppp-chart-inner { display: flex; flex-direction: column; gap: 10px; }
+
+/* ============ 3D 价格柱状地形 ============ */
+.scene3d {
+  --rz: -38deg;             /* 拖拽旋转角（JS 更新） */
+  user-select: none; -webkit-user-select: none;
+  touch-action: pan-y;
+}
+.scene3d-stage {
+  height: 440px; display: grid; place-items: center;
+  perspective: 1400px; cursor: grab; overflow: hidden;
+}
+.scene3d-stage:active { cursor: grabbing; }
+.scene3d-plane {
+  --cols: 6;
+  width: 640px; height: 320px;
+  display: grid; grid-template-columns: repeat(var(--cols), 1fr); gap: 14px;
+  transform-style: preserve-3d;
+  transform: rotateX(52deg) rotateZ(var(--rz));
+  transition: transform .12s linear;
+}
+.c3 { position: relative; transform-style: preserve-3d; }
+.c3 .face { position: absolute; border-radius: 3px; }
+.c3 .top {
+  inset: 0; display: grid; place-items: center;
+  transform: translateZ(var(--h)); transition: transform .7s cubic-bezier(.35,0,.15,1);
+  transform-style: preserve-3d;   /* 让标签能做反向 3D 竖立 */
+  background: var(--c3-top);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.25);
+}
+.c3 .s1 {  /* 前立面 */
+  left: 0; right: 0; bottom: 0; height: var(--h);
+  transform-origin: bottom; transform: rotateX(-90deg);
+  transition: height .7s cubic-bezier(.35,0,.15,1);
+  background: var(--c3-s1); border-radius: 0;
+}
+.c3 .s2 {  /* 右立面 */
+  top: 0; bottom: 0; right: 0; width: var(--h);
+  transform-origin: right; transform: rotateY(90deg);
+  transition: width .7s cubic-bezier(.35,0,.15,1);
+  background: var(--c3-s2); border-radius: 0;
+}
+.c3 .lbl { /* 顶面标签：平贴柱顶，反转 rz 保持朝向观察者 */
+  transform: translateZ(1px) rotateZ(calc(var(--rz) * -1));
+  display: flex; flex-direction: column; align-items: center; gap: 0;
+  font-size: 12px; line-height: 1.15; color: #1d1d1f;
+  pointer-events: none; white-space: nowrap; font-weight: 600;
+}
+.c3 .lbl b { font-size: 14px; font-variant-numeric: tabular-nums; }
+.c3.heat-none .lbl { color: var(--muted); }
+.c3:hover .top { filter: brightness(1.1); }
+/* 颜色：沿用发散语义（蓝=便宜 红=贵），立面为顶面的加深版 */
+.c3.heat-cheap { --c3-top: #86b6ef; --c3-s1: #5598e7; --c3-s2: #3987e5; }
+.c3.heat-base  { --c3-top: #d5d5da; --c3-s1: #bcbcc2; --c3-s2: #a5a5ac; }
+.c3.heat-warm  { --c3-top: #f2b3b2; --c3-s1: #e88a89; --c3-s2: #e34948; }
+.c3.heat-hot   { --c3-top: #ec8988; --c3-s1: #e35f5e; --c3-s2: #c93a39; }
+.c3.heat-none  { --c3-top: color-mix(in srgb, var(--ink) 8%, var(--surface)); --c3-s1: color-mix(in srgb, var(--ink) 14%, var(--surface)); --c3-s2: color-mix(in srgb, var(--ink) 20%, var(--surface)); }
+@media (prefers-color-scheme: dark) {
+  .c3 .top { box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); }
+  .c3.heat-base { --c3-top: #48484d; --c3-s1: #38383c; --c3-s2: #2a2a2e; }
+  .c3.heat-base .lbl, .c3.heat-none .lbl { color: #f5f5f7; }   /* 暗色柱顶用亮字 */
+}
+.scene3d-hint { text-align: center; margin-top: 2px; }
+@media (max-width: 640px) {
+  .scene3d-stage { height: 300px; }
+  .scene3d-plane { width: 420px; height: 210px; gap: 7px; }
+  .c3 .lbl { font-size: 9.5px; }
+  .c3 .lbl b { font-size: 10.5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .c3 .top, .c3 .s1, .c3 .s2, .scene3d-plane { transition: none; }
+}
 
 /* ============ hero ============ */
 .hero { padding: 72px 0 56px; border-bottom: 1px solid var(--hairline); }

@@ -72,8 +72,96 @@ function renderTierTabs() {
       });
       currentTier = btn.dataset.plan;
       renderRegionChart();
+      update3DColumns();   // 3D 柱高随档位平滑变形
     });
   });
+}
+
+/* ================= 3D 价格柱状地形（纯 CSS 3D，零依赖） ================= */
+
+const heatCls = (v, us) => {
+  if (v == null || us == null) return "heat-none";
+  const d = (v - us) / us * 100;
+  return d <= -5 ? "heat-cheap" : d < 5 ? "heat-base" : d < 20 ? "heat-warm" : "heat-hot";
+};
+
+function build3DMap() {
+  const plane = $("scene3dPlane");
+  if (!plane) return;
+  // 固定槽位（贵→便宜排一次：高柱在视觉后排不遮挡矮柱；档位切换只变高度不换位）
+  const order = [...R].sort((a, b) => (b[P.baseTier] ?? -1) - (a[P.baseTier] ?? -1));
+  plane.innerHTML = order.map(r => `
+    <div class="c3 heat-none" data-cc="${r.cc}" style="--h:6px">
+      <div class="face s1"></div>
+      <div class="face s2"></div>
+      <div class="face top"><span class="lbl"><span>${r.flag}</span><b>—</b></span></div>
+    </div>`).join("");
+  update3DColumns();
+}
+
+function update3DColumns() {
+  const plane = $("scene3dPlane");
+  if (!plane || plane.hidden) { /* 仍更新，切回 3D 时状态正确 */ }
+  const key = currentTier || P.baseTier;
+  const vals = R.map(r => r[key]).filter(v => v != null);
+  const us = R.find(r => r.cc === "us")?.[key];
+  const max = Math.max(...vals);
+  const H_MAX = 170;
+  plane.querySelectorAll(".c3").forEach(col => {
+    const r = R.find(x => x.cc === col.dataset.cc);
+    const v = r?.[key];
+    col.className = "c3 " + heatCls(v, us);
+    const lbl = col.querySelector(".lbl b");
+    if (v == null) {
+      col.style.setProperty("--h", "6px");
+      lbl.textContent = "—";
+      col.title = `${r.name} · 待核验`;
+    } else {
+      const h = max > 0 ? (v / max) * H_MAX : 0;   // 从零等比，不夸大价差
+      col.style.setProperty("--h", h.toFixed(1) + "px");
+      lbl.textContent = fmtUSD(v, 0);
+      col.title = `${r.name} · ${fmtUSD(v)}${us ? `（vs 美区 ${v === us ? "基准" : (v > us ? "+" : "") + Math.round((v - us) / us * 100) + "%"}）` : ""}`;
+    }
+  });
+}
+
+function init3DDrag() {
+  const stage = $("scene3dStage"), scene = $("scene3d");
+  if (!stage) return;
+  let dragging = false, startX = 0, startRz = -38;
+  const getRz = () => parseFloat(getComputedStyle(scene).getPropertyValue("--rz")) || -38;
+  stage.addEventListener("pointerdown", e => {
+    dragging = true; startX = e.clientX; startRz = getRz();
+    stage.setPointerCapture(e.pointerId);
+  });
+  stage.addEventListener("pointermove", e => {
+    if (!dragging) return;
+    const rz = Math.max(-80, Math.min(5, startRz + (e.clientX - startX) * 0.25));
+    scene.style.setProperty("--rz", rz + "deg");
+  });
+  ["pointerup", "pointercancel"].forEach(ev => stage.addEventListener(ev, () => { dragging = false; }));
+}
+
+function initMapView() {
+  const seg = $("mapViewSeg");
+  if (!seg) return;
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const saved = localStorage.getItem("mapView");
+  let view = saved || ((innerWidth > 700 && !reduced && rowsWithBase().length) ? "3d" : "2d");
+  const apply = v => {
+    view = v;
+    localStorage.setItem("mapView", v);
+    $("scene3d").hidden = v !== "3d";
+    $("heatTiles").hidden = v === "3d";
+    seg.querySelectorAll(".seg-btn").forEach(b => {
+      b.classList.toggle("active", b.dataset.view === v);
+      b.setAttribute("aria-selected", b.dataset.view === v ? "true" : "false");
+    });
+    if (v === "3d") update3DColumns();
+  };
+  seg.querySelectorAll(".seg-btn").forEach(b =>
+    b.addEventListener("click", () => apply(b.dataset.view)));
+  apply(view);
 }
 
 /* ================= 价格热力图 ================= */
@@ -312,6 +400,9 @@ async function boot() {
   renderProdNav();
   renderHero();
   renderTierTabs();
+  build3DMap();
+  init3DDrag();
+  initMapView();
   renderHeatTiles();
   renderRegionChart();
   renderTop3();
