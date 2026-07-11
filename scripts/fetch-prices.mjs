@@ -85,11 +85,16 @@ const NAME_RE = /^[\p{L}][\p{L}\p{N}\s.+&'\-–—:：]{2,59}$/u;
 function scanForIAP(node, out = []) {
   if (!node || typeof node !== "object") return out;
   if (Array.isArray(node)) {
-    for (let i = 0; i < node.length - 1; i++) {
-      const a = node[i], b = node[i + 1];
-      if (typeof a === "string" && typeof b === "string" &&
-          NAME_RE.test(a.trim()) && MONEY_RE.test(b.trim()) && /\d/.test(b)) {
-        out.push({ name: a.trim(), price: b.trim() });
+    for (let i = 0; i < node.length; i++) {
+      const b = node[i];
+      if (typeof b !== "string" || !MONEY_RE.test(b.trim()) || !/\d/.test(b)) continue;
+      // 向前最多 3 个元素找最近的名称串（部分应用 name 与 price 不相邻）
+      for (let j = i - 1; j >= Math.max(0, i - 3); j--) {
+        const a = node[j];
+        if (typeof a === "string" && NAME_RE.test(a.trim()) && !MONEY_RE.test(a.trim())) {
+          out.push({ name: a.trim(), price: b.trim() });
+          break;
+        }
       }
     }
     node.forEach(n => scanForIAP(n, out));
@@ -200,7 +205,27 @@ async function main() {
   // Apple：iTunes Search API（需海外节点），按开发商正则确认后写回配置
   async function discoverApple(appKey) {
     const st = prices.products[appKey].store || {};
-    if (st.appleId || !st.appleSearch) return;
+    if (st.appleId) return;
+    const sellerReC = new RegExp(st.sellerRe || ".", "i");
+    const nameReC = st.nameRe ? new RegExp(st.nameRe, "i") : null;
+    // 候选 ID 优先：lookup 校验开发商 + 应用名后锁定
+    for (const cand of st.appleIdCandidates || []) {
+      try {
+        const { status, text } = await get(`https://itunes.apple.com/lookup?id=${cand}&country=us`);
+        if (status !== 200) continue;
+        const hit = (JSON.parse(text).results || [])[0];
+        if (hit && (sellerReC.test(hit.sellerName || "") || sellerReC.test(hit.artistName || "")) &&
+            (!nameReC || nameReC.test(hit.trackName || ""))) {
+          st.appleId = String(hit.trackId);
+          changed = true;
+          report.warnings.push(`discoverApple(${appKey}): 候选校验锁定 ${hit.trackName} / id${hit.trackId}`);
+          return;
+        }
+        report.warnings.push(`discoverApple(${appKey}): 候选 id${cand} 校验不符（${hit?.trackName || "无结果"} / ${hit?.sellerName || ""}）`);
+      } catch (e) { report.warnings.push(`discoverApple(${appKey}) 候选校验: ${e.message}`); }
+      await sleep(300);
+    }
+    if (!st.appleSearch) return;
     try {
       const url = `https://itunes.apple.com/search?term=${encodeURIComponent(st.appleSearch)}&country=us&entity=software&limit=8`;
       const { status, text } = await get(url);

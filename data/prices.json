@@ -2078,7 +2078,10 @@
           "com.openai.sora"
         ],
         "devRe": "OpenAI",
-        "nameRe": "sora"
+        "nameRe": "sora",
+        "appleIdCandidates": [
+          "6744034028"
+        ]
       },
       "web": null,
       "regions": {}
@@ -2187,7 +2190,7 @@
         "appleId": null,
         "playPkg": null,
         "appleSearch": "Z.ai GLM",
-        "sellerRe": "Zhipu|Z\\.ai",
+        "sellerRe": "Zhipu|Z\\.ai|Knowledge Atlas|智谱",
         "playCandidates": [
           "ai.z.chat",
           "com.zhipuai.qingyan.international"
