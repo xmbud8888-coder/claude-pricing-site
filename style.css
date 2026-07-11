@@ -73,6 +73,41 @@ b, strong { font-weight: 650; }
 .navlinks a:hover { color: var(--ink); text-decoration: none; }
 @media (max-width: 760px) { .navlinks { display: none; } }
 
+/* ============ product nav (对齐对手站) ============ */
+.prodnav { border-bottom: 1px solid var(--hairline); background: var(--surface); }
+.prodnav-in { display: flex; gap: 8px; padding: 10px 24px; overflow-x: auto; }
+.prod-tab {
+  font-size: 13px; font-weight: 600; white-space: nowrap;
+  border: 1px solid var(--hairline); border-radius: 99px; padding: 5px 14px; color: var(--ink-2);
+}
+.prod-tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.prod-tab.disabled { opacity: .55; }
+
+/* ============ app hero（产品头） ============ */
+.app-hero { padding: 44px 0 36px; border-bottom: 1px solid var(--hairline); }
+.app-head { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+.app-icon {
+  width: 64px; height: 64px; border-radius: 16px; display: grid; place-items: center;
+  background: var(--accent); color: #fff; font-size: 34px; flex: none;
+}
+.app-hero h1 { font-size: clamp(26px, 4vw, 38px); margin: 0; font-weight: 800; }
+.app-hero h1 a { color: var(--ink); }
+.app-dev { margin: 2px 0 0; color: var(--ink-2); font-size: 14px; }
+.app-summary { max-width: 760px; font-size: 16.5px; color: var(--ink-2); margin: 0 0 10px; }
+.app-summary strong { color: var(--ink); }
+.app-meta { font-size: 13px; color: var(--muted); margin: 0; }
+
+/* ============ panel（卡片容器） ============ */
+.panel {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow);
+}
+.panel-h { font-size: 18px; margin: 0; font-weight: 750; }
+.head-tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.heat-legend { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 12px 0 4px; }
+.hl-chip { display: inline-block; border-radius: 5px; padding: 1px 8px; font-size: 11.5px; border: 1px solid var(--border); }
+.ppp-chart-inner { display: flex; flex-direction: column; gap: 10px; }
+
 /* ============ hero ============ */
 .hero { padding: 72px 0 56px; border-bottom: 1px solid var(--hairline); }
 .hero-kicker {
@@ -322,10 +357,11 @@ b, strong { font-weight: 650; }
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 16px 20px; box-shadow: var(--shadow);
 }
-.top3-card h3 { margin: 0 0 10px; font-size: 14.5px; }
+.top3-card h3, .top3-card .panel-h { margin: 0 0 10px; font-size: 15.5px; }
 .top3-list { margin: 0; padding: 0 0 0 22px; }
-.top3-list li { padding: 6px 0; font-size: 14.5px; display: flex; gap: 8px; align-items: baseline; }
-.top3-list li b { margin-left: auto; font-variant-numeric: tabular-nums; }
+.top3-list li { padding: 8px 0; font-size: 14.5px; display: flex; gap: 8px; align-items: baseline; }
+.top3-list li b { margin-left: auto; font-variant-numeric: tabular-nums; font-size: 15.5px; }
+.top3-list li .delta-pos, .top3-list li .delta-neg { font-size: 12px; }
 .t3-name { color: var(--ink-2); }
 
 .risk { display: inline-block; font-size: 11.5px; font-weight: 700; border-radius: 5px; padding: 1px 7px; }
