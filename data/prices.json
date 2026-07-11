@@ -818,11 +818,11 @@
         "eg": {
           "play": "EGP 220.00 - EGP 9,999.99",
           "go": 5.04,
-          "plus": 20.15,
-          "local": "EGP 999.99",
-          "localAmount": 999.99,
-          "pro": 201.54,
-          "ppp": 120.6
+          "plus": 201.54,
+          "local": "EGP 9,999.99",
+          "localAmount": 9999.99,
+          "pro": 108.83,
+          "ppp": 1205.98
         },
         "au": {
           "play": "$13.00 - $300.00",
@@ -836,11 +836,11 @@
         "ph": {
           "play": "₱300.00 - ₱9,990.00",
           "go": 4.87,
-          "plus": 16.23,
-          "local": "₱ 999.00",
-          "localAmount": 999,
-          "pro": 162.26,
-          "ppp": 51.98
+          "plus": 162.26,
+          "local": "₱ 9,990.00",
+          "localAmount": 9990,
+          "pro": 105.41,
+          "ppp": 519.83
         },
         "in": {
           "play": "₹399.00 - ₹19,900.00",
@@ -919,12 +919,12 @@
         },
         "dk": {
           "play": "64,00 kr. - 1.799,00 kr.",
-          "plus": 27.4,
-          "local": "179,00 kr",
-          "localAmount": 179,
+          "plus": 275.33,
+          "local": "1.799,00 kr",
+          "localAmount": 1799,
           "go": 9.8,
           "pro": 120.76,
-          "ppp": 30.44
+          "ppp": 305.9
         },
         "ar": {
           "plus": 19.99,
@@ -989,11 +989,11 @@
         },
         "pk": {
           "play": "Rs 1,400 - Rs 85,300",
-          "supergrok": 28.39,
-          "local": "Rs 7,900.00",
-          "localAmount": 7900,
+          "supergrok": 10.42,
+          "local": "Rs 2,900.00",
+          "localAmount": 2900,
           "heavy": 287.15,
-          "ppp": 111.54
+          "ppp": 40.94
         },
         "ca": {
           "play": "$6.99 - $424.99",
@@ -1095,7 +1095,7 @@
           "ppp": 45.11
         },
         "dk": {
-          "play": "41,00 kr. - 2.649,00 kr.",
+          "play": "41.00 kr. - 2,649.00 kr.",
           "supergrok": 38.11,
           "local": "249,00 kr",
           "localAmount": 249,
@@ -1867,10 +1867,10 @@
           "premier": 38.11
         },
         "ar": {
-          "pro": 10,
-          "local": "USD 10.00",
-          "localAmount": 10,
-          "ppp": 20.45,
+          "pro": 119.99,
+          "local": "USD 119.99",
+          "localAmount": 119.99,
+          "ppp": 245.41,
           "premier": 30
         }
       }
@@ -2150,7 +2150,7 @@
           "play": "₩30,000 - ₩570,000"
         },
         "mx": {
-          "play": "MX$395.00 - MX$7,749.00"
+          "play": "MX$399.00 - MX$4,987.50"
         },
         "de": {
           "play": "€18.99 - €379.99"
@@ -2187,7 +2187,7 @@
         ]
       ],
       "store": {
-        "appleId": null,
+        "appleId": "6450893458",
         "playPkg": null,
         "appleSearch": "Z.ai GLM",
         "sellerRe": "Zhipu|Z\\.ai|Knowledge Atlas|智谱",
