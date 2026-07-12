@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026 各国 Perplexity 价格对比 | Perplexity 哪个国家最便宜</title>
 <meta name="description" content="比较 Perplexity 订阅（Pro / Max）在全球 App Store 与 Google Play 各区域的价格：最便宜/最贵国家排行、完整价格表、购买力对比、换区订阅指南。数据每日自动抓取官方商店页核验。">
-<link rel="stylesheet" href="style.css?v=g2">
+<link rel="stylesheet" href="style.css?v=g3">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 </head>
 <body data-product="perplexity">
@@ -50,28 +50,30 @@
   </div>
 </header>
 
-<!-- 全球价格地图 -->
-<section class="section" id="map">
+<!-- 全球价格地图（通栏 hero） -->
+<section class="globe-hero" id="map">
+  <div class="globe-stage" id="globeStage">
+    <canvas id="globeCanvas"></canvas>
+    <div class="globe-tip" id="globeTip" hidden></div>
+    <div class="gh-head">
+      <div>
+        <h2 class="gh-title">Perplexity 全球价格地图</h2>
+        <p class="gh-sub">18 个国家 · 官方商店挂牌价 · 每日自动核验</p>
+      </div>
+      <div class="gh-tools">
+        <div class="seg seg-dark" id="tierSeg" role="tablist" aria-label="订阅方案"></div>
+        <button class="share-btn" id="shareBtn">分享</button>
+      </div>
+    </div>
+    <p class="gh-hint">拖拽旋转地球 · 光柱高度 = 价格 · <span class="gl-cheap">蓝</span> 比美区便宜 · <span class="gl-hot">红</span> 更贵 · 悬停看详情</p>
+  </div>
+</section>
+
+<!-- 各区月价（数据面板） -->
+<section class="section" id="mapdata">
   <div class="wrap">
     <div class="panel">
-      <div class="chart-head">
-        <h2 class="panel-h">Perplexity 全球价格地图</h2>
-        <div class="head-tools">
-          <div class="seg" id="tierSeg" role="tablist" aria-label="订阅方案"></div>
-          <div class="seg" id="mapViewSeg" role="tablist" aria-label="视图">
-            <button class="seg-btn" data-view="3d" role="tab">3D</button>
-            <button class="seg-btn" data-view="2d" role="tab">平面</button>
-          </div>
-          <button class="share-btn" id="shareBtn">分享</button>
-        </div>
-      </div>
-      <div id="scene3d" class="globe-wrap" hidden>
-        <div class="globe-stage" id="globeStage">
-          <canvas id="globeCanvas"></canvas>
-          <div class="globe-tip" id="globeTip" hidden></div>
-        </div>
-        <p class="fine scene3d-hint">拖拽旋转地球 · 光柱高度 = 价格 · <span class="gl-cheap">蓝</span> = 比美区便宜 · <span class="gl-hot">红</span> = 更贵 · 悬停光柱看详情</p>
-      </div>
+      <h3 class="block-h" style="margin-top:0">价格热力图<span class="fine-inline">相对美区基准</span></h3>
       <div id="heatTiles" class="heat-grid"></div>
       <p class="fine heat-legend">相对美区基准：<span class="hl-chip heat-cheap">更便宜</span><span class="hl-chip heat-base">±5%</span><span class="hl-chip heat-warm">+5~20%</span><span class="hl-chip heat-hot">+20% 以上</span></p>
       <h3 id="regionChartTitle" class="block-h">Pro 各区月价（美元折算）</h3>
@@ -241,6 +243,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=g2"></script>
+<script src="app.js?v=g3"></script>
 </body>
 </html>

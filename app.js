@@ -125,9 +125,14 @@ async function initGlobe() {
 
   // 仅在可见时渲染：不可见 → 循环自停（tickGlobe 顶部清零 raf），可见 → 重启
   new IntersectionObserver(es => {
-    globe.visible = es[0].isIntersecting && !$("scene3d").hidden;
+    globe.visible = es[0].isIntersecting;
     if (globe.visible && !globe.raf) tickGlobe();
   }).observe(canvas);
+  // 静态星空（初始化一次，帧内零分配）
+  globe.stars = Array.from({ length: 150 }, () => ({
+    nx: Math.random(), ny: Math.random(),
+    r: Math.random() * 1.1 + 0.4, a: Math.random() * 0.35 + 0.12,
+  }));
 }
 
 function buildGlobeMarkers() {
@@ -178,13 +183,22 @@ function tickGlobe() {
     if (!globe.reduced && !globe.hoverCC && Math.abs(globe.vyaw) < 0.0004) globe.yaw += 0.0011;
   }
 
-  const cx = W / 2, cyc = H / 2 + 6;
-  const Rpx = Math.min(W, H) / 2 - 64;
+  const cx = W / 2, cyc = H / 2 + 14;
+  const Rpx = Math.min(W * 0.46, H / 2 - Math.max(52, H * 0.11));
   if (Rpx <= 0) return;
   // 本帧三角函数只算一次
   const cy0 = Math.cos(globe.yaw), sy0 = Math.sin(globe.yaw);
   const cp0 = Math.cos(globe.pitch), sp0 = Math.sin(globe.pitch);
 
+  // 星空（静态，帧内零分配）
+  if (globe.stars) {
+    for (const s of globe.stars) {
+      x.globalAlpha = s.a;
+      x.fillStyle = "#cfe0ff";
+      x.fillRect(s.nx * W, s.ny * H, s.r, s.r);
+    }
+    x.globalAlpha = 1;
+  }
   // 球体底盘 + 大气边缘
   const disc = x.createRadialGradient(cx - Rpx * .35, cyc - Rpx * .4, Rpx * .1, cx, cyc, Rpx);
   disc.addColorStop(0, "rgba(56,74,110,.38)");
@@ -192,7 +206,14 @@ function tickGlobe() {
   disc.addColorStop(1, "rgba(10,16,30,.05)");
   x.fillStyle = disc;
   x.beginPath(); x.arc(cx, cyc, Rpx, 0, 7); x.fill();
-  x.strokeStyle = "rgba(96,140,220,.28)"; x.lineWidth = 1.2;
+  const halo = x.createRadialGradient(cx, cyc, Rpx * .92, cx, cyc, Rpx * 1.10);
+  halo.addColorStop(0, "rgba(0,0,0,0)");
+  halo.addColorStop(.55, "rgba(88,138,224,.16)");
+  halo.addColorStop(.8, "rgba(88,138,224,.05)");
+  halo.addColorStop(1, "rgba(0,0,0,0)");
+  x.fillStyle = halo;
+  x.beginPath(); x.arc(cx, cyc, Rpx * 1.10, 0, 7); x.fill();
+  x.strokeStyle = "rgba(120,160,235,.32)"; x.lineWidth = 1.2;
   x.beginPath(); x.arc(cx, cyc, Rpx + .5, 0, 7); x.stroke();
 
   // 陆地点阵：内联标量旋转（零分配），4 桶批量绘制
@@ -207,12 +228,13 @@ function tickGlobe() {
       if (z2 < 0.03) continue;
       bks[Math.min(3, z2 * 4 | 0)].push(cx + x1 * Rpx, cyc - y2 * Rpx);
     }
-    const alphas = [.16, .28, .44, .60];
+    const alphas = [.16, .28, .44, .62];
+    const ds = Math.max(1.6, Rpx * 0.0062), hd = ds / 2;
     for (let b = 0; b < 4; b++) {
-      x.fillStyle = `rgba(148,177,224,${alphas[b]})`;
+      x.fillStyle = `rgba(150,180,228,${alphas[b]})`;
       x.beginPath();
       const pts = bks[b];
-      for (let i = 0; i < pts.length; i += 2) x.rect(pts[i] - .8, pts[i + 1] - .8, 1.7, 1.7);
+      for (let i = 0; i < pts.length; i += 2) x.rect(pts[i] - hd, pts[i + 1] - hd, ds, ds);
       x.fill();
     }
   }
@@ -254,7 +276,7 @@ function tickGlobe() {
   for (const p of proj) {
     const { m } = p;
     if (!(m.tag || globe.hoverCC === m.cc) || p.z < 0.15 || m.price == null) continue;
-    x.font = "600 12px system-ui, -apple-system, sans-serif";
+    x.font = "600 13px system-ui, -apple-system, sans-serif";
     x.fillStyle = "rgba(245,245,247,.92)";
     x.shadowColor = "rgba(0,0,0,.8)"; x.shadowBlur = 6;
     x.fillText(`${m.flag} ${fmtUSD(m.price, 0)}`, p.tx, p.ty - 12);
@@ -328,34 +350,6 @@ function bindGlobeInput(canvas) {
     globe.dragging = false; downAt = 0;
     if (e.pointerType !== "touch") { globe.hoverCC = null; tip.hidden = true; }
   });
-}
-
-/* ================= 视图切换（3D 地球 / 平面） ================= */
-
-function initMapView() {
-  const seg = $("mapViewSeg");
-  if (!seg) return;
-  const lsGet = k => { try { return localStorage.getItem(k); } catch { return null; } };
-  const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
-  const saved = lsGet("mapView");
-  let view = saved || ((innerWidth > 700 && rowsWithBase().length) ? "3d" : "2d");
-  const apply = v => {
-    view = v;
-    lsSet("mapView", v);
-    $("scene3d").hidden = v !== "3d";
-    $("heatTiles").hidden = v === "3d";
-    seg.querySelectorAll(".seg-btn").forEach(b => {
-      b.classList.toggle("active", b.dataset.view === v);
-      b.setAttribute("aria-selected", b.dataset.view === v ? "true" : "false");
-    });
-    // 同步渲染循环状态（不等 IntersectionObserver 的下一帧通知）
-    globe.visible = v === "3d";
-    if (v === "3d") { globeSetTier(); if (!globe.raf) tickGlobe(); }
-    else renderHeatTiles();
-  };
-  seg.querySelectorAll(".seg-btn").forEach(b =>
-    b.addEventListener("click", () => apply(b.dataset.view)));
-  apply(view);
 }
 
 /* ================= 价格热力图 ================= */
@@ -596,7 +590,6 @@ async function boot() {
   renderHero();
   renderTierTabs();
   initGlobe();
-  initMapView();
   renderHeatTiles();
   renderRegionChart();
   renderTop3();
