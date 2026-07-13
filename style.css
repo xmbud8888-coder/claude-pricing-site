@@ -1,48 +1,46 @@
-/* ============ tokens（Apple 简约风） ============ */
+/* ============ tokens（星空版 · 深空单主题） ============ */
 :root {
-  --page: #f5f5f7;            /* Apple 浅灰页面 */
-  --surface: #ffffff;
-  --ink: #1d1d1f;
-  --ink-2: #515154;
-  --muted: #86868b;
-  --hairline: #d2d2d7;
-  --border: rgba(0, 0, 0, 0.08);
-  --accent: #0071e3;          /* Apple 蓝，仅用于 UI 强调，不进数据图 */
-  --accent-ink: #0066cc;
-  --accent-soft: rgba(0, 113, 227, 0.08);
-  --series-1: #2a78d6;        /* 数据条：蓝（已验证调色板槽位 1） */
-  --series-1-deep: #1c5cab;
-  --series-2: #1baf7a;        /* 数据条：青（槽位 2，双系列时的第二色） */
-  --good: #006300;
-  --shadow: 0 1px 2px rgba(0,0,0,.03), 0 8px 24px rgba(0,0,0,.05);
+  color-scheme: dark;
+  --page: #05070e;            /* 深空底色 */
+  --surface: #0d1322;         /* 玻璃态卡片 */
+  --surface-2: #111a2e;
+  --ink: #f5f5f7;
+  --ink-2: #a8b0bf;
+  --muted: #7d8494;
+  --hairline: rgba(255, 255, 255, 0.09);
+  --border: rgba(255, 255, 255, 0.10);
+  --accent: #4da3ff;          /* 地球光柱蓝，UI 强调色 */
+  --accent-ink: #79b8ff;
+  --accent-soft: rgba(77, 163, 255, 0.13);
+  --series-1: #3987e5;        /* 数据条：蓝（已验证调色板暗色档） */
+  --series-1-deep: #86b6ef;
+  --series-2: #199e70;
+  --good: #30d158;
+  --up: #ff6b64;              /* 比基准更贵 */
+  --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 12px 32px rgba(0,0,0,.45);
   --radius: 16px;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --page: #000000;
-    --surface: #1c1c1e;
-    --ink: #f5f5f7;
-    --ink-2: #a1a1a6;
-    --muted: #86868b;
-    --hairline: #38383a;
-    --border: rgba(255, 255, 255, 0.10);
-    --accent: #0a84ff;
-    --accent-ink: #409cff;
-    --accent-soft: rgba(10, 132, 255, 0.14);
-    --series-1: #3987e5;
-    --series-1-deep: #86b6ef;
-    --series-2: #199e70;
-    --good: #30d158;
-    --shadow: none;
-  }
 }
 
 * { box-sizing: border-box; }
+/* 全页静态星空层（三层错位平铺，低透明度不干扰阅读） */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 22% 31%, rgba(255,255,255,.55), transparent 100%),
+    radial-gradient(1.2px 1.2px at 71% 12%, rgba(214,228,255,.5), transparent 100%),
+    radial-gradient(1px 1px at 48% 67%, rgba(255,255,255,.4), transparent 100%),
+    radial-gradient(1.4px 1.4px at 86% 52%, rgba(196,216,255,.42), transparent 100%),
+    radial-gradient(1px 1px at 9% 84%, rgba(255,255,255,.36), transparent 100%);
+  background-size: 420px 420px, 560px 560px, 380px 380px, 640px 640px, 500px 500px;
+  opacity: .5;
+}
 [hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 64px; }
 body {
   margin: 0;
-  background: var(--page);
+  background:
+    radial-gradient(110% 42rem at 50% -6rem, #131d34 0%, #0a101f 46%, var(--page) 100%)
+    fixed var(--page);
   color: var(--ink);
   font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-size: 16px;
@@ -58,8 +56,8 @@ b, strong { font-weight: 650; }
 /* ============ nav ============ */
 .topnav {
   position: sticky; top: 0; z-index: 50;
-  background: color-mix(in srgb, var(--surface) 78%, transparent);
-  backdrop-filter: saturate(180%) blur(20px);
+  background: rgba(7, 10, 19, 0.66);
+  backdrop-filter: saturate(160%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid var(--hairline);
 }
@@ -74,7 +72,7 @@ b, strong { font-weight: 650; }
 @media (max-width: 760px) { .navlinks { display: none; } }
 
 /* ============ product nav (对齐对手站) ============ */
-.prodnav { border-bottom: 1px solid var(--hairline); background: var(--page); }
+.prodnav { border-bottom: 1px solid var(--hairline); background: transparent; }
 .prodnav-in { display: flex; gap: 8px; padding: 10px 24px; overflow-x: auto; }
 .prod-tab {
   font-size: 13px; font-weight: 600; white-space: nowrap;
@@ -82,16 +80,16 @@ b, strong { font-weight: 650; }
   background: var(--surface);
 }
 .prod-tab:hover { text-decoration: none; color: var(--ink); }
-.prod-tab.active { background: var(--ink); border-color: var(--ink); color: var(--page); }
+.prod-tab.active { background: #f5f5f7; border-color: #f5f5f7; color: #0b0f1a; }
 .prod-tab.disabled { opacity: .55; }
 
 /* ============ app hero（产品头） ============ */
-.app-hero { padding: 44px 0 36px; border-bottom: 1px solid var(--hairline); }
+.app-hero { padding: 52px 0 40px; border-bottom: 0; }
 .app-head { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
 .app-icon {
   width: 64px; height: 64px; border-radius: 15px; display: grid; place-items: center;
-  background: #fff; border: 1px solid var(--border); flex: none; overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  background: #fff; border: 1px solid rgba(255,255,255,.18); flex: none; overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,.5);
 }
 .app-icon svg { width: 62%; height: 62%; }
 .app-icon.icon-full svg { width: 100%; height: 100%; }
@@ -116,11 +114,11 @@ b, strong { font-weight: 650; }
 /* ============ 3D 地球通栏 hero ============ */
 .globe-hero {
   width: 100%; user-select: none; -webkit-user-select: none;
-  border-bottom: 1px solid var(--hairline);
 }
 .globe-stage {
   position: relative; height: clamp(560px, 78vh, 720px); overflow: hidden;
   background:
+    linear-gradient(180deg, rgba(5,7,14,0) 82%, var(--page) 100%),
     radial-gradient(120% 90% at 50% 0%, #16203a 0%, #0a101f 45%, #04070e 78%, #010204 100%);
   cursor: grab; touch-action: pan-y;
 }
@@ -232,7 +230,7 @@ b, strong { font-weight: 650; }
   border-radius: 99px; padding: 2px 8px; margin-left: 6px; vertical-align: 1px;
 }
 .badge-accent { background: var(--accent); color: #fff; }
-.delta-pos { color: var(--accent-ink); font-variant-numeric: tabular-nums; }
+.delta-pos { color: var(--up); font-variant-numeric: tabular-nums; }
 .delta-neg { color: var(--good); font-variant-numeric: tabular-nums; }
 
 /* ============ channel cards ============ */
@@ -359,13 +357,13 @@ b, strong { font-weight: 650; }
 .lg-line-us { border-top: 2px dashed var(--muted); }
 
 /* segmented control */
-.seg { display: inline-flex; background: color-mix(in srgb, var(--ink) 6%, transparent); border-radius: 9px; padding: 2.5px; gap: 2px; }
+.seg { display: inline-flex; background: rgba(255,255,255,.12); border-radius: 9px; padding: 2.5px; gap: 2px; }
 .seg-btn {
-  font: inherit; font-size: 13px; font-weight: 600; color: var(--ink-2);
+  font: inherit; font-size: 13px; font-weight: 600; color: rgba(235,238,245,.8);
   background: transparent; border: 0; border-radius: 7px; padding: 5px 14px; cursor: pointer;
   transition: background .15s ease;
 }
-.seg-btn.active { background: var(--surface); color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+.seg-btn.active { background: rgba(255,255,255,.94); color: #1d1d1f; box-shadow: 0 1px 4px rgba(0,0,0,.3); }
 
 @media (max-width: 560px) {
   .hbar-row { grid-template-columns: 90px 1fr 62px; font-size: 12px; }
@@ -422,8 +420,7 @@ b, strong { font-weight: 650; }
 
 .risk { display: inline-block; font-size: 11.5px; font-weight: 700; border-radius: 5px; padding: 1px 7px; }
 .risk-low { background: color-mix(in srgb, var(--good) 12%, transparent); color: var(--good); }
-.risk-mid { background: color-mix(in srgb, #eda100 20%, transparent); color: #8a6100; }
-@media (prefers-color-scheme: dark) { .risk-mid { color: #eda100; } }
+.risk-mid { background: color-mix(in srgb, #eda100 20%, transparent); color: #ffb340; }
 
 /* PPP 哑铃图 */
 .ppp-chart { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 10px; }
