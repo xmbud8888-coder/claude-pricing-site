@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#05070e">
 <title>2026 各国 Manus 价格对比 | Manus 哪个国家最便宜</title>
 <meta name="description" content="比较 Manus 订阅（Pro）在全球 App Store 与 Google Play 各区域的价格：最便宜/最贵国家排行、完整价格表、购买力对比、换区订阅指南。数据每日自动抓取官方商店页核验。">
-<link rel="stylesheet" href="style.css?v=s1">
+<link rel="stylesheet" href="style.css?v=s3">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 </head>
 <body data-product="manus">
@@ -17,7 +17,7 @@
       <span class="brand-name">AI 定价站</span>
     </a>
     <div class="navlinks">
-      <a href="#map">价格地图</a>
+      <a href="#top">价格地图</a>
       <a href="#table">价格表</a>
       <a href="#play">Google Play</a>
       <a href="#ppp">购买力</a>
@@ -34,41 +34,31 @@
 
 <main>
 
-<!-- 产品头 -->
-<header class="app-hero" id="top">
-  <div class="wrap">
-    <div class="app-head">
-      <div class="app-icon icon-full"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1d1d1f"/><text x="32" y="43" font-family="system-ui,sans-serif" font-size="30" font-weight="700" text-anchor="middle" fill="#fff">M</text></svg></div>
-      <div>
-        <h1><a href="https://manus.im/" rel="noopener" target="_blank">Manus 全球定价</a></h1>
-        <p class="app-dev">开发者：Butterfly Effect</p>
-      </div>
-    </div>
-    <p class="app-summary" id="heroSummary">
-      比较 Claude 订阅在全球 App Store 各区域的价格。
-    </p>
-    <p class="app-meta">价格来自 App Store / Google Play 官方挂牌 · 更新于 <span class="data-date">—</span> · 每日自动核验 · 非官方站点</p>
-  </div>
-</header>
-
-<!-- 全球价格地图（通栏 hero） -->
-<section class="globe-hero" id="map">
+<!-- 产品头 + 全球价格地图（一体化星空 hero） -->
+<section class="globe-hero" id="top">
   <div class="globe-stage" id="globeStage">
     <canvas id="globeCanvas"></canvas>
     <div class="globe-tip" id="globeTip" hidden></div>
-    <div class="gh-head">
-      <div>
-        <h2 class="gh-title">Manus 全球价格地图</h2>
-        <p class="gh-sub">18 个国家 · 官方商店挂牌价 · 每日自动核验</p>
+    <div class="gh-content">
+      <div class="gh-head">
+        <div class="gh-id">
+          <div class="app-icon icon-full"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1d1d1f"/><text x="32" y="43" font-family="system-ui,sans-serif" font-size="30" font-weight="700" text-anchor="middle" fill="#fff">M</text></svg></div>
+          <div>
+            <h1><a href="https://manus.im/" rel="noopener" target="_blank">Manus 全球定价</a></h1>
+            <p class="app-dev">开发者：Butterfly Effect · 数据更新于 <span class="data-date">—</span> · 每日自动核验 · 非官方站点</p>
+          </div>
+        </div>
+        <div class="gh-tools">
+          <div class="seg" id="tierSeg" role="tablist" aria-label="订阅方案"></div>
+          <button class="share-btn" id="shareBtn">分享</button>
+        </div>
       </div>
-      <div class="gh-tools">
-        <div class="seg seg-dark" id="tierSeg" role="tablist" aria-label="订阅方案"></div>
-        <button class="share-btn" id="shareBtn">分享</button>
-      </div>
+      <p class="app-summary" id="heroSummary">比较 Claude 订阅在全球 App Store 与 Google Play 各区域的价格。</p>
     </div>
     <p class="gh-hint">拖拽旋转地球 · 光柱高度 = 价格 · <span class="gl-cheap">蓝</span> 比美区便宜 · <span class="gl-hot">红</span> 更贵 · 悬停看详情</p>
   </div>
 </section>
+
 
 <!-- 各区月价（数据面板） -->
 <section class="section" id="mapdata">
@@ -244,6 +234,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=s1"></script>
+<script src="app.js?v=s3"></script>
 </body>
 </html>

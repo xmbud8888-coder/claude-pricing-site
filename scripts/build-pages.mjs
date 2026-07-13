@@ -44,7 +44,7 @@ for (const [key, p] of Object.entries(prices.products)) {
   html = html.replace(
     /<h1><a href="https:\/\/claude\.ai\/" rel="noopener" target="_blank">Claude 全球定价<\/a><\/h1>/,
     `<h1><a href="${p.site}" rel="noopener" target="_blank">${p.label} 全球定价</a></h1>`);
-  html = html.replace('<p class="app-dev">开发者：Anthropic</p>', `<p class="app-dev">开发者：${p.developer}</p>`);
+  html = html.replace('开发者：Anthropic ·', `开发者：${p.developer} ·`);
   // 模板文案中的产品名批量替换
   html = html.replace(/Claude 全球价格地图/g, `${p.label} 全球价格地图`);
   html = html.replace(/Claude 最便宜的国家/g, `${p.label} 最便宜的国家`);

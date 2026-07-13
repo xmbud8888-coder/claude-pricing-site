@@ -183,9 +183,13 @@ function tickGlobe() {
     if (!globe.reduced && !globe.hoverCC && Math.abs(globe.vyaw) < 0.0004) globe.yaw += 0.0011;
   }
 
-  const cx = W / 2, cyc = H / 2 + 14;
-  const Rpx = Math.min(W * 0.46, H / 2 - Math.max(52, H * 0.11));
+  if (!canvas.offsetWidth) return;   // 移动端 canvas display:none 时跳帧
+  const cx = W / 2, cyc = H * 0.74;   // 球心下移：上部让给产品头，下缘裁切营造体量
+  const Rpx = Math.min(W * 0.44, H * 0.58);
   if (Rpx <= 0) return;
+  // 产品头下边界：光柱/标签进入该区域时渐隐，避免压住标题
+  const gc = globe.contentEl || (globe.contentEl = document.querySelector(".gh-content"));
+  const safeY = gc ? gc.offsetTop + gc.offsetHeight + 16 : 0;
   // 本帧三角函数只算一次
   const cy0 = Math.cos(globe.yaw), sy0 = Math.sin(globe.yaw);
   const cp0 = Math.cos(globe.pitch), sp0 = Math.sin(globe.pitch);
@@ -247,13 +251,16 @@ function tickGlobe() {
     const b = rotXY(m.vec, cy0, sy0, cp0, sp0);
     if (b[2] < -0.05) continue;
     const t = 1 + m.h;
+    const ty = cyc - b[1] * Rpx * t;
     proj.push({ m, z: b[2],
       bx: cx + b[0] * Rpx, by: cyc - b[1] * Rpx,
-      tx: cx + b[0] * Rpx * t, ty: cyc - b[1] * Rpx * t });
+      tx: cx + b[0] * Rpx * t, ty,
+      fade: Math.max(0, Math.min(1, (ty - safeY) / 70)) });
   }
   proj.sort((a, b) => a.z - b.z);
   for (const p of proj) {
-    const { m } = p, edge = Math.max(0.25, Math.min(1, p.z * 1.6));
+    if (p.fade <= 0.02) continue;
+    const { m } = p, edge = Math.max(0.25, Math.min(1, p.z * 1.6)) * p.fade;
     const hovered = globe.hoverCC === m.cc;
     const g = x.createLinearGradient(p.bx, p.by, p.tx, p.ty);
     g.addColorStop(0, "rgba(255,255,255,0)");
@@ -275,18 +282,20 @@ function tickGlobe() {
   x.textAlign = "center"; x.textBaseline = "bottom";
   for (const p of proj) {
     const { m } = p;
-    if (!(m.tag || globe.hoverCC === m.cc) || p.z < 0.15 || m.price == null) continue;
+    if (!(m.tag || globe.hoverCC === m.cc) || p.z < 0.15 || m.price == null || p.fade < 0.3) continue;
     x.font = "600 13px system-ui, -apple-system, sans-serif";
     x.fillStyle = "rgba(245,245,247,.92)";
     x.shadowColor = "rgba(0,0,0,.8)"; x.shadowBlur = 6;
+    x.globalAlpha = p.fade;
     x.fillText(`${m.flag} ${fmtUSD(m.price, 0)}`, p.tx, p.ty - 12);
-    x.shadowBlur = 0;
+    x.globalAlpha = 1; x.shadowBlur = 0;
   }
 }
 
 function globePickAt(mx, my) {
   let best = null, bestD = 20;
   for (const p of globe._proj) {
+    if (p.fade < 0.2) continue;   // 头部渐隐区不参与拾取
     const d = Math.hypot(p.tx - mx, p.ty - my);
     if (d < bestD) { bestD = d; best = p; }
   }
