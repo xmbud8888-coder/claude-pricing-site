@@ -36,24 +36,28 @@ function renderProdNav() {
 /* ================= 产品头摘要 ================= */
 
 function renderHero() {
-  const rows = rowsWithBase().sort((a, b) => a[P.baseTier] - b[P.baseTier]);
+  const tk = currentTier || P.baseTier;
+  const rows = R.filter(r => r[tk] != null).sort((a, b) => a[tk] - b[tk]);
   const year = D.updatedAt.slice(0, 4);
   if (rows.length < 2) {
     $("heroSummary").innerHTML =
       `比较 ${P.label} 订阅在全球 App Store 与 Google Play 各区域的价格。各区价格由自动管线每日抓取官方商店页，核验完成后即在此展示最便宜/最贵地区结论。`;
-    if ($("faqCheapest")) $("faqCheapest").textContent = "各区价格核验完成后，此处显示最新结论（数据每日自动更新）。";
+    if (tk === P.baseTier && $("faqCheapest"))
+      $("faqCheapest").textContent = "各区价格核验完成后，此处显示最新结论（数据每日自动更新）。";
     return;
   }
-  const base = P.tiers.find(t => t.key === P.baseTier)?.label || "";
+  const base = P.tiers.find(t => t.key === tk)?.label || "";
   const lo = rows[0], hi = rows[rows.length - 1];
-  const diff = Math.round((hi[P.baseTier] - lo[P.baseTier]) / lo[P.baseTier] * 100);
+  const diff = Math.round((hi[tk] - lo[tk]) / lo[tk] * 100);
   $("heroSummary").innerHTML =
     `比较 ${P.label} 订阅在全球 App Store 与 Google Play 各区域的价格。` +
-    `<strong>${lo.name}（${fmtUSD(lo[P.baseTier])}/mo）</strong>是 ${year} 年 ${P.label} ${base} 最便宜的地区。` +
-    `相比最贵的<strong>${hi.name}（${fmtUSD(hi[P.baseTier])}/mo）</strong>，价格相差 <strong>${diff}%</strong>。`;
-  if ($("faqCheapest")) $("faqCheapest").textContent =
-    `按最新核验数据，${lo.name}（${fmtUSD(lo[P.baseTier])}/mo）是 App Store 各区中 ${P.label} ${base} 月价最低的地区，其次是` +
-    `${rows[1].name}（${fmtUSD(rows[1][P.baseTier])}/mo）。数据每日自动核验更新。`;
+    `<strong>${lo.name}（${fmtUSD(lo[tk])}/mo）</strong>是 ${year} 年 ${P.label} ${base} 最便宜的地区。` +
+    `相比最贵的<strong>${hi.name}（${fmtUSD(hi[tk])}/mo）</strong>，价格相差 <strong>${diff}%</strong>。`;
+  const bRows = rowsWithBase().sort((a, b) => a[P.baseTier] - b[P.baseTier]);
+  const bLabel = P.tiers.find(t => t.key === P.baseTier)?.label || "";
+  if ($("faqCheapest") && bRows.length >= 2) $("faqCheapest").textContent =
+    `按最新核验数据，${bRows[0].name}（${fmtUSD(bRows[0][P.baseTier])}/mo）是 App Store 各区中 ${P.label} ${bLabel} 月价最低的地区，其次是` +
+    `${bRows[1].name}（${fmtUSD(bRows[1][P.baseTier])}/mo）。数据每日自动核验更新。`;
 }
 
 /* ================= 档位切换（动态生成） ================= */
@@ -71,6 +75,7 @@ function renderTierTabs() {
         b.setAttribute("aria-selected", b === btn ? "true" : "false");
       });
       currentTier = btn.dataset.plan;
+      renderHero();        // 摘要结论跟随档位
       renderRegionChart();
       globeSetTier();      // 地球光柱随档位平滑变形
       renderHeatTiles();   // 平面热力砖同步档位
@@ -317,6 +322,7 @@ function bindGlobeInput(canvas) {
   const stage = $("globeStage"), tip = $("globeTip");
   let downX = 0, downY = 0, lastX = 0, lastY = 0, moved = false, downAt = 0;
   stage.addEventListener("pointerdown", e => {
+    if (e.target.closest(".gh-tools, a")) return;   // 档位/分享/链接不启动拖拽捕获，否则 click 被吞
     downX = lastX = e.clientX; downY = lastY = e.clientY;
     moved = false; downAt = Date.now();
     globe.vyaw = 0;
