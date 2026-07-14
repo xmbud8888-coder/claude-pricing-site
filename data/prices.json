@@ -1,3085 +1,3289 @@
 {
- "updatedAt": "2026-07-13",
- "policy": "所有数字必须核验自官方来源才展示；未核验的字段为 null，由管线抓官方页面后回填",
- "provenance": [
-  {
-   "key": "claude-web",
-   "products": [
-    "claude"
-   ],
-   "label": "Claude 订阅（网页价，含 Max 20x）",
-   "status": "verified",
-   "verifiedAt": "2026-07-12",
-   "source": "claude.com/pricing + support.claude.com 官方帮助文章",
-   "url": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
-  },
-  {
-   "key": "appstore-claude",
-   "products": [
-    "claude"
-   ],
-   "label": "Claude · App Store 各区内购价",
-   "status": "verified",
-   "verifiedAt": "2026-07-12",
-   "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算"
-  },
-  {
-   "key": "play-claude",
-   "products": [
-    "claude"
-   ],
-   "label": "Claude · Google Play 各区内购区间",
-   "status": "verified",
-   "verifiedAt": "2026-07-13",
-   "source": "play.google.com 各区商店页（管线直抓，17/18 区）"
-  },
-  {
-   "key": "appstore-chatgpt",
-   "products": [
-    "chatgpt"
-   ],
-   "label": "ChatGPT · App Store 各区内购价",
-   "status": "verified",
-   "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-   "verifiedAt": "2026-07-12"
-  },
-  {
-   "key": "play-chatgpt",
-   "products": [
-    "chatgpt"
-   ],
-   "label": "ChatGPT · Google Play 各区内购区间",
-   "status": "verified",
-   "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-   "verifiedAt": "2026-07-13"
-  },
-  {
-   "key": "appstore-grok",
-   "products": [
-    "grok"
-   ],
-   "label": "Grok · App Store 各区内购价",
-   "status": "verified",
-   "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-   "verifiedAt": "2026-07-12"
-  },
-  {
-   "key": "play-grok",
-   "products": [
-    "grok"
-   ],
-   "label": "Grok · Google Play 各区内购区间",
-   "status": "verified",
-   "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-   "verifiedAt": "2026-07-13"
-  },
-  {
-   "key": "chatgpt-web",
-   "products": [
-    "chatgpt"
-   ],
-   "label": "ChatGPT 官网订阅价",
-   "status": "pending",
-   "source": "openai.com 有 bot 防护，待核验后展示"
-  },
-  {
-   "key": "grok-web",
-   "products": [
-    "grok"
-   ],
-   "label": "Grok 官网订阅价",
-   "status": "pending",
-   "source": "grok.com / x.ai 有 bot 防护，待核验后展示"
-  },
-  {
-   "key": "imf-ppp",
-   "products": [
-    "claude",
-    "chatgpt",
-    "grok",
-    "gemini",
-    "perplexity",
-    "copilot",
-    "capcut",
-    "characterai",
-    "suno",
-    "kling",
-    "sora",
-    "kimi",
-    "glm",
-    "leonardo",
-    "manus",
-    "catcosplay"
-   ],
-   "label": "购买力平价换算率（IMF PPPEX）",
-   "status": "verified",
-   "verifiedAt": "2026-07-13",
-   "source": "IMF DataMapper API（PPPEX，2026 年值）"
-  },
-  {
-   "key": "appstore-gemini",
-   "products": [
-    "gemini"
-   ],
-   "label": "Gemini · App Store 各区内购价",
-   "status": "pending",
-   "source": "apps.apple.com 各区商店页，待管线抓取"
-  },
-  {
-   "key": "play-gemini",
-   "products": [
-    "gemini"
-   ],
-   "label": "Gemini · Google Play 各区内购区间",
-   "status": "pending",
-   "source": "play.google.com 各区商店页，待管线抓取"
-  },
-  {
-   "key": "appstore-perplexity",
-   "products": [
-    "perplexity"
-   ],
-   "label": "Perplexity · App Store 各区内购价",
-   "status": "verified",
-   "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-   "verifiedAt": "2026-07-12"
-  },
-  {
-   "key": "play-perplexity",
-   "products": [
-    "perplexity"
-   ],
-   "label": "Perplexity · Google Play 各区内购区间",
-   "status": "verified",
-   "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-   "verifiedAt": "2026-07-13"
-  },
-  {
-   "key": "appstore-copilot",
-   "products": [
-    "copilot"
-   ],
-   "label": "Copilot · App Store 各区内购价",
-   "status": "verified",
-   "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-   "verifiedAt": "2026-07-12"
-  },
-  {
-   "key": "play-copilot",
-   "products": [
-    "copilot"
-   ],
-   "label": "Copilot · Google Play 各区内购区间",
-   "status": "verified",
-   "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-   "verifiedAt": "2026-07-13"
-  },
-  {
-   "key": "appstore-capcut",
-   "products": [
-    "capcut"
-   ],
-   "label": "CapCut · App Store 各区内购价",
-   "status": "verified",
-   "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-   "verifiedAt": "2026-07-12"
-  },
-  {
-   "key": "play-capcut",
-   "products": [
-    "capcut"
-   ],
-   "label": "CapCut · Google Play 各区内购区间",
-   "status": "verified",
-   "source": "play.google.com 各区商店页（管线直抓，16/18 区）",
-   "verifiedAt": "2026-07-13"
-  },
-  {
-   "key": "appstore-characterai",
-   "products": [
-    "characterai"
-   ],
-   "label": "Character.AI · App Store 各区内购价",
-   "status": "pending",
-   "source": "apps.apple.com 各区商店页，待管线抓取"
-  },
-  {
-   "key": "play-characterai",
-   "products": [
-    "characterai"
-   ],
-   "label": "Character.AI · Google Play 各区内购区间",
-   "status": "verified",
-   "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-   "verifiedAt": "2026-07-13"
-  },
-  {
-   "key": "appstore-suno",
-   "products": [
-    "suno"
-   ],
-   "label": "Suno · App Store 各区内购价",
-   "status": "verified",
-   "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-   "verifiedAt": "2026-07-12"
-  },
-  {
-   "key": "play-suno",
-   "products": [
-    "suno"
-   ],
-   "label": "Suno · Google Play 各区内购区间",
-   "status": "verified",
-   "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-   "verifiedAt": "2026-07-13"
-  },
-  {
-   "key": "appstore-kling",
-   "products": [
-    "kling"
-   ],
-   "label": "Kling AI · App Store 各区内购价",
-   "status": "verified",
-   "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-   "verifiedAt": "2026-07-12"
-  },
-  {
-   "key": "play-kling",
-   "products": [
-    "kling"
-   ],
-   "label": "Kling AI · Google Play 各区内购区间",
-   "status": "verified",
-   "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-   "verifiedAt": "2026-07-13"
-  },
-  {
-   "key": "appstore-sora",
-   "products": [
-    "sora"
-   ],
-   "label": "Sora · App Store 各区内购价",
-   "status": "pending",
-   "source": "apps.apple.com 各区商店页，待管线抓取"
-  },
-  {
-   "key": "play-sora",
-   "products": [
-    "sora"
-   ],
-   "label": "Sora · Google Play 各区内购区间",
-   "status": "pending",
-   "source": "play.google.com 各区商店页，待管线抓取"
-  },
-  {
-   "key": "appstore-kimi",
-   "products": [
-    "kimi"
-   ],
-   "label": "Kimi · App Store 各区内购价",
-   "status": "pending",
-   "source": "apps.apple.com 各区商店页，待管线抓取"
-  },
-  {
-   "key": "play-kimi",
-   "products": [
-    "kimi"
-   ],
-   "label": "Kimi · Google Play 各区内购区间",
-   "status": "verified",
-   "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-   "verifiedAt": "2026-07-13"
-  },
-  {
-   "key": "appstore-glm",
-   "products": [
-    "glm"
-   ],
-   "label": "GLM · App Store 各区内购价",
-   "status": "pending",
-   "source": "apps.apple.com 各区商店页，待管线抓取"
-  },
-  {
-   "key": "play-glm",
-   "products": [
-    "glm"
-   ],
-   "label": "GLM · Google Play 各区内购区间",
-   "status": "pending",
-   "source": "play.google.com 各区商店页，待管线抓取"
-  },
-  {
-   "key": "appstore-leonardo",
-   "products": [
-    "leonardo"
-   ],
-   "label": "Leonardo AI · App Store 各区内购价",
-   "status": "verified",
-   "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-   "verifiedAt": "2026-07-12"
-  },
-  {
-   "key": "play-leonardo",
-   "products": [
-    "leonardo"
-   ],
-   "label": "Leonardo AI · Google Play 各区内购区间",
-   "status": "verified",
-   "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-   "verifiedAt": "2026-07-13"
-  },
-  {
-   "key": "appstore-manus",
-   "products": [
-    "manus"
-   ],
-   "label": "Manus · App Store 各区内购价",
-   "status": "verified",
-   "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-   "verifiedAt": "2026-07-12"
-  },
-  {
-   "key": "play-manus",
-   "products": [
-    "manus"
-   ],
-   "label": "Manus · Google Play 各区内购区间",
-   "status": "verified",
-   "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-   "verifiedAt": "2026-07-13"
-  },
-  {
-   "key": "appstore-catcosplay",
-   "products": [
-    "catcosplay"
-   ],
-   "label": "CatCosplay · App Store 各区内购价",
-   "status": "pending",
-   "source": "apps.apple.com 各区商店页，待管线抓取"
-  },
-  {
-   "key": "play-catcosplay",
-   "products": [
-    "catcosplay"
-   ],
-   "label": "CatCosplay · Google Play 各区内购区间",
-   "status": "pending",
-   "source": "play.google.com 各区商店页，待管线抓取"
+  "updatedAt": "2026-07-14",
+  "policy": "所有数字必须核验自官方来源才展示；未核验的字段为 null，由管线抓官方页面后回填",
+  "provenance": [
+    {
+      "key": "claude-web",
+      "products": [
+        "claude"
+      ],
+      "label": "Claude 订阅（网页价，含 Max 20x）",
+      "status": "verified",
+      "verifiedAt": "2026-07-12",
+      "source": "claude.com/pricing + support.claude.com 官方帮助文章",
+      "url": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
+    },
+    {
+      "key": "appstore-claude",
+      "products": [
+        "claude"
+      ],
+      "label": "Claude · App Store 各区内购价",
+      "status": "verified",
+      "verifiedAt": "2026-07-14",
+      "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算"
+    },
+    {
+      "key": "play-claude",
+      "products": [
+        "claude"
+      ],
+      "label": "Claude · Google Play 各区内购区间",
+      "status": "verified",
+      "verifiedAt": "2026-07-14",
+      "source": "play.google.com 各区商店页（管线直抓，17/18 区）"
+    },
+    {
+      "key": "appstore-chatgpt",
+      "products": [
+        "chatgpt"
+      ],
+      "label": "ChatGPT · App Store 各区内购价",
+      "status": "verified",
+      "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "play-chatgpt",
+      "products": [
+        "chatgpt"
+      ],
+      "label": "ChatGPT · Google Play 各区内购区间",
+      "status": "verified",
+      "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "appstore-grok",
+      "products": [
+        "grok"
+      ],
+      "label": "Grok · App Store 各区内购价",
+      "status": "verified",
+      "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "play-grok",
+      "products": [
+        "grok"
+      ],
+      "label": "Grok · Google Play 各区内购区间",
+      "status": "verified",
+      "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "chatgpt-web",
+      "products": [
+        "chatgpt"
+      ],
+      "label": "ChatGPT 官网订阅价",
+      "status": "pending",
+      "source": "openai.com 有 bot 防护，待核验后展示"
+    },
+    {
+      "key": "grok-web",
+      "products": [
+        "grok"
+      ],
+      "label": "Grok 官网订阅价",
+      "status": "pending",
+      "source": "grok.com / x.ai 有 bot 防护，待核验后展示"
+    },
+    {
+      "key": "imf-ppp",
+      "products": [
+        "claude",
+        "chatgpt",
+        "grok",
+        "gemini",
+        "perplexity",
+        "copilot",
+        "capcut",
+        "characterai",
+        "suno",
+        "kling",
+        "sora",
+        "kimi",
+        "glm",
+        "leonardo",
+        "manus",
+        "catcosplay"
+      ],
+      "label": "购买力平价换算率（IMF PPPEX）",
+      "status": "verified",
+      "verifiedAt": "2026-07-14",
+      "source": "IMF DataMapper API（PPPEX，2026 年值）"
+    },
+    {
+      "key": "appstore-gemini",
+      "products": [
+        "gemini"
+      ],
+      "label": "Gemini · App Store 各区内购价",
+      "status": "pending",
+      "source": "apps.apple.com 各区商店页，待管线抓取"
+    },
+    {
+      "key": "play-gemini",
+      "products": [
+        "gemini"
+      ],
+      "label": "Gemini · Google Play 各区内购区间",
+      "status": "pending",
+      "source": "play.google.com 各区商店页，待管线抓取"
+    },
+    {
+      "key": "appstore-perplexity",
+      "products": [
+        "perplexity"
+      ],
+      "label": "Perplexity · App Store 各区内购价",
+      "status": "verified",
+      "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "play-perplexity",
+      "products": [
+        "perplexity"
+      ],
+      "label": "Perplexity · Google Play 各区内购区间",
+      "status": "verified",
+      "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "appstore-copilot",
+      "products": [
+        "copilot"
+      ],
+      "label": "Copilot · App Store 各区内购价",
+      "status": "verified",
+      "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "play-copilot",
+      "products": [
+        "copilot"
+      ],
+      "label": "Copilot · Google Play 各区内购区间",
+      "status": "verified",
+      "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "appstore-capcut",
+      "products": [
+        "capcut"
+      ],
+      "label": "CapCut · App Store 各区内购价",
+      "status": "verified",
+      "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "play-capcut",
+      "products": [
+        "capcut"
+      ],
+      "label": "CapCut · Google Play 各区内购区间",
+      "status": "verified",
+      "source": "play.google.com 各区商店页（管线直抓，16/18 区）",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "appstore-characterai",
+      "products": [
+        "characterai"
+      ],
+      "label": "Character.AI · App Store 各区内购价",
+      "status": "pending",
+      "source": "apps.apple.com 各区商店页，待管线抓取"
+    },
+    {
+      "key": "play-characterai",
+      "products": [
+        "characterai"
+      ],
+      "label": "Character.AI · Google Play 各区内购区间",
+      "status": "verified",
+      "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "appstore-suno",
+      "products": [
+        "suno"
+      ],
+      "label": "Suno · App Store 各区内购价",
+      "status": "verified",
+      "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "play-suno",
+      "products": [
+        "suno"
+      ],
+      "label": "Suno · Google Play 各区内购区间",
+      "status": "verified",
+      "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "appstore-kling",
+      "products": [
+        "kling"
+      ],
+      "label": "Kling AI · App Store 各区内购价",
+      "status": "verified",
+      "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "play-kling",
+      "products": [
+        "kling"
+      ],
+      "label": "Kling AI · Google Play 各区内购区间",
+      "status": "verified",
+      "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "appstore-sora",
+      "products": [
+        "sora"
+      ],
+      "label": "Sora · App Store 各区内购价",
+      "status": "pending",
+      "source": "apps.apple.com 各区商店页，待管线抓取"
+    },
+    {
+      "key": "play-sora",
+      "products": [
+        "sora"
+      ],
+      "label": "Sora · Google Play 各区内购区间",
+      "status": "pending",
+      "source": "play.google.com 各区商店页，待管线抓取"
+    },
+    {
+      "key": "appstore-kimi",
+      "products": [
+        "kimi"
+      ],
+      "label": "Kimi · App Store 各区内购价",
+      "status": "pending",
+      "source": "apps.apple.com 各区商店页，待管线抓取"
+    },
+    {
+      "key": "play-kimi",
+      "products": [
+        "kimi"
+      ],
+      "label": "Kimi · Google Play 各区内购区间",
+      "status": "verified",
+      "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "appstore-glm",
+      "products": [
+        "glm"
+      ],
+      "label": "GLM · App Store 各区内购价",
+      "status": "pending",
+      "source": "apps.apple.com 各区商店页，待管线抓取"
+    },
+    {
+      "key": "play-glm",
+      "products": [
+        "glm"
+      ],
+      "label": "GLM · Google Play 各区内购区间",
+      "status": "pending",
+      "source": "play.google.com 各区商店页，待管线抓取"
+    },
+    {
+      "key": "appstore-leonardo",
+      "products": [
+        "leonardo"
+      ],
+      "label": "Leonardo AI · App Store 各区内购价",
+      "status": "verified",
+      "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "play-leonardo",
+      "products": [
+        "leonardo"
+      ],
+      "label": "Leonardo AI · Google Play 各区内购区间",
+      "status": "verified",
+      "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "appstore-manus",
+      "products": [
+        "manus"
+      ],
+      "label": "Manus · App Store 各区内购价",
+      "status": "verified",
+      "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "play-manus",
+      "products": [
+        "manus"
+      ],
+      "label": "Manus · Google Play 各区内购区间",
+      "status": "verified",
+      "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "key": "appstore-catcosplay",
+      "products": [
+        "catcosplay"
+      ],
+      "label": "CatCosplay · App Store 各区内购价",
+      "status": "pending",
+      "source": "apps.apple.com 各区商店页，待管线抓取"
+    },
+    {
+      "key": "play-catcosplay",
+      "products": [
+        "catcosplay"
+      ],
+      "label": "CatCosplay · Google Play 各区内购区间",
+      "status": "pending",
+      "source": "play.google.com 各区商店页，待管线抓取"
+    }
+  ],
+  "regionsMeta": [
+    {
+      "flag": "🇺🇸",
+      "name": "美国",
+      "cc": "us",
+      "addr": "us",
+      "tax": "各州销售税 0–10%",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 1,
+      "lat": 39.8,
+      "lon": -98.6
+    },
+    {
+      "flag": "🇯🇵",
+      "name": "日本",
+      "cc": "jp",
+      "addr": "jp",
+      "tax": "含 10% 消费税",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 93.306,
+      "lat": 36.2,
+      "lon": 138.3
+    },
+    {
+      "flag": "🇵🇰",
+      "name": "巴基斯坦",
+      "cc": "pk",
+      "addr": "pk",
+      "tax": "数字服务税按省 15–16%",
+      "risk": "中",
+      "riskNote": "需本地账单地址、IP 与礼品卡",
+      "pppex": 70.827,
+      "lat": 30.4,
+      "lon": 69.3
+    },
+    {
+      "flag": "🇨🇦",
+      "name": "加拿大",
+      "cc": "ca",
+      "addr": "ca",
+      "tax": "各省 GST/HST 5–15%",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 1.174,
+      "lat": 56.1,
+      "lon": -106.3
+    },
+    {
+      "flag": "🇦🇷",
+      "name": "阿根廷",
+      "cc": "ar",
+      "addr": "ar",
+      "tax": "21% IVA + 8% 数字税",
+      "risk": "中",
+      "riskNote": "需本地账单地址、IP 与礼品卡",
+      "pppex": 728.957,
+      "lat": -38.4,
+      "lon": -63.6
+    },
+    {
+      "flag": "🇪🇬",
+      "name": "埃及",
+      "cc": "eg",
+      "addr": null,
+      "tax": "含 14% 增值税",
+      "risk": "中",
+      "riskNote": "需本地账单地址、IP 与礼品卡",
+      "pppex": 8.292,
+      "lat": 26.8,
+      "lon": 30.8
+    },
+    {
+      "flag": "🇦🇺",
+      "name": "澳大利亚",
+      "cc": "au",
+      "addr": "au",
+      "tax": "含 10% GST",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 1.437,
+      "lat": -25.3,
+      "lon": 133.8
+    },
+    {
+      "flag": "🇵🇭",
+      "name": "菲律宾",
+      "cc": "ph",
+      "addr": "ph",
+      "tax": "含 12% 增值税",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 19.218,
+      "lat": 12.9,
+      "lon": 121.8
+    },
+    {
+      "flag": "🇮🇳",
+      "name": "印度",
+      "cc": "in",
+      "addr": "in",
+      "tax": "含 18% GST",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 20.343,
+      "lat": 21,
+      "lon": 78
+    },
+    {
+      "flag": "🇹🇷",
+      "name": "土耳其",
+      "cc": "tr",
+      "addr": "tr",
+      "tax": "含 20% 增值税",
+      "risk": "中",
+      "riskNote": "需本地账单地址、IP 与礼品卡",
+      "pppex": 20.204,
+      "lat": 39,
+      "lon": 35.2
+    },
+    {
+      "flag": "🇳🇬",
+      "name": "尼日利亚",
+      "cc": "ng",
+      "addr": "ng",
+      "tax": "含 7.5% 增值税",
+      "risk": "中",
+      "riskNote": "需本地账单地址、IP 与礼品卡",
+      "pppex": 218.339,
+      "lat": 9.1,
+      "lon": 8.7
+    },
+    {
+      "flag": "🇰🇷",
+      "name": "韩国",
+      "cc": "kr",
+      "addr": "kr",
+      "tax": "含 10% 增值税",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 787.181,
+      "lat": 36.5,
+      "lon": 127.9
+    },
+    {
+      "flag": "🇲🇽",
+      "name": "墨西哥",
+      "cc": "mx",
+      "addr": "mx",
+      "tax": "含 16% IVA",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 10.507,
+      "lat": 23.6,
+      "lon": -102.6
+    },
+    {
+      "flag": "🇩🇪",
+      "name": "德国",
+      "cc": "de",
+      "addr": "de",
+      "tax": "含 19% 增值税",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 0.722,
+      "lat": 51.2,
+      "lon": 10.4
+    },
+    {
+      "flag": "🇫🇷",
+      "name": "法国",
+      "cc": "fr",
+      "addr": "fr",
+      "tax": "含 20% 增值税",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 0.644,
+      "lat": 46.6,
+      "lon": 2.2
+    },
+    {
+      "flag": "🇧🇷",
+      "name": "巴西",
+      "cc": "br",
+      "addr": "br",
+      "tax": "州税 ICMS 7–25%",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 2.613,
+      "lat": -14.2,
+      "lon": -51.9
+    },
+    {
+      "flag": "🇬🇧",
+      "name": "英国",
+      "cc": "gb",
+      "addr": "uk",
+      "tax": "含 20% 增值税",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 0.665,
+      "lat": 54,
+      "lon": -2
+    },
+    {
+      "flag": "🇩🇰",
+      "name": "丹麦",
+      "cc": "dk",
+      "addr": null,
+      "tax": "含 25% 增值税",
+      "risk": "低",
+      "riskNote": "",
+      "pppex": 5.881,
+      "lat": 56,
+      "lon": 9.5
+    },
+    {
+      "cc": "cl",
+      "flag": "🇨🇱",
+      "name": "智利",
+      "addr": "cl",
+      "tax": "含 19% IVA",
+      "risk": "low",
+      "lat": -33.4,
+      "lon": -70.7,
+      "pppex": 486.069
+    },
+    {
+      "cc": "co",
+      "flag": "🇨🇴",
+      "name": "哥伦比亚",
+      "addr": "co",
+      "tax": "结账另加 19% IVA",
+      "risk": "low",
+      "lat": 4.7,
+      "lon": -74.1,
+      "pppex": 1602.91
+    },
+    {
+      "cc": "pe",
+      "flag": "🇵🇪",
+      "name": "秘鲁",
+      "addr": "pe",
+      "tax": "含 18% IGV",
+      "risk": "low",
+      "lat": -12,
+      "lon": -77,
+      "pppex": 1.896
+    },
+    {
+      "cc": "es",
+      "flag": "🇪🇸",
+      "name": "西班牙",
+      "addr": "es",
+      "tax": "含 21% VAT",
+      "risk": "low",
+      "lat": 40.4,
+      "lon": -3.7,
+      "pppex": 0.596
+    },
+    {
+      "cc": "it",
+      "flag": "🇮🇹",
+      "name": "意大利",
+      "addr": "it",
+      "tax": "含 22% VAT",
+      "risk": "low",
+      "lat": 41.9,
+      "lon": 12.5,
+      "pppex": 0.6
+    },
+    {
+      "cc": "nl",
+      "flag": "🇳🇱",
+      "name": "荷兰",
+      "addr": "nl",
+      "tax": "含 21% VAT",
+      "risk": "low",
+      "lat": 52.4,
+      "lon": 4.9,
+      "pppex": 0.772
+    },
+    {
+      "cc": "za",
+      "flag": "🇿🇦",
+      "name": "南非",
+      "addr": "za",
+      "tax": "含 15% VAT",
+      "risk": "low",
+      "lat": -26.2,
+      "lon": 28,
+      "pppex": 7.485
+    },
+    {
+      "cc": "nz",
+      "flag": "🇳🇿",
+      "name": "新西兰",
+      "addr": "nz",
+      "tax": "含 15% GST",
+      "risk": "low",
+      "lat": -36.8,
+      "lon": 174.8,
+      "pppex": 1.494
+    },
+    {
+      "cc": "hk",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "addr": "hk",
+      "tax": "无消费税",
+      "risk": "low",
+      "lat": 22.3,
+      "lon": 114.2,
+      "pppex": 5.513
+    }
+  ],
+  "products": {
+    "claude": {
+      "label": "Claude",
+      "developer": "Anthropic",
+      "site": "https://claude.ai/",
+      "baseTier": "pro",
+      "tiers": [
+        {
+          "key": "pro",
+          "label": "Pro"
+        },
+        {
+          "key": "max5x",
+          "label": "Max 5x"
+        },
+        {
+          "key": "max20x",
+          "label": "Max 20x"
+        }
+      ],
+      "web": {
+        "note": "网页直订：Pro $20/月（年付折合 $17）· Max 5x $100 · Max 20x $200",
+        "pro": 17,
+        "max5x": 100,
+        "max20x": 200
+      },
+      "regions": {
+        "us": {
+          "pro": 20,
+          "local": "$20.00",
+          "localAmount": 20,
+          "max5x": 124.99,
+          "max20x": 249.99,
+          "play": "$20.00 - $279.99",
+          "ppp": 20
+        },
+        "jp": {
+          "pro": 18.48,
+          "local": "¥3,000",
+          "localAmount": 3000,
+          "max5x": 123.22,
+          "max20x": 246.44,
+          "play": "¥3,400 - ¥42,500",
+          "ppp": 32.15
+        },
+        "pk": {
+          "pro": 17.61,
+          "local": "Rs 4,900.00",
+          "localAmount": 4900,
+          "max5x": 125.45,
+          "max20x": 251.26,
+          "play": "Rs 4,900 - Rs 61,250",
+          "ppp": 69.18
+        },
+        "ca": {
+          "pro": 19.79,
+          "local": "$28.00",
+          "localAmount": 28,
+          "max5x": 127.24,
+          "max20x": 247.43,
+          "play": "$28.00 - $350.00",
+          "ppp": 23.85
+        },
+        "ar": {
+          "pro": 20,
+          "local": "USD 20.00",
+          "localAmount": 20,
+          "max5x": 124.99,
+          "max20x": 249.99,
+          "play": null,
+          "ppp": 40.77
+        },
+        "eg": {
+          "pro": 19.91,
+          "local": "EGP 999.99",
+          "localAmount": 999.99,
+          "max5x": 139.36,
+          "max20x": 258.81,
+          "play": "EGP 1,099.99 - EGP 13,749.88",
+          "ppp": 120.6
+        },
+        "au": {
+          "pro": 20.78,
+          "local": "$30.00",
+          "localAmount": 30,
+          "max5x": 138.53,
+          "max20x": 277.06,
+          "play": "$33.99 - $424.88",
+          "ppp": 20.88
+        },
+        "ph": {
+          "pro": 20.92,
+          "local": "₱ 1,290.00",
+          "localAmount": 1290,
+          "max5x": 129.6,
+          "max20x": 243.14,
+          "play": "₱1,300.00 - ₱16,250.00",
+          "ppp": 67.12
+        },
+        "in": {
+          "pro": 20.88,
+          "local": "₹ 1,999",
+          "localAmount": 1999,
+          "max5x": 134.77,
+          "max20x": 260.13,
+          "play": "₹1,999.00 - ₹24,987.50",
+          "ppp": 98.26
+        },
+        "tr": {
+          "pro": 21.27,
+          "local": "₺999,99",
+          "localAmount": 999.99,
+          "max5x": 148.92,
+          "max20x": 276.56,
+          "play": "TRY 799.99 - TRY 9,999.88",
+          "ppp": 49.49
+        },
+        "ng": {
+          "pro": 21.67,
+          "local": "₦ 29,900.00",
+          "localAmount": 29900,
+          "max5x": 144.85,
+          "max20x": 289.77,
+          "play": "₦33,500.00 - ₦418,750.00",
+          "ppp": 136.94
+        },
+        "kr": {
+          "pro": null,
+          "local": null,
+          "localAmount": null,
+          "max5x": null,
+          "max20x": null,
+          "play": "₩30,000 - ₩375,000",
+          "ppp": null
+        },
+        "mx": {
+          "pro": 22.79,
+          "local": "$399.00",
+          "localAmount": 399,
+          "max5x": 142.72,
+          "max20x": 285.49,
+          "play": "MX$399.00 - MX$4,987.50",
+          "ppp": 37.97
+        },
+        "de": {
+          "pro": 25.07,
+          "local": "22,00 €",
+          "localAmount": 22,
+          "max5x": 170.95,
+          "max20x": 341.91,
+          "play": "€22.00 - €275.00",
+          "ppp": 30.47
+        },
+        "fr": {
+          "pro": 25.07,
+          "local": "22,00 €",
+          "localAmount": 22,
+          "max5x": 170.95,
+          "max20x": 341.91,
+          "play": "€22.00 - €275.00",
+          "ppp": 34.16
+        },
+        "br": {
+          "pro": 25.38,
+          "local": "R$ 129,90",
+          "localAmount": 129.9,
+          "max5x": 156.28,
+          "max20x": 293.04,
+          "play": "R$110.00 - R$1,375.00",
+          "ppp": 49.71
+        },
+        "gb": {
+          "pro": 26.73,
+          "local": "£20.00",
+          "localAmount": 20,
+          "max5x": 160.35,
+          "max20x": 334.09,
+          "play": "£18.00 - £225.00",
+          "ppp": 30.08
+        },
+        "dk": {
+          "pro": 27.35,
+          "local": "179,00 kr",
+          "localAmount": 179,
+          "max5x": 152.63,
+          "max20x": 305.42,
+          "play": "179,00 kr. - 2.237,50 kr.",
+          "ppp": 30.44
+        }
+      },
+      "store": {
+        "appleId": "6473753684",
+        "playPkg": "com.anthropic.claude"
+      },
+      "tierRules": [
+        [
+          "max.*20|20x",
+          "max20x"
+        ],
+        [
+          "max",
+          "max5x"
+        ],
+        [
+          "pro",
+          "pro"
+        ]
+      ]
+    },
+    "chatgpt": {
+      "label": "ChatGPT",
+      "developer": "OpenAI",
+      "site": "https://chatgpt.com/",
+      "baseTier": "plus",
+      "tiers": [
+        {
+          "key": "plus",
+          "label": "Plus"
+        },
+        {
+          "key": "pro",
+          "label": "Pro"
+        },
+        {
+          "key": "go",
+          "label": "Go"
+        }
+      ],
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$8.00 - $200.00",
+          "plus": 19.99,
+          "local": "$19.99",
+          "localAmount": 19.99,
+          "go": 8,
+          "pro": 200,
+          "ppp": 19.99
+        },
+        "jp": {
+          "play": "¥1,400 - ¥30,000",
+          "plus": 18.48,
+          "local": "¥3,000",
+          "localAmount": 3000,
+          "go": 8.63,
+          "pro": 184.83,
+          "ppp": 32.15
+        },
+        "pk": {
+          "play": "Rs 1,400 - Rs 49,900",
+          "go": 5.03,
+          "plus": 17.61,
+          "local": "Rs 4,900.00",
+          "localAmount": 4900,
+          "pro": 100.64,
+          "ppp": 69.18
+        },
+        "ca": {
+          "play": "$11.00 - $249.00",
+          "plus": 17.67,
+          "local": "$24.99",
+          "localAmount": 24.99,
+          "go": 9.18,
+          "pro": 176.03,
+          "ppp": 21.29
+        },
+        "eg": {
+          "play": "EGP 220.00 - EGP 9,999.99",
+          "go": 4.98,
+          "plus": 19.91,
+          "local": "EGP 999.99",
+          "localAmount": 999.99,
+          "pro": 107.51,
+          "ppp": 120.6
+        },
+        "au": {
+          "play": "$13.00 - $300.00",
+          "plus": 20.77,
+          "local": "$29.99",
+          "localAmount": 29.99,
+          "go": 9,
+          "pro": 107.36,
+          "ppp": 20.87
+        },
+        "ph": {
+          "play": "₱300.00 - ₱9,990.00",
+          "go": 4.87,
+          "plus": 16.2,
+          "local": "₱ 999.00",
+          "localAmount": 999,
+          "pro": 162.04,
+          "ppp": 51.98
+        },
+        "in": {
+          "play": "₹399.00 - ₹19,900.00",
+          "go": 4.17,
+          "plus": 20.88,
+          "local": "₹ 1,999",
+          "localAmount": 1999,
+          "pro": 111.77,
+          "ppp": 98.26
+        },
+        "tr": {
+          "play": "TRY 249.99 - TRY 9,999.99",
+          "plus": 21.27,
+          "local": "₺999,99",
+          "localAmount": 999.99,
+          "go": 5.32,
+          "pro": 212.74,
+          "ppp": 49.49
+        },
+        "ng": {
+          "play": "₦7,000.00 - ₦299,900.00",
+          "plus": 22.82,
+          "local": "₦ 31,500.00",
+          "localAmount": 31500,
+          "go": 5,
+          "pro": 104.99,
+          "ppp": 144.27
+        },
+        "kr": {
+          "play": "₩13,000 - ₩310,000"
+        },
+        "mx": {
+          "play": "MX$129.00 - MX$3,999.00",
+          "plus": 22.79,
+          "local": "$399.00",
+          "localAmount": 399,
+          "go": 7.37,
+          "pro": 228.38,
+          "ppp": 37.97
+        },
+        "de": {
+          "play": "€7.99 - €229.00",
+          "plus": 26.2,
+          "local": "22,99 €",
+          "localAmount": 22.99,
+          "go": 9.11,
+          "pro": 117.38,
+          "ppp": 31.84
+        },
+        "fr": {
+          "play": "€7.99 - €229.00",
+          "plus": 26.2,
+          "local": "22,99 €",
+          "localAmount": 22.99,
+          "go": 9.11,
+          "pro": 261,
+          "ppp": 35.7
+        },
+        "br": {
+          "play": "R$39.99 - R$999.90",
+          "plus": 19.52,
+          "local": "R$ 99,90",
+          "localAmount": 99.9,
+          "go": 7.8,
+          "pro": 195.35,
+          "ppp": 38.23
+        },
+        "gb": {
+          "play": "£6.99 - £200.00",
+          "plus": 26.71,
+          "local": "£19.99",
+          "localAmount": 19.99,
+          "go": 9.34,
+          "pro": 267.28,
+          "ppp": 30.06
+        },
+        "dk": {
+          "play": "64,00 kr. - 1.799,00 kr.",
+          "plus": 27.35,
+          "local": "179,00 kr",
+          "localAmount": 179,
+          "go": 9.78,
+          "pro": 120.55,
+          "ppp": 30.44
+        },
+        "ar": {
+          "plus": 19.99,
+          "local": "USD 19.99",
+          "localAmount": 19.99,
+          "go": 5.99,
+          "pro": 100,
+          "ppp": 40.75
+        }
+      },
+      "store": {
+        "appleId": "6448311069",
+        "playPkg": "com.openai.chatgpt"
+      },
+      "tierRules": [
+        [
+          "\\bgo\\b",
+          "go"
+        ],
+        [
+          "plus",
+          "plus"
+        ],
+        [
+          "\\bpro\\b",
+          "pro"
+        ]
+      ]
+    },
+    "grok": {
+      "label": "Grok",
+      "developer": "xAI",
+      "site": "https://grok.com/",
+      "baseTier": "supergrok",
+      "tiers": [
+        {
+          "key": "supergrok",
+          "label": "SuperGrok"
+        },
+        {
+          "key": "heavy",
+          "label": "SuperGrok Heavy"
+        }
+      ],
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$4.99 - $299.99",
+          "supergrok": 30,
+          "local": "$30.00",
+          "localAmount": 30,
+          "heavy": 300,
+          "ppp": 30
+        },
+        "jp": {
+          "play": "¥900 - ¥48,300",
+          "supergrok": 30.81,
+          "local": "¥5,000",
+          "localAmount": 5000,
+          "heavy": 308.05,
+          "ppp": 53.59
+        },
+        "pk": {
+          "play": "Rs 1,400 - Rs 85,300",
+          "supergrok": 28.4,
+          "local": "Rs 7,900.00",
+          "localAmount": 7900,
+          "heavy": 287.2,
+          "ppp": 111.54
+        },
+        "ca": {
+          "play": "$6.99 - $424.99",
+          "supergrok": 28.28,
+          "local": "$40.00",
+          "localAmount": 40,
+          "heavy": 282.78,
+          "ppp": 34.07
+        },
+        "eg": {
+          "play": "EGP 279.99 - EGP 17,299.99",
+          "supergrok": 30.23,
+          "local": "EGP 1,499.99",
+          "localAmount": 1499.99,
+          "heavy": 302.27,
+          "ppp": 180.9
+        },
+        "au": {
+          "play": "$7.99 - $499.99",
+          "supergrok": 34.63,
+          "local": "$50.00",
+          "localAmount": 50,
+          "heavy": 346.33,
+          "ppp": 34.79
+        },
+        "ph": {
+          "play": "₱345.00 - ₱17,350.00",
+          "supergrok": 29.03,
+          "local": "₱ 1,790.00",
+          "localAmount": 1790,
+          "heavy": 243.14,
+          "ppp": 93.14
+        },
+        "in": {
+          "play": "₹550.00 - ₹30,300.00",
+          "supergrok": 7.31,
+          "local": "₹ 700",
+          "localAmount": 700,
+          "heavy": 312.37,
+          "ppp": 34.41
+        },
+        "tr": {
+          "play": "TRY 279.99 - TRY 14,409.99",
+          "supergrok": 27.66,
+          "local": "₺1.299,99",
+          "localAmount": 1299.99,
+          "heavy": 276.56,
+          "ppp": 64.34
+        },
+        "ng": {
+          "play": "₦7,420.00 - ₦493,000.00",
+          "supergrok": 36.16,
+          "local": "₦ 49,900.00",
+          "localAmount": 49900,
+          "heavy": 362.23,
+          "ppp": 228.54
+        },
+        "kr": {
+          "play": "₩8,500 - ₩480,000"
+        },
+        "mx": {
+          "play": "MX$99.00 - MX$7,049.00",
+          "supergrok": 34.21,
+          "local": "$599.00",
+          "localAmount": 599,
+          "heavy": 342.6,
+          "ppp": 57.01
+        },
+        "de": {
+          "play": "€4.99 - €339.99",
+          "supergrok": 39.89,
+          "local": "35,00 €",
+          "localAmount": 35,
+          "heavy": 397.76,
+          "ppp": 48.48
+        },
+        "fr": {
+          "play": "€5.49 - €344.99",
+          "supergrok": 39.89,
+          "local": "35,00 €",
+          "localAmount": 35,
+          "heavy": 397.76,
+          "ppp": 54.35
+        },
+        "br": {
+          "play": "R$25.99 - R$1,699.99",
+          "supergrok": 29.29,
+          "local": "R$ 149,90",
+          "localAmount": 149.9,
+          "heavy": 390.72,
+          "ppp": 57.37
+        },
+        "gb": {
+          "play": "£4.49 - £284.99",
+          "supergrok": 40.09,
+          "local": "£30.00",
+          "localAmount": 30,
+          "heavy": 400.92,
+          "ppp": 45.11
+        },
+        "dk": {
+          "play": "41,00 kr. - 2.649,00 kr.",
+          "supergrok": 38.04,
+          "local": "249,00 kr",
+          "localAmount": 249,
+          "heavy": 381.81,
+          "ppp": 42.34
+        },
+        "ar": {
+          "supergrok": 30,
+          "local": "USD 30.00",
+          "localAmount": 30,
+          "heavy": 300,
+          "ppp": 61.16
+        }
+      },
+      "store": {
+        "appleId": "6670324846",
+        "playPkg": "ai.x.grok"
+      },
+      "tierRules": [
+        [
+          "heavy",
+          "heavy"
+        ],
+        [
+          "super",
+          "supergrok"
+        ]
+      ]
+    },
+    "gemini": {
+      "label": "Gemini",
+      "developer": "Google",
+      "site": "https://gemini.google.com/",
+      "baseTier": "pro",
+      "tiers": [
+        {
+          "key": "pro",
+          "label": "AI Pro"
+        },
+        {
+          "key": "ultra",
+          "label": "AI Ultra"
+        }
+      ],
+      "tierRules": [
+        [
+          "ultra",
+          "ultra"
+        ],
+        [
+          "pro|premium|ai plan",
+          "pro"
+        ]
+      ],
+      "store": {
+        "appleId": "6477489729",
+        "playPkg": "com.google.android.apps.bard",
+        "appleSearch": "Google Gemini",
+        "sellerRe": "Google"
+      },
+      "web": null,
+      "regions": {}
+    },
+    "perplexity": {
+      "label": "Perplexity",
+      "developer": "Perplexity AI",
+      "site": "https://www.perplexity.ai/",
+      "baseTier": "pro",
+      "tiers": [
+        {
+          "key": "pro",
+          "label": "Pro"
+        },
+        {
+          "key": "max",
+          "label": "Max"
+        }
+      ],
+      "tierRules": [
+        [
+          "max",
+          "max"
+        ],
+        [
+          "pro",
+          "pro"
+        ]
+      ],
+      "store": {
+        "appleId": "1668000334",
+        "playPkg": "ai.perplexity.app.android",
+        "appleSearch": "Perplexity",
+        "sellerRe": "Perplexity"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$4.99 - $1,999.99",
+          "pro": 20,
+          "local": "$20.00",
+          "localAmount": 20,
+          "max": 200,
+          "ppp": 20
+        },
+        "jp": {
+          "play": "¥720 - ¥342,500",
+          "pro": 18.48,
+          "local": "¥3,000",
+          "localAmount": 3000,
+          "max": 184.83,
+          "ppp": 32.15
+        },
+        "pk": {
+          "play": "Rs 1,400 - Rs 559,700",
+          "pro": 17.61,
+          "local": "Rs 4,900.00",
+          "localAmount": 4900,
+          "max": 179.37,
+          "ppp": 69.18
+        },
+        "ca": {
+          "play": "$6.49 - $2,749.99",
+          "pro": 17.67,
+          "local": "$25.00",
+          "localAmount": 25,
+          "max": 176.03,
+          "ppp": 21.29
+        },
+        "eg": {
+          "play": "EGP 279.99 - EGP 107,099.99",
+          "pro": 19.91,
+          "local": "EGP 999.99",
+          "localAmount": 999.99,
+          "max": 199.09,
+          "ppp": 120.6
+        },
+        "au": {
+          "play": "$7.99 - $3,149.99",
+          "pro": 20.78,
+          "local": "$30.00",
+          "localAmount": 30,
+          "max": 207.8,
+          "ppp": 20.88
+        },
+        "ph": {
+          "play": "₱280.00 - ₱131,950.00",
+          "pro": 20.92,
+          "local": "₱ 1,290.00",
+          "localAmount": 1290,
+          "max": 210.7,
+          "ppp": 67.12
+        },
+        "in": {
+          "play": "₹490.00 - ₹28,000.00",
+          "pro": 20.88,
+          "local": "₹ 1,999",
+          "localAmount": 1999,
+          "max": 207.9,
+          "ppp": 98.26
+        },
+        "tr": {
+          "play": "TRY 204.99 - TRY 104,339.99",
+          "pro": 21.27,
+          "local": "₺999,99",
+          "localAmount": 999.99,
+          "max": 212.74,
+          "ppp": 49.49
+        },
+        "ng": {
+          "play": "₦7,430.00 - ₦2,982,000.00",
+          "pro": 21.67,
+          "local": "₦ 29,900.00",
+          "localAmount": 29900,
+          "ppp": 136.94
+        },
+        "kr": {
+          "play": "₩7,500 - ₩420,000"
+        },
+        "mx": {
+          "play": "MX$105.00 - MX$39,949.00",
+          "pro": 22.79,
+          "local": "$399.00",
+          "localAmount": 399,
+          "max": 228.38,
+          "ppp": 37.97
+        },
+        "de": {
+          "play": "€4.99 - €1,999.99",
+          "pro": 25.07,
+          "local": "22,00 €",
+          "localAmount": 22,
+          "max": 261,
+          "ppp": 30.47
+        },
+        "fr": {
+          "play": "€4.99 - €2,049.99",
+          "pro": 25.07,
+          "local": "22,00 €",
+          "localAmount": 22,
+          "max": 261,
+          "ppp": 34.16
+        },
+        "br": {
+          "play": "R$25.99 - R$10,449.99",
+          "pro": 25.38,
+          "local": "R$ 129,90",
+          "localAmount": 129.9,
+          "max": 253.96,
+          "ppp": 49.71
+        },
+        "gb": {
+          "play": "£4.49 - £1,749.99",
+          "pro": 26.73,
+          "local": "£20.00",
+          "localAmount": 20,
+          "max": 267.28,
+          "ppp": 30.08
+        },
+        "dk": {
+          "play": "41,00 kr. - 15.799,00 kr.",
+          "pro": 27.35,
+          "local": "179,00 kr",
+          "localAmount": 179,
+          "max": 274.86,
+          "ppp": 30.44
+        },
+        "ar": {
+          "pro": 20,
+          "local": "USD 20.00",
+          "localAmount": 20,
+          "max": 200,
+          "ppp": 40.77
+        }
+      }
+    },
+    "copilot": {
+      "label": "Copilot",
+      "developer": "Microsoft",
+      "site": "https://copilot.microsoft.com/",
+      "baseTier": "pro",
+      "tiers": [
+        {
+          "key": "pro",
+          "label": "Pro"
+        }
+      ],
+      "tierRules": [
+        [
+          "pro",
+          "pro"
+        ]
+      ],
+      "store": {
+        "appleId": "6472538445",
+        "playPkg": "com.microsoft.copilot",
+        "appleSearch": "Microsoft Copilot",
+        "sellerRe": "Microsoft"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$9.99 - $199.99",
+          "pro": 20,
+          "local": "$20.00",
+          "localAmount": 20,
+          "ppp": 20
+        },
+        "jp": {
+          "play": "¥2,130 - ¥32,000",
+          "pro": 19.72,
+          "local": "¥3,200",
+          "localAmount": 3200,
+          "ppp": 34.3
+        },
+        "pk": {
+          "play": "Rs 2,299 - Rs 55,999",
+          "pro": 20.13,
+          "local": "Rs 5,600.00",
+          "localAmount": 5600,
+          "ppp": 79.07
+        },
+        "ca": {
+          "play": "$11.50 - $270.00",
+          "pro": 19.09,
+          "local": "$27.00",
+          "localAmount": 27,
+          "ppp": 23
+        },
+        "eg": {
+          "play": "EGP 239.00 - EGP 6,999.00",
+          "pro": 13.94,
+          "local": "EGP 700.00",
+          "localAmount": 700,
+          "ppp": 84.42
+        },
+        "au": {
+          "play": "$16.00 - $329.00",
+          "pro": 22.86,
+          "local": "$33.00",
+          "localAmount": 33,
+          "ppp": 22.96
+        },
+        "ph": {
+          "play": "₱489.00 - ₱10,999.00",
+          "pro": 21.09,
+          "local": "₱ 1,300.00",
+          "localAmount": 1300,
+          "ppp": 67.64
+        },
+        "in": {
+          "play": "₹689.00 - ₹19,999.00",
+          "pro": 20.89,
+          "local": "₹ 2,000",
+          "localAmount": 2000,
+          "ppp": 98.31
+        },
+        "tr": {
+          "play": "TRY 329.99 - TRY 7,199.99",
+          "pro": 15.32,
+          "local": "₺719,99",
+          "localAmount": 719.99,
+          "ppp": 35.64
+        },
+        "ng": {
+          "play": "₦7,200.00 - ₦169,900.00",
+          "pro": 12.32,
+          "local": "₦ 17,000.00",
+          "localAmount": 17000,
+          "ppp": 77.86
+        },
+        "kr": {
+          "play": "₩12,500 - ₩290,000"
+        },
+        "mx": {
+          "play": "MX$185.00 - MX$3,749.00",
+          "pro": 19.99,
+          "local": "$350.00",
+          "localAmount": 350,
+          "ppp": 33.31
+        },
+        "de": {
+          "play": "€10.00 - €219.00",
+          "pro": 25.07,
+          "local": "22,00 €",
+          "localAmount": 22,
+          "ppp": 30.47
+        },
+        "fr": {
+          "play": "€10.00 - €219.00",
+          "pro": 25.07,
+          "local": "22,00 €",
+          "localAmount": 22,
+          "ppp": 34.16
+        },
+        "br": {
+          "play": "R$51.00 - R$1,089.00",
+          "pro": 21.47,
+          "local": "R$ 109,90",
+          "localAmount": 109.9,
+          "ppp": 42.06
+        },
+        "gb": {
+          "play": "£8.49 - £189.99",
+          "pro": 25.39,
+          "local": "£19.00",
+          "localAmount": 19,
+          "ppp": 28.57
+        },
+        "dk": {
+          "play": "78.99 kr. - 1,689.00 kr.",
+          "pro": 25.82,
+          "local": "169,00 kr",
+          "localAmount": 169,
+          "ppp": 28.74
+        },
+        "ar": {
+          "pro": 20,
+          "local": "USD 20.00",
+          "localAmount": 20,
+          "ppp": 40.77
+        }
+      }
+    },
+    "capcut": {
+      "label": "CapCut",
+      "developer": "Bytedance",
+      "site": "https://www.capcut.com/",
+      "baseTier": "pro",
+      "tiers": [
+        {
+          "key": "pro",
+          "label": "Pro"
+        }
+      ],
+      "tierRules": [
+        [
+          "pro",
+          "pro"
+        ]
+      ],
+      "store": {
+        "appleId": "1500855883",
+        "playPkg": "com.lemon.lvoverseas",
+        "appleSearch": "CapCut",
+        "sellerRe": "Bytedance|CapCut"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$0.49 - $669.99",
+          "pro": 19.99,
+          "local": "$19.99",
+          "localAmount": 19.99,
+          "ppp": 19.99
+        },
+        "jp": {
+          "play": "¥12 - ¥99,800",
+          "pro": 13.43,
+          "local": "¥2,180",
+          "localAmount": 2180,
+          "ppp": 23.36
+        },
+        "pk": {
+          "play": "Rs 12 - Rs 179,900",
+          "pro": 7.91,
+          "local": "Rs 2,200.00",
+          "localAmount": 2200,
+          "ppp": 31.06
+        },
+        "ca": {
+          "play": "$0.39 - $909.00",
+          "pro": 19.79,
+          "local": "$27.99",
+          "localAmount": 27.99,
+          "ppp": 23.84
+        },
+        "eg": {
+          "play": "EGP 9.99 - EGP 34,999.99",
+          "pro": 10.08,
+          "local": "EGP 499.99",
+          "localAmount": 499.99,
+          "ppp": 60.3
+        },
+        "au": {
+          "play": "$0.49 - $1,000.00",
+          "pro": 20.85,
+          "local": "$29.99",
+          "localAmount": 29.99,
+          "ppp": 20.87
+        },
+        "ph": {
+          "play": "₱9.00 - ₱37,490.00",
+          "pro": 7.8,
+          "local": "₱ 480.00",
+          "localAmount": 480,
+          "ppp": 24.98
+        },
+        "tr": {
+          "play": "TRY 4.99 - TRY 30,999.00",
+          "pro": 8.51,
+          "local": "₺399,99",
+          "localAmount": 399.99,
+          "ppp": 19.8
+        },
+        "ng": {
+          "play": "₦30.00 - ₦1,099,000.00",
+          "pro": 10.8,
+          "local": "₦ 14,900.00",
+          "localAmount": 14900,
+          "ppp": 68.24
+        },
+        "kr": {
+          "play": "₩80 - ₩570,000"
+        },
+        "mx": {
+          "play": "MX$5.00 - MX$14,999.00",
+          "pro": 18.86,
+          "local": "$330.00",
+          "localAmount": 330,
+          "ppp": 31.41
+        },
+        "de": {
+          "play": "€0.29 - €769.99",
+          "pro": 27.34,
+          "local": "23,99 €",
+          "localAmount": 23.99,
+          "ppp": 33.23
+        },
+        "fr": {
+          "play": "€0.29 - €769.99",
+          "pro": 27.34,
+          "local": "23,99 €",
+          "localAmount": 23.99,
+          "ppp": 37.25
+        },
+        "br": {
+          "play": "R$0.90 - R$3,299.90",
+          "pro": 12.87,
+          "local": "R$ 65,90",
+          "localAmount": 65.9,
+          "ppp": 25.22
+        },
+        "gb": {
+          "play": "£0.29 - £700.00",
+          "pro": 29.39,
+          "local": "£21.99",
+          "localAmount": 21.99,
+          "ppp": 33.07
+        },
+        "dk": {
+          "play": "2,00 kr. - 6.999,00 kr.",
+          "pro": 34.99,
+          "local": "229,00 kr",
+          "localAmount": 229,
+          "ppp": 38.94
+        },
+        "ar": {
+          "pro": 6.99,
+          "local": "USD 6.99",
+          "localAmount": 6.99,
+          "ppp": 14.25
+        }
+      }
+    },
+    "characterai": {
+      "label": "Character.AI",
+      "developer": "Character Technologies",
+      "site": "https://character.ai/",
+      "baseTier": "plus",
+      "tiers": [
+        {
+          "key": "plus",
+          "label": "c.ai+"
+        }
+      ],
+      "tierRules": [
+        [
+          "c\\.ai|plus",
+          "plus"
+        ]
+      ],
+      "store": {
+        "appleId": "1671705818",
+        "playPkg": "ai.character.app",
+        "appleSearch": "Character AI",
+        "sellerRe": "Character"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$0.99 - $99.99"
+        },
+        "jp": {
+          "play": "¥170 - ¥17,800"
+        },
+        "pk": {
+          "play": "Rs 280 - Rs 27,800"
+        },
+        "ca": {
+          "play": "$1.39 - $139.99"
+        },
+        "eg": {
+          "play": "EGP 53.99 - EGP 5,649.99"
+        },
+        "au": {
+          "play": "$1.59 - $159.99"
+        },
+        "ph": {
+          "play": "₱65.00 - ₱6,850.00"
+        },
+        "in": {
+          "play": "₹100.00 - ₹11,200.00"
+        },
+        "tr": {
+          "play": "TRY 50.99 - TRY 5,579.99"
+        },
+        "ng": {
+          "play": "₦1,550.00 - ₦156,000.00"
+        },
+        "kr": {
+          "play": "₩1,600 - ₩170,000"
+        },
+        "mx": {
+          "play": "MX$21.00 - MX$2,049.00"
+        },
+        "de": {
+          "play": "€0.99 - €104.99"
+        },
+        "fr": {
+          "play": "€0.99 - €104.99"
+        },
+        "br": {
+          "play": "R$5.49 - R$519.99"
+        },
+        "gb": {
+          "play": "£0.89 - £90.99"
+        },
+        "dk": {
+          "play": "8,00 kr. - 819,00 kr."
+        }
+      }
+    },
+    "suno": {
+      "label": "Suno",
+      "developer": "Suno",
+      "site": "https://suno.com/",
+      "baseTier": "pro",
+      "tiers": [
+        {
+          "key": "pro",
+          "label": "Pro"
+        },
+        {
+          "key": "premier",
+          "label": "Premier"
+        }
+      ],
+      "tierRules": [
+        [
+          "premier",
+          "premier"
+        ],
+        [
+          "pro",
+          "pro"
+        ]
+      ],
+      "store": {
+        "appleId": "6480136315",
+        "playPkg": "com.suno.android",
+        "appleSearch": "Suno AI Music",
+        "sellerRe": "Suno",
+        "playCandidates": [
+          "com.suno.android"
+        ],
+        "devRe": "Suno"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$4.00 - $289.99",
+          "pro": 10,
+          "local": "$10.00",
+          "localAmount": 10,
+          "ppp": 10,
+          "premier": 30
+        },
+        "jp": {
+          "play": "¥620 - ¥50,500",
+          "pro": 9.24,
+          "local": "¥1,500",
+          "localAmount": 1500,
+          "ppp": 16.08,
+          "premier": 30.81
+        },
+        "pk": {
+          "play": "Rs 1,100 - Rs 81,100",
+          "pro": 10.42,
+          "local": "Rs 2,900.00",
+          "localAmount": 2900,
+          "ppp": 40.94,
+          "premier": 28.4
+        },
+        "ca": {
+          "play": "$5.49 - $399.99",
+          "pro": 9.9,
+          "local": "$14.00",
+          "localAmount": 14,
+          "ppp": 11.93,
+          "premier": 28.28
+        },
+        "eg": {
+          "play": "EGP 229.99 - EGP 16,999.99",
+          "pro": 9.95,
+          "local": "EGP 499.99",
+          "localAmount": 499.99,
+          "ppp": 60.3,
+          "premier": 29.86
+        },
+        "au": {
+          "play": "$6.99 - $479.99",
+          "pro": 10.39,
+          "local": "$15.00",
+          "localAmount": 15,
+          "ppp": 10.44,
+          "premier": 34.63
+        },
+        "ph": {
+          "play": "₱235.00 - ₱19,350.00",
+          "pro": 9.72,
+          "local": "₱ 599.00",
+          "localAmount": 599,
+          "ppp": 31.17,
+          "premier": 32.28
+        },
+        "in": {
+          "play": "₹400.00 - ₹31,800.00",
+          "pro": 10.44,
+          "local": "₹ 999",
+          "localAmount": 999,
+          "ppp": 49.11,
+          "premier": 31.33
+        },
+        "tr": {
+          "play": "TRY 164.99 - TRY 15,509.99",
+          "pro": 10.64,
+          "local": "₺499,99",
+          "localAmount": 499.99,
+          "ppp": 24.75,
+          "premier": 31.91
+        },
+        "ng": {
+          "play": "₦7,160.00 - ₦461,500.00",
+          "pro": 10.8,
+          "local": "₦ 14,900.00",
+          "localAmount": 14900,
+          "ppp": 68.24,
+          "premier": 36.16
+        },
+        "kr": {
+          "play": "₩6,000 - ₩470,000"
+        },
+        "mx": {
+          "play": "MX$95.00 - MX$6,149.00",
+          "pro": 11.36,
+          "local": "$199.00",
+          "localAmount": 199,
+          "ppp": 18.94,
+          "premier": 34.21
+        },
+        "de": {
+          "play": "€4.49 - €289.99",
+          "pro": 11.4,
+          "local": "10,00 €",
+          "localAmount": 10,
+          "ppp": 13.85,
+          "premier": 39.89
+        },
+        "fr": {
+          "play": "€4.59 - €294.99",
+          "pro": 11.4,
+          "local": "10,00 €",
+          "localAmount": 10,
+          "ppp": 15.53,
+          "premier": 39.89
+        },
+        "br": {
+          "play": "R$22.99 - R$1,499.99",
+          "pro": 11.7,
+          "local": "R$ 59,90",
+          "localAmount": 59.9,
+          "ppp": 22.92,
+          "premier": 39.05
+        },
+        "gb": {
+          "play": "£3.79 - £254.99",
+          "pro": 13.36,
+          "local": "£10.00",
+          "localAmount": 10,
+          "ppp": 15.04,
+          "premier": 40.09
+        },
+        "dk": {
+          "play": "35,00 kr. - 2.299,00 kr.",
+          "pro": 13.6,
+          "local": "89,00 kr",
+          "localAmount": 89,
+          "ppp": 15.13,
+          "premier": 38.04
+        },
+        "ar": {
+          "pro": 10,
+          "local": "USD 10.00",
+          "localAmount": 10,
+          "ppp": 20.39,
+          "premier": 30
+        }
+      }
+    },
+    "kling": {
+      "label": "Kling AI",
+      "developer": "Kuaishou",
+      "site": "https://klingai.com/",
+      "baseTier": "standard",
+      "tiers": [
+        {
+          "key": "standard",
+          "label": "Standard"
+        },
+        {
+          "key": "pro",
+          "label": "Pro"
+        },
+        {
+          "key": "premier",
+          "label": "Premier"
+        }
+      ],
+      "tierRules": [
+        [
+          "premier",
+          "premier"
+        ],
+        [
+          "pro",
+          "pro"
+        ],
+        [
+          "standard",
+          "standard"
+        ]
+      ],
+      "store": {
+        "appleId": "6738049229",
+        "playPkg": "kling.ai.video.chat",
+        "appleSearch": "Kling AI",
+        "sellerRe": "Kuaishou|Kling",
+        "playCandidates": [
+          "com.klingai.global",
+          "com.kwai.klingai"
+        ],
+        "devRe": "Kuaishou|Kling"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$0.59 - $2,160.00",
+          "standard": 1.19,
+          "local": "$1.19",
+          "localAmount": 1.19,
+          "ppp": 1.19
+        },
+        "jp": {
+          "play": "¥100 - ¥378,300",
+          "standard": 1.23,
+          "local": "¥200",
+          "localAmount": 200,
+          "ppp": 2.14
+        },
+        "pk": {
+          "play": "Rs 160 - Rs 602,000",
+          "standard": 1.08,
+          "local": "Rs 300.00",
+          "localAmount": 300,
+          "ppp": 4.24
+        },
+        "ca": {
+          "play": "$0.79 - $2,999.99",
+          "standard": 1.41,
+          "local": "$1.99",
+          "localAmount": 1.99,
+          "ppp": 1.7
+        },
+        "eg": {
+          "play": "EGP 35.99 - EGP 128,599.99",
+          "standard": 1.19,
+          "local": "EGP 59.99",
+          "localAmount": 59.99,
+          "ppp": 7.23
+        },
+        "au": {
+          "play": "$0.89 - $3,299.99",
+          "standard": 1.38,
+          "local": "$1.99",
+          "localAmount": 1.99,
+          "ppp": 1.38
+        },
+        "ph": {
+          "play": "₱41.00 - ₱148,950.00",
+          "standard": 1.28,
+          "local": "₱ 79.00",
+          "localAmount": 79,
+          "ppp": 4.11
+        },
+        "in": {
+          "play": "₹65.00 - ₹2,43,300.00",
+          "standard": 1.03,
+          "local": "₹ 99",
+          "localAmount": 99,
+          "ppp": 4.87
+        },
+        "tr": {
+          "play": "TRY 31.99 - TRY 118,989.99",
+          "standard": 1.28,
+          "local": "₺59,99",
+          "localAmount": 59.99,
+          "ppp": 2.97
+        },
+        "ng": {
+          "play": "₦870.00 - ₦3,188,000.00",
+          "standard": 1.38,
+          "local": "₦ 1,900.00",
+          "localAmount": 1900,
+          "ppp": 8.7
+        },
+        "kr": {
+          "play": "₩1,000 - ₩340,000"
+        },
+        "mx": {
+          "play": "MX$12.00 - MX$43,349.00",
+          "standard": 1.66,
+          "local": "$29.00",
+          "localAmount": 29,
+          "ppp": 2.76
+        },
+        "de": {
+          "play": "€0.59 - €2,199.99",
+          "standard": 1.13,
+          "local": "0,99 €",
+          "localAmount": 0.99,
+          "ppp": 1.37
+        },
+        "fr": {
+          "play": "€0.59 - €2,229.99",
+          "standard": 1.13,
+          "local": "0,99 €",
+          "localAmount": 0.99,
+          "ppp": 1.54
+        },
+        "br": {
+          "play": "R$2.89 - R$10,849.99",
+          "standard": 1.54,
+          "local": "R$ 7,90",
+          "localAmount": 7.9,
+          "ppp": 3.02
+        },
+        "gb": {
+          "play": "£0.49 - £1,929.99",
+          "standard": 1.32,
+          "local": "£0.99",
+          "localAmount": 0.99,
+          "ppp": 1.49
+        },
+        "dk": {
+          "play": "5,00 kr. - 17.349,00 kr.",
+          "standard": 1.38,
+          "local": "9,00 kr",
+          "localAmount": 9,
+          "ppp": 1.53
+        },
+        "ar": {
+          "standard": 1.19,
+          "local": "USD 1.19",
+          "localAmount": 1.19,
+          "ppp": 2.43
+        }
+      }
+    },
+    "sora": {
+      "label": "Sora",
+      "developer": "OpenAI",
+      "site": "https://sora.com/",
+      "baseTier": "plus",
+      "tiers": [
+        {
+          "key": "plus",
+          "label": "Plus"
+        },
+        {
+          "key": "pro",
+          "label": "Pro"
+        }
+      ],
+      "tierRules": [
+        [
+          "pro",
+          "pro"
+        ],
+        [
+          "plus",
+          "plus"
+        ]
+      ],
+      "store": {
+        "appleId": null,
+        "playPkg": null,
+        "appleSearch": "Sora by OpenAI",
+        "sellerRe": "OpenAI",
+        "playCandidates": [
+          "com.openai.sora"
+        ],
+        "devRe": "OpenAI",
+        "nameRe": "sora",
+        "appleIdCandidates": [
+          "6744034028"
+        ]
+      },
+      "web": null,
+      "regions": {}
+    },
+    "kimi": {
+      "label": "Kimi",
+      "developer": "Moonshot AI",
+      "site": "https://kimi.com/",
+      "baseTier": "pro",
+      "tiers": [
+        {
+          "key": "pro",
+          "label": "Pro"
+        }
+      ],
+      "tierRules": [
+        [
+          "pro|plus|premium|会员|member",
+          "pro"
+        ]
+      ],
+      "store": {
+        "appleId": "6474233312",
+        "playPkg": "com.moonshot.kimichat",
+        "appleSearch": "Kimi AI",
+        "sellerRe": "Moonshot",
+        "playCandidates": [
+          "com.moonshot.kimichat",
+          "ai.moonshot.kimi"
+        ],
+        "devRe": "Moonshot"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$19.00 - $372.00"
+        },
+        "jp": {
+          "play": "¥3,180 - ¥64,100"
+        },
+        "pk": {
+          "play": "Rs 5,300 - Rs 104,600"
+        },
+        "ca": {
+          "play": "$25.99 - $499.99"
+        },
+        "eg": {
+          "play": "EGP 999.99 - EGP 20,049.99"
+        },
+        "au": {
+          "play": "$30.99 - $599.99"
+        },
+        "ph": {
+          "play": "₱1,250.00 - ₱24,650.00"
+        },
+        "in": {
+          "play": "₹2,000.00 - ₹39,500.00"
+        },
+        "tr": {
+          "play": "TRY 949.99 - TRY 19,209.99"
+        },
+        "ng": {
+          "play": "₦29,000.00 - ₦569,500.00"
+        },
+        "kr": {
+          "play": "₩30,000 - ₩570,000"
+        },
+        "mx": {
+          "play": "MX$395.00 - MX$7,749.00"
+        },
+        "de": {
+          "play": "€18.99 - €379.99"
+        },
+        "fr": {
+          "play": "€19.99 - €379.99"
+        },
+        "br": {
+          "play": "R$99.99 - R$1,999.99"
+        },
+        "gb": {
+          "play": "£16.99 - £329.99"
+        },
+        "dk": {
+          "play": "155,00 kr. - 2.999,00 kr."
+        }
+      }
+    },
+    "glm": {
+      "label": "GLM",
+      "developer": "Zhipu AI",
+      "site": "https://chat.z.ai/",
+      "baseTier": "pro",
+      "tiers": [
+        {
+          "key": "pro",
+          "label": "Pro"
+        }
+      ],
+      "tierRules": [
+        [
+          "pro|plus|premium",
+          "pro"
+        ]
+      ],
+      "store": {
+        "appleId": "6450893458",
+        "playPkg": null,
+        "appleSearch": "Z.ai GLM",
+        "sellerRe": "Zhipu|Z\\.ai|Knowledge Atlas|智谱",
+        "playCandidates": [
+          "ai.z.chat",
+          "com.zhipuai.qingyan.international"
+        ],
+        "devRe": "Zhipu|Z\\.ai"
+      },
+      "web": null,
+      "regions": {}
+    },
+    "leonardo": {
+      "label": "Leonardo AI",
+      "developer": "Leonardo Interactive",
+      "site": "https://leonardo.ai/",
+      "baseTier": "premium",
+      "tiers": [
+        {
+          "key": "premium",
+          "label": "Premium"
+        }
+      ],
+      "tierRules": [
+        [
+          "premium",
+          "premium"
+        ]
+      ],
+      "store": {
+        "appleId": "1662773014",
+        "playPkg": "ai.leonardo.leonardo",
+        "appleSearch": "Leonardo AI",
+        "sellerRe": "Leonardo",
+        "playCandidates": [
+          "ai.leonardo.app",
+          "app.leonardo.ai"
+        ],
+        "devRe": "Leonardo"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$9.49 - $459.99",
+          "premium": 39.99,
+          "local": "$39.99",
+          "localAmount": 39.99,
+          "ppp": 39.99
+        },
+        "jp": {
+          "play": "¥1,500 - ¥74,600",
+          "premium": 36.97,
+          "local": "¥6,000",
+          "localAmount": 6000,
+          "ppp": 64.3
+        },
+        "pk": {
+          "play": "Rs 2,650 - Rs 130,300",
+          "premium": 35.59,
+          "local": "Rs 9,900.00",
+          "localAmount": 9900,
+          "ppp": 139.78
+        },
+        "ca": {
+          "play": "$12.99 - $649.99",
+          "premium": 35.34,
+          "local": "$49.99",
+          "localAmount": 49.99,
+          "ppp": 42.58
+        },
+        "eg": {
+          "play": "EGP 509.99 - EGP 25,249.99",
+          "premium": 23.89,
+          "local": "EGP 1,199.99",
+          "localAmount": 1199.99,
+          "ppp": 144.72
+        },
+        "au": {
+          "play": "$13.99 - $699.99",
+          "premium": 41.55,
+          "local": "$59.99",
+          "localAmount": 59.99,
+          "ppp": 41.75
+        },
+        "ph": {
+          "play": "₱595.00 - ₱29,550.00",
+          "premium": 37.14,
+          "local": "₱ 2,290.00",
+          "localAmount": 2290,
+          "ppp": 119.16
+        },
+        "in": {
+          "play": "₹950.00 - ₹18,700.00",
+          "premium": 41.78,
+          "local": "₹ 3,999",
+          "localAmount": 3999,
+          "ppp": 196.58
+        },
+        "tr": {
+          "play": "TRY 464.99 - TRY 22,839.99",
+          "premium": 21.27,
+          "local": "₺999,99",
+          "localAmount": 999.99,
+          "ppp": 49.49
+        },
+        "ng": {
+          "play": "₦15,000.00 - ₦743,000.00",
+          "premium": 14.42,
+          "local": "₦ 19,900.00",
+          "localAmount": 19900,
+          "ppp": 91.14
+        },
+        "kr": {
+          "play": "₩14,000 - ₩570,000"
+        },
+        "mx": {
+          "play": "MX$199.00 - MX$9,849.00",
+          "premium": 51.34,
+          "local": "$899.00",
+          "localAmount": 899,
+          "ppp": 85.56
+        },
+        "de": {
+          "play": "€9.49 - €464.99",
+          "premium": 51.28,
+          "local": "44,99 €",
+          "localAmount": 44.99,
+          "ppp": 62.31
+        },
+        "fr": {
+          "play": "€9.49 - €469.99",
+          "premium": 51.28,
+          "local": "44,99 €",
+          "localAmount": 44.99,
+          "ppp": 69.86
+        },
+        "br": {
+          "play": "R$49.99 - R$2,449.99",
+          "premium": 39.05,
+          "local": "R$ 199,90",
+          "localAmount": 199.9,
+          "ppp": 76.5
+        },
+        "gb": {
+          "play": "£7.99 - £404.99",
+          "premium": 53.44,
+          "local": "£39.99",
+          "localAmount": 39.99,
+          "ppp": 60.14
+        },
+        "dk": {
+          "play": "75,00 kr. - 3.649,00 kr.",
+          "premium": 53.32,
+          "local": "349,00 kr",
+          "localAmount": 349,
+          "ppp": 59.34
+        },
+        "ar": {
+          "premium": 39.99,
+          "local": "USD 39.99",
+          "localAmount": 39.99,
+          "ppp": 81.52
+        }
+      }
+    },
+    "manus": {
+      "label": "Manus",
+      "developer": "Butterfly Effect",
+      "site": "https://manus.im/",
+      "baseTier": "pro",
+      "tiers": [
+        {
+          "key": "pro",
+          "label": "Pro"
+        }
+      ],
+      "tierRules": [
+        [
+          "pro|plus|starter",
+          "pro"
+        ]
+      ],
+      "store": {
+        "appleId": "6740909540",
+        "playPkg": "tech.butterfly.app",
+        "appleSearch": "Manus AI",
+        "sellerRe": "Butterfly|Manus",
+        "playCandidates": [
+          "tech.butterfly.app",
+          "im.manus.app"
+        ],
+        "devRe": "Butterfly|Manus"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$18.99 - $4,999.99",
+          "pro": 39.99,
+          "local": "$39.99",
+          "localAmount": 39.99,
+          "ppp": 39.99
+        },
+        "jp": {
+          "play": "¥3,140 - ¥863,100",
+          "pro": 36.97,
+          "local": "¥6,000",
+          "localAmount": 6000,
+          "ppp": 64.3
+        },
+        "pk": {
+          "play": "Rs 5,300 - Rs 1,394,600",
+          "pro": 17.61,
+          "local": "Rs 4,900.00",
+          "localAmount": 4900,
+          "ppp": 69.18
+        },
+        "ca": {
+          "play": "$26.99 - $6,799.99",
+          "pro": 35.34,
+          "local": "$49.99",
+          "localAmount": 49.99,
+          "ppp": 42.58
+        },
+        "eg": {
+          "play": "EGP 1,049.99 - EGP 304,449.99",
+          "pro": 19.91,
+          "local": "EGP 999.99",
+          "localAmount": 999.99,
+          "ppp": 120.6
+        },
+        "au": {
+          "play": "$31.99 - $7,649.99",
+          "pro": 41.55,
+          "local": "$59.99",
+          "localAmount": 59.99,
+          "ppp": 41.75
+        },
+        "ph": {
+          "play": "₱1,250.00 - ₱344,950.00",
+          "pro": 20.92,
+          "local": "₱ 1,290.00",
+          "localAmount": 1290,
+          "ppp": 67.12
+        },
+        "in": {
+          "play": "₹2,000.00 - ₹5,60,800.00",
+          "pro": 20.88,
+          "local": "₹ 1,999",
+          "localAmount": 1999,
+          "ppp": 98.26
+        },
+        "tr": {
+          "play": "TRY 949.99 - TRY 271,189.99",
+          "pro": 42.55,
+          "local": "₺1.999,99",
+          "localAmount": 1999.99,
+          "ppp": 98.99
+        },
+        "ng": {
+          "play": "₦30,000.00 - ₦7,395,000.00",
+          "pro": 21.67,
+          "local": "₦ 29,900.00",
+          "localAmount": 29900,
+          "ppp": 136.94
+        },
+        "kr": {
+          "play": "₩30,000 - ₩570,000"
+        },
+        "mx": {
+          "play": "MX$405.00 - MX$101,299.00",
+          "pro": 51.34,
+          "local": "$899.00",
+          "localAmount": 899,
+          "ppp": 85.56
+        },
+        "de": {
+          "play": "€18.99 - €5,099.99",
+          "pro": 51.28,
+          "local": "44,99 €",
+          "localAmount": 44.99,
+          "ppp": 62.31
+        },
+        "fr": {
+          "play": "€18.99 - €5,099.99",
+          "pro": 51.28,
+          "local": "44,99 €",
+          "localAmount": 44.99,
+          "ppp": 69.86
+        },
+        "br": {
+          "play": "R$99.99 - R$24,799.99",
+          "pro": 48.82,
+          "local": "R$ 249,90",
+          "localAmount": 249.9,
+          "ppp": 95.64
+        },
+        "gb": {
+          "play": "£16.99 - £4,399.99",
+          "pro": 53.44,
+          "local": "£39.99",
+          "localAmount": 39.99,
+          "ppp": 60.14
+        },
+        "dk": {
+          "play": "149,00 kr. - 39.849,00 kr.",
+          "pro": 53.32,
+          "local": "349,00 kr",
+          "localAmount": 349,
+          "ppp": 59.34
+        },
+        "ar": {
+          "pro": 39.99,
+          "local": "USD 39.99",
+          "localAmount": 39.99,
+          "ppp": 81.52
+        }
+      }
+    },
+    "catcosplay": {
+      "label": "CatCosplay",
+      "developer": "CatCosplay",
+      "site": "https://catcosplay.com/",
+      "baseTier": "pro",
+      "tiers": [
+        {
+          "key": "pro",
+          "label": "Pro"
+        }
+      ],
+      "tierRules": [
+        [
+          "pro|plus|premium",
+          "pro"
+        ]
+      ],
+      "store": {
+        "appleId": null,
+        "playPkg": null,
+        "appleSearch": "CatCosplay",
+        "sellerRe": "Cat",
+        "playCandidates": [
+          "com.catcosplay.app"
+        ],
+        "devRe": "Cat"
+      },
+      "web": null,
+      "regions": {}
+    },
+    "youtube": {
+      "label": "YouTube Premium",
+      "developer": "Google",
+      "site": "https://www.youtube.com/premium",
+      "baseTier": "premium",
+      "tiers": [
+        {
+          "key": "premium",
+          "label": "Premium"
+        },
+        {
+          "key": "family",
+          "label": "家庭版"
+        }
+      ],
+      "tierRules": [
+        [
+          "family|家庭",
+          "family"
+        ],
+        [
+          "premium",
+          "premium"
+        ]
+      ],
+      "store": {
+        "appleSearch": "YouTube",
+        "sellerRe": "Google",
+        "nameRe": "^YouTube$",
+        "playPkg": "com.google.android.youtube",
+        "appleId": "544007664"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$0.05 - $999.99",
+          "premium": 20.99,
+          "local": "$20.99",
+          "localAmount": 20.99,
+          "family": 34.99,
+          "ppp": 20.99
+        },
+        "jp": {
+          "play": "¥7 - ¥155,000",
+          "premium": 10.35,
+          "local": "¥1,680",
+          "localAmount": 1680,
+          "family": 17.87,
+          "ppp": 18.01
+        },
+        "pk": {
+          "play": "Rs 10 - Rs 279,000",
+          "premium": 2.33,
+          "local": "Rs 649.00",
+          "localAmount": 649,
+          "family": 4.31,
+          "ppp": 9.16
+        },
+        "ca": {
+          "play": "$0.10 - $1,380.00",
+          "premium": 12.01,
+          "local": "$16.99",
+          "localAmount": 16.99,
+          "family": 21.2,
+          "ppp": 14.47
+        },
+        "eg": {
+          "play": "EGP 0.90 - EGP 49,000.00",
+          "premium": 2.29,
+          "local": "EGP 114.99",
+          "localAmount": 114.99,
+          "family": 4.18,
+          "ppp": 13.87
+        },
+        "au": {
+          "play": "$0.10 - $1,550.00",
+          "premium": 15.92,
+          "local": "$22.99",
+          "localAmount": 22.99,
+          "family": 36.01,
+          "ppp": 16
+        },
+        "ph": {
+          "play": "₱3.00 - ₱58,000.00",
+          "premium": 4.04,
+          "local": "₱ 249.00",
+          "localAmount": 249,
+          "family": 7.93,
+          "ppp": 12.96
+        },
+        "in": {
+          "play": "₹4.00 - ₹84,000.00",
+          "premium": 2.04,
+          "local": "₹ 195",
+          "localAmount": 195,
+          "family": 4.06,
+          "ppp": 9.59
+        },
+        "tr": {
+          "play": "TRY 0.59 - TRY 40,800.00",
+          "premium": 3.4,
+          "local": "₺159,99",
+          "localAmount": 159.99,
+          "family": 6.81,
+          "ppp": 7.92
+        },
+        "ng": {
+          "play": "₦25.00 - ₦1,490,000.00",
+          "premium": 1.59,
+          "local": "₦ 2,200.00",
+          "localAmount": 2200,
+          "family": 2.61,
+          "ppp": 10.08
+        },
+        "kr": {
+          "play": "₩70 - ₩600,000"
+        },
+        "mx": {
+          "play": "MX$1.20 - MX$17,200.00",
+          "premium": 11.94,
+          "local": "$209.00",
+          "localAmount": 209,
+          "family": 23.93,
+          "ppp": 19.89
+        },
+        "de": {
+          "play": "€0.05 - €940.00",
+          "premium": 22.78,
+          "local": "19,99 €",
+          "localAmount": 19.99,
+          "family": 42.16,
+          "ppp": 27.69
+        },
+        "fr": {
+          "play": "€0.05 - €940.00",
+          "premium": 19.36,
+          "local": "16,99 €",
+          "localAmount": 16.99,
+          "family": 44.44,
+          "ppp": 26.38
+        },
+        "br": {
+          "play": "R$0.30 - R$5,200.00",
+          "premium": 6.82,
+          "local": "R$ 34,90",
+          "localAmount": 34.9,
+          "family": 13.66,
+          "ppp": 13.36
+        },
+        "gb": {
+          "play": "£0.05 - £810.00",
+          "premium": 22.71,
+          "local": "£16.99",
+          "localAmount": 16.99,
+          "family": 34.73,
+          "ppp": 25.55
+        },
+        "dk": {
+          "play": "0,40 kr. - 7.000,00 kr.",
+          "premium": 27.35,
+          "local": "179,00 kr",
+          "localAmount": 179,
+          "family": 51.79,
+          "ppp": 30.44
+        },
+        "ar": {
+          "premium": 4.99,
+          "local": "USD 4.99",
+          "localAmount": 4.99,
+          "family": 9.49,
+          "ppp": 10.17
+        }
+      }
+    },
+    "x": {
+      "label": "X Premium",
+      "developer": "X Corp.",
+      "site": "https://x.com/",
+      "baseTier": "premium",
+      "tiers": [
+        {
+          "key": "basic",
+          "label": "Basic"
+        },
+        {
+          "key": "premium",
+          "label": "Premium"
+        },
+        {
+          "key": "premiumplus",
+          "label": "Premium+"
+        }
+      ],
+      "tierRules": [
+        [
+          "premium\\s*\\+|premium plus",
+          "premiumplus"
+        ],
+        [
+          "basic",
+          "basic"
+        ],
+        [
+          "premium",
+          "premium"
+        ]
+      ],
+      "store": {
+        "appleSearch": "X",
+        "sellerRe": "X Corp",
+        "nameRe": "^X$",
+        "playPkg": "com.twitter.android",
+        "appleId": "333903271"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$0.99 - $500.00"
+        },
+        "jp": {
+          "play": "¥120 - ¥88,700"
+        },
+        "pk": {
+          "play": "Rs 160 - Rs 139,100"
+        },
+        "ca": {
+          "play": "$1.19 - $699.99"
+        },
+        "eg": {
+          "play": "EGP 15.99 - EGP 27,999.99"
+        },
+        "au": {
+          "play": "$1.49 - $799.99"
+        },
+        "ph": {
+          "play": "₱49.00 - ₱34,400.00"
+        },
+        "in": {
+          "play": "₹85.00 - ₹56,200.00"
+        },
+        "tr": {
+          "play": "TRY 9.99 - TRY 28,079.99"
+        },
+        "ng": {
+          "play": "₦405.00 - ₦736,500.00"
+        },
+        "kr": {
+          "play": "₩1,200 - ₩600,000"
+        },
+        "mx": {
+          "play": "MX$19.00 - MX$10,149.00"
+        },
+        "de": {
+          "play": "€0.99 - €499.99"
+        },
+        "fr": {
+          "play": "€0.99 - €499.99"
+        },
+        "br": {
+          "play": "R$4.69 - R$2,599.99"
+        },
+        "gb": {
+          "play": "£0.89 - £456.00"
+        },
+        "dk": {
+          "play": "8,00 kr. - 4.099,00 kr."
+        }
+      }
+    },
+    "hbo-max": {
+      "label": "HBO Max",
+      "developer": "Warner Bros. Discovery",
+      "site": "https://www.hbomax.com/",
+      "baseTier": "adfree",
+      "tiers": [
+        {
+          "key": "ads",
+          "label": "含广告"
+        },
+        {
+          "key": "adfree",
+          "label": "无广告"
+        },
+        {
+          "key": "ultimate",
+          "label": "至尊版"
+        }
+      ],
+      "tierRules": [
+        [
+          "ultimate",
+          "ultimate"
+        ],
+        [
+          "ad[- ]?free|无广告",
+          "adfree"
+        ],
+        [
+          "with ads|ads|广告",
+          "ads"
+        ]
+      ],
+      "store": {
+        "appleSearch": "HBO Max",
+        "sellerRe": "Warner|WarnerMedia|WB",
+        "nameRe": "HBO Max|^Max\\b",
+        "playCandidates": [
+          "com.wbd.stream",
+          "com.hbo.hbonow"
+        ],
+        "appleId": "1666653815",
+        "playPkg": "com.wbd.stream"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$2.49 - $229.99",
+          "ads": 10.99
+        },
+        "jp": {
+          "play": "¥310 - ¥19,200"
+        },
+        "pk": {
+          "play": "Rs 460 - Rs 27,800"
+        },
+        "ca": {
+          "play": "$3.09 - $189.99"
+        },
+        "eg": {
+          "play": "EGP 45.99 - EGP 2,799.99"
+        },
+        "au": {
+          "play": "$3.79 - $229.99",
+          "ads": 8.31
+        },
+        "ph": {
+          "play": "₱130.00 - ₱7,850.00"
+        },
+        "in": {
+          "play": "₹220.00 - ₹13,300.00"
+        },
+        "tr": {
+          "play": "TRY 43.99 - TRY 3,598.80"
+        },
+        "ng": {
+          "play": "₦1,110.00 - ₦69,000.00"
+        },
+        "kr": {
+          "play": "₩3,400 - ₩210,000"
+        },
+        "mx": {
+          "play": "MX$59.00 - MX$3,599.00"
+        },
+        "de": {
+          "play": "€2.79 - €169.99"
+        },
+        "fr": {
+          "play": "€2.79 - €169.99"
+        },
+        "br": {
+          "play": "R$12.99 - R$809.99"
+        },
+        "gb": {
+          "play": "£2.19 - £134.99"
+        },
+        "dk": {
+          "play": "19,00 kr. - 1.249,00 kr.",
+          "ads": 12.07
+        }
+      }
+    },
+    "netflix": {
+      "label": "Netflix",
+      "developer": "Netflix",
+      "site": "https://www.netflix.com/",
+      "baseTier": "standard",
+      "tiers": [
+        {
+          "key": "ads",
+          "label": "广告版"
+        },
+        {
+          "key": "standard",
+          "label": "标准版"
+        },
+        {
+          "key": "premium",
+          "label": "高级版"
+        }
+      ],
+      "tierRules": [
+        [
+          "premium|高级",
+          "premium"
+        ],
+        [
+          "standard|标准",
+          "standard"
+        ],
+        [
+          "ads|广告",
+          "ads"
+        ]
+      ],
+      "store": {
+        "appleSearch": "Netflix",
+        "sellerRe": "Netflix",
+        "nameRe": "^Netflix$",
+        "playPkg": "com.netflix.mediaclient",
+        "appleId": "363590051"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "standard": 19.99,
+          "local": "$19.99",
+          "localAmount": 19.99,
+          "premium": 26.99,
+          "ppp": 19.99
+        },
+        "pk": {
+          "premium": 3.95,
+          "standard": 2.88,
+          "local": "Rs 800.00",
+          "localAmount": 800,
+          "ppp": 11.3
+        },
+        "ca": {
+          "standard": 13.42,
+          "local": "$18.99",
+          "localAmount": 18.99,
+          "premium": 16.96,
+          "ppp": 16.18
+        },
+        "ar": {
+          "premium": 13.9
+        },
+        "eg": {
+          "premium": 5.38,
+          "standard": 3.78,
+          "local": "EGP 190.00",
+          "localAmount": 190,
+          "ppp": 22.91
+        },
+        "au": {
+          "standard": 14.54,
+          "local": "$20.99",
+          "localAmount": 20.99,
+          "premium": 20.08,
+          "ppp": 14.61
+        },
+        "ph": {
+          "premium": 10.04,
+          "standard": 7.28,
+          "local": "₱ 449.00",
+          "localAmount": 449,
+          "ppp": 23.36
+        },
+        "in": {
+          "premium": 6.78,
+          "standard": 5.21,
+          "local": "₹ 499",
+          "localAmount": 499,
+          "ppp": 24.53
+        },
+        "tr": {
+          "standard": 6.17,
+          "local": "₺289,99",
+          "localAmount": 289.99,
+          "premium": 8.08,
+          "ppp": 14.35
+        },
+        "ng": {
+          "premium": 6.16,
+          "standard": 4.71,
+          "local": "₦ 6,500.00",
+          "localAmount": 6500,
+          "ppp": 29.77
+        },
+        "mx": {
+          "premium": 21.07
+        },
+        "de": {
+          "standard": 15.94,
+          "local": "13,99 €",
+          "localAmount": 13.99,
+          "premium": 22.78,
+          "ppp": 19.38
+        },
+        "fr": {
+          "standard": 17.08,
+          "local": "14,99 €",
+          "localAmount": 14.99,
+          "premium": 25.06,
+          "ppp": 23.28
+        },
+        "br": {
+          "standard": 8.77,
+          "local": "R$ 44,90",
+          "localAmount": 44.9,
+          "premium": 10.92,
+          "ppp": 17.18
+        },
+        "gb": {
+          "standard": 17.36,
+          "local": "£12.99",
+          "localAmount": 12.99,
+          "premium": 25.38,
+          "ppp": 19.53
+        },
+        "dk": {
+          "standard": 22.77,
+          "local": "149,00 kr",
+          "localAmount": 149,
+          "premium": 28.88,
+          "ppp": 25.34
+        }
+      }
+    },
+    "spotify": {
+      "label": "Spotify",
+      "developer": "Spotify AB",
+      "site": "https://www.spotify.com/premium/",
+      "baseTier": "individual",
+      "tiers": [
+        {
+          "key": "individual",
+          "label": "个人"
+        },
+        {
+          "key": "duo",
+          "label": "双人"
+        },
+        {
+          "key": "family",
+          "label": "家庭"
+        }
+      ],
+      "tierRules": [
+        [
+          "family|家庭",
+          "family"
+        ],
+        [
+          "duo|双人",
+          "duo"
+        ],
+        [
+          "individual|个人|premium",
+          "individual"
+        ]
+      ],
+      "store": {
+        "appleSearch": "Spotify",
+        "sellerRe": "Spotify",
+        "nameRe": "^Spotify",
+        "playPkg": "com.spotify.music",
+        "appleId": "324684580"
+      },
+      "web": null,
+      "regions": {
+        "us": {
+          "play": "$6.99 - $203.88"
+        },
+        "jp": {
+          "play": "¥580 - ¥17,200"
+        },
+        "pk": {
+          "play": "Rs 199 - Rs 29,700"
+        },
+        "ca": {
+          "play": "$6.39 - $144.99"
+        },
+        "eg": {
+          "play": "EGP 39.00 - EGP 5,899.99"
+        },
+        "au": {
+          "play": "$7.99 - $251.99"
+        },
+        "ph": {
+          "play": "₱85.00 - ₱6,750.00"
+        },
+        "in": {
+          "play": "₹139.00 - ₹11,000.00"
+        },
+        "tr": {
+          "play": "TRY 55.00 - TRY 5,209.99"
+        },
+        "ng": {
+          "play": "₦800.00 - ₦172,000.00"
+        },
+        "kr": {
+          "play": "₩8,690 - ₩160,000"
+        },
+        "mx": {
+          "play": "MX$74.00 - MX$2,860.00"
+        },
+        "de": {
+          "play": "€6.99 - €109.99"
+        },
+        "fr": {
+          "play": "€7.07 - €109.99"
+        },
+        "br": {
+          "play": "R$18.90 - R$599.00"
+        },
+        "gb": {
+          "play": "£5.99 - £215.88"
+        },
+        "dk": {
+          "play": "65,00 kr. - 849,00 kr."
+        }
+      }
+    }
   }
- ],
- "regionsMeta": [
-  {
-   "flag": "🇺🇸",
-   "name": "美国",
-   "cc": "us",
-   "addr": "us",
-   "tax": "各州销售税 0–10%",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 1,
-   "lat": 39.8,
-   "lon": -98.6
-  },
-  {
-   "flag": "🇯🇵",
-   "name": "日本",
-   "cc": "jp",
-   "addr": "jp",
-   "tax": "含 10% 消费税",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 93.306,
-   "lat": 36.2,
-   "lon": 138.3
-  },
-  {
-   "flag": "🇵🇰",
-   "name": "巴基斯坦",
-   "cc": "pk",
-   "addr": "pk",
-   "tax": "数字服务税按省 15–16%",
-   "risk": "中",
-   "riskNote": "需本地账单地址、IP 与礼品卡",
-   "pppex": 70.827,
-   "lat": 30.4,
-   "lon": 69.3
-  },
-  {
-   "flag": "🇨🇦",
-   "name": "加拿大",
-   "cc": "ca",
-   "addr": "ca",
-   "tax": "各省 GST/HST 5–15%",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 1.174,
-   "lat": 56.1,
-   "lon": -106.3
-  },
-  {
-   "flag": "🇦🇷",
-   "name": "阿根廷",
-   "cc": "ar",
-   "addr": "ar",
-   "tax": "21% IVA + 8% 数字税",
-   "risk": "中",
-   "riskNote": "需本地账单地址、IP 与礼品卡",
-   "pppex": 728.957,
-   "lat": -38.4,
-   "lon": -63.6
-  },
-  {
-   "flag": "🇪🇬",
-   "name": "埃及",
-   "cc": "eg",
-   "addr": null,
-   "tax": "含 14% 增值税",
-   "risk": "中",
-   "riskNote": "需本地账单地址、IP 与礼品卡",
-   "pppex": 8.292,
-   "lat": 26.8,
-   "lon": 30.8
-  },
-  {
-   "flag": "🇦🇺",
-   "name": "澳大利亚",
-   "cc": "au",
-   "addr": "au",
-   "tax": "含 10% GST",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 1.437,
-   "lat": -25.3,
-   "lon": 133.8
-  },
-  {
-   "flag": "🇵🇭",
-   "name": "菲律宾",
-   "cc": "ph",
-   "addr": "ph",
-   "tax": "含 12% 增值税",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 19.218,
-   "lat": 12.9,
-   "lon": 121.8
-  },
-  {
-   "flag": "🇮🇳",
-   "name": "印度",
-   "cc": "in",
-   "addr": "in",
-   "tax": "含 18% GST",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 20.343,
-   "lat": 21,
-   "lon": 78
-  },
-  {
-   "flag": "🇹🇷",
-   "name": "土耳其",
-   "cc": "tr",
-   "addr": "tr",
-   "tax": "含 20% 增值税",
-   "risk": "中",
-   "riskNote": "需本地账单地址、IP 与礼品卡",
-   "pppex": 20.204,
-   "lat": 39,
-   "lon": 35.2
-  },
-  {
-   "flag": "🇳🇬",
-   "name": "尼日利亚",
-   "cc": "ng",
-   "addr": "ng",
-   "tax": "含 7.5% 增值税",
-   "risk": "中",
-   "riskNote": "需本地账单地址、IP 与礼品卡",
-   "pppex": 218.339,
-   "lat": 9.1,
-   "lon": 8.7
-  },
-  {
-   "flag": "🇰🇷",
-   "name": "韩国",
-   "cc": "kr",
-   "addr": "kr",
-   "tax": "含 10% 增值税",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 787.181,
-   "lat": 36.5,
-   "lon": 127.9
-  },
-  {
-   "flag": "🇲🇽",
-   "name": "墨西哥",
-   "cc": "mx",
-   "addr": "mx",
-   "tax": "含 16% IVA",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 10.507,
-   "lat": 23.6,
-   "lon": -102.6
-  },
-  {
-   "flag": "🇩🇪",
-   "name": "德国",
-   "cc": "de",
-   "addr": "de",
-   "tax": "含 19% 增值税",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 0.722,
-   "lat": 51.2,
-   "lon": 10.4
-  },
-  {
-   "flag": "🇫🇷",
-   "name": "法国",
-   "cc": "fr",
-   "addr": "fr",
-   "tax": "含 20% 增值税",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 0.644,
-   "lat": 46.6,
-   "lon": 2.2
-  },
-  {
-   "flag": "🇧🇷",
-   "name": "巴西",
-   "cc": "br",
-   "addr": "br",
-   "tax": "州税 ICMS 7–25%",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 2.613,
-   "lat": -14.2,
-   "lon": -51.9
-  },
-  {
-   "flag": "🇬🇧",
-   "name": "英国",
-   "cc": "gb",
-   "addr": "uk",
-   "tax": "含 20% 增值税",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 0.665,
-   "lat": 54,
-   "lon": -2
-  },
-  {
-   "flag": "🇩🇰",
-   "name": "丹麦",
-   "cc": "dk",
-   "addr": null,
-   "tax": "含 25% 增值税",
-   "risk": "低",
-   "riskNote": "",
-   "pppex": 5.881,
-   "lat": 56,
-   "lon": 9.5
-  },
-  {
-   "cc": "cl",
-   "flag": "🇨🇱",
-   "name": "智利",
-   "addr": "cl",
-   "tax": "含 19% IVA",
-   "risk": "low",
-   "lat": -33.4,
-   "lon": -70.7
-  },
-  {
-   "cc": "co",
-   "flag": "🇨🇴",
-   "name": "哥伦比亚",
-   "addr": "co",
-   "tax": "结账另加 19% IVA",
-   "risk": "low",
-   "lat": 4.7,
-   "lon": -74.1
-  },
-  {
-   "cc": "pe",
-   "flag": "🇵🇪",
-   "name": "秘鲁",
-   "addr": "pe",
-   "tax": "含 18% IGV",
-   "risk": "low",
-   "lat": -12.0,
-   "lon": -77.0
-  },
-  {
-   "cc": "es",
-   "flag": "🇪🇸",
-   "name": "西班牙",
-   "addr": "es",
-   "tax": "含 21% VAT",
-   "risk": "low",
-   "lat": 40.4,
-   "lon": -3.7
-  },
-  {
-   "cc": "it",
-   "flag": "🇮🇹",
-   "name": "意大利",
-   "addr": "it",
-   "tax": "含 22% VAT",
-   "risk": "low",
-   "lat": 41.9,
-   "lon": 12.5
-  },
-  {
-   "cc": "nl",
-   "flag": "🇳🇱",
-   "name": "荷兰",
-   "addr": "nl",
-   "tax": "含 21% VAT",
-   "risk": "low",
-   "lat": 52.4,
-   "lon": 4.9
-  },
-  {
-   "cc": "za",
-   "flag": "🇿🇦",
-   "name": "南非",
-   "addr": "za",
-   "tax": "含 15% VAT",
-   "risk": "low",
-   "lat": -26.2,
-   "lon": 28.0
-  },
-  {
-   "cc": "nz",
-   "flag": "🇳🇿",
-   "name": "新西兰",
-   "addr": "nz",
-   "tax": "含 15% GST",
-   "risk": "low",
-   "lat": -36.8,
-   "lon": 174.8
-  },
-  {
-   "cc": "hk",
-   "flag": "🇭🇰",
-   "name": "香港",
-   "addr": "hk",
-   "tax": "无消费税",
-   "risk": "low",
-   "lat": 22.3,
-   "lon": 114.2
-  }
- ],
- "products": {
-  "claude": {
-   "label": "Claude",
-   "developer": "Anthropic",
-   "site": "https://claude.ai/",
-   "baseTier": "pro",
-   "tiers": [
-    {
-     "key": "pro",
-     "label": "Pro"
-    },
-    {
-     "key": "max5x",
-     "label": "Max 5x"
-    },
-    {
-     "key": "max20x",
-     "label": "Max 20x"
-    }
-   ],
-   "web": {
-    "note": "网页直订：Pro $20/月（年付折合 $17）· Max 5x $100 · Max 20x $200",
-    "pro": 17,
-    "max5x": 100,
-    "max20x": 200
-   },
-   "regions": {
-    "us": {
-     "pro": 20,
-     "local": "$20.00",
-     "localAmount": 20,
-     "max5x": 124.99,
-     "max20x": 249.99,
-     "play": "$20.00 - $279.99",
-     "ppp": 20
-    },
-    "jp": {
-     "pro": 18.54,
-     "local": "¥3,000",
-     "localAmount": 3000,
-     "max5x": 123.62,
-     "max20x": 247.24,
-     "play": "¥3,400 - ¥42,500",
-     "ppp": 32.15
-    },
-    "pk": {
-     "pro": 17.61,
-     "local": "Rs 4,900.00",
-     "localAmount": 4900,
-     "max5x": 125.46,
-     "max20x": 251.28,
-     "play": "Rs 4,900 - Rs 61,250",
-     "ppp": 69.18
-    },
-    "ca": {
-     "pro": 19.79,
-     "local": "$28.00",
-     "localAmount": 28,
-     "max5x": 127.19,
-     "max20x": 247.33,
-     "play": "$28.00 - $350.00",
-     "ppp": 23.85
-    },
-    "ar": {
-     "pro": 20,
-     "local": "USD 20.00",
-     "localAmount": 20,
-     "max5x": 124.99,
-     "max20x": 249.99,
-     "play": null,
-     "ppp": 40.91
-    },
-    "eg": {
-     "pro": 20.15,
-     "local": "EGP 999.99",
-     "localAmount": 999.99,
-     "max5x": 141.06,
-     "max20x": 261.97,
-     "play": "EGP 1,099.99 - EGP 13,749.88",
-     "ppp": 120.6
-    },
-    "au": {
-     "pro": 20.85,
-     "local": "$30.00",
-     "localAmount": 30,
-     "max5x": 139.01,
-     "max20x": 278.03,
-     "play": "$33.99 - $424.88",
-     "ppp": 20.88
-    },
-    "ph": {
-     "pro": 20.95,
-     "local": "₱ 1,290.00",
-     "localAmount": 1290,
-     "max5x": 129.74,
-     "max20x": 243.41,
-     "play": "₱1,300.00 - ₱16,250.00",
-     "ppp": 67.12
-    },
-    "in": {
-     "pro": 20.92,
-     "local": "₹ 1,999",
-     "localAmount": 1999,
-     "max5x": 135.01,
-     "max20x": 260.6,
-     "play": "₹1,999.00 - ₹24,987.50",
-     "ppp": 98.26
-    },
-    "tr": {
-     "pro": 21.28,
-     "local": "₺999,99",
-     "localAmount": 999.99,
-     "max5x": 148.99,
-     "max20x": 276.69,
-     "play": "TRY 799.99 - TRY 9,999.88",
-     "ppp": 49.49
-    },
-    "ng": {
-     "pro": 21.68,
-     "local": "₦ 29,900.00",
-     "localAmount": 29900,
-     "max5x": 144.96,
-     "max20x": 289.99,
-     "play": "₦33,500.00 - ₦418,750.00",
-     "ppp": 136.94
-    },
-    "kr": {
-     "pro": null,
-     "local": null,
-     "localAmount": null,
-     "max5x": null,
-     "max20x": null,
-     "play": "₩30,000 - ₩375,000",
-     "ppp": null
-    },
-    "mx": {
-     "pro": 22.8,
-     "local": "$399.00",
-     "localAmount": 399,
-     "max5x": 142.83,
-     "max20x": 285.72,
-     "play": "MX$399.00 - MX$4,987.50",
-     "ppp": 37.97
-    },
-    "de": {
-     "pro": 25.13,
-     "local": "22,00 €",
-     "localAmount": 22,
-     "max5x": 171.32,
-     "max20x": 342.65,
-     "play": "€22.00 - €275.00",
-     "ppp": 30.47
-    },
-    "fr": {
-     "pro": 25.13,
-     "local": "22,00 €",
-     "localAmount": 22,
-     "max5x": 171.32,
-     "max20x": 342.65,
-     "play": "€22.00 - €275.00",
-     "ppp": 34.16
-    },
-    "br": {
-     "pro": 25.39,
-     "local": "R$ 129,90",
-     "localAmount": 129.9,
-     "max5x": 156.37,
-     "max20x": 293.2,
-     "play": "R$110.00 - R$1,375.00",
-     "ppp": 49.71
-    },
-    "gb": {
-     "pro": 26.81,
-     "local": "£20.00",
-     "localAmount": 20,
-     "max5x": 160.86,
-     "max20x": 335.13,
-     "play": "£18.00 - £225.00",
-     "ppp": 30.08
-    },
-    "dk": {
-     "pro": 27.4,
-     "local": "179,00 kr",
-     "localAmount": 179,
-     "max5x": 152.93,
-     "max20x": 306.02,
-     "play": "179,00 kr. - 2.237,50 kr.",
-     "ppp": 30.44
-    }
-   },
-   "store": {
-    "appleId": "6473753684",
-    "playPkg": "com.anthropic.claude"
-   },
-   "tierRules": [
-    [
-     "max.*20|20x",
-     "max20x"
-    ],
-    [
-     "max",
-     "max5x"
-    ],
-    [
-     "pro",
-     "pro"
-    ]
-   ]
-  },
-  "chatgpt": {
-   "label": "ChatGPT",
-   "developer": "OpenAI",
-   "site": "https://chatgpt.com/",
-   "baseTier": "plus",
-   "tiers": [
-    {
-     "key": "plus",
-     "label": "Plus"
-    },
-    {
-     "key": "pro",
-     "label": "Pro"
-    },
-    {
-     "key": "go",
-     "label": "Go"
-    }
-   ],
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$8.00 - $200.00",
-     "plus": 19.99,
-     "local": "$19.99",
-     "localAmount": 19.99,
-     "go": 8,
-     "pro": 200,
-     "ppp": 19.99
-    },
-    "jp": {
-     "play": "¥1,400 - ¥30,000",
-     "plus": 18.54,
-     "local": "¥3,000",
-     "localAmount": 3000,
-     "go": 8.65,
-     "pro": 185.43,
-     "ppp": 32.15
-    },
-    "pk": {
-     "play": "Rs 1,400 - Rs 49,900",
-     "go": 5.03,
-     "plus": 17.61,
-     "local": "Rs 4,900.00",
-     "localAmount": 4900,
-     "pro": 179.38,
-     "ppp": 69.18
-    },
-    "ca": {
-     "play": "$11.00 - $249.00",
-     "plus": 17.66,
-     "local": "$24.99",
-     "localAmount": 24.99,
-     "go": 9.18,
-     "pro": 175.96,
-     "ppp": 21.29
-    },
-    "eg": {
-     "play": "EGP 220.00 - EGP 9,999.99",
-     "go": 5.04,
-     "plus": 20.15,
-     "local": "EGP 999.99",
-     "localAmount": 999.99,
-     "pro": 201.52,
-     "ppp": 120.6
-    },
-    "au": {
-     "play": "$13.00 - $300.00",
-     "plus": 20.85,
-     "local": "$29.99",
-     "localAmount": 29.99,
-     "go": 9.04,
-     "pro": 208.53,
-     "ppp": 20.87
-    },
-    "ph": {
-     "play": "₱300.00 - ₱9,990.00",
-     "go": 4.87,
-     "plus": 16.22,
-     "local": "₱ 999.00",
-     "localAmount": 999,
-     "pro": 162.22,
-     "ppp": 51.98
-    },
-    "in": {
-     "play": "₹399.00 - ₹19,900.00",
-     "go": 4.18,
-     "plus": 20.92,
-     "local": "₹ 1,999",
-     "localAmount": 1999,
-     "pro": 111.97,
-     "ppp": 98.26
-    },
-    "tr": {
-     "play": "TRY 249.99 - TRY 9,999.99",
-     "plus": 21.28,
-     "local": "₺999,99",
-     "localAmount": 999.99,
-     "go": 5.32,
-     "pro": 212.84,
-     "ppp": 49.49
-    },
-    "ng": {
-     "play": "₦7,000.00 - ₦299,900.00",
-     "plus": 22.84,
-     "local": "₦ 31,500.00",
-     "localAmount": 31500,
-     "go": 5,
-     "pro": 105.07,
-     "ppp": 144.27
-    },
-    "kr": {
-     "play": "₩13,000 - ₩310,000"
-    },
-    "mx": {
-     "play": "MX$129.00 - MX$3,999.00",
-     "plus": 22.8,
-     "local": "$399.00",
-     "localAmount": 399,
-     "go": 7.37,
-     "pro": 228.56,
-     "ppp": 37.97
-    },
-    "de": {
-     "play": "€7.99 - €229.00",
-     "plus": 26.26,
-     "local": "22,99 €",
-     "localAmount": 22.99,
-     "go": 9.13,
-     "pro": 117.64,
-     "ppp": 31.84
-    },
-    "fr": {
-     "play": "€7.99 - €229.00",
-     "plus": 26.26,
-     "local": "22,99 €",
-     "localAmount": 22.99,
-     "go": 9.13,
-     "pro": 261.57,
-     "ppp": 35.7
-    },
-    "br": {
-     "play": "R$39.99 - R$999.90",
-     "plus": 19.53,
-     "local": "R$ 99,90",
-     "localAmount": 99.9,
-     "go": 7.8,
-     "pro": 195.46,
-     "ppp": 38.23
-    },
-    "gb": {
-     "play": "£6.99 - £200.00",
-     "plus": 26.8,
-     "local": "£19.99",
-     "localAmount": 19.99,
-     "go": 9.37,
-     "pro": 268.12,
-     "ppp": 30.06
-    },
-    "dk": {
-     "play": "64,00 kr. - 1.799,00 kr.",
-     "plus": 27.4,
-     "local": "179,00 kr",
-     "localAmount": 179,
-     "go": 9.8,
-     "pro": 120.79,
-     "ppp": 30.44
-    },
-    "ar": {
-     "plus": 19.99,
-     "local": "USD 19.99",
-     "localAmount": 19.99,
-     "go": 5.99,
-     "pro": 100,
-     "ppp": 40.88
-    }
-   },
-   "store": {
-    "appleId": "6448311069",
-    "playPkg": "com.openai.chatgpt"
-   },
-   "tierRules": [
-    [
-     "\\bgo\\b",
-     "go"
-    ],
-    [
-     "plus",
-     "plus"
-    ],
-    [
-     "\\bpro\\b",
-     "pro"
-    ]
-   ]
-  },
-  "grok": {
-   "label": "Grok",
-   "developer": "xAI",
-   "site": "https://grok.com/",
-   "baseTier": "supergrok",
-   "tiers": [
-    {
-     "key": "supergrok",
-     "label": "SuperGrok"
-    },
-    {
-     "key": "heavy",
-     "label": "SuperGrok Heavy"
-    }
-   ],
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$4.99 - $299.99",
-     "supergrok": 30,
-     "local": "$30.00",
-     "localAmount": 30,
-     "heavy": 300,
-     "ppp": 30
-    },
-    "jp": {
-     "play": "¥900 - ¥48,300",
-     "supergrok": 30.9,
-     "local": "¥5,000",
-     "localAmount": 5000,
-     "heavy": 309.05,
-     "ppp": 53.59
-    },
-    "pk": {
-     "play": "Rs 1,400 - Rs 85,300",
-     "supergrok": 28.4,
-     "local": "Rs 7,900.00",
-     "localAmount": 7900,
-     "heavy": 287.23,
-     "ppp": 111.54
-    },
-    "ca": {
-     "play": "$6.99 - $424.99",
-     "supergrok": 28.27,
-     "local": "$40.00",
-     "localAmount": 40,
-     "heavy": 282.67,
-     "ppp": 34.07
-    },
-    "eg": {
-     "play": "EGP 279.99 - EGP 17,299.99",
-     "supergrok": 30.23,
-     "local": "EGP 1,499.99",
-     "localAmount": 1499.99,
-     "heavy": 302.27,
-     "ppp": 180.9
-    },
-    "au": {
-     "play": "$7.99 - $499.99",
-     "supergrok": 34.75,
-     "local": "$50.00",
-     "localAmount": 50,
-     "heavy": 347.55,
-     "ppp": 34.79
-    },
-    "ph": {
-     "play": "₱345.00 - ₱17,350.00",
-     "supergrok": 29.07,
-     "local": "₱ 1,790.00",
-     "localAmount": 1790,
-     "heavy": 243.41,
-     "ppp": 93.14
-    },
-    "in": {
-     "play": "₹550.00 - ₹30,300.00",
-     "supergrok": 7.33,
-     "local": "₹ 700",
-     "localAmount": 700,
-     "heavy": 312.93,
-     "ppp": 34.41
-    },
-    "tr": {
-     "play": "TRY 279.99 - TRY 14,409.99",
-     "supergrok": 27.67,
-     "local": "₺1.299,99",
-     "localAmount": 1299.99,
-     "heavy": 276.69,
-     "ppp": 64.34
-    },
-    "ng": {
-     "play": "₦7,420.00 - ₦493,000.00",
-     "supergrok": 36.19,
-     "local": "₦ 49,900.00",
-     "localAmount": 49900,
-     "heavy": 362.5,
-     "ppp": 228.54
-    },
-    "kr": {
-     "play": "₩8,500 - ₩480,000"
-    },
-    "mx": {
-     "play": "MX$99.00 - MX$7,049.00",
-     "supergrok": 34.24,
-     "local": "$599.00",
-     "localAmount": 599,
-     "heavy": 342.87,
-     "ppp": 57.01
-    },
-    "de": {
-     "play": "€4.99 - €339.99",
-     "supergrok": 39.98,
-     "local": "35,00 €",
-     "localAmount": 35,
-     "heavy": 398.63,
-     "ppp": 48.48
-    },
-    "fr": {
-     "play": "€5.49 - €344.99",
-     "supergrok": 39.98,
-     "local": "35,00 €",
-     "localAmount": 35,
-     "heavy": 398.63,
-     "ppp": 54.35
-    },
-    "br": {
-     "play": "R$25.99 - R$1,699.99",
-     "supergrok": 29.3,
-     "local": "R$ 149,90",
-     "localAmount": 149.9,
-     "heavy": 390.94,
-     "ppp": 57.37
-    },
-    "gb": {
-     "play": "£4.49 - £284.99",
-     "supergrok": 40.22,
-     "local": "£30.00",
-     "localAmount": 30,
-     "heavy": 402.18,
-     "ppp": 45.11
-    },
-    "dk": {
-     "play": "41,00 kr. - 2.649,00 kr.",
-     "supergrok": 38.12,
-     "local": "249,00 kr",
-     "localAmount": 249,
-     "heavy": 382.56,
-     "ppp": 42.34
-    },
-    "ar": {
-     "supergrok": 30,
-     "local": "USD 30.00",
-     "localAmount": 30,
-     "heavy": 300,
-     "ppp": 61.36
-    }
-   },
-   "store": {
-    "appleId": "6670324846",
-    "playPkg": "ai.x.grok"
-   },
-   "tierRules": [
-    [
-     "heavy",
-     "heavy"
-    ],
-    [
-     "super",
-     "supergrok"
-    ]
-   ]
-  },
-  "gemini": {
-   "label": "Gemini",
-   "developer": "Google",
-   "site": "https://gemini.google.com/",
-   "baseTier": "pro",
-   "tiers": [
-    {
-     "key": "pro",
-     "label": "AI Pro"
-    },
-    {
-     "key": "ultra",
-     "label": "AI Ultra"
-    }
-   ],
-   "tierRules": [
-    [
-     "ultra",
-     "ultra"
-    ],
-    [
-     "pro|premium|ai plan",
-     "pro"
-    ]
-   ],
-   "store": {
-    "appleId": "6477489729",
-    "playPkg": "com.google.android.apps.bard",
-    "appleSearch": "Google Gemini",
-    "sellerRe": "Google"
-   },
-   "web": null,
-   "regions": {}
-  },
-  "perplexity": {
-   "label": "Perplexity",
-   "developer": "Perplexity AI",
-   "site": "https://www.perplexity.ai/",
-   "baseTier": "pro",
-   "tiers": [
-    {
-     "key": "pro",
-     "label": "Pro"
-    },
-    {
-     "key": "max",
-     "label": "Max"
-    }
-   ],
-   "tierRules": [
-    [
-     "max",
-     "max"
-    ],
-    [
-     "pro",
-     "pro"
-    ]
-   ],
-   "store": {
-    "appleId": "1668000334",
-    "playPkg": "ai.perplexity.app.android",
-    "appleSearch": "Perplexity",
-    "sellerRe": "Perplexity"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$4.99 - $1,999.99",
-     "pro": 20,
-     "local": "$20.00",
-     "localAmount": 20,
-     "max": 200,
-     "ppp": 20
-    },
-    "jp": {
-     "play": "¥720 - ¥342,500",
-     "pro": 18.54,
-     "local": "¥3,000",
-     "localAmount": 3000,
-     "max": 185.43,
-     "ppp": 32.15
-    },
-    "pk": {
-     "play": "Rs 1,400 - Rs 559,700",
-     "pro": 17.61,
-     "local": "Rs 4,900.00",
-     "localAmount": 4900,
-     "max": 179.38,
-     "ppp": 69.18
-    },
-    "ca": {
-     "play": "$6.49 - $2,749.99",
-     "pro": 17.67,
-     "local": "$25.00",
-     "localAmount": 25,
-     "max": 175.96,
-     "ppp": 21.29
-    },
-    "eg": {
-     "play": "EGP 279.99 - EGP 107,099.99",
-     "pro": 20.15,
-     "local": "EGP 999.99",
-     "localAmount": 999.99,
-     "max": 201.52,
-     "ppp": 120.6
-    },
-    "au": {
-     "play": "$7.99 - $3,149.99",
-     "pro": 20.85,
-     "local": "$30.00",
-     "localAmount": 30,
-     "max": 208.53,
-     "ppp": 20.88
-    },
-    "ph": {
-     "play": "₱280.00 - ₱131,950.00",
-     "pro": 20.95,
-     "local": "₱ 1,290.00",
-     "localAmount": 1290,
-     "max": 210.93,
-     "ppp": 67.12
-    },
-    "in": {
-     "play": "₹490.00 - ₹28,000.00",
-     "pro": 20.92,
-     "local": "₹ 1,999",
-     "localAmount": 1999,
-     "max": 208.27,
-     "ppp": 98.26
-    },
-    "tr": {
-     "play": "TRY 204.99 - TRY 104,339.99",
-     "pro": 21.28,
-     "local": "₺999,99",
-     "localAmount": 999.99,
-     "max": 212.84,
-     "ppp": 49.49
-    },
-    "ng": {
-     "play": "₦7,430.00 - ₦2,982,000.00",
-     "pro": 21.68,
-     "local": "₦ 29,900.00",
-     "localAmount": 29900,
-     "ppp": 136.94
-    },
-    "kr": {
-     "play": "₩7,500 - ₩420,000"
-    },
-    "mx": {
-     "play": "MX$105.00 - MX$39,949.00",
-     "pro": 22.8,
-     "local": "$399.00",
-     "localAmount": 399,
-     "max": 228.56,
-     "ppp": 37.97
-    },
-    "de": {
-     "play": "€4.99 - €1,999.99",
-     "pro": 25.13,
-     "local": "22,00 €",
-     "localAmount": 22,
-     "max": 261.57,
-     "ppp": 30.47
-    },
-    "fr": {
-     "play": "€4.99 - €2,049.99",
-     "pro": 25.13,
-     "local": "22,00 €",
-     "localAmount": 22,
-     "max": 261.57,
-     "ppp": 34.16
-    },
-    "br": {
-     "play": "R$25.99 - R$10,449.99",
-     "pro": 25.39,
-     "local": "R$ 129,90",
-     "localAmount": 129.9,
-     "max": 254.11,
-     "ppp": 49.71
-    },
-    "gb": {
-     "play": "£4.49 - £1,749.99",
-     "pro": 26.81,
-     "local": "£20.00",
-     "localAmount": 20,
-     "max": 268.12,
-     "ppp": 30.08
-    },
-    "dk": {
-     "play": "41,00 kr. - 15.799,00 kr.",
-     "pro": 27.4,
-     "local": "179,00 kr",
-     "localAmount": 179,
-     "max": 275.4,
-     "ppp": 30.44
-    },
-    "ar": {
-     "pro": 20,
-     "local": "USD 20.00",
-     "localAmount": 20,
-     "max": 200,
-     "ppp": 40.91
-    }
-   }
-  },
-  "copilot": {
-   "label": "Copilot",
-   "developer": "Microsoft",
-   "site": "https://copilot.microsoft.com/",
-   "baseTier": "pro",
-   "tiers": [
-    {
-     "key": "pro",
-     "label": "Pro"
-    }
-   ],
-   "tierRules": [
-    [
-     "pro",
-     "pro"
-    ]
-   ],
-   "store": {
-    "appleId": "6472538445",
-    "playPkg": "com.microsoft.copilot",
-    "appleSearch": "Microsoft Copilot",
-    "sellerRe": "Microsoft"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$9.99 - $199.99",
-     "pro": 20,
-     "local": "$20.00",
-     "localAmount": 20,
-     "ppp": 20
-    },
-    "jp": {
-     "play": "¥2,130 - ¥32,000",
-     "pro": 19.78,
-     "local": "¥3,200",
-     "localAmount": 3200,
-     "ppp": 34.3
-    },
-    "pk": {
-     "play": "Rs 2,299 - Rs 55,999",
-     "pro": 20.13,
-     "local": "Rs 5,600.00",
-     "localAmount": 5600,
-     "ppp": 79.07
-    },
-    "ca": {
-     "play": "$11.50 - $270.00",
-     "pro": 19.08,
-     "local": "$27.00",
-     "localAmount": 27,
-     "ppp": 23
-    },
-    "eg": {
-     "play": "EGP 239.00 - EGP 6,999.00",
-     "pro": 14.11,
-     "local": "EGP 700.00",
-     "localAmount": 700,
-     "ppp": 84.42
-    },
-    "au": {
-     "play": "$16.00 - $329.00",
-     "pro": 22.94,
-     "local": "$33.00",
-     "localAmount": 33,
-     "ppp": 22.96
-    },
-    "ph": {
-     "play": "₱489.00 - ₱10,999.00",
-     "pro": 21.11,
-     "local": "₱ 1,300.00",
-     "localAmount": 1300,
-     "ppp": 67.64
-    },
-    "in": {
-     "play": "₹689.00 - ₹19,999.00",
-     "pro": 20.93,
-     "local": "₹ 2,000",
-     "localAmount": 2000,
-     "ppp": 98.31
-    },
-    "tr": {
-     "play": "TRY 329.99 - TRY 7,199.99",
-     "pro": 15.32,
-     "local": "₺719,99",
-     "localAmount": 719.99,
-     "ppp": 35.64
-    },
-    "ng": {
-     "play": "₦7,200.00 - ₦169,900.00",
-     "pro": 12.33,
-     "local": "₦ 17,000.00",
-     "localAmount": 17000,
-     "ppp": 77.86
-    },
-    "kr": {
-     "play": "₩12,500 - ₩290,000"
-    },
-    "mx": {
-     "play": "MX$185.00 - MX$3,749.00",
-     "pro": 20,
-     "local": "$350.00",
-     "localAmount": 350,
-     "ppp": 33.31
-    },
-    "de": {
-     "play": "€10.00 - €219.00",
-     "pro": 25.13,
-     "local": "22,00 €",
-     "localAmount": 22,
-     "ppp": 30.47
-    },
-    "fr": {
-     "play": "€10.00 - €219.00",
-     "pro": 25.13,
-     "local": "22,00 €",
-     "localAmount": 22,
-     "ppp": 34.16
-    },
-    "br": {
-     "play": "R$51.00 - R$1,089.00",
-     "pro": 21.48,
-     "local": "R$ 109,90",
-     "localAmount": 109.9,
-     "ppp": 42.06
-    },
-    "gb": {
-     "play": "£8.49 - £189.99",
-     "pro": 25.47,
-     "local": "£19.00",
-     "localAmount": 19,
-     "ppp": 28.57
-    },
-    "dk": {
-     "play": "78,99 kr. - 1.689,00 kr.",
-     "pro": 25.87,
-     "local": "169,00 kr",
-     "localAmount": 169,
-     "ppp": 28.74
-    },
-    "ar": {
-     "pro": 20,
-     "local": "USD 20.00",
-     "localAmount": 20,
-     "ppp": 40.91
-    }
-   }
-  },
-  "capcut": {
-   "label": "CapCut",
-   "developer": "Bytedance",
-   "site": "https://www.capcut.com/",
-   "baseTier": "pro",
-   "tiers": [
-    {
-     "key": "pro",
-     "label": "Pro"
-    }
-   ],
-   "tierRules": [
-    [
-     "pro",
-     "pro"
-    ]
-   ],
-   "store": {
-    "appleId": "1500855883",
-    "playPkg": "com.lemon.lvoverseas",
-    "appleSearch": "CapCut",
-    "sellerRe": "Bytedance|CapCut"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$0.49 - $669.99",
-     "pro": 19.99,
-     "local": "$19.99",
-     "localAmount": 19.99,
-     "ppp": 19.99
-    },
-    "jp": {
-     "play": "¥12 - ¥99,800",
-     "pro": 13.47,
-     "local": "¥2,180",
-     "localAmount": 2180,
-     "ppp": 23.36
-    },
-    "pk": {
-     "play": "Rs 12 - Rs 179,900",
-     "pro": 7.91,
-     "local": "Rs 2,200.00",
-     "localAmount": 2200,
-     "ppp": 31.06
-    },
-    "ca": {
-     "play": "$0.39 - $909.00",
-     "pro": 19.78,
-     "local": "$27.99",
-     "localAmount": 27.99,
-     "ppp": 23.84
-    },
-    "eg": {
-     "play": "EGP 9.99 - EGP 34,999.99",
-     "pro": 10.08,
-     "local": "EGP 499.99",
-     "localAmount": 499.99,
-     "ppp": 60.3
-    },
-    "au": {
-     "play": "$0.49 - $1,000.00",
-     "pro": 20.85,
-     "local": "$29.99",
-     "localAmount": 29.99,
-     "ppp": 20.87
-    },
-    "ph": {
-     "play": "₱9.00 - ₱37,490.00",
-     "pro": 7.8,
-     "local": "₱ 480.00",
-     "localAmount": 480,
-     "ppp": 24.98
-    },
-    "tr": {
-     "play": "TRY 4.99 - TRY 30,999.00",
-     "pro": 8.51,
-     "local": "₺399,99",
-     "localAmount": 399.99,
-     "ppp": 19.8
-    },
-    "ng": {
-     "play": "₦30.00 - ₦1,099,000.00",
-     "pro": 10.8,
-     "local": "₦ 14,900.00",
-     "localAmount": 14900,
-     "ppp": 68.24
-    },
-    "kr": {
-     "play": "₩80 - ₩570,000"
-    },
-    "mx": {
-     "play": "MX$5.00 - MX$14,999.00",
-     "pro": 18.86,
-     "local": "$330.00",
-     "localAmount": 330,
-     "ppp": 31.41
-    },
-    "de": {
-     "play": "€0.29 - €769.99",
-     "pro": 27.4,
-     "local": "23,99 €",
-     "localAmount": 23.99,
-     "ppp": 33.23
-    },
-    "fr": {
-     "play": "€0.29 - €769.99",
-     "pro": 27.4,
-     "local": "23,99 €",
-     "localAmount": 23.99,
-     "ppp": 37.25
-    },
-    "br": {
-     "play": "R$0.90 - R$3,299.90",
-     "pro": 12.88,
-     "local": "R$ 65,90",
-     "localAmount": 65.9,
-     "ppp": 25.22
-    },
-    "gb": {
-     "play": "£0.29 - £700.00",
-     "pro": 29.48,
-     "local": "£21.99",
-     "localAmount": 21.99,
-     "ppp": 33.07
-    },
-    "dk": {
-     "play": "2,00 kr. - 6.999,00 kr.",
-     "pro": 35.06,
-     "local": "229,00 kr",
-     "localAmount": 229,
-     "ppp": 38.94
-    },
-    "ar": {
-     "pro": 6.99,
-     "local": "USD 6.99",
-     "localAmount": 6.99,
-     "ppp": 14.3
-    }
-   }
-  },
-  "characterai": {
-   "label": "Character.AI",
-   "developer": "Character Technologies",
-   "site": "https://character.ai/",
-   "baseTier": "plus",
-   "tiers": [
-    {
-     "key": "plus",
-     "label": "c.ai+"
-    }
-   ],
-   "tierRules": [
-    [
-     "c\\.ai|plus",
-     "plus"
-    ]
-   ],
-   "store": {
-    "appleId": "1671705818",
-    "playPkg": "ai.character.app",
-    "appleSearch": "Character AI",
-    "sellerRe": "Character"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$0.99 - $99.99"
-    },
-    "jp": {
-     "play": "¥170 - ¥17,800"
-    },
-    "pk": {
-     "play": "Rs 280 - Rs 27,800"
-    },
-    "ca": {
-     "play": "$1.39 - $139.99"
-    },
-    "eg": {
-     "play": "EGP 53.99 - EGP 5,649.99"
-    },
-    "au": {
-     "play": "$1.59 - $159.99"
-    },
-    "ph": {
-     "play": "₱65.00 - ₱6,850.00"
-    },
-    "in": {
-     "play": "₹100.00 - ₹11,200.00"
-    },
-    "tr": {
-     "play": "TRY 50.99 - TRY 5,579.99"
-    },
-    "ng": {
-     "play": "₦1,550.00 - ₦156,000.00"
-    },
-    "kr": {
-     "play": "₩1,600 - ₩170,000"
-    },
-    "mx": {
-     "play": "MX$21.00 - MX$2,049.00"
-    },
-    "de": {
-     "play": "€0.99 - €104.99"
-    },
-    "fr": {
-     "play": "€0.99 - €104.99"
-    },
-    "br": {
-     "play": "R$5.49 - R$519.99"
-    },
-    "gb": {
-     "play": "£0.89 - £90.99"
-    },
-    "dk": {
-     "play": "8,00 kr. - 819,00 kr."
-    }
-   }
-  },
-  "suno": {
-   "label": "Suno",
-   "developer": "Suno",
-   "site": "https://suno.com/",
-   "baseTier": "pro",
-   "tiers": [
-    {
-     "key": "pro",
-     "label": "Pro"
-    },
-    {
-     "key": "premier",
-     "label": "Premier"
-    }
-   ],
-   "tierRules": [
-    [
-     "premier",
-     "premier"
-    ],
-    [
-     "pro",
-     "pro"
-    ]
-   ],
-   "store": {
-    "appleId": "6480136315",
-    "playPkg": "com.suno.android",
-    "appleSearch": "Suno AI Music",
-    "sellerRe": "Suno",
-    "playCandidates": [
-     "com.suno.android"
-    ],
-    "devRe": "Suno"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$4.00 - $289.99",
-     "pro": 10,
-     "local": "$10.00",
-     "localAmount": 10,
-     "ppp": 10,
-     "premier": 30
-    },
-    "jp": {
-     "play": "¥620 - ¥50,500",
-     "pro": 9.27,
-     "local": "¥1,500",
-     "localAmount": 1500,
-     "ppp": 16.08,
-     "premier": 30.9
-    },
-    "pk": {
-     "play": "Rs 1,100 - Rs 81,100",
-     "pro": 10.43,
-     "local": "Rs 2,900.00",
-     "localAmount": 2900,
-     "ppp": 40.94,
-     "premier": 28.4
-    },
-    "ca": {
-     "play": "$5.49 - $399.99",
-     "pro": 9.89,
-     "local": "$14.00",
-     "localAmount": 14,
-     "ppp": 11.93,
-     "premier": 28.27
-    },
-    "eg": {
-     "play": "EGP 229.99 - EGP 16,999.99",
-     "pro": 10.08,
-     "local": "EGP 499.99",
-     "localAmount": 499.99,
-     "ppp": 60.3,
-     "premier": 30.23
-    },
-    "au": {
-     "play": "$6.99 - $479.99",
-     "pro": 10.43,
-     "local": "$15.00",
-     "localAmount": 15,
-     "ppp": 10.44,
-     "premier": 34.75
-    },
-    "ph": {
-     "play": "₱235.00 - ₱19,350.00",
-     "pro": 9.73,
-     "local": "₱ 599.00",
-     "localAmount": 599,
-     "ppp": 31.17,
-     "premier": 32.31
-    },
-    "in": {
-     "play": "₹400.00 - ₹31,800.00",
-     "pro": 10.46,
-     "local": "₹ 999",
-     "localAmount": 999,
-     "ppp": 49.11,
-     "premier": 31.39
-    },
-    "tr": {
-     "play": "TRY 164.99 - TRY 15,509.99",
-     "pro": 10.64,
-     "local": "₺499,99",
-     "localAmount": 499.99,
-     "ppp": 24.75,
-     "premier": 31.93
-    },
-    "ng": {
-     "play": "₦7,160.00 - ₦461,500.00",
-     "pro": 10.8,
-     "local": "₦ 14,900.00",
-     "localAmount": 14900,
-     "ppp": 68.24,
-     "premier": 36.19
-    },
-    "kr": {
-     "play": "₩6,000 - ₩470,000"
-    },
-    "mx": {
-     "play": "MX$95.00 - MX$6,149.00",
-     "pro": 11.37,
-     "local": "$199.00",
-     "localAmount": 199,
-     "ppp": 18.94,
-     "premier": 34.24
-    },
-    "de": {
-     "play": "€4.49 - €289.99",
-     "pro": 11.42,
-     "local": "10,00 €",
-     "localAmount": 10,
-     "ppp": 13.85,
-     "premier": 39.98
-    },
-    "fr": {
-     "play": "€4.59 - €294.99",
-     "pro": 11.42,
-     "local": "10,00 €",
-     "localAmount": 10,
-     "ppp": 15.53,
-     "premier": 39.98
-    },
-    "br": {
-     "play": "R$22.99 - R$1,499.99",
-     "pro": 11.71,
-     "local": "R$ 59,90",
-     "localAmount": 59.9,
-     "ppp": 22.92,
-     "premier": 39.08
-    },
-    "gb": {
-     "play": "£3.79 - £254.99",
-     "pro": 13.41,
-     "local": "£10.00",
-     "localAmount": 10,
-     "ppp": 15.04,
-     "premier": 40.22
-    },
-    "dk": {
-     "play": "35,00 kr. - 2.299,00 kr.",
-     "pro": 13.62,
-     "local": "89,00 kr",
-     "localAmount": 89,
-     "ppp": 15.13,
-     "premier": 38.12
-    },
-    "ar": {
-     "pro": 10,
-     "local": "USD 10.00",
-     "localAmount": 10,
-     "ppp": 20.45,
-     "premier": 30
-    }
-   }
-  },
-  "kling": {
-   "label": "Kling AI",
-   "developer": "Kuaishou",
-   "site": "https://klingai.com/",
-   "baseTier": "standard",
-   "tiers": [
-    {
-     "key": "standard",
-     "label": "Standard"
-    },
-    {
-     "key": "pro",
-     "label": "Pro"
-    },
-    {
-     "key": "premier",
-     "label": "Premier"
-    }
-   ],
-   "tierRules": [
-    [
-     "premier",
-     "premier"
-    ],
-    [
-     "pro",
-     "pro"
-    ],
-    [
-     "standard",
-     "standard"
-    ]
-   ],
-   "store": {
-    "appleId": "6738049229",
-    "playPkg": "kling.ai.video.chat",
-    "appleSearch": "Kling AI",
-    "sellerRe": "Kuaishou|Kling",
-    "playCandidates": [
-     "com.klingai.global",
-     "com.kwai.klingai"
-    ],
-    "devRe": "Kuaishou|Kling"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$0.59 - $2,160.00",
-     "standard": 1.19,
-     "local": "$1.19",
-     "localAmount": 1.19,
-     "ppp": 1.19
-    },
-    "jp": {
-     "play": "¥100 - ¥378,300",
-     "standard": 1.24,
-     "local": "¥200",
-     "localAmount": 200,
-     "ppp": 2.14
-    },
-    "pk": {
-     "play": "Rs 160 - Rs 602,000",
-     "standard": 1.08,
-     "local": "Rs 300.00",
-     "localAmount": 300,
-     "ppp": 4.24
-    },
-    "ca": {
-     "play": "$0.79 - $2,999.99",
-     "standard": 1.41,
-     "local": "$1.99",
-     "localAmount": 1.99,
-     "ppp": 1.7
-    },
-    "eg": {
-     "play": "EGP 35.99 - EGP 128,599.99",
-     "standard": 1.21,
-     "local": "EGP 59.99",
-     "localAmount": 59.99,
-     "ppp": 7.23
-    },
-    "au": {
-     "play": "$0.89 - $3,299.99",
-     "standard": 1.38,
-     "local": "$1.99",
-     "localAmount": 1.99,
-     "ppp": 1.38
-    },
-    "ph": {
-     "play": "₱41.00 - ₱148,950.00",
-     "standard": 1.28,
-     "local": "₱ 79.00",
-     "localAmount": 79,
-     "ppp": 4.11
-    },
-    "in": {
-     "play": "₹65.00 - ₹2,43,300.00",
-     "standard": 1.04,
-     "local": "₹ 99",
-     "localAmount": 99,
-     "ppp": 4.87
-    },
-    "tr": {
-     "play": "TRY 31.99 - TRY 118,989.99",
-     "standard": 1.28,
-     "local": "₺59,99",
-     "localAmount": 59.99,
-     "ppp": 2.97
-    },
-    "ng": {
-     "play": "₦870.00 - ₦3,188,000.00",
-     "standard": 1.38,
-     "local": "₦ 1,900.00",
-     "localAmount": 1900,
-     "ppp": 8.7
-    },
-    "kr": {
-     "play": "₩1,000 - ₩340,000"
-    },
-    "mx": {
-     "play": "MX$12.00 - MX$43,349.00",
-     "standard": 1.66,
-     "local": "$29.00",
-     "localAmount": 29,
-     "ppp": 2.76
-    },
-    "de": {
-     "play": "€0.59 - €2,199.99",
-     "standard": 1.13,
-     "local": "0,99 €",
-     "localAmount": 0.99,
-     "ppp": 1.37
-    },
-    "fr": {
-     "play": "€0.59 - €2,229.99",
-     "standard": 1.13,
-     "local": "0,99 €",
-     "localAmount": 0.99,
-     "ppp": 1.54
-    },
-    "br": {
-     "play": "R$2.89 - R$10,849.99",
-     "standard": 1.54,
-     "local": "R$ 7,90",
-     "localAmount": 7.9,
-     "ppp": 3.02
-    },
-    "gb": {
-     "play": "£0.49 - £1,929.99",
-     "standard": 1.33,
-     "local": "£0.99",
-     "localAmount": 0.99,
-     "ppp": 1.49
-    },
-    "dk": {
-     "play": "5,00 kr. - 17.349,00 kr.",
-     "standard": 1.38,
-     "local": "9,00 kr",
-     "localAmount": 9,
-     "ppp": 1.53
-    },
-    "ar": {
-     "standard": 1.19,
-     "local": "USD 1.19",
-     "localAmount": 1.19,
-     "ppp": 2.43
-    }
-   }
-  },
-  "sora": {
-   "label": "Sora",
-   "developer": "OpenAI",
-   "site": "https://sora.com/",
-   "baseTier": "plus",
-   "tiers": [
-    {
-     "key": "plus",
-     "label": "Plus"
-    },
-    {
-     "key": "pro",
-     "label": "Pro"
-    }
-   ],
-   "tierRules": [
-    [
-     "pro",
-     "pro"
-    ],
-    [
-     "plus",
-     "plus"
-    ]
-   ],
-   "store": {
-    "appleId": null,
-    "playPkg": null,
-    "appleSearch": "Sora by OpenAI",
-    "sellerRe": "OpenAI",
-    "playCandidates": [
-     "com.openai.sora"
-    ],
-    "devRe": "OpenAI",
-    "nameRe": "sora",
-    "appleIdCandidates": [
-     "6744034028"
-    ]
-   },
-   "web": null,
-   "regions": {}
-  },
-  "kimi": {
-   "label": "Kimi",
-   "developer": "Moonshot AI",
-   "site": "https://kimi.com/",
-   "baseTier": "pro",
-   "tiers": [
-    {
-     "key": "pro",
-     "label": "Pro"
-    }
-   ],
-   "tierRules": [
-    [
-     "pro|plus|premium|会员|member",
-     "pro"
-    ]
-   ],
-   "store": {
-    "appleId": "6474233312",
-    "playPkg": "com.moonshot.kimichat",
-    "appleSearch": "Kimi AI",
-    "sellerRe": "Moonshot",
-    "playCandidates": [
-     "com.moonshot.kimichat",
-     "ai.moonshot.kimi"
-    ],
-    "devRe": "Moonshot"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$19.00 - $372.00"
-    },
-    "jp": {
-     "play": "¥3,180 - ¥64,100"
-    },
-    "pk": {
-     "play": "Rs 5,300 - Rs 104,600"
-    },
-    "ca": {
-     "play": "$25.99 - $499.99"
-    },
-    "eg": {
-     "play": "EGP 999.99 - EGP 20,049.99"
-    },
-    "au": {
-     "play": "$30.99 - $599.99"
-    },
-    "ph": {
-     "play": "₱1,250.00 - ₱24,650.00"
-    },
-    "in": {
-     "play": "₹2,000.00 - ₹39,500.00"
-    },
-    "tr": {
-     "play": "TRY 949.99 - TRY 19,209.99"
-    },
-    "ng": {
-     "play": "₦29,000.00 - ₦569,500.00"
-    },
-    "kr": {
-     "play": "₩30,000 - ₩570,000"
-    },
-    "mx": {
-     "play": "MX$395.00 - MX$7,749.00"
-    },
-    "de": {
-     "play": "€18.99 - €379.99"
-    },
-    "fr": {
-     "play": "€19.99 - €379.99"
-    },
-    "br": {
-     "play": "R$99.99 - R$1,999.99"
-    },
-    "gb": {
-     "play": "£16.99 - £329.99"
-    },
-    "dk": {
-     "play": "155,00 kr. - 2.999,00 kr."
-    }
-   }
-  },
-  "glm": {
-   "label": "GLM",
-   "developer": "Zhipu AI",
-   "site": "https://chat.z.ai/",
-   "baseTier": "pro",
-   "tiers": [
-    {
-     "key": "pro",
-     "label": "Pro"
-    }
-   ],
-   "tierRules": [
-    [
-     "pro|plus|premium",
-     "pro"
-    ]
-   ],
-   "store": {
-    "appleId": "6450893458",
-    "playPkg": null,
-    "appleSearch": "Z.ai GLM",
-    "sellerRe": "Zhipu|Z\\.ai|Knowledge Atlas|智谱",
-    "playCandidates": [
-     "ai.z.chat",
-     "com.zhipuai.qingyan.international"
-    ],
-    "devRe": "Zhipu|Z\\.ai"
-   },
-   "web": null,
-   "regions": {}
-  },
-  "leonardo": {
-   "label": "Leonardo AI",
-   "developer": "Leonardo Interactive",
-   "site": "https://leonardo.ai/",
-   "baseTier": "premium",
-   "tiers": [
-    {
-     "key": "premium",
-     "label": "Premium"
-    }
-   ],
-   "tierRules": [
-    [
-     "premium",
-     "premium"
-    ]
-   ],
-   "store": {
-    "appleId": "1662773014",
-    "playPkg": "ai.leonardo.leonardo",
-    "appleSearch": "Leonardo AI",
-    "sellerRe": "Leonardo",
-    "playCandidates": [
-     "ai.leonardo.app",
-     "app.leonardo.ai"
-    ],
-    "devRe": "Leonardo"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$9.49 - $459.99",
-     "premium": 39.99,
-     "local": "$39.99",
-     "localAmount": 39.99,
-     "ppp": 39.99
-    },
-    "jp": {
-     "play": "¥1,500 - ¥74,600",
-     "premium": 37.09,
-     "local": "¥6,000",
-     "localAmount": 6000,
-     "ppp": 64.3
-    },
-    "pk": {
-     "play": "Rs 2,650 - Rs 130,300",
-     "premium": 35.59,
-     "local": "Rs 9,900.00",
-     "localAmount": 9900,
-     "ppp": 139.78
-    },
-    "ca": {
-     "play": "$12.99 - $649.99",
-     "premium": 35.33,
-     "local": "$49.99",
-     "localAmount": 49.99,
-     "ppp": 42.58
-    },
-    "eg": {
-     "play": "EGP 509.99 - EGP 25,249.99",
-     "premium": 24.18,
-     "local": "EGP 1,199.99",
-     "localAmount": 1199.99,
-     "ppp": 144.72
-    },
-    "au": {
-     "play": "$13.99 - $699.99",
-     "premium": 41.7,
-     "local": "$59.99",
-     "localAmount": 59.99,
-     "ppp": 41.75
-    },
-    "ph": {
-     "play": "₱595.00 - ₱29,550.00",
-     "premium": 37.18,
-     "local": "₱ 2,290.00",
-     "localAmount": 2290,
-     "ppp": 119.16
-    },
-    "in": {
-     "play": "₹950.00 - ₹18,700.00",
-     "premium": 41.85,
-     "local": "₹ 3,999",
-     "localAmount": 3999,
-     "ppp": 196.58
-    },
-    "tr": {
-     "play": "TRY 464.99 - TRY 22,839.99",
-     "premium": 21.28,
-     "local": "₺999,99",
-     "localAmount": 999.99,
-     "ppp": 49.49
-    },
-    "ng": {
-     "play": "₦15,000.00 - ₦743,000.00",
-     "premium": 14.43,
-     "local": "₦ 19,900.00",
-     "localAmount": 19900,
-     "ppp": 91.14
-    },
-    "kr": {
-     "play": "₩14,000 - ₩570,000"
-    },
-    "mx": {
-     "play": "MX$199.00 - MX$9,849.00",
-     "premium": 51.38,
-     "local": "$899.00",
-     "localAmount": 899,
-     "ppp": 85.56
-    },
-    "de": {
-     "play": "€9.49 - €464.99",
-     "premium": 51.39,
-     "local": "44,99 €",
-     "localAmount": 44.99,
-     "ppp": 62.31
-    },
-    "fr": {
-     "play": "€9.49 - €469.99",
-     "premium": 51.39,
-     "local": "44,99 €",
-     "localAmount": 44.99,
-     "ppp": 69.86
-    },
-    "br": {
-     "play": "R$49.99 - R$2,449.99",
-     "premium": 39.08,
-     "local": "R$ 199,90",
-     "localAmount": 199.9,
-     "ppp": 76.5
-    },
-    "gb": {
-     "play": "£7.99 - £404.99",
-     "premium": 53.61,
-     "local": "£39.99",
-     "localAmount": 39.99,
-     "ppp": 60.14
-    },
-    "dk": {
-     "play": "75.00 kr. - 3,649.00 kr.",
-     "premium": 53.43,
-     "local": "349,00 kr",
-     "localAmount": 349,
-     "ppp": 59.34
-    },
-    "ar": {
-     "premium": 39.99,
-     "local": "USD 39.99",
-     "localAmount": 39.99,
-     "ppp": 81.79
-    }
-   }
-  },
-  "manus": {
-   "label": "Manus",
-   "developer": "Butterfly Effect",
-   "site": "https://manus.im/",
-   "baseTier": "pro",
-   "tiers": [
-    {
-     "key": "pro",
-     "label": "Pro"
-    }
-   ],
-   "tierRules": [
-    [
-     "pro|plus|starter",
-     "pro"
-    ]
-   ],
-   "store": {
-    "appleId": "6740909540",
-    "playPkg": "tech.butterfly.app",
-    "appleSearch": "Manus AI",
-    "sellerRe": "Butterfly|Manus",
-    "playCandidates": [
-     "tech.butterfly.app",
-     "im.manus.app"
-    ],
-    "devRe": "Butterfly|Manus"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$18.99 - $4,999.99",
-     "pro": 39.99,
-     "local": "$39.99",
-     "localAmount": 39.99,
-     "ppp": 39.99
-    },
-    "jp": {
-     "play": "¥3,140 - ¥863,100",
-     "pro": 37.09,
-     "local": "¥6,000",
-     "localAmount": 6000,
-     "ppp": 64.3
-    },
-    "pk": {
-     "play": "Rs 5,300 - Rs 1,394,600",
-     "pro": 35.59,
-     "local": "Rs 9,900.00",
-     "localAmount": 9900,
-     "ppp": 139.78
-    },
-    "ca": {
-     "play": "$26.99 - $6,799.99",
-     "pro": 35.33,
-     "local": "$49.99",
-     "localAmount": 49.99,
-     "ppp": 42.58
-    },
-    "eg": {
-     "play": "EGP 1,049.99 - EGP 304,449.99",
-     "pro": 20.15,
-     "local": "EGP 999.99",
-     "localAmount": 999.99,
-     "ppp": 120.6
-    },
-    "au": {
-     "play": "$31.99 - $7,649.99",
-     "pro": 41.7,
-     "local": "$59.99",
-     "localAmount": 59.99,
-     "ppp": 41.75
-    },
-    "ph": {
-     "play": "₱1,250.00 - ₱344,950.00",
-     "pro": 20.95,
-     "local": "₱ 1,290.00",
-     "localAmount": 1290,
-     "ppp": 67.12
-    },
-    "in": {
-     "play": "₹2,000.00 - ₹5,60,800.00",
-     "pro": 20.92,
-     "local": "₹ 1,999",
-     "localAmount": 1999,
-     "ppp": 98.26
-    },
-    "tr": {
-     "play": "TRY 949.99 - TRY 271,189.99",
-     "pro": 42.57,
-     "local": "₺1.999,99",
-     "localAmount": 1999.99,
-     "ppp": 98.99
-    },
-    "ng": {
-     "play": "₦30,000.00 - ₦7,395,000.00",
-     "pro": 50.69,
-     "local": "₦ 69,900.00",
-     "localAmount": 69900,
-     "ppp": 320.14
-    },
-    "kr": {
-     "play": "₩30,000 - ₩570,000"
-    },
-    "mx": {
-     "play": "MX$405.00 - MX$101,299.00",
-     "pro": 51.38,
-     "local": "$899.00",
-     "localAmount": 899,
-     "ppp": 85.56
-    },
-    "de": {
-     "play": "€18.99 - €5,099.99",
-     "pro": 51.39,
-     "local": "44,99 €",
-     "localAmount": 44.99,
-     "ppp": 62.31
-    },
-    "fr": {
-     "play": "€18.99 - €5,099.99",
-     "pro": 51.39,
-     "local": "44,99 €",
-     "localAmount": 44.99,
-     "ppp": 69.86
-    },
-    "br": {
-     "play": "R$99.99 - R$24,799.99",
-     "pro": 48.85,
-     "local": "R$ 249,90",
-     "localAmount": 249.9,
-     "ppp": 95.64
-    },
-    "gb": {
-     "play": "£16.99 - £4,399.99",
-     "pro": 53.61,
-     "local": "£39.99",
-     "localAmount": 39.99,
-     "ppp": 60.14
-    },
-    "dk": {
-     "play": "64,00 kr. - 1.799,00 kr.",
-     "pro": 53.43,
-     "local": "349,00 kr",
-     "localAmount": 349,
-     "ppp": 59.34
-    },
-    "ar": {
-     "pro": 39.99,
-     "local": "USD 39.99",
-     "localAmount": 39.99,
-     "ppp": 81.79
-    }
-   }
-  },
-  "catcosplay": {
-   "label": "CatCosplay",
-   "developer": "CatCosplay",
-   "site": "https://catcosplay.com/",
-   "baseTier": "pro",
-   "tiers": [
-    {
-     "key": "pro",
-     "label": "Pro"
-    }
-   ],
-   "tierRules": [
-    [
-     "pro|plus|premium",
-     "pro"
-    ]
-   ],
-   "store": {
-    "appleId": null,
-    "playPkg": null,
-    "appleSearch": "CatCosplay",
-    "sellerRe": "Cat",
-    "playCandidates": [
-     "com.catcosplay.app"
-    ],
-    "devRe": "Cat"
-   },
-   "web": null,
-   "regions": {}
-  },
-  "youtube": {
-   "label": "YouTube Premium",
-   "developer": "Google",
-   "site": "https://www.youtube.com/premium",
-   "baseTier": "premium",
-   "tiers": [
-    {
-     "key": "premium",
-     "label": "Premium"
-    },
-    {
-     "key": "family",
-     "label": "家庭版"
-    }
-   ],
-   "tierRules": [
-    [
-     "family|家庭",
-     "family"
-    ],
-    [
-     "premium",
-     "premium"
-    ]
-   ],
-   "store": {
-    "appleSearch": "YouTube",
-    "sellerRe": "Google",
-    "nameRe": "^YouTube$",
-    "playPkg": "com.google.android.youtube",
-    "appleId": "544007664"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$0.05 - $999.99"
-    },
-    "jp": {
-     "play": "¥7 - ¥155,000"
-    },
-    "pk": {
-     "play": "Rs 10 - Rs 279,000"
-    },
-    "ca": {
-     "play": "$0.10 - $1,380.00"
-    },
-    "eg": {
-     "play": "EGP 0.90 - EGP 49,000.00"
-    },
-    "au": {
-     "play": "$0.10 - $1,550.00"
-    },
-    "ph": {
-     "play": "₱3.00 - ₱58,000.00"
-    },
-    "in": {
-     "play": "₹4.00 - ₹84,000.00"
-    },
-    "tr": {
-     "play": "TRY 0.59 - TRY 40,800.00"
-    },
-    "ng": {
-     "play": "₦25.00 - ₦1,490,000.00"
-    },
-    "kr": {
-     "play": "₩70 - ₩600,000"
-    },
-    "mx": {
-     "play": "MX$1.20 - MX$17,200.00"
-    },
-    "de": {
-     "play": "€0.05 - €940.00"
-    },
-    "fr": {
-     "play": "€0.05 - €940.00"
-    },
-    "br": {
-     "play": "R$0.30 - R$5,200.00"
-    },
-    "gb": {
-     "play": "£0.05 - £810.00"
-    },
-    "dk": {
-     "play": "0,40 kr. - 7.000,00 kr."
-    }
-   }
-  },
-  "x": {
-   "label": "X Premium",
-   "developer": "X Corp.",
-   "site": "https://x.com/",
-   "baseTier": "premium",
-   "tiers": [
-    {
-     "key": "basic",
-     "label": "Basic"
-    },
-    {
-     "key": "premium",
-     "label": "Premium"
-    },
-    {
-     "key": "premiumplus",
-     "label": "Premium+"
-    }
-   ],
-   "tierRules": [
-    [
-     "premium\\s*\\+|premium plus",
-     "premiumplus"
-    ],
-    [
-     "basic",
-     "basic"
-    ],
-    [
-     "premium",
-     "premium"
-    ]
-   ],
-   "store": {
-    "appleSearch": "X",
-    "sellerRe": "X Corp",
-    "nameRe": "^X$",
-    "playPkg": "com.twitter.android",
-    "appleId": "333903271"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$0.99 - $500.00"
-    },
-    "jp": {
-     "play": "¥120 - ¥88,700"
-    },
-    "pk": {
-     "play": "Rs 160 - Rs 139,100"
-    },
-    "ca": {
-     "play": "$1.19 - $699.99"
-    },
-    "eg": {
-     "play": "EGP 15.99 - EGP 27,999.99"
-    },
-    "au": {
-     "play": "$1.49 - $799.99"
-    },
-    "ph": {
-     "play": "₱49.00 - ₱34,400.00"
-    },
-    "in": {
-     "play": "₹85.00 - ₹56,200.00"
-    },
-    "tr": {
-     "play": "TRY 9.99 - TRY 28,079.99"
-    },
-    "ng": {
-     "play": "₦405.00 - ₦736,500.00"
-    },
-    "kr": {
-     "play": "₩1,200 - ₩600,000"
-    },
-    "mx": {
-     "play": "MX$19.00 - MX$10,149.00"
-    },
-    "de": {
-     "play": "€0.99 - €499.99"
-    },
-    "fr": {
-     "play": "€0.99 - €499.99"
-    },
-    "br": {
-     "play": "R$4.69 - R$2,599.99"
-    },
-    "gb": {
-     "play": "£0.89 - £456.00"
-    },
-    "dk": {
-     "play": "8,00 kr. - 4.099,00 kr."
-    }
-   }
-  },
-  "hbo-max": {
-   "label": "HBO Max",
-   "developer": "Warner Bros. Discovery",
-   "site": "https://www.hbomax.com/",
-   "baseTier": "adfree",
-   "tiers": [
-    {
-     "key": "ads",
-     "label": "含广告"
-    },
-    {
-     "key": "adfree",
-     "label": "无广告"
-    },
-    {
-     "key": "ultimate",
-     "label": "至尊版"
-    }
-   ],
-   "tierRules": [
-    [
-     "ultimate",
-     "ultimate"
-    ],
-    [
-     "ad[- ]?free|无广告",
-     "adfree"
-    ],
-    [
-     "with ads|ads|广告",
-     "ads"
-    ]
-   ],
-   "store": {
-    "appleSearch": "HBO Max",
-    "sellerRe": "Warner|WarnerMedia|WB",
-    "nameRe": "HBO Max|^Max\\b",
-    "playCandidates": [
-     "com.wbd.stream",
-     "com.hbo.hbonow"
-    ],
-    "appleId": "1666653815",
-    "playPkg": "com.wbd.stream"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$2.49 - $229.99"
-    },
-    "jp": {
-     "play": "¥310 - ¥19,200"
-    },
-    "pk": {
-     "play": "Rs 460 - Rs 27,800"
-    },
-    "ca": {
-     "play": "$3.09 - $189.99"
-    },
-    "eg": {
-     "play": "EGP 45.99 - EGP 2,799.99"
-    },
-    "au": {
-     "play": "$3.79 - $229.99"
-    },
-    "ph": {
-     "play": "₱130.00 - ₱7,850.00"
-    },
-    "in": {
-     "play": "₹220.00 - ₹13,300.00"
-    },
-    "tr": {
-     "play": "TRY 43.99 - TRY 3,598.80"
-    },
-    "ng": {
-     "play": "₦1,110.00 - ₦69,000.00"
-    },
-    "kr": {
-     "play": "₩3,400 - ₩210,000"
-    },
-    "mx": {
-     "play": "MX$59.00 - MX$3,599.00"
-    },
-    "de": {
-     "play": "€2.79 - €169.99"
-    },
-    "fr": {
-     "play": "€2.79 - €169.99"
-    },
-    "br": {
-     "play": "R$12.99 - R$809.99"
-    },
-    "gb": {
-     "play": "£2.19 - £134.99"
-    },
-    "dk": {
-     "play": "19,00 kr. - 1.249,00 kr."
-    }
-   }
-  },
-  "netflix": {
-   "label": "Netflix",
-   "developer": "Netflix",
-   "site": "https://www.netflix.com/",
-   "baseTier": "standard",
-   "tiers": [
-    {
-     "key": "ads",
-     "label": "广告版"
-    },
-    {
-     "key": "standard",
-     "label": "标准版"
-    },
-    {
-     "key": "premium",
-     "label": "高级版"
-    }
-   ],
-   "tierRules": [
-    [
-     "premium|高级",
-     "premium"
-    ],
-    [
-     "standard|标准",
-     "standard"
-    ],
-    [
-     "ads|广告",
-     "ads"
-    ]
-   ],
-   "store": {
-    "appleSearch": "Netflix",
-    "sellerRe": "Netflix",
-    "nameRe": "^Netflix$",
-    "playPkg": "com.netflix.mediaclient",
-    "appleId": "363590051"
-   },
-   "web": null,
-   "regions": {}
-  },
-  "spotify": {
-   "label": "Spotify",
-   "developer": "Spotify AB",
-   "site": "https://www.spotify.com/premium/",
-   "baseTier": "individual",
-   "tiers": [
-    {
-     "key": "individual",
-     "label": "个人"
-    },
-    {
-     "key": "duo",
-     "label": "双人"
-    },
-    {
-     "key": "family",
-     "label": "家庭"
-    }
-   ],
-   "tierRules": [
-    [
-     "family|家庭",
-     "family"
-    ],
-    [
-     "duo|双人",
-     "duo"
-    ],
-    [
-     "individual|个人|premium",
-     "individual"
-    ]
-   ],
-   "store": {
-    "appleSearch": "Spotify",
-    "sellerRe": "Spotify",
-    "nameRe": "^Spotify",
-    "playPkg": "com.spotify.music",
-    "appleId": "324684580"
-   },
-   "web": null,
-   "regions": {
-    "us": {
-     "play": "$6.99 - $203.88"
-    },
-    "jp": {
-     "play": "¥580 - ¥17,200"
-    },
-    "pk": {
-     "play": "Rs 199 - Rs 29,700"
-    },
-    "ca": {
-     "play": "$6.39 - $144.99"
-    },
-    "eg": {
-     "play": "EGP 39.00 - EGP 5,899.99"
-    },
-    "au": {
-     "play": "$7.99 - $251.99"
-    },
-    "ph": {
-     "play": "₱85.00 - ₱6,750.00"
-    },
-    "in": {
-     "play": "₹139.00 - ₹11,000.00"
-    },
-    "tr": {
-     "play": "TRY 55.00 - TRY 5,209.99"
-    },
-    "ng": {
-     "play": "₦800.00 - ₦172,000.00"
-    },
-    "kr": {
-     "play": "₩8,690 - ₩160,000"
-    },
-    "mx": {
-     "play": "MX$74.00 - MX$2,860.00"
-    },
-    "de": {
-     "play": "€6.99 - €109.99"
-    },
-    "fr": {
-     "play": "€7.07 - €109.99"
-    },
-    "br": {
-     "play": "R$18.90 - R$599.00"
-    },
-    "gb": {
-     "play": "£5.99 - £215.88"
-    },
-    "dk": {
-     "play": "65,00 kr. - 849,00 kr."
-    }
-   }
-  }
- }
 }
