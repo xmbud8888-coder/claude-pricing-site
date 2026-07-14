@@ -4,236 +4,67 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#05070e">
-<title>2026 各国 Claude 价格对比 | Claude 哪个国家最便宜</title>
-<meta name="description" content="比较 Claude 订阅在全球 App Store 与 Google Play 各区域的价格：最便宜/最贵国家排行、完整价格表、购买力对比、换区订阅指南。数据每日自动抓取官方商店页核验。">
-<link rel="stylesheet" href="style.css?v=s4">
+<title>AI 定价站 | AI · 游戏 · 流媒体全球比价</title>
+<meta name="description" content="同一个产品，全球不是一个价。AI 订阅、Steam 与 eShop 游戏、流媒体服务的各国价格对比，全部数字来自官方接口每日核验；配套礼品卡与换区指南。">
+<link rel="stylesheet" href="style.css?v=s6">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 </head>
-<body data-product="claude">
+<body class="landing">
 
-<nav class="topnav">
+<nav class="topnav landing-nav" id="landingNav">
   <div class="wrap topnav-in">
-    <a class="brand" href="#top">
-      <span class="brand-name">AI 定价站</span>
-    </a>
-    <div class="navlinks">
-      <a href="#top">价格地图</a>
-      <a href="#table">价格表</a>
-      <a href="#play">Google Play</a>
-      <a href="#ppp">购买力</a>
-      <a href="#howto">换区指南</a>
-      <a href="#faq">FAQ</a>
-    </div>
+    <a class="brand" href="index.html"><span class="brand-name">AI 定价站</span></a>
   </div>
 </nav>
 
-<!-- 产品切换（对齐对手站的产品导航） -->
-<div class="prodnav">
-  <div class="wrap prodnav-in" id="prodNav"><!-- JS 渲染 --></div>
-</div>
-
 <main>
-
-<!-- 产品头 + 全球价格地图（一体化星空 hero） -->
-<section class="globe-hero" id="top">
-  <div class="globe-stage" id="globeStage">
-    <canvas id="globeCanvas"></canvas>
-    <div class="globe-tip" id="globeTip" hidden></div>
-    <div class="gh-content">
-      <div class="gh-head">
-        <div class="gh-id">
-          <div class="app-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="hsl(14.8, 63.1%, 59.6%)"><path d="m19.6 66.5 19.7-11 .3-1-.3-.5h-1l-3.3-.2-11.2-.3L14 53l-9.5-.5-2.4-.5L0 49l.2-1.5 2-1.3 2.9.2 6.3.5 9.5.6 6.9.4L38 49.1h1.6l.2-.7-.5-.4-.4-.4L29 41l-10.6-7-5.6-4.1-3-2-1.5-2-.6-4.2 2.7-3 3.7.3.9.2 3.7 2.9 8 6.1L37 36l1.5 1.2.6-.4.1-.3-.7-1.1L33 25l-6-10.4-2.7-4.3-.7-2.6c-.3-1-.4-2-.4-3l3-4.2L28 0l4.2.6L33.8 2l2.6 6 4.1 9.3L47 29.9l2 3.8 1 3.4.3 1h.7v-.5l.5-7.2 1-8.7 1-11.2.3-3.2 1.6-3.8 3-2L61 2.6l2 2.9-.3 1.8-1.1 7.7L59 27.1l-1.5 8.2h.9l1-1.1 4.1-5.4 6.9-8.6 3-3.5L77 13l2.3-1.8h4.3l3.1 4.7-1.4 4.9-4.4 5.6-3.7 4.7-5.3 7.1-3.2 5.7.3.4h.7l12-2.6 6.4-1.1 7.6-1.3 3.5 1.6.4 1.6-1.4 3.4-8.2 2-9.6 2-14.3 3.3-.2.1.2.3 6.4.6 2.8.2h6.8l12.6 1 3.3 2 1.9 2.7-.3 2-5.1 2.6-6.8-1.6-16-3.8-5.4-1.3h-.8v.4l4.6 4.5 8.3 7.5L89 80.1l.5 2.4-1.3 2-1.4-.2-9.2-7-3.6-3-8-6.8h-.5v.7l1.8 2.7 9.8 14.7.5 4.5-.7 1.4-2.6 1-2.7-.6-5.8-8-6-9-4.7-8.2-.5.4-2.9 30.2-1.3 1.5-3 1.2-2.5-2-1.4-3 1.4-6.2 1.6-8 1.3-6.4 1.2-7.9.7-2.6v-.2H49L43 72l-9 12.3-7.2 7.6-1.7.7-3-1.5.3-2.8L24 86l10-12.8 6-7.9 4-4.6-.1-.5h-.3L17.2 77.4l-4.7.6-2-2 .2-3 1-1 8-5.5Z"></path></svg></div>
-          <div>
-            <h1><a href="https://claude.ai/" rel="noopener" target="_blank">Claude 全球定价</a></h1>
-            <p class="app-dev">开发者：Anthropic · 数据更新于 <span class="data-date">—</span> · 每日自动核验 · 非官方站点</p>
-          </div>
-        </div>
-        <div class="gh-tools">
-          <div class="seg" id="tierSeg" role="tablist" aria-label="订阅方案"></div>
-          <button class="share-btn" id="shareBtn">分享</button>
-        </div>
-      </div>
-      <p class="app-summary" id="heroSummary">比较 Claude 订阅在全球 App Store 与 Google Play 各区域的价格。</p>
-    </div>
-    <p class="gh-hint">拖拽旋转地球 · 光柱高度 = 价格 · <span class="gl-cheap">蓝</span> 比美区便宜 · <span class="gl-hot">红</span> 更贵 · 悬停看详情</p>
-  </div>
-</section>
-
-
-<!-- 各区月价（数据面板） -->
-<section class="section" id="mapdata">
+<section class="landing-hero">
   <div class="wrap">
-    <div class="panel">
-      <h3 class="block-h" style="margin-top:0">价格热力图<span class="fine-inline">相对美区基准</span></h3>
-      <div id="heatTiles" class="heat-grid"></div>
-      <p class="fine heat-legend">相对美区基准：<span class="hl-chip heat-cheap">更便宜</span><span class="hl-chip heat-base">±5%</span><span class="hl-chip heat-warm">+5~20%</span><span class="hl-chip heat-hot">+20% 以上</span></p>
-      <h3 id="regionChartTitle" class="block-h">Pro 各区月价（美元折算）</h3>
-      <div id="regionChart" class="hbar-chart"></div>
-      <p class="fine chart-legend-line">
-        <span class="lg-item"><span class="lg-swatch"></span>商店挂牌价</span>
-        <span class="lg-item lg-item-web"><span class="lg-line lg-line-web"></span>网页直订价</span>
-        <span class="lg-item"><span class="lg-line lg-line-us"></span>美区基准</span>
-      </p>
-    </div>
+    <h1 id="typeline" aria-label="同一个产品，全球不是一个价。"><span id="typed"></span><span class="caret" aria-hidden="true"></span></h1>
+    <p class="landing-sub">每个数字都来自官方接口，每天自动核验。核验不到的，如实告诉你。</p>
   </div>
 </section>
 
-<!-- 最便宜 / 最贵 -->
-<section class="section" id="top3">
-  <div class="wrap">
-    <div class="top3-grid">
-      <div class="top3-card">
-        <h2 class="panel-h">↓ Claude 最便宜的国家</h2>
-        <ol id="top3Cheap" class="top3-list"></ol>
-      </div>
-      <div class="top3-card">
-        <h2 class="panel-h">↑ Claude 最贵的国家</h2>
-        <ol id="top3Rich" class="top3-list"></ol>
-      </div>
-    </div>
+<section class="landing-cards">
+  <div class="wrap entry-grid" id="entryGrid">
+    <a class="entry-card" href="ai.html">
+      <p class="eyebrow">找性价比</p>
+      <h2>全球区域定价对比</h2>
+      <p>AI 订阅、Steam 与 eShop 游戏、流媒体服务在全球各区的真实价格，最便宜的地区一眼可见。</p>
+    </a>
+    <a class="entry-card" href="gift-cards.html" rel="nofollow">
+      <p class="eyebrow">解决支付</p>
+      <h2>Apple 礼品卡对比</h2>
+      <p>换区之后怎么付款？各国礼品卡的官方面额、发行渠道与避坑要点，一页说清。</p>
+    </a>
+    <a class="entry-card" href="vpn.html">
+      <p class="eyebrow">解决访问</p>
+      <h2>VPN 榜单与事实库</h2>
+      <p>以协议、审计、辖区等可核验事实为依据的 VPN 排行，不吹不黑，立场先行公示。</p>
+    </a>
   </div>
 </section>
-
-<!-- App Store 完整价格表 -->
-<section class="section" id="table">
-  <div class="wrap">
-    <h2>App Store 各区价格表<span class="h2-tag">18 区 · 每日核验</span></h2>
-    <div class="table-scroll">
-      <table class="cmp-table region-table">
-        <thead id="regionTableHead"><!-- JS 渲染 --></thead>
-        <tbody id="regionTableBody"><!-- JS 渲染 --></tbody>
-      </table>
-    </div>
-    <p class="fine" id="tableFoot">价格为含税挂牌价折美元（本币原文见基准档下方），"对比美国价"按基准档计算。部分地区商店不公示内购价时如实标注待核验。</p>
-  </div>
-</section>
-
-<!-- Google Play 各区价格 -->
-<section class="section" id="play">
-  <div class="wrap">
-    <h2>Google Play 各区价格<span class="h2-tag">对手站没有的</span></h2>
-    <p class="section-sub">Google Play 商店页公示内购价格区间（最低档 ≈ Pro 月付，最高档为最贵 SKU），不公示逐档明细。区间为该区本币原文。</p>
-    <div class="table-scroll">
-      <table class="cmp-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>地区</th>
-            <th>内购价格区间（本币）</th>
-            <th>状态</th>
-          </tr>
-        </thead>
-        <tbody id="playTableBody"><!-- JS 渲染 --></tbody>
-      </table>
-    </div>
-    <p class="fine">来源：play.google.com 各区商店页（hl=en&gl=区码）管线直抓。阿根廷区 Play 页面不公示内购信息，如实标注。</p>
-  </div>
-</section>
-
-<!-- 购买力对比 -->
-<section class="section" id="ppp">
-  <div class="wrap">
-    <div class="panel">
-      <div class="chart-head">
-        <h2 class="panel-h">Claude 定价 vs 本地购买力</h2>
-      </div>
-      <p class="fine" style="margin:0 0 16px">空心圆 = 标价 · 实心圆 = 按购买力平价折算后的本地实际负担 · 美国 = 基准（IMF PPPEX 官方数据）</p>
-      <div id="pppChart" class="ppp-chart-inner"></div>
-    </div>
-  </div>
-</section>
-
-<!-- 换区订阅操作指南 -->
-<section class="section" id="howto">
-  <div class="wrap">
-    <h2>换区订阅操作指南</h2>
-    <p class="section-sub">适用于确需换区的用户。请先阅读表中风险列与 FAQ 中的风险说明。</p>
-    <div class="howto-grid">
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <h3>准备目标区 Apple ID</h3>
-        <p>新注册一个目标地区的 Apple ID（推荐，风险隔离），或在「设置 → 媒体与购买项目 → 国家/地区」中更改现有账户地区（需先取消所有订阅、花完余额）。</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <h3>填写当地账单地址</h3>
-        <p>改区时需要一个格式合法的当地地址和电话。可用地址生成器按目标地区生成：</p>
-        <div class="chips" id="addrChips"><!-- JS 渲染 --></div>
-        <p class="fine">生成器为第三方工具（randaddress.com）；丹麦、埃及暂无对应生成页。</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <h3>解决支付方式</h3>
-        <p>换区后原有支付方式通常失效。最通用的方案是购买该区 App Store <strong>礼品卡</strong>充值（认准正规渠道，谨防低价卡诈骗和黑卡）。部分地区支持当地发行的银行卡。</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">4</div>
-        <h3>App 内完成订阅</h3>
-        <p>用该账户登录 App Store 下载 Claude，在 App 内购买订阅，费用从礼品卡余额扣除。到期续费同样依赖余额，记得提前充值以免订阅中断。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section" id="faq">
-  <div class="wrap">
-    <h2>Claude 订阅定价 FAQ</h2>
-    <div class="faq-list">
-      <details>
-        <summary>哪个国家的 Claude 订阅最便宜？</summary>
-        <p id="faqCheapest">见上方"最便宜的国家"排行，数据每日自动核验更新。</p>
-      </details>
-      <details>
-        <summary>为什么 Claude 在英国和欧洲这么贵？</summary>
-        <p>欧洲各国 20–25% 的增值税直接计入挂牌价，叠加汇率因素，使英国、德国、法国、丹麦等地明显高于美区基准。比较全球价格可以帮你找到更具性价比的订阅地区。</p>
-      </details>
-      <details>
-        <summary>切换 App Store 地区有风险吗？</summary>
-        <p>有三层风险：① 虚构账单地址违反 Apple 服务条款，账号可能被限制；② 换区后原支付方式失效，需持续购买该区礼品卡（礼品卡渠道存在诈骗风险）；③ 异常支付特征可能触发服务风控。表中"风险"列标注了各区所需条件，请自行评估。</p>
-      </details>
-      <details>
-        <summary>Claude 在 Google Play、网页版和 App Store 之间有价格差异吗？</summary>
-        <p>通常有。官网网页直订一般最便宜（已核验的网页价见价格表下方注释）；App Store 内购含苹果 15–30% 抽成，普遍更高；Google Play 各区内购区间见上方板块。同一账号在任何平台登录使用，功能没有区别。</p>
-      </details>
-      <details>
-        <summary>为什么有的地区显示"待核验"？</summary>
-        <p>部分商店页不公示内购价格（如 Apple 韩国区依当地法规不公示明细、Google Play 阿根廷区不展示区间），管线抓取不到官方数字。本站规则是"核验不到就不显示"，不会用第三方转述数据填充。</p>
-      </details>
-      <details>
-        <summary>本站的数据来自哪里？多久更新？</summary>
-        <p>价格数据由自动管线每日直接抓取 Apple App Store 与 Google Play 各区官方商店页；订阅网页价核验自 claude.com/pricing 与官方帮助中心；购买力数据来自 IMF DataMapper（PPPEX）；汇率取公开市场价。每组数据的来源与核验日期见页尾"数据来源账本"，官方改价时管线自动报警。本站为独立第三方站点，与 Anthropic 无关联。</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- 数据来源账本 -->
-<section class="section" id="sources">
-  <div class="wrap">
-    <h2>数据来源账本<span class="h2-tag">每个数字可追溯</span></h2>
-    <div class="table-scroll">
-      <table class="cmp-table">
-        <thead>
-          <tr><th>数据组</th><th>状态</th><th>官方来源</th></tr>
-        </thead>
-        <tbody id="provTableBody"><!-- JS 渲染 --></tbody>
-      </table>
-    </div>
-    <p class="fine">已核验 = 从官方页面原文抓取比对；待核验 = 目标页面对抓取节点有访问限制或未公示，不显示猜测数字。管线每日对官方定价页做变更检测，改价自动报警。</p>
-  </div>
-</section>
-
 </main>
 
-<footer class="footer">
-  <div class="wrap">
-    <p>价格数据来自 Apple App Store 与 Google Play 官方商店页（管线每日直抓）；订阅网页价来自 claude.com/pricing；购买力（PPP）数据来自 IMF DataMapper；汇率取自公开市场数据。最近核验：<span class="data-date">—</span>。</p>
-    <p>本站为独立第三方信息站，与 Anthropic 无关联。Claude 是 Anthropic 的商标。地址生成器为第三方工具，本站不对其服务负责。价格可能变动，下单前请以官方页面为准。</p>
-    <p class="fine">© 2026 AI 定价站</p>
-  </div>
-</footer>
-
-<script src="app.js?v=s4"></script>
+<script>
+(function () {
+  var text = "同一个产品，全球不是一个价。";
+  var typed = document.getElementById("typed");
+  var grid = document.getElementById("entryGrid");
+  var nav = document.getElementById("landingNav");
+  var reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function reveal() {
+    nav.classList.add("revealed");
+    grid.classList.add("revealed");
+  }
+  if (reduced) { typed.textContent = text; document.body.classList.add("no-anim"); reveal(); return; }
+  var i = 0;
+  (function tick() {
+    typed.textContent = text.slice(0, ++i);
+    if (i < text.length) setTimeout(tick, 55 + Math.random() * 45);
+    else setTimeout(reveal, 250);
+  })();
+})();
+</script>
 </body>
 </html>

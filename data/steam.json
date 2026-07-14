@@ -1,0 +1,2289 @@
+{
+  "updatedAt": "2026-07-13",
+  "source": "Steam 官方 storefront API（appdetails/price_overview），appid 经 storesearch 发现并名称防伪校验；USD 折算 open.er-api.com",
+  "regions": [
+    "us",
+    "ar",
+    "tr",
+    "ru",
+    "cn",
+    "in",
+    "br",
+    "ph",
+    "vn",
+    "id",
+    "mx",
+    "ca",
+    "jp",
+    "kr",
+    "de",
+    "fr",
+    "gb",
+    "pl",
+    "au",
+    "no",
+    "ch",
+    "eg",
+    "ng"
+  ],
+  "games": {
+    "baldurs-gate-3": {
+      "label": "博德之门 3",
+      "appid": 1086940,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 34.99,
+          "usd": 34.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 34.99,
+          "usd": 34.99
+        },
+        "ru": {
+          "cur": "RUB",
+          "price": 1999,
+          "usd": 26.04
+        },
+        "cn": {
+          "cur": "CNY",
+          "price": 298,
+          "usd": 43.95
+        },
+        "in": {
+          "cur": "INR",
+          "price": 2999,
+          "usd": 31.41
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 199.99,
+          "usd": 39.12
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 2599,
+          "usd": 42.22
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 990000,
+          "usd": 37.8
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 699999,
+          "usd": 38.74
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 1299,
+          "usd": 74.17
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 79.99,
+          "usd": 56.47
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 8499,
+          "usd": 52.5
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 66000,
+          "usd": 43.96
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 59.99,
+          "usd": 68.42
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 59.99,
+          "usd": 68.42
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 49.99,
+          "usd": 66.92
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 249,
+          "usd": 65.49
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 89.95,
+          "usd": 62.42
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 599,
+          "usd": 61.25
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 69.99,
+          "usd": 86.48
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 34.99,
+          "usd": 34.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        }
+      }
+    },
+    "cyberpunk-2077": {
+      "label": "赛博朋克 2077",
+      "appid": 1091500,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 44.99,
+          "usd": 44.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 44.99,
+          "usd": 44.99
+        },
+        "ru": null,
+        "cn": {
+          "cur": "CNY",
+          "price": 298,
+          "usd": 43.95
+        },
+        "in": {
+          "cur": "INR",
+          "price": 2999,
+          "usd": 31.41
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 199.9,
+          "usd": 39.11
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 2599,
+          "usd": 42.22
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 990000,
+          "usd": 37.8
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 699999,
+          "usd": 38.74
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 999,
+          "usd": 57.04
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 79.99,
+          "usd": 56.47
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 8778,
+          "usd": 54.23
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 66000,
+          "usd": 43.96
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 59.99,
+          "usd": 68.42
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 59.99,
+          "usd": 68.42
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 49.99,
+          "usd": 66.92
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 199,
+          "usd": 52.34
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 89.95,
+          "usd": 62.42
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 579,
+          "usd": 59.21
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 55.99,
+          "usd": 69.18
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 44.99,
+          "usd": 44.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        }
+      }
+    },
+    "dead-by-daylight": {
+      "label": "黎明杀机",
+      "appid": 381210,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 19.99,
+          "usd": 19.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 14.99,
+          "usd": 14.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 14.99,
+          "usd": 14.99
+        },
+        "ru": null,
+        "cn": {
+          "cur": "CNY",
+          "price": 93.75,
+          "usd": 13.83
+        },
+        "in": {
+          "cur": "INR",
+          "price": 1159,
+          "usd": 12.14
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 69.99,
+          "usd": 13.69
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 739.99,
+          "usd": 12.02
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 340000,
+          "usd": 12.98
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 219890,
+          "usd": 12.17
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 329.99,
+          "usd": 18.84
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 25.99,
+          "usd": 18.35
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 1980,
+          "usd": 12.23
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 21500,
+          "usd": 14.32
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 19.99,
+          "usd": 22.8
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 19.99,
+          "usd": 22.8
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 17.19,
+          "usd": 23.01
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 81.99,
+          "usd": 21.56
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 28.95,
+          "usd": 20.09
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 179.99,
+          "usd": 18.41
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 19,
+          "usd": 23.48
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 14.99,
+          "usd": 14.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 19.99,
+          "usd": 19.99
+        }
+      }
+    },
+    "death-stranding-2-on-the-beach": {
+      "label": "死亡搁浅 2",
+      "appid": 3280350,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 69.99,
+          "discountPrice": 55.99,
+          "discountPct": 20,
+          "usd": 69.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 69.99,
+          "discountPrice": 55.99,
+          "discountPct": 20,
+          "usd": 69.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 69.99,
+          "discountPrice": 55.99,
+          "discountPct": 20,
+          "usd": 69.99
+        },
+        "ru": null,
+        "cn": {
+          "cur": "CNY",
+          "price": 298,
+          "discountPrice": 238.4,
+          "discountPct": 20,
+          "usd": 43.95
+        },
+        "in": {
+          "cur": "INR",
+          "price": 4999,
+          "discountPrice": 3999,
+          "discountPct": 20,
+          "usd": 52.35
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 399.9,
+          "discountPrice": 319.92,
+          "discountPct": 20,
+          "usd": 78.23
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 3490,
+          "discountPrice": 2792,
+          "discountPct": 20,
+          "usd": 56.7
+        },
+        "vn": null,
+        "id": {
+          "cur": "IDR",
+          "price": 1029000,
+          "discountPrice": 823200,
+          "discountPct": 20,
+          "usd": 56.94
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 1199,
+          "discountPrice": 959.2,
+          "discountPct": 20,
+          "usd": 68.46
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 89.99,
+          "discountPrice": 71.99,
+          "discountPct": 20,
+          "usd": 63.53
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 8980,
+          "discountPrice": 7184,
+          "discountPct": 20,
+          "usd": 55.47
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 79800,
+          "discountPrice": 63840,
+          "discountPct": 20,
+          "usd": 53.15
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 79.99,
+          "discountPrice": 63.99,
+          "discountPct": 20,
+          "usd": 91.23
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 79.99,
+          "discountPrice": 63.99,
+          "discountPct": 20,
+          "usd": 91.23
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 69.99,
+          "discountPrice": 55.99,
+          "discountPct": 20,
+          "usd": 93.7
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 339,
+          "discountPrice": 271.2,
+          "discountPct": 20,
+          "usd": 89.16
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 124.95,
+          "discountPrice": 99.96,
+          "discountPct": 20,
+          "usd": 86.71
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 899,
+          "discountPrice": 719.2,
+          "discountPct": 20,
+          "usd": 91.93
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 79.9,
+          "discountPrice": 63.92,
+          "discountPct": 20,
+          "usd": 98.73
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 69.99,
+          "discountPrice": 55.99,
+          "discountPct": 20,
+          "usd": 69.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 69.99,
+          "discountPrice": 55.99,
+          "discountPct": 20,
+          "usd": 69.99
+        }
+      }
+    },
+    "elden-ring": {
+      "label": "艾尔登法环",
+      "appid": 1245620,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 47.99,
+          "usd": 47.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 39.99,
+          "usd": 39.99
+        },
+        "ru": {
+          "cur": "RUB",
+          "price": 3599,
+          "usd": 46.89
+        },
+        "cn": {
+          "cur": "CNY",
+          "price": 298,
+          "usd": 43.95
+        },
+        "in": {
+          "cur": "INR",
+          "price": 3599,
+          "usd": 37.69
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 274.5,
+          "usd": 53.7
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 2399,
+          "usd": 38.98
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 990000,
+          "usd": 37.8
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 599000,
+          "usd": 33.15
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 979,
+          "usd": 55.9
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 79.99,
+          "usd": 56.47
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 9020,
+          "usd": 55.72
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 64800,
+          "usd": 43.16
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 59.99,
+          "usd": 68.42
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 59.99,
+          "usd": 68.42
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 49.99,
+          "usd": 66.92
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 249,
+          "usd": 65.49
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 89.95,
+          "usd": 62.42
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 599,
+          "usd": 61.25
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 69.9,
+          "usd": 86.37
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 39.99,
+          "usd": 39.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        }
+      }
+    },
+    "forza-horizon-6": {
+      "label": "极限竞速：地平线 6",
+      "appid": 2483190,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 69.99,
+          "usd": 69.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 48.99,
+          "usd": 48.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 48.99,
+          "usd": 48.99
+        },
+        "ru": null,
+        "cn": {
+          "cur": "CNY",
+          "price": 298,
+          "usd": 43.95
+        },
+        "in": {
+          "cur": "INR",
+          "price": 5499,
+          "usd": 57.59
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 299,
+          "usd": 58.49
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 3490,
+          "usd": 56.7
+        },
+        "vn": null,
+        "id": {
+          "cur": "IDR",
+          "price": 899000,
+          "usd": 49.75
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 1399,
+          "usd": 79.88
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 89.99,
+          "usd": 63.53
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 9800,
+          "usd": 60.54
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 79800,
+          "usd": 53.15
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 69.99,
+          "usd": 79.83
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 69.99,
+          "usd": 79.83
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 59.99,
+          "usd": 80.31
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 299,
+          "usd": 78.64
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 109.95,
+          "usd": 76.3
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 799,
+          "usd": 81.71
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 69.9,
+          "usd": 86.37
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 48.99,
+          "usd": 48.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 69.99,
+          "usd": 69.99
+        }
+      }
+    },
+    "god-of-war-ragnarok": {
+      "label": "战神：诸神黄昏",
+      "appid": 2322010,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 49.99,
+          "usd": 49.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 49.99,
+          "usd": 49.99
+        },
+        "ru": null,
+        "cn": {
+          "cur": "CNY",
+          "price": 398,
+          "usd": 58.7
+        },
+        "in": {
+          "cur": "INR",
+          "price": 3999,
+          "usd": 41.88
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 249.9,
+          "usd": 48.89
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 2990,
+          "usd": 48.58
+        },
+        "vn": null,
+        "id": {
+          "cur": "IDR",
+          "price": 879000,
+          "usd": 48.64
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 999,
+          "usd": 57.04
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 79.99,
+          "usd": 56.47
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 7590,
+          "usd": 46.89
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 62800,
+          "usd": 41.83
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 59.99,
+          "usd": 68.42
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 59.99,
+          "usd": 68.42
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 49.99,
+          "usd": 66.92
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 259,
+          "usd": 68.12
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 94.95,
+          "usd": 65.89
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 649,
+          "usd": 66.37
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 59.9,
+          "usd": 74.02
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 49.99,
+          "usd": 49.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        }
+      }
+    },
+    "hollow-knight-silksong": {
+      "label": "空洞骑士：丝之歌",
+      "appid": 1030300,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 19.99,
+          "usd": 19.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 6.99,
+          "usd": 6.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 7.99,
+          "usd": 7.99
+        },
+        "ru": {
+          "cur": "RUB",
+          "price": 710,
+          "usd": 9.25
+        },
+        "cn": {
+          "cur": "CNY",
+          "price": 76,
+          "usd": 11.21
+        },
+        "in": {
+          "cur": "INR",
+          "price": 880,
+          "usd": 9.22
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 59.99,
+          "usd": 11.74
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 615,
+          "usd": 9.99
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 220000,
+          "usd": 8.4
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 165999,
+          "usd": 9.19
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 227.99,
+          "usd": 13.02
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 25.99,
+          "usd": 18.35
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 2300,
+          "usd": 14.21
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 21500,
+          "usd": 14.32
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 19.5,
+          "usd": 22.24
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 19.5,
+          "usd": 22.24
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 16.75,
+          "usd": 22.42
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 74.99,
+          "usd": 19.72
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 29.5,
+          "usd": 20.47
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 220,
+          "usd": 22.5
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 21.99,
+          "usd": 27.17
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 7.99,
+          "usd": 7.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 19.99,
+          "usd": 19.99
+        }
+      }
+    },
+    "meccha-chameleon": {
+      "label": "Meccha Chameleon",
+      "appid": 4704690,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 5.99,
+          "usd": 5.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 3.99,
+          "usd": 3.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 3.99,
+          "usd": 3.99
+        },
+        "ru": {
+          "cur": "RUB",
+          "price": 290,
+          "usd": 3.78
+        },
+        "cn": {
+          "cur": "CNY",
+          "price": 26,
+          "usd": 3.83
+        },
+        "in": {
+          "cur": "INR",
+          "price": 309,
+          "usd": 3.24
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 23.49,
+          "usd": 4.6
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 205,
+          "usd": 3.33
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 92000,
+          "usd": 3.51
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 58499,
+          "usd": 3.24
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 87.99,
+          "usd": 5.02
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 7.19,
+          "usd": 5.08
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 790,
+          "usd": 4.88
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 6550,
+          "usd": 4.36
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 6.15,
+          "usd": 7.01
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 6.15,
+          "usd": 7.01
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 5.29,
+          "usd": 7.08
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 25.49,
+          "usd": 6.7
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 8.5,
+          "usd": 5.9
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 70,
+          "usd": 7.16
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 5.19,
+          "usd": 6.41
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 3.99,
+          "usd": 3.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 5.99,
+          "usd": 5.99
+        }
+      }
+    },
+    "mount-and-blade-ii-bannerlord": {
+      "label": "骑马与砍杀 2：霸主",
+      "appid": 261550,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 49.99,
+          "usd": 49.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 24.99,
+          "usd": 24.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 19.99,
+          "usd": 19.99
+        },
+        "ru": {
+          "cur": "RUB",
+          "price": 2799,
+          "usd": 36.46
+        },
+        "cn": {
+          "cur": "CNY",
+          "price": 248,
+          "usd": 36.58
+        },
+        "in": {
+          "cur": "INR",
+          "price": 2499,
+          "usd": 26.17
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 199.99,
+          "usd": 39.12
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 1799.95,
+          "usd": 29.24
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 800000,
+          "usd": 30.54
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 549000,
+          "usd": 30.38
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 899.99,
+          "usd": 51.39
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 64.99,
+          "usd": 45.88
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 6500,
+          "usd": 40.15
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 60000,
+          "usd": 39.96
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 49.99,
+          "usd": 57.01
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 49.99,
+          "usd": 57.01
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 42.99,
+          "usd": 57.55
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 229.99,
+          "usd": 60.49
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 72.5,
+          "usd": 50.31
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 499.99,
+          "usd": 51.13
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 54.99,
+          "usd": 67.95
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 19.99,
+          "usd": 19.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 49.99,
+          "usd": 49.99
+        }
+      }
+    },
+    "palworld": {
+      "label": "幻兽帕鲁",
+      "appid": 1623730,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 29.99,
+          "discountPrice": 20.99,
+          "discountPct": 30,
+          "usd": 29.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 14.99,
+          "discountPrice": 10.49,
+          "discountPct": 30,
+          "usd": 14.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 14.99,
+          "discountPrice": 10.49,
+          "discountPct": 30,
+          "usd": 14.99
+        },
+        "ru": {
+          "cur": "RUB",
+          "price": 1100,
+          "discountPrice": 770,
+          "discountPct": 30,
+          "usd": 14.33
+        },
+        "cn": {
+          "cur": "CNY",
+          "price": 108,
+          "discountPrice": 75.6,
+          "discountPct": 30,
+          "usd": 15.93
+        },
+        "in": {
+          "cur": "INR",
+          "price": 1300,
+          "discountPrice": 910,
+          "discountPct": 30,
+          "usd": 13.61
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 88.99,
+          "discountPrice": 62.29,
+          "discountPct": 30,
+          "usd": 17.41
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 910,
+          "discountPrice": 637,
+          "discountPct": 30,
+          "usd": 14.78
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 385000,
+          "discountPrice": 269500,
+          "discountPct": 30,
+          "usd": 14.7
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 245999,
+          "discountPrice": 172199,
+          "discountPct": 30,
+          "usd": 13.61
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 334.99,
+          "discountPrice": 234.49,
+          "discountPct": 30,
+          "usd": 19.13
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 38.99,
+          "discountPrice": 27.29,
+          "discountPct": 30,
+          "usd": 27.53
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 3400,
+          "discountPrice": 2380,
+          "discountPct": 30,
+          "usd": 21
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 32000,
+          "discountPrice": 22400,
+          "discountPct": 30,
+          "usd": 21.31
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 28.99,
+          "discountPrice": 20.29,
+          "discountPct": 30,
+          "usd": 33.06
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 28.99,
+          "discountPrice": 20.29,
+          "discountPct": 30,
+          "usd": 33.06
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 24.99,
+          "discountPrice": 17.49,
+          "discountPct": 30,
+          "usd": 33.45
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 99.99,
+          "discountPrice": 69.99,
+          "discountPct": 30,
+          "usd": 26.3
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 43.95,
+          "discountPrice": 30.76,
+          "discountPct": 30,
+          "usd": 30.5
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 335,
+          "discountPrice": 234.5,
+          "discountPct": 30,
+          "usd": 34.26
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 33.5,
+          "discountPrice": 23.45,
+          "discountPct": 30,
+          "usd": 41.39
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 14.99,
+          "discountPrice": 10.49,
+          "discountPct": 30,
+          "usd": 14.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 29.99,
+          "discountPrice": 20.99,
+          "discountPct": 30,
+          "usd": 29.99
+        }
+      }
+    },
+    "red-dead-redemption-2": {
+      "label": "荒野大镖客：救赎 2",
+      "appid": 1174180,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 59.99,
+          "discountPrice": 14.99,
+          "discountPct": 75,
+          "usd": 59.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 59.99,
+          "discountPrice": 14.99,
+          "discountPct": 75,
+          "usd": 59.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 59.99,
+          "discountPrice": 14.99,
+          "discountPct": 75,
+          "usd": 59.99
+        },
+        "ru": null,
+        "cn": {
+          "cur": "CNY",
+          "price": 279,
+          "discountPrice": 69.75,
+          "discountPct": 75,
+          "usd": 41.15
+        },
+        "in": {
+          "cur": "INR",
+          "price": 4999,
+          "discountPrice": 1249,
+          "discountPct": 75,
+          "usd": 52.35
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 299.9,
+          "discountPrice": 74.97,
+          "discountPct": 75,
+          "usd": 58.67
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 3399,
+          "discountPrice": 849.75,
+          "discountPct": 75,
+          "usd": 55.22
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 1359000,
+          "discountPrice": 339500,
+          "discountPct": 75,
+          "usd": 51.89
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 879000,
+          "discountPrice": 219750,
+          "discountPct": 75,
+          "usd": 48.64
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 1199,
+          "discountPrice": 299.75,
+          "discountPct": 75,
+          "usd": 68.46
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 79.99,
+          "discountPrice": 19.99,
+          "discountPct": 75,
+          "usd": 56.47
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 8618,
+          "discountPrice": 2154,
+          "discountPct": 75,
+          "usd": 53.24
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 73000,
+          "discountPrice": 18250,
+          "discountPct": 75,
+          "usd": 48.62
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 59.99,
+          "discountPrice": 14.99,
+          "discountPct": 75,
+          "usd": 68.42
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 59.99,
+          "discountPrice": 14.99,
+          "discountPct": 75,
+          "usd": 68.42
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 59.99,
+          "discountPrice": 14.99,
+          "discountPct": 75,
+          "usd": 80.31
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 249.9,
+          "discountPrice": 62.47,
+          "discountPct": 75,
+          "usd": 65.72
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 89.95,
+          "discountPrice": 22.48,
+          "discountPct": 75,
+          "usd": 62.42
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 719,
+          "discountPrice": 179.75,
+          "discountPct": 75,
+          "usd": 73.53
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 59,
+          "discountPrice": 14.75,
+          "discountPct": 75,
+          "usd": 72.9
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 59.99,
+          "discountPrice": 14.99,
+          "discountPct": 75,
+          "usd": 59.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 59.99,
+          "discountPrice": 14.99,
+          "discountPct": 75,
+          "usd": 59.99
+        }
+      }
+    },
+    "resident-evil-requiem": {
+      "label": "生化危机：安魂曲",
+      "appid": 3764200,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 69.99,
+          "usd": 69.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 53,
+          "usd": 53
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 52.49,
+          "usd": 52.49
+        },
+        "ru": null,
+        "cn": {
+          "cur": "CNY",
+          "price": 348,
+          "usd": 51.33
+        },
+        "in": {
+          "cur": "INR",
+          "price": 4399,
+          "usd": 46.07
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 299,
+          "usd": 58.49
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 3090,
+          "usd": 50.2
+        },
+        "vn": null,
+        "id": {
+          "cur": "IDR",
+          "price": 910000,
+          "usd": 50.36
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 999,
+          "usd": 57.04
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 94.99,
+          "usd": 67.06
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 8990,
+          "usd": 55.54
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 79800,
+          "usd": 53.15
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 69.99,
+          "usd": 79.83
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 69.99,
+          "usd": 79.83
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 59.99,
+          "usd": 80.31
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 299,
+          "usd": 78.64
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 107.95,
+          "usd": 74.91
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 769,
+          "usd": 78.64
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 69.9,
+          "usd": 86.37
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 52.49,
+          "usd": 52.49
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 69.99,
+          "usd": 69.99
+        }
+      }
+    },
+    "rust": {
+      "label": "Rust",
+      "appid": 252490,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 39.99,
+          "usd": 39.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 18.99,
+          "usd": 18.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 18.99,
+          "usd": 18.99
+        },
+        "ru": {
+          "cur": "RUB",
+          "price": 1699,
+          "usd": 22.13
+        },
+        "cn": {
+          "cur": "CNY",
+          "price": 138,
+          "usd": 20.35
+        },
+        "in": {
+          "cur": "INR",
+          "price": 1799,
+          "usd": 18.84
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 119.99,
+          "usd": 23.47
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 900,
+          "usd": 14.62
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 500000,
+          "usd": 19.09
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 329000,
+          "usd": 18.21
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 449,
+          "usd": 25.64
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 51.99,
+          "usd": 36.7
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 4600,
+          "usd": 28.42
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 42000,
+          "usd": 27.98
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 39.99,
+          "usd": 45.61
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 39.99,
+          "usd": 45.61
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 34.99,
+          "usd": 46.84
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 119.99,
+          "usd": 31.56
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 59.95,
+          "usd": 41.6
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 369,
+          "usd": 37.73
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 35.99,
+          "usd": 44.47
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 18.99,
+          "usd": 18.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 39.99,
+          "usd": 39.99
+        }
+      }
+    },
+    "sekiro-shadows-die-twice": {
+      "label": "只狼：影逝二度",
+      "appid": 814380,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        },
+        "ru": null,
+        "cn": {
+          "cur": "CNY",
+          "price": 268,
+          "usd": 39.53
+        },
+        "in": {
+          "cur": "INR",
+          "price": 4997,
+          "usd": 52.33
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 274,
+          "usd": 53.6
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 3610,
+          "usd": 58.65
+        },
+        "vn": null,
+        "id": {
+          "cur": "IDR",
+          "price": 891000,
+          "usd": 49.31
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 1299,
+          "usd": 74.17
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 79.99,
+          "usd": 56.47
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 8360,
+          "usd": 51.64
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 75000,
+          "usd": 49.96
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 59.99,
+          "usd": 68.42
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 59.99,
+          "usd": 68.42
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 49.9,
+          "usd": 66.8
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 254,
+          "usd": 66.8
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 89.95,
+          "usd": 62.42
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 659,
+          "usd": 67.39
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 59.9,
+          "usd": 74.02
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 59.99,
+          "usd": 59.99
+        }
+      }
+    },
+    "stardew-valley": {
+      "label": "星露谷物语",
+      "appid": 413150,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 14.99,
+          "usd": 14.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 4.99,
+          "usd": 4.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 5.99,
+          "usd": 5.99
+        },
+        "ru": {
+          "cur": "RUB",
+          "price": 299,
+          "usd": 3.9
+        },
+        "cn": {
+          "cur": "CNY",
+          "price": 48,
+          "usd": 7.08
+        },
+        "in": {
+          "cur": "INR",
+          "price": 479,
+          "usd": 5.02
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 24.99,
+          "usd": 4.89
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 419.95,
+          "usd": 6.82
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 165000,
+          "usd": 6.3
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 115999,
+          "usd": 6.42
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 149.99,
+          "usd": 8.56
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 16.99,
+          "usd": 11.99
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 1480,
+          "usd": 9.14
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 16000,
+          "usd": 10.66
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 13.99,
+          "usd": 15.96
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 13.99,
+          "usd": 15.96
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 10.99,
+          "usd": 14.71
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 53.99,
+          "usd": 14.2
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 16.99,
+          "usd": 11.79
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 100,
+          "usd": 10.23
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 15,
+          "usd": 18.53
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 5.99,
+          "usd": 5.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 14.99,
+          "usd": 14.99
+        }
+      }
+    },
+    "subnautica-2": {
+      "label": "深海迷航 2",
+      "appid": 1962700,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 29.99,
+          "usd": 29.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 20.99,
+          "usd": 20.99
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 20.99,
+          "usd": 20.99
+        },
+        "ru": {
+          "cur": "RUB",
+          "price": 1800,
+          "usd": 23.45
+        },
+        "cn": {
+          "cur": "CNY",
+          "price": 108,
+          "usd": 15.93
+        },
+        "in": {
+          "cur": "INR",
+          "price": 1800,
+          "usd": 18.85
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 119.99,
+          "usd": 23.47
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 1375,
+          "usd": 22.34
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 595000,
+          "usd": 22.72
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 350999,
+          "usd": 19.42
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 529,
+          "usd": 30.2
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 39.99,
+          "usd": 28.23
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 3370,
+          "usd": 20.82
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 33700,
+          "usd": 22.45
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 29.99,
+          "usd": 34.2
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 29.99,
+          "usd": 34.2
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 25.99,
+          "usd": 34.79
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 115,
+          "usd": 30.24
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 44.95,
+          "usd": 31.19
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 335,
+          "usd": 34.26
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 34.5,
+          "usd": 42.63
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 20.99,
+          "usd": 20.99
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 29.99,
+          "usd": 29.99
+        }
+      }
+    },
+    "terraria": {
+      "label": "泰拉瑞亚",
+      "appid": 105600,
+      "regions": {
+        "us": {
+          "cur": "USD",
+          "price": 9.99,
+          "usd": 9.99
+        },
+        "ar": {
+          "cur": "USD",
+          "price": 5.79,
+          "usd": 5.79
+        },
+        "tr": {
+          "cur": "USD",
+          "price": 5.79,
+          "usd": 5.79
+        },
+        "ru": {
+          "cur": "RUB",
+          "price": 385,
+          "usd": 5.02
+        },
+        "cn": {
+          "cur": "CNY",
+          "price": 42,
+          "usd": 6.19
+        },
+        "in": {
+          "cur": "INR",
+          "price": 480,
+          "usd": 5.03
+        },
+        "br": {
+          "cur": "BRL",
+          "price": 32.99,
+          "usd": 6.45
+        },
+        "ph": {
+          "cur": "PHP",
+          "price": 335,
+          "usd": 5.44
+        },
+        "vn": {
+          "cur": "VND",
+          "price": 142000,
+          "usd": 5.42
+        },
+        "id": {
+          "cur": "IDR",
+          "price": 90999,
+          "usd": 5.04
+        },
+        "mx": {
+          "cur": "MXN",
+          "price": 123.99,
+          "usd": 7.08
+        },
+        "ca": {
+          "cur": "CAD",
+          "price": 12.99,
+          "usd": 9.17
+        },
+        "jp": {
+          "cur": "JPY",
+          "price": 1200,
+          "usd": 7.41
+        },
+        "kr": {
+          "cur": "KRW",
+          "price": 11000,
+          "usd": 7.33
+        },
+        "de": {
+          "cur": "EUR",
+          "price": 9.75,
+          "usd": 11.12
+        },
+        "fr": {
+          "cur": "EUR",
+          "price": 9.75,
+          "usd": 11.12
+        },
+        "gb": {
+          "cur": "GBP",
+          "price": 8.5,
+          "usd": 11.38
+        },
+        "pl": {
+          "cur": "PLN",
+          "price": 45.99,
+          "usd": 12.1
+        },
+        "au": {
+          "cur": "AUD",
+          "price": 14.5,
+          "usd": 10.06
+        },
+        "no": {
+          "cur": "NOK",
+          "price": 110,
+          "usd": 11.25
+        },
+        "ch": {
+          "cur": "CHF",
+          "price": 10.99,
+          "usd": 13.58
+        },
+        "eg": {
+          "cur": "USD",
+          "price": 5.79,
+          "usd": 5.79
+        },
+        "ng": {
+          "cur": "USD",
+          "price": 9.99,
+          "usd": 9.99
+        }
+      }
+    }
+  }
+}

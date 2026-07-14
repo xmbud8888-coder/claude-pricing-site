@@ -19,16 +19,29 @@ jobs:
         with:
           node-version: 20
 
-      - name: 抓取并核验价格
+      - name: 抓取并核验价格（AI/流媒体 · App Store + Play）
         id: fetch
         continue-on-error: true
         run: node scripts/fetch-prices.mjs
+
+      - name: 抓取并核验价格（Steam 官方接口）
+        continue-on-error: true
+        run: node scripts/fetch-steam.mjs
+
+      - name: 抓取并核验价格（任天堂 eShop 官方接口）
+        continue-on-error: true
+        run: node scripts/fetch-eshop.mjs
+
+      - name: 重新生成页面（索引卡里的静态摘要跟随最新数据）
+        run: |
+          node scripts/build-pages.mjs
+          node scripts/build-extra.mjs
 
       - name: 提交数据更新
         run: |
           git config user.name "price-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/
+          git add data/ *.html
           git diff --cached --quiet || git commit -m "chore: 自动更新价格数据 $(date -u +%F)"
           git push
 

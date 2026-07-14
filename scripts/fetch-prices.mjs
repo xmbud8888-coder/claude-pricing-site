@@ -39,6 +39,9 @@ const CC_ISO3 = {
   us: "USA", jp: "JPN", pk: "PAK", ca: "CAN", ar: "ARG", eg: "EGY", au: "AUS", ph: "PHL",
   in: "IND", tr: "TUR", ng: "NGA", kr: "KOR", mx: "MEX", de: "DEU", fr: "FRA", br: "BRA",
   gb: "GBR", dk: "DNK",
+  // Steam/eShop 板块地区（pppex 写入 regionsMeta 供游戏页购买力图使用）
+  ru: "RUS", cn: "CHN", vn: "VNM", id: "IDN", pl: "POL", no: "NOR", ch: "CHE",
+  cl: "CHL", co: "COL", pe: "PER", es: "ESP", it: "ITA", nl: "NLD", za: "ZAF", nz: "NZL", hk: "HKG",
 };
 
 const WATCH_PAGES = [

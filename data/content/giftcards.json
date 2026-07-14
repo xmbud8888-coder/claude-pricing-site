@@ -1,0 +1,72 @@
+{
+  "updatedAt": "2026-07-13",
+  "disclaimer": "第三方转售价格波动大、黑卡风险高；本站仅收录 Apple 官方发行面额，转售行情数据待核验，请自行确认购买渠道可靠性。",
+  "countries": [
+    {
+      "slug": "turkey",
+      "cc": "TR",
+      "flag": "🇹🇷",
+      "name": "土耳其",
+      "currency": "TRY",
+      "denominations": null,
+      "appleOfficialUrl": "https://www.apple.com/tr/shop/gift-cards",
+      "notes": "Apple 土耳其官网礼品卡页只展示 App Store Card 一种，页面写明\"金额可自选\"，但未公布任何固定面额，也没有在线直购入口，仅指向老的 iTunes 邮寄购卡通道。市面上流通的\"土区苹果卡\"多来自第三方渠道，来源难以追溯，官方固定面额待核验。",
+      "risk": "土区以低价闻名，但兑换需土耳其区账号且第三方低价卡黑卡率高，换区充值有封号风险。"
+    },
+    {
+      "slug": "india",
+      "cc": "IN",
+      "flag": "🇮🇳",
+      "name": "印度",
+      "currency": "INR",
+      "denominations": null,
+      "appleOfficialUrl": "https://www.apple.com/in/shop/gift-cards",
+      "notes": "Apple 印度官网列出两类卡：App Store Code（经 Paytm、Amazon Pay、Amazon、PhonePe、Flipkart 等官方合作平台发售，仅限 App Store 与订阅服务）和只能在线下 Apple Store 买硬件的 Apple Store 礼品卡。Apple 官网页面本身不标注面额，具体面额由各合作平台设定，待核验。",
+      "risk": "App Store Code 仅限印度区账号兑换，印度区订阅常要求本地支付方式配合，换区使用易触发风控。"
+    },
+    {
+      "slug": "usa",
+      "cc": "US",
+      "flag": "🇺🇸",
+      "name": "美国",
+      "currency": "USD",
+      "denominations": [25, 50, 100],
+      "appleOfficialUrl": "https://www.apple.com/shop/buy-giftcard/giftcard",
+      "notes": "美区 Apple Gift Card 是通用卡，App Store、各类订阅乃至 apple.com 买硬件都能用。官网直营，可选 Email 电子卡或实体邮寄，预设面额 $25/$50/$100，另有 \"Other Amount\" 自定义金额档（自定义上下限购买页未直接标注，待核验）。",
+      "risk": "美区卡只能充入美区 Apple 账户，充错区无法退款或转移；美区礼品卡诈骗高发，Apple 官网购买页即附反诈提示。"
+    },
+    {
+      "slug": "brazil",
+      "cc": "BR",
+      "flag": "🇧🇷",
+      "name": "巴西",
+      "currency": "BRL",
+      "denominations": [20, 50, 100],
+      "appleOfficialUrl": "https://www.apple.com/br/shop/gift-cards",
+      "notes": "巴西官方渠道是实体 App Store Card，固定面额 R$20/R$50/R$100，另有最高 R$200 的可充值版，由 Americanas、Carrefour 等授权零售商发售，Apple 不提供线上电子卡。此卡仅限 App Store 与订阅消费，不能用于购买硬件。",
+      "risk": "巴西卡为实体零售发售，跨境购买真伪难辨；兑换仅限巴西区账号，换区充值风险自担。"
+    },
+    {
+      "slug": "japan",
+      "cc": "JP",
+      "flag": "🇯🇵",
+      "name": "日本",
+      "currency": "JPY",
+      "denominations": [3000, 5000, 10000],
+      "appleOfficialUrl": "https://www.apple.com/jp/shop/buy-giftcard/giftcard",
+      "notes": "日区 Apple Gift Card 官网直营，以 Email 电子形式发送，预设面额 ¥3,000/¥5,000/¥10,000，另设\"其他金额\"自定义档。购买流程简单、面额体系清晰，是换区充值讨论中的热门区域。",
+      "risk": "兑换需日本区 Apple 账号，账号地区与支付信息需自洽；第三方折扣卡渠道混杂，谨防黑卡。"
+    },
+    {
+      "slug": "indonesia",
+      "cc": "ID",
+      "flag": "🇮🇩",
+      "name": "印度尼西亚",
+      "currency": "IDR",
+      "denominations": null,
+      "appleOfficialUrl": null,
+      "notes": "Apple 未在印尼开设在线商店，官网也没有印尼版礼品卡页面（相关路径均为 404），即 Apple 官方并不在印尼直营发行礼品卡。市面上打着\"印尼苹果卡\"旗号的商品基本来自第三方灰色渠道，官方兑换渠道待核验。",
+      "risk": "无官方发行渠道意味着任何\"印尼区礼品卡\"都无法验证来源，黑卡与被回收风险极高，不建议用于换区充值。"
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05070e">
+<title>2026 各国 生化危机：安魂曲 Steam价格对比 | 哪个区最便宜</title>
+<meta name="description" content="比较 生化危机：安魂曲 在Steam全球各区的售价：最便宜/最贵地区排行、完整价格表、购买力对比。数据每日自动调用官方接口核验。">
+<link rel="stylesheet" href="style.css?v=s6">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+</head>
+<body data-catalog="steam" data-product="resident-evil-requiem">
+
+<nav class="topnav">
+  <div class="wrap topnav-in">
+    <a class="brand" href="index.html">
+      <span class="brand-name">AI 定价站</span>
+    </a>
+    <div class="navlinks">
+      <a href="index.html">首页</a>
+      <a href="ai.html" data-nav="ai">AI 定价</a>
+      <a href="streaming.html" data-nav="streaming">流媒体</a>
+      <a href="steam.html" data-nav="steam">Steam</a>
+      <a href="eshop.html" data-nav="eshop">eShop</a>
+      <a href="gift-cards.html" data-nav="giftcards">礼品卡</a>
+      <a href="vpn.html" data-nav="vpn">VPN 榜单</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 产品切换（对齐对手站的产品导航） -->
+<div class="prodnav">
+  <div class="wrap prodnav-in" id="prodNav"><!-- JS 渲染 --></div>
+</div>
+
+<main>
+
+<!-- 产品头 + 全球价格地图（一体化星空 hero） -->
+<section class="globe-hero" id="top">
+  <div class="globe-stage" id="globeStage">
+    <canvas id="globeCanvas"></canvas>
+    <div class="globe-tip" id="globeTip" hidden></div>
+    <div class="gh-content">
+      <div class="gh-head">
+        <div class="gh-id">
+          <div class="app-icon icon-full"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1d1d1f"/><text x="32" y="43" font-family="system-ui,sans-serif" font-size="30" font-weight="700" text-anchor="middle" fill="#fff">生</text></svg></div>
+          <div>
+            <h1><a href="https://store.steampowered.com/app/3764200/" rel="noopener" target="_blank">生化危机：安魂曲 全球价格</a></h1>
+            <p class="app-dev">平台：Steam · 官方 storefront 接口 · 数据更新于 <span class="data-date">—</span> · 每日自动核验 · 非官方站点</p>
+          </div>
+        </div>
+        <div class="gh-tools">
+          <div class="seg" id="tierSeg" role="tablist" aria-label="订阅方案"></div>
+          <button class="share-btn" id="shareBtn">分享</button>
+        </div>
+      </div>
+      <p class="app-summary" id="heroSummary">比较 Claude 订阅在全球 App Store 与 Google Play 各区域的价格。</p>
+    </div>
+    <p class="gh-hint">拖拽旋转地球 · 光柱高度 = 价格 · <span class="gl-cheap">蓝</span> 比美区便宜 · <span class="gl-hot">红</span> 更贵 · 悬停看详情</p>
+  </div>
+</section>
+
+
+<!-- 各区月价（数据面板） -->
+<section class="section" id="mapdata">
+  <div class="wrap">
+    <div class="panel">
+      <h3 class="block-h" style="margin-top:0">价格热力图<span class="fine-inline">相对美区基准</span></h3>
+      <div id="heatTiles" class="heat-grid"></div>
+      <p class="fine heat-legend">相对美区基准：<span class="hl-chip heat-cheap">更便宜</span><span class="hl-chip heat-base">±5%</span><span class="hl-chip heat-warm">+5~20%</span><span class="hl-chip heat-hot">+20% 以上</span></p>
+      <h3 id="regionChartTitle" class="block-h">Pro 各区月价（美元折算）</h3>
+      <div id="regionChart" class="hbar-chart"></div>
+      <p class="fine chart-legend-line">
+        <span class="lg-item"><span class="lg-swatch"></span>商店挂牌价</span>
+        <span class="lg-item lg-item-web"><span class="lg-line lg-line-web"></span>网页直订价</span>
+        <span class="lg-item"><span class="lg-line lg-line-us"></span>美区基准</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 最便宜 / 最贵 -->
+<section class="section" id="top3">
+  <div class="wrap">
+    <div class="top3-grid">
+      <div class="top3-card">
+        <h2 class="panel-h">↓ 生化危机：安魂曲 最便宜的地区</h2>
+        <ol id="top3Cheap" class="top3-list"></ol>
+      </div>
+      <div class="top3-card">
+        <h2 class="panel-h">↑ 生化危机：安魂曲 最贵的地区</h2>
+        <ol id="top3Rich" class="top3-list"></ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- App Store 完整价格表 -->
+<section class="section" id="table">
+  <div class="wrap">
+    <h2>Steam 各区价格表<span class="h2-tag">每日核验</span></h2>
+    <div class="table-scroll">
+      <table class="cmp-table region-table">
+        <thead id="regionTableHead"><!-- JS 渲染 --></thead>
+        <tbody id="regionTableBody"><!-- JS 渲染 --></tbody>
+      </table>
+    </div>
+    <p class="fine" id="tableFoot">价格为官方接口挂牌价折美元（本币原文见基准档下方）。部分地区结账时另加税费；打折期间按常规价排序，折扣价另行标注。</p>
+  </div>
+</section>
+
+
+<!-- 购买力对比 -->
+<section class="section" id="ppp">
+  <div class="wrap">
+    <div class="panel">
+      <div class="chart-head">
+        <h2 class="panel-h">生化危机：安魂曲 价格 vs 本地购买力</h2>
+      </div>
+      <p class="fine" style="margin:0 0 16px">空心圆 = 标价 · 实心圆 = 按购买力平价折算后的本地实际负担 · 美国 = 基准（IMF PPPEX 官方数据）</p>
+      <div id="pppChart" class="ppp-chart-inner"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 换区订阅操作指南 -->
+<section class="section" id="howto">
+  <div class="wrap">
+    <h2>Steam 换区购买说明</h2>
+    <p class="section-sub">Steam 对更改商店地区有严格限制（需在目标地区产生真实支付记录，且每 3 个月最多改一次），跨区礼赠同样受价差限制。以下步骤仅供确需换区的用户参考。</p>
+    <div class="howto-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>准备目标区 Apple ID</h3>
+        <p>新注册一个目标地区的 Apple ID（推荐，风险隔离），或在「设置 → 媒体与购买项目 → 国家/地区」中更改现有账户地区（需先取消所有订阅、花完余额）。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>填写当地账单地址</h3>
+        <p>改区时需要一个格式合法的当地地址和电话。可用地址生成器按目标地区生成：</p>
+        <div class="chips" id="addrChips"><!-- JS 渲染 --></div>
+        <p class="fine">生成器为第三方工具（randaddress.com）；丹麦、埃及暂无对应生成页。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>解决支付方式</h3>
+        <p>换区后原有支付方式通常失效。最通用的方案是购买该区 App Store <strong>礼品卡</strong>充值（认准正规渠道，谨防低价卡诈骗和黑卡）。部分地区支持当地发行的银行卡。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3>App 内完成订阅</h3>
+        <p>用该账户登录 App Store 下载 Claude，在 App 内购买订阅，费用从礼品卡余额扣除。到期续费同样依赖余额，记得提前充值以免订阅中断。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <h2>生化危机：安魂曲 价格 FAQ</h2>
+    <div class="faq-list">
+      <details open>
+        <summary>哪个国家的 生化危机：安魂曲 最便宜？</summary>
+        <p id="faqCheapest">见上方"最便宜的地区"排行，数据每日自动核验更新。</p>
+      </details>
+      <details>
+        <summary>Steam 各区价格为什么差这么多？</summary>
+        <p>Steam 按地区购买力给出推荐定价，开发商可在此基础上自行调价；再叠加汇率波动与各国税制（部分地区结账另加税），就形成了成倍的区间差。</p>
+      </details>
+      <details>
+        <summary>直接换区买更便宜的版本可行吗？</summary>
+        <p>Steam 要求使用目标地区的支付方式，且会检测常用登录地，频繁换区可能触发商店限制；跨区礼赠在价差过大的区域之间会被直接拦截。请把换区视为真实居住变更时的功能，而不是常规省钱手段。</p>
+      </details>
+      <details>
+        <summary>为什么有的地区显示"待核验"？</summary>
+        <p>该游戏在该计价区未上架、未公示价格或接口访问受限，管线抓不到官方数字。本站规则是"核验不到就不显示"，不会用第三方转述数据填充。</p>
+      </details>
+      <details>
+        <summary>本站的数据来自哪里？多久更新？</summary>
+        <p>价格由自动管线每日调用 Steam 官方 storefront 接口逐区抓取，appid 经名称防伪校验；购买力数据来自 IMF DataMapper（PPPEX）；汇率取公开市场价。来源与核验日期见页尾"数据来源账本"。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 数据来源账本 -->
+<section class="section" id="sources">
+  <div class="wrap">
+    <h2>数据来源账本<span class="h2-tag">每个数字可追溯</span></h2>
+    <div class="table-scroll">
+      <table class="cmp-table">
+        <thead>
+          <tr><th>数据组</th><th>状态</th><th>官方来源</th></tr>
+        </thead>
+        <tbody id="provTableBody"><!-- JS 渲染 --></tbody>
+      </table>
+    </div>
+    <p class="fine">已核验 = 从官方页面原文抓取比对；待核验 = 目标页面对抓取节点有访问限制或未公示，不显示猜测数字。管线每日对官方定价页做变更检测，改价自动报警。</p>
+  </div>
+</section>
+
+<div class="wrap breadcrumb" aria-label="面包屑">
+  <a href="index.html">首页</a> <span class="bc-sep">›</span> <a href="steam.html">Steam 比价</a> <span class="bc-sep">›</span> <span>生化危机：安魂曲</span>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="footer-links"><a href="ai.html">AI 区域定价</a> · <a href="streaming.html">流媒体定价</a> · <a href="steam.html">Steam 比价</a> · <a href="eshop.html">eShop 比价</a> · <a href="gift-cards.html" rel="nofollow">礼品卡对比</a> · <a href="vpn.html">VPN 榜单</a> · <a href="apple-id-registration.html">Apple ID 换区指南</a></p>
+    <p>价格数据来自 Steam 官方 storefront 接口（appdetails，管线每日直抓，appid 经名称防伪校验）；购买力（PPP）数据来自 IMF DataMapper；汇率取自公开市场数据。最近核验：<span class="data-date">—</span>。<span class="data-date">—</span>。</p>
+    <p>本站为独立第三方信息站，与 Valve、任天堂及各游戏厂商均无关联。生化危机：安魂曲 相关商标归其各自权利人所有。地址生成器为第三方工具，本站不对其服务负责。价格可能变动，下单前请以官方页面为准。</p>
+    <p class="fine">© 2026 AI 定价站</p>
+  </div>
+</footer>
+
+<script src="app.js?v=s6"></script>
+</body>
+</html>

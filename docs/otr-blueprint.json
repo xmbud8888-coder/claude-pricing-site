@@ -1,0 +1,1431 @@
+{
+ "architecture": {
+  "meta": {
+   "site": "opentherank.com 全站复刻蓝图（基于 /zh 13 类页面侦察合并）",
+   "techStack": "Astro SSG（全静态、构建期烘焙数据、无运行时 fetch）+ Cloudflare Pages 托管 + Astro View Transitions/ClientRouter + viewport 预取",
+   "designSystem": "米色（beige）暖色调 + 毛玻璃卡片；Google Fonts: Inter(正文)+Playfair Display(标题)；价格胶囊三档语义色 pc-pill-low/mid/high；每游戏/产品可注入独立品牌色 CSS 变量",
+   "analytics": [
+    "Google Analytics G-TRXDT2X71R",
+    "PostHog",
+    "Google AdSense ca-pub-1950215420642428（仅 auto-ads loader，页内无固定广告位）"
+   ],
+   "i18n": {
+    "locales": [
+     "en(x-default,无前缀)",
+     "ru",
+     "tr",
+     "zh",
+     "hi",
+     "id",
+     "pt",
+     "es",
+     "de",
+     "fr",
+     "ja",
+     "ko"
+    ],
+    "routing": "/{lang}/{path}，英文无前缀；全站每页输出完整 hreflang alternate 簇 + canonical",
+    "exception": "/ai-rankings/ 仅英文无本地化路径"
+   },
+   "globalChrome": {
+    "topNav": "sticky 毛玻璃顶栏 + nav-progress 页面切换进度条；左 logo+站名；菜单：首页、AI 区域定价、'AI 可访问性'hover 下拉（三分组：支付→礼品卡对比[rel=nofollow]、访问→VPN 对比、选择→AI 工具对比）；右侧 12 语言 hover 下拉；移动端汉堡+右滑抽屉。首页特例：仅 logo+语言切换，无菜单",
+    "breadcrumb": "位于 main 底部/footer 之上（非页顶），2-3 级，配 BreadcrumbList JSON-LD",
+    "footer": "三段式：站内交叉导流链接行（AI 区域定价 · 礼品卡对比[nofollow] · VPN 对比 · AI 工具对比 · Apple ID 注册）+ 数据来源免责一行 + 条款/隐私/© 版权。首页特例：无 footer"
+   }
+  },
+  "tree": [
+   {
+    "section": "首页",
+    "pages": [
+     {
+      "path": "/{lang}/",
+      "template": "T0-landing",
+      "blocks": [
+       "顶栏(仅logo+语言)",
+       "Hero打字机标语",
+       "三张板块入口卡(性价比→ai-pricing / 支付→gift-cards[nofollow] / 访问→vpn)",
+       "无页脚"
+      ]
+     }
+    ]
+   },
+   {
+    "section": "区域比价（四垂类共用一套框架：索引页 T1 + 详情页 T2）",
+    "tabs": [
+     "/{lang}/ai-pricing/",
+     "/{lang}/streaming-pricing/",
+     "/{lang}/steam-pricing/",
+     "/{lang}/eshop-pricing/"
+    ],
+    "pages": [
+     {
+      "path": "/{lang}/ai-pricing/",
+      "template": "T1",
+      "cards": 17,
+      "detailNamespace": "/{lang}/ai-pricing/{slug}/"
+     },
+     {
+      "path": "/{lang}/streaming-pricing/",
+      "template": "T1",
+      "cards": 4,
+      "detailNamespace": "/{lang}/ai-pricing/{slug}/（注意：流媒体详情复用 ai-pricing 路径命名空间）"
+     },
+     {
+      "path": "/{lang}/steam-pricing/",
+      "template": "T1",
+      "cards": 18,
+      "detailNamespace": "/{lang}/steam-pricing/{slug}/"
+     },
+     {
+      "path": "/{lang}/eshop-pricing/",
+      "template": "T1",
+      "cards": 16,
+      "detailNamespace": "/{lang}/eshop-pricing/{slug}/"
+     },
+     {
+      "path": "/{lang}/steam-pricing/{slug}/",
+      "template": "T2",
+      "count": 18,
+      "regionsPerPage": "17-19（已核实样本均为19）",
+      "confirmedSamples": [
+       "elden-ring",
+       "stardew-valley"
+      ]
+     },
+     {
+      "path": "/{lang}/eshop-pricing/{slug}/",
+      "template": "T2",
+      "count": 16,
+      "regionsPerPage": 16,
+      "confirmedSamples": [
+       "zelda-tears-of-the-kingdom",
+       "mario-kart-8-deluxe"
+      ]
+     },
+     {
+      "path": "/{lang}/ai-pricing/{slug}/",
+      "template": "T2(推定,未侦察)",
+      "count": "17 AI + 4 流媒体",
+      "regionsPerPage": "4-18"
+     },
+     {
+      "path": "/{lang}/ai-pricing/apple-id-registration/",
+      "template": "T8-guide(未侦察)",
+      "note": "全站页脚导流的换区指南页"
+     }
+    ]
+   },
+   {
+    "section": "Apple 礼品卡（noindex,nofollow 灰色板块）",
+    "pages": [
+     {
+      "path": "/{lang}/gift-cards/",
+      "template": "T6",
+      "blocks": [
+       "Hero(英文未翻译)",
+       "6 国家卡片(整卡链详情+内嵌商家外链比价表)",
+       "页脚"
+      ]
+     },
+     {
+      "path": "/{lang}/gift-cards/{country}/",
+      "template": "T7(未侦察)",
+      "count": 6,
+      "countries": [
+       "turkey",
+       "india",
+       "usa",
+       "brazil",
+       "japan",
+       "indonesia"
+      ]
+     }
+    ]
+   },
+   {
+    "section": "VPN",
+    "pages": [
+     {
+      "path": "/{lang}/vpn/",
+      "template": "T3-speed-tracker",
+      "blocks": [
+       "Hero",
+       "7天趋势折线图(下载/Ping双tab,12系列)",
+       "测量方式(东京节点+Dataverse+GitHub来源)",
+       "当前下载Top5快照表",
+       "分类榜单CTA(仅free/secure两枚)",
+       "面包屑",
+       "页脚"
+      ]
+     },
+     {
+      "path": "/{lang}/leaderboard/free/",
+      "template": "T4-editorial",
+      "rows": "9可用+6谨慎归档双表"
+     },
+     {
+      "path": "/{lang}/leaderboard/secure/",
+      "template": "T4-editorial",
+      "rows": 11
+     },
+     {
+      "path": "/{lang}/leaderboard/best/",
+      "template": "T5-generic",
+      "rows": 15,
+      "note": "无站内入口(孤页)"
+     },
+     {
+      "path": "/{lang}/leaderboard/value/",
+      "template": "T5-generic",
+      "rows": 15,
+      "note": "无站内入口(孤页)"
+     },
+     {
+      "path": "/{lang}/leaderboard/streaming/",
+      "template": "T5-generic",
+      "rows": 15,
+      "note": "无站内入口(孤页)"
+     }
+    ]
+   },
+   {
+    "section": "AI 工具对比",
+    "pages": [
+     {
+      "path": "/ai-rankings/",
+      "template": "未侦察",
+      "note": "仅英文、无 /zh 前缀，导航'选择'分组入口"
+     }
+    ]
+   },
+   {
+    "section": "法务",
+    "pages": [
+     {
+      "path": "/terms/"
+     },
+     {
+      "path": "/privacy/"
+     }
+    ]
+   }
+  ]
+ },
+ "templates": {
+  "T0-landing": {
+   "usedBy": [
+    "/"
+   ],
+   "blocks": [
+    {
+     "order": 1,
+     "block": "简化顶栏",
+     "fields": [
+      "logo",
+      "12语言下拉"
+     ],
+     "interaction": "初始隐藏，Hero 打完字后 .revealed 淡入"
+    },
+    {
+     "order": 2,
+     "block": "Hero 打字机",
+     "fields": [
+      "单行使命宣言 H1"
+     ],
+     "interaction": "逐字打出(30-100ms/字自适应)+闪烁光标；结束后卡片 150ms 交错淡入；prefers-reduced-motion 静态降级；无 CTA/统计数字"
+    },
+    {
+     "order": 3,
+     "block": "板块入口卡×3",
+     "fields": [
+      "eyebrow 分类标签",
+      "H2 标题",
+      "2-3行简介(3行截断)"
+     ],
+     "interaction": "hover 上浮+阴影；viewport 预取；礼品卡卡片 rel=nofollow"
+    }
+   ],
+   "noFooter": true
+  },
+  "T1-pricing-index": {
+   "usedBy": [
+    "ai-pricing",
+    "streaming-pricing",
+    "steam-pricing",
+    "eshop-pricing"
+   ],
+   "blocks": [
+    {
+     "order": 1,
+     "block": "全局顶栏"
+    },
+    {
+     "order": 2,
+     "block": "Hero",
+     "fields": [
+      "H1『各国最便宜的{垂类}价格』",
+      "一行副标题"
+     ],
+     "interaction": "无"
+    },
+    {
+     "order": 3,
+     "block": "四垂类 Tab 条",
+     "fields": [
+      "role=tablist 胶囊，4 个页面链接(非JS切换)，当前 aria-current=page"
+     ],
+     "interaction": "viewport 预取"
+    },
+    {
+     "order": 4,
+     "block": "产品卡网格(1列/md 2列)",
+     "fields": [
+      "整卡<a>→详情页",
+      "卡头: 36px 图标+H2『{名} 各地区定价』+副标题(点名档位/数据源)",
+      "右上: 『N% 价差』徽章↔『查看更多→』(hover切换；各区同价则无徽章)",
+      "卡体预览表4列: #排名 / 地区(国旗emoji+国名H3) / 价格(USD胶囊三档色+≈本币小字,/mo或/pack) / 税费(短句)",
+      "行结构: 最便宜前4 + pt-row-gap 断档行直跳最贵(其rank=该产品收录区总数)"
+     ],
+     "interaction": "hover 上浮；税费表头 ? 图标纯CSS tooltip(注意原站文案残留'Steam 标价'bug，须参数化)"
+    },
+    {
+     "order": 5,
+     "block": "面包屑(2级)+BreadcrumbList JSON-LD"
+    },
+    {
+     "order": 6,
+     "block": "全局页脚",
+     "fields": [
+      "数据来源声明按垂类参数化: App Store 列表(月更) / Steam Storefront API(日更) / Nintendo 公开端点(日更)"
+     ]
+    }
+   ],
+   "seo": "产品名 H2、国家名 H3 的标题层级"
+  },
+  "T2-pricing-detail": {
+   "usedBy": [
+    "steam-pricing/{slug}",
+    "eshop-pricing/{slug}",
+    "(推定)ai-pricing/{slug}"
+   ],
+   "blocks": [
+    {
+     "order": 1,
+     "block": "全局顶栏"
+    },
+    {
+     "order": 2,
+     "block": "左侧实体切换边栏",
+     "fields": [
+      "『←返回总览』",
+      "同垂类全部实体链接列表(可带封面缩略图)，当前项高亮"
+     ],
+     "interaction": "桌面 sticky 竖列(w-56)独立滚动，移动端横向滚动条"
+    },
+    {
+     "order": 3,
+     "block": "Hero 摘要",
+     "fields": [
+      "封面小图+H1『{名} 区域定价』+开发商行",
+      "动态摘要句(最便宜国+价/最贵国+价/价差%)",
+      "微字数据来源+更新日期(=构建日，日更证据)",
+      "每实体独立品牌色 CSS 变量"
+     ]
+    },
+    {
+     "order": 4,
+     "block": "全球价格 SVG 地图",
+     "fields": [
+      "内联SVG世界地图(约30大洲path)",
+      "追踪国圆点三档色阶",
+      "标签芯片(旗帜+ISO+$价+±%)+弧形引导线",
+      "优先标签(最便宜/US基准/最贵)",
+      "图例: 相对美国 -50%~+50% 色带"
+     ],
+     "interaction": "SKU/版本 tab(多版本实体才渲染: BG3 base/deluxe、塞尔达 Switch/Switch2升级包，两套预渲染SVG切换)；+/−/重置缩放；hover/点击 tooltip(国名/USD/±%/税费)",
+     "responsive": "CSS order: 桌面第1、移动第3"
+    },
+    {
+     "order": 5,
+     "block": "最便宜/最贵双榜卡",
+     "fields": [
+      "各 Top3: 排名徽章+旗帜+国名H3+USD价+相对US ±%(绿/红)"
+     ],
+     "responsive": "移动端排第1(先看结论)"
+    },
+    {
+     "order": 6,
+     "block": "全量价格表",
+     "fields": [
+      "列: #(sticky左) / 地区(sticky左) / {每SKU一列}USD胶囊色阶+≈本币小字 / 对比美国价±%徽章 / 税费(短句+已含|不同徽章+表头?tooltip) / 示例地址(sticky右,『获取地址』外链→randaddress.com/{lang}/genaddress/{cc}-address/,无对应国回退us-address)",
+      "按 base SKU USD 升序静态预排"
+     ],
+     "interaction": "容器横向滚动(min-width 720px)；无排序/筛选/货币切换；eShop 声明打折时自动展示折扣价/原价/折扣率/截止时间"
+    },
+    {
+     "order": 7,
+     "block": "定价 vs 本地购买力(PPP)图",
+     "fields": [
+      "哑铃图(默认)/散点图双tab",
+      "散点: X=GDP PPP指数(US=20)、Y=标价USD、PPP公允线+象限标注、按大洲着色",
+      "哑铃: 空心圆标价→实心圆PPP折算实际成本，按偏离度排序，四档严重度图例",
+      "节点 data-ppp/price/effective/premium"
+     ],
+     "interaction": "tab 切换+hover tooltip(标价/PPP指数/实际成本/相对US%)"
+    },
+    {
+     "order": 8,
+     "block": "FAQ 手风琴(条件区块)",
+     "fields": [
+      "details/summary 3-5条，首项默认展开，答案嵌动态数字",
+      "FAQPage JSON-LD"
+     ],
+     "condition": "仅部分实体有(BG3有/星露谷无；eShop样本均有5条)"
+    },
+    {
+     "order": 9,
+     "block": "方法论脚注",
+     "fields": [
+      "一行10px: 按cc逐区调官方接口+每日汇率折算"
+     ]
+    },
+    {
+     "order": 10,
+     "block": "面包屑(3级)+BreadcrumbList JSON-LD"
+    },
+    {
+     "order": 11,
+     "block": "全局页脚"
+    }
+   ],
+   "responsive": "CSS order 重排——移动: 榜单→表格→地图→PPP→FAQ；桌面: 地图→榜单→表格→PPP→FAQ"
+  },
+  "T3-vpn-speed-tracker": {
+   "usedBy": [
+    "/{lang}/vpn/"
+   ],
+   "blocks": [
+    {
+     "order": 1,
+     "block": "全局顶栏"
+    },
+    {
+     "order": 2,
+     "block": "Hero",
+     "fields": [
+      "H1 VPN 速度跟踪+一句副标题"
+     ]
+    },
+    {
+     "order": 3,
+     "block": "7天趋势折线图",
+     "fields": [
+      "头部: 📡 Tokyo,JP 节点徽标+数据截至日期+『Last 7 days · daily mean』",
+      "指标tab: 下载/Ping(两套预渲染SVG stage)",
+      "图例chips×12(oklch色点+名+当前值双data)",
+      "SVG 1080×560: 折线+末端脉冲点+缩写标签；y轴固定(下载150-500Mbps/ping5-35ms)；x轴7日刻度末日高亮",
+      "数据全内嵌 data-series(12系列×7日均值)"
+     ],
+     "interaction": "chip点击切显隐(默认仅6条激活)；chip悬停该线加粗其余降透明；crosshair+tooltip(下载降序/ping升序)；触屏点按"
+    },
+    {
+     "order": 4,
+     "block": "测量方式",
+     "fields": [
+      "东京节点+13款(文案)自动化测试",
+      "四指标定义(下载/上传Mbps、Ping ms、稳定性%、可靠性%)",
+      "来源外链: Harvard Dataverse DOI 10.7910/DVN/OMC9A4(CC BY 4.0)+GitHub hmy0210/vpn-stability-ranking(MIT)",
+      "免责: 仅东京测量"
+     ]
+    },
+    {
+     "order": 5,
+     "block": "当前下载 Top5 表",
+     "fields": [
+      "8列: #/VPN(名+总部辖区副行)/下载/上传/Ping/稳定性/可靠性/服务器数(厂商口径)",
+      "行不可点，无详情页"
+     ]
+    },
+    {
+     "order": 6,
+     "block": "分类榜单 CTA chips",
+     "fields": [
+      "仅 free、secure 两枚(best/value/streaming 无入口)"
+     ]
+    },
+    {
+     "order": 7,
+     "block": "面包屑+页脚"
+    }
+   ]
+  },
+  "T4-vpn-leaderboard-editorial": {
+   "usedBy": [
+    "leaderboard/free",
+    "leaderboard/secure"
+   ],
+   "blocks": [
+    {
+     "order": 1,
+     "block": "全局顶栏+移动抽屉"
+    },
+    {
+     "order": 2,
+     "block": "榜单侧栏",
+     "fields": [
+      "←返回VPN首页",
+      "仅 free/secure 两个入口(带图标)"
+     ]
+    },
+    {
+     "order": 3,
+     "block": "编辑版 Hero",
+     "fields": [
+      "eyebrow 指南小字+H1+排名维度导语+『已更新{年月}』"
+     ]
+    },
+    {
+     "order": 4,
+     "block": "主榜表",
+     "fields": [
+      "free: #/VPN/评分(星+0-5四档色)/状态/免费额度/免费位置/设备数/隐私验证(三色徽章+辖区)/适合场景/主要风险/备注(含『来源』外链)",
+      "secure: #/VPN/评分/隐私验证(徽章+辖区+证据摘要)/开源情况/审计证据/所有权/匿名使用(注册|支付|金丝雀)/服务器控制/主要限制/备注"
+     ],
+     "interaction": "横向滚动，零排序筛选，零联盟链接"
+    },
+    {
+     "order": 5,
+     "block": "第二表(仅free)",
+     "fields": [
+      "『谨慎、历史归档或并非完整VPN』rank10-15，红色'已知问题/Service Closed'徽章，与推荐区物理隔离"
+     ]
+    },
+    {
+     "order": 6,
+     "block": "双栏使用指南卡",
+     "fields": [
+      "何时适合用 vs 何时不该依赖，各3 bullet"
+     ]
+    },
+    {
+     "order": 7,
+     "block": "长文说明×3",
+     "fields": [
+      "品类取舍/排序方法论/数据来源类型"
+     ]
+    },
+    {
+     "order": 8,
+     "block": "FAQ 手风琴",
+     "fields": [
+      "free 4条/secure 5条+FAQPage JSON-LD"
+     ]
+    },
+    {
+     "order": 9,
+     "block": "面包屑+页脚"
+    }
+   ]
+  },
+  "T5-vpn-leaderboard-generic": {
+   "usedBy": [
+    "leaderboard/best",
+    "leaderboard/value",
+    "leaderboard/streaming"
+   ],
+   "blocks": [
+    {
+     "order": 1,
+     "block": "全局顶栏+同T4侧栏(自身不在侧栏内)"
+    },
+    {
+     "order": 2,
+     "block": "简版 Hero",
+     "fields": [
+      "英文H2标题(zh未翻译)+英文副标题+『已更新2026年4月』"
+     ]
+    },
+    {
+     "order": 3,
+     "block": "通用10列表×15行",
+     "fields": [
+      "#/VPN(纯文本无链接)/评分(星+三档色)/免费计划(全'不适用')/服务器(全'不适用')/隐私(徽章+辖区)/可信度(审计/法庭/所有权短句)/协议(胶囊组)/漏洞赏金(全N/A)/备注(min-width 400px长评)",
+      "前两列 sticky 左固定"
+     ],
+     "interaction": "零交互、零外链、零价格"
+    },
+    {
+     "order": 4,
+     "block": "面包屑(末级英文)+页脚"
+    }
+   ],
+   "warning": "免费计划/服务器/漏洞赏金三列为共用组件未填字段，复刻时应按榜单隐藏空列"
+  },
+  "T6-giftcards-index": {
+   "usedBy": [
+    "/{lang}/gift-cards/"
+   ],
+   "seo": "meta robots=noindex,nofollow；全站指向本页内链均 rel=nofollow",
+   "blocks": [
+    {
+     "order": 1,
+     "block": "滚动进度条+全局顶栏"
+    },
+    {
+     "order": 2,
+     "block": "Hero",
+     "fields": [
+      "英文H1+加密货币/国际卡卖点句(zh未翻译)"
+     ]
+    },
+    {
+     "order": 3,
+     "block": "国家卡×6(整卡<a>→国家详情页)",
+     "fields": [
+      "卡头: 国旗emoji+H2『{Country} Apple Gift Cards』+副标题+查看更多→",
+      "卡体4列表: Platform(嵌套外链直连商品页,target=_blank noopener noreferrer,无联盟参数) / Cost per {归一化单位}(本币三色徽章绿黄红+≈$换算;表头?tooltip含手续费免责) / 支付方式(Crypto|International Card pill) / Channel(Official|3rd Party)",
+      "每国2-3行按单位成本升序",
+      "单位基准: TR 100TL / IN ₹100 / US $10 / BR R$20 / JP ¥1000 / ID Rp1,000,000"
+     ]
+    },
+    {
+     "order": 4,
+     "block": "页脚(含第二处数据免责)"
+    }
+   ]
+  },
+  "T7-giftcards-country": {
+   "usedBy": [
+    "gift-cards/{country}×6"
+   ],
+   "status": "未侦察——结构未知，需补抓后定义"
+  },
+  "T8-guide-legal": {
+   "usedBy": [
+    "ai-pricing/apple-id-registration",
+    "terms",
+    "privacy",
+    "ai-rankings"
+   ],
+   "status": "未侦察"
+  }
+ },
+ "entities": {
+  "aiProducts": [
+   {
+    "slug": "chatgpt",
+    "plans": [
+     "Plus",
+     "Pro"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "claude",
+    "plans": [
+     "Pro",
+     "Max"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "gemini",
+    "plans": [
+     "Advanced"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "grok",
+    "plans": [
+     "SuperGrok",
+     "Lite"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "glm",
+    "plans": [
+     "Coding Lite",
+     "Pro",
+     "Max"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "capcut",
+    "plans": [
+     "Pro"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "leonardo-ai",
+    "plans": [
+     "Essential",
+     "Premium"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "character-ai",
+    "plans": [
+     "c.ai+"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "perplexity",
+    "plans": [
+     "Professional",
+     "Max"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "copilot",
+    "plans": [
+     "Pro"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "manus",
+    "plans": [
+     "Plus"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "kimi",
+    "plans": [
+     "Moderato",
+     "Allegretto"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "sora",
+    "plans": [
+     "10视频包(/pack计价)"
+    ],
+    "source": "App Store",
+    "note": "仅4个地区、无gap行"
+   },
+   {
+    "slug": "kling-ai",
+    "plans": [
+     "Standard",
+     "Pro"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "catcosplay",
+    "plans": [
+     "Pro"
+    ],
+    "source": "App Store",
+    "note": "各区同价，无价差徽章"
+   },
+   {
+    "slug": "suno",
+    "plans": [
+     "Pro",
+     "Premier"
+    ],
+    "source": "App Store"
+   },
+   {
+    "slug": "x",
+    "plans": [
+     "Basic",
+     "Premium",
+     "Premium+"
+    ],
+    "source": "X 官网定价页(非App Store)"
+   }
+  ],
+  "streamingServices": [
+   {
+    "slug": "netflix",
+    "plans": [
+     "标准版",
+     "高级版"
+    ],
+    "source": "App Store",
+    "regions": 17,
+    "detailPath": "/zh/ai-pricing/netflix/"
+   },
+   {
+    "slug": "spotify",
+    "plans": [
+     "个人版",
+     "家庭版"
+    ],
+    "source": "官网",
+    "regions": 18,
+    "detailPath": "/zh/ai-pricing/spotify/"
+   },
+   {
+    "slug": "youtube",
+    "plans": [
+     "Premium个人",
+     "家庭版"
+    ],
+    "source": "App Store",
+    "regions": 17,
+    "detailPath": "/zh/ai-pricing/youtube/"
+   },
+   {
+    "slug": "hbo-max",
+    "plans": [
+     "高级版",
+     "标准版"
+    ],
+    "source": "Max官网",
+    "regions": 17,
+    "detailPath": "/zh/ai-pricing/hbo-max/"
+   }
+  ],
+  "steamGames": [
+   {
+    "slug": "baldurs-gate-3",
+    "appid": 1086940,
+    "skus": [
+     "base",
+     "数字豪华升级包"
+    ],
+    "hasFaq": true
+   },
+   {
+    "slug": "cyberpunk-2077",
+    "appid": 1091500
+   },
+   {
+    "slug": "sekiro-shadows-die-twice",
+    "appid": 814380
+   },
+   {
+    "slug": "stardew-valley",
+    "appid": 413150,
+    "hasFaq": false
+   },
+   {
+    "slug": "hollow-knight-silksong",
+    "appid": 1030300
+   },
+   {
+    "slug": "palworld",
+    "appid": 1623730
+   },
+   {
+    "slug": "mount-and-blade-ii-bannerlord",
+    "appid": 261550
+   },
+   {
+    "slug": "red-dead-redemption-2",
+    "appid": 1174180
+   },
+   {
+    "slug": "forza-horizon-6",
+    "appid": 2483190
+   },
+   {
+    "slug": "dead-by-daylight",
+    "appid": 381210
+   },
+   {
+    "slug": "rust",
+    "appid": 252490
+   },
+   {
+    "slug": "subnautica-2",
+    "appid": 1962700
+   },
+   {
+    "slug": "meccha-chameleon",
+    "appid": 4704690
+   },
+   {
+    "slug": "elden-ring",
+    "appid": 1245620
+   },
+   {
+    "slug": "terraria",
+    "appid": 105600
+   },
+   {
+    "slug": "death-stranding-2-on-the-beach",
+    "appid": 3280350
+   },
+   {
+    "slug": "resident-evil-requiem",
+    "appid": 3764200
+   },
+   {
+    "slug": "god-of-war-ragnarok",
+    "appid": 2322010
+   }
+  ],
+  "eshopGames": [
+   {
+    "slug": "nintendo-switch-online",
+    "type": "订阅会员",
+    "note": "价格不在 Nintendo price API 内"
+   },
+   {
+    "slug": "zelda-tears-of-the-kingdom",
+    "skus": [
+     "Switch版",
+     "Switch 2 升级包"
+    ]
+   },
+   {
+    "slug": "animal-crossing-new-horizons"
+   },
+   {
+    "slug": "splatoon-3"
+   },
+   {
+    "slug": "super-smash-bros-ultimate"
+   },
+   {
+    "slug": "super-mario-galaxy-plus-super-mario-galaxy-2"
+   },
+   {
+    "slug": "super-mario-party-jamboree"
+   },
+   {
+    "slug": "mario-kart-8-deluxe"
+   },
+   {
+    "slug": "pokemon-legends-z-a"
+   },
+   {
+    "slug": "pokemon-scarlet"
+   },
+   {
+    "slug": "pokemon-violet"
+   },
+   {
+    "slug": "monster-hunter-rise"
+   },
+   {
+    "slug": "final-fantasy-vii-rebirth"
+   },
+   {
+    "slug": "xenoblade-chronicles-3"
+   },
+   {
+    "slug": "kirby-and-the-forgotten-land"
+   },
+   {
+    "slug": "super-mario-odyssey"
+   }
+  ],
+  "eshopNote": "nsuid 映射未采集，是接入 api.ec.nintendo.com 核验管线的前置任务",
+  "vpns": {
+   "speedTracker12": [
+    "nordvpn",
+    "expressvpn",
+    "private-internet-access",
+    "mullvad",
+    "surfshark",
+    "protonvpn",
+    "cyberghost",
+    "tunnelbear",
+    "hidemyass",
+    "hotspot-shield",
+    "ipvanish",
+    "windscribe"
+   ],
+   "boardBest15": [
+    "Mullvad",
+    "ProtonVPN",
+    "NordVPN",
+    "IVPN",
+    "Surfshark",
+    "Private Internet Access",
+    "Windscribe",
+    "OVPN",
+    "ExpressVPN",
+    "Astrill VPN",
+    "VyprVPN",
+    "AirVPN",
+    "Mozilla VPN",
+    "CyberGhost",
+    "TorGuard"
+   ],
+   "boardFree15": {
+    "usable9": [
+     "ProtonVPN Free",
+     "Windscribe Free",
+     "Hide.me Free",
+     "PrivadoVPN Free",
+     "TunnelBear Free",
+     "Calyx VPN",
+     "Riseup VPN",
+     "Speedify Free",
+     "ZoogVPN Free"
+    ],
+    "caution6": [
+     "Hotspot Shield",
+     "Opera VPN",
+     "Kaspersky VPN Free",
+     "VPN Gate",
+     "Atlas VPN Free (Discontinued)",
+     "Hola VPN"
+    ]
+   },
+   "boardSecure11": [
+    "Mullvad",
+    "IVPN",
+    "ProtonVPN",
+    "OVPN",
+    "AirVPN",
+    "Private Internet Access",
+    "Windscribe",
+    "NordVPN",
+    "Mozilla VPN",
+    "ExpressVPN",
+    "VyprVPN"
+   ],
+   "boardValue15": [
+    "Surfshark",
+    "Private Internet Access",
+    "CyberGhost",
+    "NordVPN",
+    "Windscribe",
+    "ProtonVPN",
+    "AirVPN",
+    "VyprVPN",
+    "TorGuard",
+    "Mullvad",
+    "Hide.me",
+    "IVPN",
+    "PrivadoVPN",
+    "OVPN",
+    "IPVanish"
+   ],
+   "boardStreaming15": [
+    "ExpressVPN",
+    "NordVPN",
+    "Surfshark",
+    "CyberGhost",
+    "Private Internet Access",
+    "ProtonVPN",
+    "Windscribe",
+    "TorGuard",
+    "IPVanish",
+    "Mullvad",
+    "VyprVPN",
+    "Hotspot Shield",
+    "StrongVPN",
+    "PrivadoVPN",
+    "Hide.me"
+   ],
+   "unionAllBrands31": [
+    "Mullvad",
+    "ProtonVPN",
+    "NordVPN",
+    "IVPN",
+    "Surfshark",
+    "Private Internet Access",
+    "Windscribe",
+    "OVPN",
+    "ExpressVPN",
+    "Astrill VPN",
+    "VyprVPN",
+    "AirVPN",
+    "Mozilla VPN",
+    "CyberGhost",
+    "TorGuard",
+    "Hide.me",
+    "PrivadoVPN",
+    "TunnelBear",
+    "Calyx VPN",
+    "Riseup VPN",
+    "Speedify",
+    "ZoogVPN",
+    "Hotspot Shield",
+    "Opera VPN",
+    "Kaspersky VPN",
+    "VPN Gate",
+    "Atlas VPN",
+    "Hola VPN",
+    "IPVanish",
+    "StrongVPN",
+    "HideMyAss"
+   ],
+   "protocolTags": [
+    "WireGuard",
+    "OpenVPN",
+    "IKEv2",
+    "NordLynx",
+    "Lightway",
+    "Stealth",
+    "StealthVPN",
+    "Chameleon",
+    "SoftEther",
+    "Hydra"
+   ],
+   "privacyBadgeTiers": [
+    "无日志已验证",
+    "法庭证实无日志",
+    "纯内存服务器",
+    "审计确认无日志",
+    "声称无日志",
+    "无日志(非营利)",
+    "无日志(公益组织)",
+    "已知问题",
+    "Service Closed"
+   ]
+  },
+  "giftCards": {
+   "countries": [
+    {
+     "slug": "turkey",
+     "unit": "100 TL"
+    },
+    {
+     "slug": "india",
+     "unit": "₹100"
+    },
+    {
+     "slug": "usa",
+     "unit": "$10"
+    },
+    {
+     "slug": "brazil",
+     "unit": "R$20"
+    },
+    {
+     "slug": "japan",
+     "unit": "¥1,000"
+    },
+    {
+     "slug": "indonesia",
+     "unit": "Rp1,000,000"
+    }
+   ],
+   "platforms": [
+    {
+     "name": "SEAGM",
+     "coverage": [
+      "TR",
+      "IN",
+      "US",
+      "BR",
+      "JP",
+      "ID"
+     ],
+     "channel": "3rd Party"
+    },
+    {
+     "name": "Bitrefill",
+     "coverage": [
+      "IN",
+      "US",
+      "BR",
+      "JP"
+     ],
+     "channel": "3rd Party"
+    },
+    {
+     "name": "mtcgame",
+     "coverage": [
+      "IN",
+      "BR",
+      "ID"
+     ],
+     "channel": "3rd Party"
+    },
+    {
+     "name": "Turgame",
+     "coverage": [
+      "TR"
+     ],
+     "channel": "3rd Party"
+    },
+    {
+     "name": "Oyunfor",
+     "coverage": [
+      "TR"
+     ],
+     "channel": "3rd Party"
+    },
+    {
+     "name": "Amazon US",
+     "coverage": [
+      "US"
+     ],
+     "channel": "Official"
+    },
+    {
+     "name": "Amazon JP",
+     "coverage": [
+      "JP"
+     ],
+     "channel": "Official"
+    }
+   ],
+   "paymentTags": [
+    "Crypto",
+    "International Card"
+   ]
+  },
+  "regionsByVertical": {
+   "steam19": [
+    "IN",
+    "KZ",
+    "GE",
+    "TR",
+    "UA",
+    "KR",
+    "CN",
+    "RU",
+    "AR",
+    "BR",
+    "JP",
+    "MX",
+    "CA",
+    "PK",
+    "US",
+    "AU",
+    "GB",
+    "DE",
+    "CH"
+   ],
+   "eshop16": [
+    "JP",
+    "NZ",
+    "AU",
+    "AR",
+    "US",
+    "CA",
+    "PL",
+    "BR",
+    "NO",
+    "DK",
+    "DE",
+    "GB",
+    "ZA",
+    "MX",
+    "CH",
+    "CO"
+   ],
+   "aiVisible19_incomplete": [
+    "PH",
+    "PK",
+    "CA",
+    "JP",
+    "DK",
+    "AR",
+    "EG",
+    "TR",
+    "ID",
+    "IN",
+    "GB",
+    "CN",
+    "DE",
+    "US",
+    "NG",
+    "FR",
+    "AU",
+    "CH",
+    "KR"
+   ],
+   "streamingVisible8_incomplete": [
+    "PK",
+    "EG",
+    "NG",
+    "IN",
+    "TR",
+    "PH",
+    "ID",
+    "CH"
+   ],
+   "usIsBaseline": "所有 vs% 与地图色带均以 US 为基准"
+  },
+  "externalServices": {
+   "data": [
+    "Steam Storefront API (store.steampowered.com/api/appdetails)",
+    "Nintendo price API (api.ec.nintendo.com/v1/price)",
+    "Harvard Dataverse DOI 10.7910/DVN/OMC9A4",
+    "GitHub hmy0210/vpn-stability-ranking"
+   ],
+   "assets": [
+    "cdn.cloudflare.steamstatic.com / shared.akamai.steamstatic.com (Steam封面,热链)",
+    "assets.nintendo.com / nintendo.com CDN (eShop封面,热链,有版权/防盗链风险)"
+   ],
+   "conversion": [
+    "randaddress.com/{lang}/genaddress/{cc}-address/ 示例地址生成器(缺国回退us-address)——唯一的购买引导外链"
+   ]
+  }
+ },
+ "verifiability": {
+  "gradeDefinition": {
+   "A": "有官方接口可全自动核验",
+   "B": "部分可核验（官方页面抓取/公开报告/人工半自动）",
+   "C": "无法核验，复刻时只能标『待核验』或自建口径"
+  },
+  "items": [
+   {
+    "domain": "Steam 各区本币标价",
+    "grade": "A",
+    "method": "store.steampowered.com/api/appdetails?appids={appid}&cc={cc}，18个appid已齐",
+    "caveat": "cc=ru 对非俄IP可能受限，管线需专门处理"
+   },
+   {
+    "domain": "eShop 游戏各区标价+进行中折扣",
+    "grade": "A",
+    "method": "api.ec.nintendo.com/v1/price?country=XX&ids={nsuid}",
+    "caveat": "前置任务：先采集16个游戏的分区 nsuid 映射"
+   },
+   {
+    "domain": "USD 换算/价差%/vs US%/排名 等派生值",
+    "grade": "A",
+    "method": "自建每日 FX 管线可全自动复算",
+    "caveat": "无法逐分对上原站（其汇率快照未披露），口径需自定并公示"
+   },
+   {
+    "domain": "X / Spotify / HBO Max 官网订阅价",
+    "grade": "B",
+    "method": "抓官方定价页（结构化程度低，逐国页面）"
+   },
+   {
+    "domain": "AI 订阅 IAP 价格 & Netflix/YouTube App Store 价",
+    "grade": "B",
+    "method": "Apple 无订阅IAP公开价格API；逐区 App Store 网页/iTunes lookup 抽查或真机核验"
+   },
+   {
+    "domain": "NSO 会员订阅价",
+    "grade": "B",
+    "method": "不在 Nintendo price API 内，需抓各国 eShop 会员页"
+   },
+   {
+    "domain": "礼品卡平台价格",
+    "grade": "B",
+    "method": "7家商家商品页URL公开可重抓；Apple无官方礼品卡价格API",
+    "caveat": "标价可能不含手续费/支付通道加价（原站tooltip自认），建议加抓结账价并保留免责"
+   },
+   {
+    "domain": "各国 VAT/GST 税率数字",
+    "grade": "B",
+    "method": "对照各国税务机关/官方公告，人工半自动维护国别税费知识库"
+   },
+   {
+    "domain": "VPN 事实字段（协议/辖区/开源/审计报告存在性/法庭案例/免费额度）",
+    "grade": "B",
+    "method": "官网、GitHub、Cure53/Deloitte等公开审计报告、新闻源；free榜每行已给来源外链可逐条比对"
+   },
+   {
+    "domain": "VPN 测速数据与原站一致性",
+    "grade": "B",
+    "method": "Dataverse API + GitHub 仓库可核验其公开数据集内容（仅一致性，非真值）"
+   },
+   {
+    "domain": "VPN 下载/上传/Ping/稳定性/可靠性 真值",
+    "grade": "C",
+    "method": "无官方口径；复现需自建东京固定节点每日测速管线，上线前标待核验"
+   },
+   {
+    "domain": "VPN 0-5 编辑评分/榜单排序/隐私徽章分档",
+    "grade": "C",
+    "method": "站方主观编辑口径；value榜声称按性价比排序但全页无价格，不可复算"
+   },
+   {
+    "domain": "GDP PPP 指数(US=20)与PPP折算实际成本/公允线",
+    "grade": "C",
+    "method": "来源未披露（疑IMF/世行加工）；复刻需自定义口径并公开，不可能对上原值"
+   },
+   {
+    "domain": "税费『已含/结账另加』行为",
+    "grade": "C",
+    "method": "只能真实结账验证；哥伦比亚等税前/税后排名口径问题需自定规则"
+   },
+   {
+    "domain": "VPN 服务器数量(如7,100+)",
+    "grade": "C",
+    "method": "厂商营销口径，仅能照抄官网宣传"
+   },
+   {
+    "domain": "编辑类文案（税费短句/FAQ/榜单备注/使用指南）",
+    "grade": "C",
+    "method": "自产内容，自担准确性"
+   }
+  ],
+  "pipelineImplication": "复刻数据层拆四条管线：①A级日更管线(Steam/eShop官方API+FX)驱动 T1/T2；②B级抓取管线(App Store/官网/礼品卡商家页)月更；③C级自建测速管线(东京探针)驱动 VPN 板块，未建成前该板块整体标待核验；④人工知识库(税费/PPP/编辑评分)带版本与来源标注"
+ },
+ "gaps": [
+  {
+   "type": "矛盾",
+   "item": "VPN 数量口径：/zh/vpn/ 与首页文案均称13款，但图例、data-series、图表仅12款，第13款全站未点名。复刻需拍板取12或13"
+  },
+  {
+   "type": "矛盾",
+   "item": "Steam 游戏总数：索引页18张卡、stardew详情页侧栏18项，但elden-ring详情页侦察记录称侧栏19款（实体清单仍只有18个slug）。大概率为18，需复核elden-ring页侧栏"
+  },
+  {
+   "type": "矛盾",
+   "item": "Steam 每游戏追踪区数：索引页gap行rank显示17/18/19不等，但两个已侦察详情页均为19国。各游戏区数是否真的不同需逐页确认"
+  },
+  {
+   "type": "矛盾",
+   "item": "税费排名口径不统一：哥伦比亚(eShop)标'结账另加19% IVA'却按税前价参与'最贵'排名；复刻需统一税前/税后排序规则"
+  },
+  {
+   "type": "矛盾",
+   "item": "数据更新节奏不一致：steam/eshop/vpn速度=每日重建，ai/streaming=月更(2026年6月)，giftcards=2026年4月，榜单free/secure=2026年6月、best/value/streaming=2026年4月——同站多套时效，复刻应统一或明示"
+  },
+  {
+   "type": "原站bug勿照抄",
+   "item": "税费列表头 tooltip 在 ai/streaming/eshop 页均残留『Steam 标价』字样；eShop热图 tablist aria-label 残留『订阅方案』——四垂类共用组件文案未参数化，复刻时必须参数化"
+  },
+  {
+   "type": "原站bug勿照抄",
+   "item": "VPN趋势图图例末3系列(Hotspot Shield/IPVanish/Windscribe)共用同一oklch颜色（调色板截断）；Top5表『上传』列缺单位；相对时间刷新脚本存在但无data-last-updated实际不生效"
+  },
+  {
+   "type": "原站缺陷",
+   "item": "i18n不完整：lb-best/value/streaming 标题副标题面包屑为英文、gift-cards 正文全英文、Romania/Seychelles/Service Closed 漏翻——复刻若做中文站应全量翻译"
+  },
+  {
+   "type": "原站缺陷",
+   "item": "T5通用榜表『免费计划』『服务器』两列15行全为不适用、『漏洞赏金』全N/A——共用组件空字段，复刻应按榜单条件隐藏空列"
+  },
+  {
+   "type": "结构性孤页",
+   "item": "leaderboard/best、value、streaming 三页无任何站内入口（侧栏只收free/secure，vpn页CTA也只有这两枚）；复刻需决定补入口或砍掉这三页"
+  },
+  {
+   "type": "侦察缺失",
+   "item": "未侦察页面：①AI产品详情页×17+流媒体详情×4（/zh/ai-pricing/{slug}/，T2是否含地图/PPP/FAQ未确认，AI垂类完整国家清单4-18区/产品也未枚举）；②礼品卡国家详情页×6；③apple-id-registration 指南页；④/ai-rankings/；⑤/terms/、/privacy/。蓝图对这些页的模板定义是推定，需补抓"
+  },
+  {
+   "type": "侦察缺失",
+   "item": "eShop 16游戏的 nsuid 映射未采集（官方核验管线前置）；streaming/ai 各产品的完整地区清单只在详情页（索引页gap行只透露总数）"
+  },
+  {
+   "type": "路径怪点",
+   "item": "流媒体详情页复用 /ai-pricing/ 命名空间而非 /streaming-pricing/{slug}/；/ai-rankings/ 无语言前缀——复刻时建议规整为一致的URL体系并做好重定向"
+  },
+  {
+   "type": "合规姿态需继承",
+   "item": "gift-cards 页 noindex,nofollow + 全站指向它的内链 rel=nofollow（灰色板块与SEO隔离）；商家外链无联盟参数；VPN榜单零厂商外链零价格。复刻若要变现需重新设计且保留同等免责"
+  },
+  {
+   "type": "资产风险",
+   "item": "游戏封面/OG图热链 Steam 与 Nintendo 官方CDN，有版权与防盗链风险，复刻应自备图源"
+  },
+  {
+   "type": "已下线痕迹",
+   "item": "首页HTML注释里有第4张『Claude Source Code』卡片（已移除），复刻不必做"
+  },
+  {
+   "type": "数据源异构",
+   "item": "同一垂类内数据源混用：X用官网价、其余AI用App Store价；Spotify/HBO Max用官网、Netflix/YouTube用App Store——实体数据模型需支持 per-product source 配置字段"
+  }
+ ]
+}

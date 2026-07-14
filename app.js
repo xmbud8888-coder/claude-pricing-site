@@ -15,10 +15,45 @@ const vBadge = (verifiedAt, source) => verifiedAt
   : `<span class="vb vb-wait" title="${source || ""}">待核验</span>`;
 
 const PRODUCT = document.body.dataset.product || "claude";
-let D = null;      // 全量数据
-let P = null;      // 当前产品
+const CATALOG = document.body.dataset.catalog || "ai";   // ai | steam | eshop
+let D = null;      // 全量数据（prices.json：regionsMeta/产品/账本）
+let G = null;      // 游戏目录数据（steam.json / eshop.json，仅游戏页加载）
+let P = null;      // 当前产品（游戏页由游戏数据归一化而来）
 let R = [];        // 合并了 meta + 当前产品价格的地区行
 let currentTier = null;
+
+// 目录文案参数化（蓝图教训：对手站组件文案没参数化，四个板块全串词）
+const CATALOG_COPY = {
+  ai:    { unit: "/mo", store: "全球 App Store 与 Google Play 各区", verb: "订阅", src: "官方商店页" },
+  steam: { unit: "",    store: " Steam 全球各计价区",       verb: "购买", src: "Steam 官方 storefront 接口" },
+  eshop: { unit: "",    store: "任天堂 eShop 各区商店",     verb: "购买", src: "任天堂官方价格接口" },
+};
+const CC = CATALOG_COPY[CATALOG];
+
+// 本币格式化（游戏目录数据只存数值+币种）
+const fmtLocal = (cur, v) => v == null ? "—" :
+  `${cur} ${v.toLocaleString("en-US", { minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2 })}`;
+
+// 游戏 → 伪产品：单档 std，复用全部渲染器
+function normalizeGame(slugData) {
+  const regions = {};
+  for (const [cc, r] of Object.entries(slugData.regions || {})) {
+    if (!r) { regions[cc] = {}; continue; }
+    const meta = D.regionsMeta.find(m => m.cc === cc);
+    // 购买力：本币价 / IMF PPPEX（美元计价区（如 Steam 的 ar/tr）无本币价，诚实跳过）
+    const ppp = meta?.pppex && r.cur !== "USD" ? +(r.price / meta.pppex).toFixed(2)
+              : meta?.pppex && cc === "us" ? r.price : null;
+    regions[cc] = {
+      std: r.usd, local: fmtLocal(r.cur, r.price), localAmount: r.price, cur: r.cur,
+      ...(r.discountUsd != null || r.discountPrice != null
+        ? { discountUsd: r.discountUsd ?? null, discountLocal: fmtLocal(r.cur, r.discountPrice) } : {}),
+      ...(ppp != null ? { ppp } : {}),
+    };
+  }
+  return { label: slugData.label, baseTier: "std",
+    tiers: [{ key: "std", label: CATALOG === "steam" ? "标准版" : "数字版" }],
+    regions };
+}
 
 const rowsWithBase = () => R.filter(r => r[P.baseTier] != null);
 
@@ -27,10 +62,15 @@ const rowsWithBase = () => R.filter(r => r[P.baseTier] != null);
 function renderProdNav() {
   const nav = $("prodNav");
   if (!nav) return;
-  nav.innerHTML = Object.entries(D.products).map(([key, p]) => {
-    const href = key === "claude" ? "index.html" : `${key}.html`;
-    return `<a class="prod-tab ${key === PRODUCT ? "active" : ""}" href="${href}">${p.label}</a>`;
-  }).join("");
+  if (CATALOG === "ai") {
+    nav.innerHTML = Object.entries(D.products).map(([key, p]) =>
+      `<a class="prod-tab ${key === PRODUCT ? "active" : ""}" href="${key}.html">${p.label}</a>`
+    ).join("");
+  } else {
+    nav.innerHTML = Object.entries(G.games).map(([key, g]) =>
+      `<a class="prod-tab ${key === PRODUCT ? "active" : ""}" href="${CATALOG}-${key}.html">${g.label}</a>`
+    ).join("");
+  }
 }
 
 /* ================= 产品头摘要 ================= */
@@ -41,7 +81,7 @@ function renderHero() {
   const year = D.updatedAt.slice(0, 4);
   if (rows.length < 2) {
     $("heroSummary").innerHTML =
-      `比较 ${P.label} 订阅在全球 App Store 与 Google Play 各区域的价格。各区价格由自动管线每日抓取官方商店页，核验完成后即在此展示最便宜/最贵地区结论。`;
+      `比较 ${P.label} 在${CC.store}的${CATALOG === "ai" ? "订阅价格" : "售价"}。各区价格由自动管线每日抓取${CC.src}，核验完成后即在此展示最便宜/最贵地区结论。`;
     if (tk === P.baseTier && $("faqCheapest"))
       $("faqCheapest").textContent = "各区价格核验完成后，此处显示最新结论（数据每日自动更新）。";
     return;
@@ -50,14 +90,14 @@ function renderHero() {
   const lo = rows[0], hi = rows[rows.length - 1];
   const diff = Math.round((hi[tk] - lo[tk]) / lo[tk] * 100);
   $("heroSummary").innerHTML =
-    `比较 ${P.label} 订阅在全球 App Store 与 Google Play 各区域的价格。` +
-    `<strong>${lo.name}（${fmtUSD(lo[tk])}/mo）</strong>是 ${year} 年 ${P.label} ${base} 最便宜的地区。` +
-    `相比最贵的<strong>${hi.name}（${fmtUSD(hi[tk])}/mo）</strong>，价格相差 <strong>${diff}%</strong>。`;
+    `比较 ${P.label} 在${CC.store}的${CATALOG === "ai" ? "订阅价格" : "售价"}。` +
+    `<strong>${lo.name}（${fmtUSD(lo[tk])}${CC.unit}）</strong>是 ${year} 年 ${P.label} ${base} 最便宜的地区。` +
+    `相比最贵的<strong>${hi.name}（${fmtUSD(hi[tk])}${CC.unit}）</strong>，价格相差 <strong>${diff}%</strong>。`;
   const bRows = rowsWithBase().sort((a, b) => a[P.baseTier] - b[P.baseTier]);
   const bLabel = P.tiers.find(t => t.key === P.baseTier)?.label || "";
   if ($("faqCheapest") && bRows.length >= 2) $("faqCheapest").textContent =
-    `按最新核验数据，${bRows[0].name}（${fmtUSD(bRows[0][P.baseTier])}/mo）是 App Store 各区中 ${P.label} ${bLabel} 月价最低的地区，其次是` +
-    `${bRows[1].name}（${fmtUSD(bRows[1][P.baseTier])}/mo）。数据每日自动核验更新。`;
+    `按最新核验数据，${bRows[0].name}（${fmtUSD(bRows[0][P.baseTier])}${CC.unit}）是${CC.store}中 ${P.label} ${bLabel} ${CATALOG === "ai" ? "月价" : "售价"}最低的地区，其次是` +
+    `${bRows[1].name}（${fmtUSD(bRows[1][P.baseTier])}${CC.unit}）。数据每日自动核验更新。`;
 }
 
 /* ================= 档位切换（动态生成） ================= */
@@ -486,6 +526,7 @@ function renderRegionTable() {
 /* ================= Google Play 表 ================= */
 
 function renderPlayTable() {
+  if (!$("playTableBody")) return;
   $("playTableBody").innerHTML = R.map((r, i) => `
     <tr>
       <td class="num">${i + 1}</td>
@@ -566,6 +607,7 @@ function initShare() {
 /* ================= 换区指南地址链接 ================= */
 
 function renderAddrChips() {
+  if (!$("addrChips")) return;
   $("addrChips").innerHTML = R.filter(r => r.addr).map(r =>
     `<a class="chip" href="https://www.randaddress.com/zh/genaddress/${r.addr}-address/" target="_blank" rel="nofollow noopener">${r.flag} ${r.name}</a>`
   ).join("");
@@ -574,6 +616,20 @@ function renderAddrChips() {
 /* ================= 数据来源账本（按产品过滤 + 共享项） ================= */
 
 function renderProvenance() {
+  if (CATALOG !== "ai") {
+    $("provTableBody").innerHTML = `
+    <tr>
+      <td class="plan-name">${P.label} 各区价格</td>
+      <td><span class="vb vb-ok">已核验 ${G.updatedAt}</span></td>
+      <td>${G.source || ""}</td>
+    </tr>
+    <tr>
+      <td class="plan-name">购买力（PPP）</td>
+      <td><span class="vb vb-ok">已核验</span></td>
+      <td><a href="https://www.imf.org/external/datamapper/PPPEX" target="_blank" rel="noopener">IMF DataMapper（PPPEX）↗</a></td>
+    </tr>`;
+    return;
+  }
   const rows = (D.provenance || []).filter(p => !p.products || p.products.includes(PRODUCT));
   $("provTableBody").innerHTML = rows.map(p => `
     <tr>
@@ -597,10 +653,30 @@ async function boot() {
       `<div class="wrap" style="padding:24px"><div class="callout">⚠️ 价格数据加载失败（${e.message}）。请通过 http 服务访问本站（而非直接打开文件），或检查 data/prices.json。</div></div>`);
     return;
   }
-  P = D.products[PRODUCT];
-  R = D.regionsMeta.map(m => ({ ...m, ...(P.regions[m.cc] || {}) }));
+  if (CATALOG === "ai") {
+    P = D.products[PRODUCT];
+    R = D.regionsMeta.map(m => ({ ...m, ...(P.regions[m.cc] || {}) }));
+  } else {
+    try {
+      const res2 = await fetch(`data/${CATALOG}.json`, { cache: "no-cache" });
+      if (!res2.ok) throw new Error("HTTP " + res2.status);
+      G = await res2.json();
+    } catch (e) {
+      document.querySelector("main").insertAdjacentHTML("afterbegin",
+        `<div class="wrap" style="padding:24px"><div class="callout">⚠️ 目录数据加载失败（${e.message}）。</div></div>`);
+      return;
+    }
+    P = normalizeGame(G.games[PRODUCT]);
+    // 游戏页地区行只保留该目录覆盖的区（保序：regionsMeta 顺序）
+    R = D.regionsMeta.filter(m => PRODUCT in G.games ? (G.games[PRODUCT].regions || {})[m.cc] !== undefined : false)
+                     .map(m => ({ ...m, ...(P.regions[m.cc] || {}) }));
+    const play = document.getElementById("play");
+    if (play) play.remove();   // 游戏无 Google Play 数据
+  }
+  if (P.tiers.length < 2) { const seg = $("tierSeg"); if (seg) seg.style.display = "none"; }
 
-  document.querySelectorAll(".data-date").forEach(el => { el.textContent = D.updatedAt; });
+  const dataDate = CATALOG === "ai" ? D.updatedAt : (G.updatedAt || D.updatedAt);
+  document.querySelectorAll(".data-date").forEach(el => { el.textContent = dataDate; });
   renderProdNav();
   renderHero();
   renderTierTabs();

@@ -1,0 +1,1906 @@
+{
+ "updatedAt": "2026-07-13",
+ "policy": "所有数字必须核验自任天堂官方价格接口才展示；拿不到的 国家×游戏 为 null（站上显示待核验），绝不估算",
+ "source": {
+  "prices": "api.ec.nintendo.com/v1/price（任天堂官方 eShop 价格接口，逐国批量直抓，主字段为 regular_price 常规价）",
+  "nsuidDiscovery": {
+   "us": "Nintendo 官网公开 Algolia 索引 store_game_en_us（名称正则防伪校验）",
+   "eu": "searching.nintendo-europe.com 公开 Solr（fq=type:GAME，名称正则防伪校验）",
+   "jp": "search.nintendo.jp/nintendo_soft/search.json（名称正则防伪校验）",
+   "hk": "暂无公开可核验来源（官方列表 JSON 止于 2022-06，新商店为排队页+JS 壳）→ null",
+   "kr": "暂无公开可核验来源 → null"
+  },
+  "fx": "open.er-api.com 公开汇率（USD 基准）"
+ },
+ "countries": [
+  "us",
+  "ca",
+  "mx",
+  "br",
+  "ar",
+  "cl",
+  "co",
+  "pe",
+  "gb",
+  "de",
+  "fr",
+  "es",
+  "it",
+  "nl",
+  "pl",
+  "no",
+  "ch",
+  "za",
+  "au",
+  "nz",
+  "jp",
+  "hk",
+  "kr"
+ ],
+ "games": {
+  "animal-crossing-new-horizons": {
+   "label": "集合啦！动物森友会",
+   "nsuid": {
+    "us": "70010000027619",
+    "eu": "70010000027620",
+    "jp": "70010000027618",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 59.99,
+     "usd": 59.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 84.99,
+     "usd": 60
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1229,
+     "usd": 70.17
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 329.9,
+     "usd": 64.54
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 84999,
+     "usd": 57.01
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 61990,
+     "usd": 66.95
+    },
+    "co": {
+     "cur": "COP",
+     "price": 279900,
+     "usd": 85.43
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 239,
+     "usd": 70.4
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 49.99,
+     "usd": 66.92
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 249.8,
+     "usd": 65.7
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 659,
+     "usd": 67.39
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 59.9,
+     "usd": 74.02
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1129,
+     "usd": 69.04
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 79.95,
+     "usd": 55.48
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 89.95,
+     "usd": 51.79
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 6578,
+     "usd": 40.64
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "final-fantasy-vii-rebirth": {
+   "label": "最终幻想 VII 重生",
+   "nsuid": {
+    "us": "70010000112477",
+    "eu": "70010000112478",
+    "jp": "70010000112479",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 49.99,
+     "usd": 49.99,
+     "discountPrice": 29.99,
+     "discountUsd": 29.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 66.99,
+     "usd": 47.29,
+     "discountPrice": 40.19,
+     "discountUsd": 28.37
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 800,
+     "usd": 45.68,
+     "discountPrice": 480,
+     "discountUsd": 27.41
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 284.9,
+     "usd": 55.74,
+     "discountPrice": 170.94,
+     "discountUsd": 33.44
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 72499,
+     "usd": 48.63,
+     "discountPrice": 43499.4,
+     "discountUsd": 29.18
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 45799,
+     "usd": 49.46,
+     "discountPrice": 27479,
+     "discountUsd": 29.68
+    },
+    "co": {
+     "cur": "COP",
+     "price": 191000,
+     "usd": 58.3,
+     "discountPrice": 114600,
+     "discountUsd": 34.98
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 170,
+     "usd": 50.08,
+     "discountPrice": 102,
+     "discountUsd": 30.05
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 49.99,
+     "usd": 66.92,
+     "discountPrice": 29.99,
+     "discountUsd": 40.15
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42,
+     "discountPrice": 35.99,
+     "discountUsd": 41.05
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42,
+     "discountPrice": 35.99,
+     "discountUsd": 41.05
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42,
+     "discountPrice": 35.99,
+     "discountUsd": 41.05
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42,
+     "discountPrice": 35.99,
+     "discountUsd": 41.05
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42,
+     "discountPrice": 35.99,
+     "discountUsd": 41.05
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 259,
+     "usd": 68.12,
+     "discountPrice": 155.4,
+     "discountUsd": 40.87
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 649,
+     "usd": 66.37,
+     "discountPrice": 389,
+     "discountUsd": 39.78
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 59.9,
+     "usd": 74.02,
+     "discountPrice": 35.94,
+     "discountUsd": 44.41
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1149,
+     "usd": 70.26,
+     "discountPrice": 689.4,
+     "discountUsd": 42.16
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 84.95,
+     "usd": 58.95,
+     "discountPrice": 50.97,
+     "discountUsd": 35.37
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 104.95,
+     "usd": 60.43,
+     "discountPrice": 62.97,
+     "discountUsd": 36.26
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 6578,
+     "usd": 40.64
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "kirby-and-the-forgotten-land": {
+   "label": "星之卡比 探索发现",
+   "nsuid": {
+    "us": "70010000046405",
+    "eu": "70010000046406",
+    "jp": "70010000046404",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 59.99,
+     "usd": 59.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 84.99,
+     "usd": 60
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1229,
+     "usd": 70.17
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 329.9,
+     "usd": 64.54
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 84999,
+     "usd": 57.01
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 61990,
+     "usd": 66.95
+    },
+    "co": {
+     "cur": "COP",
+     "price": 279900,
+     "usd": 85.43
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 239,
+     "usd": 70.4
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 49.99,
+     "usd": 66.92
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 249.8,
+     "usd": 65.7
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 659,
+     "usd": 67.39
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 59.9,
+     "usd": 74.02
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1129,
+     "usd": 69.04
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 79.95,
+     "usd": 55.48
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 89.95,
+     "usd": 51.79
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 6500,
+     "usd": 40.15
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "mario-kart-8-deluxe": {
+   "label": "马力欧卡丁车 8 豪华版",
+   "nsuid": {
+    "us": "70010000000153",
+    "eu": "70010000000126",
+    "jp": "70010000000186",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 59.99,
+     "usd": 59.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 84.99,
+     "usd": 60
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1229,
+     "usd": 70.17
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 329.9,
+     "usd": 64.54
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 84999,
+     "usd": 57.01
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 61990,
+     "usd": 66.95
+    },
+    "co": {
+     "cur": "COP",
+     "price": 279900,
+     "usd": 85.43
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 239,
+     "usd": 70.4
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 49.99,
+     "usd": 66.92
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 249.8,
+     "usd": 65.7
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 659,
+     "usd": 67.39
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 59.9,
+     "usd": 74.02
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1129,
+     "usd": 69.04
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 79.95,
+     "usd": 55.48
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 89.95,
+     "usd": 51.79
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 6578,
+     "usd": 40.64
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "monster-hunter-rise": {
+   "label": "怪物猎人 崛起",
+   "nsuid": {
+    "us": "70010000029016",
+    "eu": "70010000029015",
+    "jp": "70010000029014",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 39.99,
+     "usd": 39.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 49.99,
+     "usd": 35.29
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 805,
+     "usd": 45.96
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 184,
+     "usd": 36
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 11767,
+     "usd": 7.89
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 36355,
+     "usd": 39.26
+    },
+    "co": {
+     "cur": "COP",
+     "price": 173870,
+     "usd": 53.07
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 154,
+     "usd": 45.36
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 34.99,
+     "usd": 46.84
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 39.99,
+     "usd": 45.61
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 39.99,
+     "usd": 45.61
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 39.99,
+     "usd": 45.61
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 39.99,
+     "usd": 45.61
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 39.99,
+     "usd": 45.61
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 169.8,
+     "usd": 44.66
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 399,
+     "usd": 40.8
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 51.9,
+     "usd": 64.13
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 729,
+     "usd": 44.58
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 59.95,
+     "usd": 41.6
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 69.95,
+     "usd": 40.27
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 3990,
+     "usd": 24.65
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "nintendo-switch-online": {
+   "label": "Nintendo Switch Online 会员",
+   "nsuid": {
+    "us": null,
+    "eu": null,
+    "jp": null,
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": null,
+    "ca": null,
+    "mx": null,
+    "br": null,
+    "ar": null,
+    "cl": null,
+    "co": null,
+    "pe": null,
+    "gb": null,
+    "de": null,
+    "fr": null,
+    "es": null,
+    "it": null,
+    "nl": null,
+    "pl": null,
+    "no": null,
+    "ch": null,
+    "za": null,
+    "au": null,
+    "nz": null,
+    "jp": null,
+    "hk": null,
+    "kr": null
+   },
+   "note": "订阅制会员，无 GAME 类目录条目可发现 NSUID，价格接口无法核验 → 全部 null（待核验）"
+  },
+  "pokemon-legends-z-a": {
+   "label": "宝可梦传说 Z-A",
+   "nsuid": {
+    "us": "70010000094234",
+    "eu": "70010000094235",
+    "jp": "70010000094233",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 59.99,
+     "usd": 59.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 84.99,
+     "usd": 60
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1229,
+     "usd": 70.17
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 329.9,
+     "usd": 64.54
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 84999,
+     "usd": 57.01
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 61990,
+     "usd": 66.95
+    },
+    "co": {
+     "cur": "COP",
+     "price": 279900,
+     "usd": 85.43
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 239,
+     "usd": 70.4
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 49.99,
+     "usd": 66.92
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 249.8,
+     "usd": 65.7
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 659,
+     "usd": 67.39
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 59.9,
+     "usd": 74.02
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1129,
+     "usd": 69.04
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 89.95,
+     "usd": 62.42
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 99.95,
+     "usd": 57.55
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 7100,
+     "usd": 43.86
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "pokemon-scarlet": {
+   "label": "宝可梦 朱",
+   "nsuid": {
+    "us": "70010000053966",
+    "eu": "70010000053967",
+    "jp": "70010000053965",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 59.99,
+     "usd": 59.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 84.99,
+     "usd": 60
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1229,
+     "usd": 70.17
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 329.9,
+     "usd": 64.54
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 84999,
+     "usd": 57.01
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 61990,
+     "usd": 66.95
+    },
+    "co": {
+     "cur": "COP",
+     "price": 279900,
+     "usd": 85.43
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 239,
+     "usd": 70.4
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 49.99,
+     "usd": 66.92
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 249.8,
+     "usd": 65.7
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 659,
+     "usd": 67.39
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 59.9,
+     "usd": 74.02
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1129,
+     "usd": 69.04
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 79.95,
+     "usd": 55.48
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 89.95,
+     "usd": 51.79
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 6500,
+     "usd": 40.15
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "pokemon-violet": {
+   "label": "宝可梦 紫",
+   "nsuid": {
+    "us": "70010000053971",
+    "eu": "70010000053972",
+    "jp": "70010000053970",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 59.99,
+     "usd": 59.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 84.99,
+     "usd": 60
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1229,
+     "usd": 70.17
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 329.9,
+     "usd": 64.54
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 84999,
+     "usd": 57.01
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 61990,
+     "usd": 66.95
+    },
+    "co": {
+     "cur": "COP",
+     "price": 279900,
+     "usd": 85.43
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 239,
+     "usd": 70.4
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 49.99,
+     "usd": 66.92
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 249.8,
+     "usd": 65.7
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 659,
+     "usd": 67.39
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 59.9,
+     "usd": 74.02
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1129,
+     "usd": 69.04
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 79.95,
+     "usd": 55.48
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 89.95,
+     "usd": 51.79
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 6500,
+     "usd": 40.15
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "splatoon-3": {
+   "label": "斯普拉遁 3",
+   "nsuid": {
+    "us": "70010000046395",
+    "eu": "70010000046396",
+    "jp": "70010000046394",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 59.99,
+     "usd": 59.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 84.99,
+     "usd": 60
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1229,
+     "usd": 70.17
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 329.9,
+     "usd": 64.54
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 84999,
+     "usd": 57.01
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 61990,
+     "usd": 66.95
+    },
+    "co": {
+     "cur": "COP",
+     "price": 279900,
+     "usd": 85.43
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 239,
+     "usd": 70.4
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 49.99,
+     "usd": 66.92
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 249.8,
+     "usd": 65.7
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 659,
+     "usd": 67.39
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 59.9,
+     "usd": 74.02
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1129,
+     "usd": 69.04
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 79.95,
+     "usd": 55.48
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 89.95,
+     "usd": 51.79
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 6500,
+     "usd": 40.15
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "super-mario-galaxy-plus-super-mario-galaxy-2": {
+   "label": "超级马力欧银河 1+2",
+   "nsuid": {
+    "us": "70070000030770",
+    "eu": "70070000030726",
+    "jp": "70070000029947",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 69.99,
+     "usd": 69.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 99.99,
+     "usd": 70.59
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1449,
+     "usd": 82.73
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 389.9,
+     "usd": 76.28
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 99199,
+     "usd": 66.54
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 71990,
+     "usd": 77.74
+    },
+    "co": {
+     "cur": "COP",
+     "price": 324900,
+     "usd": 99.16
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 279,
+     "usd": 82.18
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 58.99,
+     "usd": 78.97
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 297.8,
+     "usd": 78.32
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 829,
+     "usd": 84.78
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 69.9,
+     "usd": 86.37
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1469,
+     "usd": 89.83
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 89.95,
+     "usd": 62.42
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 99.95,
+     "usd": 57.55
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 7980,
+     "usd": 49.3
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "super-mario-odyssey": {
+   "label": "超级马力欧 奥德赛",
+   "nsuid": {
+    "us": "70010000001130",
+    "eu": "70010000000127",
+    "jp": "70010000000828",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 59.99,
+     "usd": 59.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 84.99,
+     "usd": 60
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1229,
+     "usd": 70.17
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 329.9,
+     "usd": 64.54
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 84999,
+     "usd": 57.01
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 61990,
+     "usd": 66.95
+    },
+    "co": {
+     "cur": "COP",
+     "price": 279900,
+     "usd": 85.43
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 239,
+     "usd": 70.4
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 49.99,
+     "usd": 66.92
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 249.8,
+     "usd": 65.7
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 659,
+     "usd": 67.39
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 59.9,
+     "usd": 74.02
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1129,
+     "usd": 69.04
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 79.95,
+     "usd": 55.48
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 89.95,
+     "usd": 51.79
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 6578,
+     "usd": 40.64
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "super-mario-party-jamboree": {
+   "label": "超级马力欧派对 空前盛会",
+   "nsuid": {
+    "us": "70010000084608",
+    "eu": "70010000084609",
+    "jp": "70010000084607",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 59.99,
+     "usd": 59.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 84.99,
+     "usd": 60
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1229,
+     "usd": 70.17
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 329.9,
+     "usd": 64.54
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 84999,
+     "usd": 57.01
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 61990,
+     "usd": 66.95
+    },
+    "co": {
+     "cur": "COP",
+     "price": 279900,
+     "usd": 85.43
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 239,
+     "usd": 70.4
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 49.99,
+     "usd": 66.92
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 249.8,
+     "usd": 65.7
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 659,
+     "usd": 67.39
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 59.9,
+     "usd": 74.02
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1129,
+     "usd": 69.04
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 79.95,
+     "usd": 55.48
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 89.95,
+     "usd": 51.79
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 7100,
+     "usd": 43.86
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "super-smash-bros-ultimate": {
+   "label": "任天堂明星大乱斗 特别版",
+   "nsuid": {
+    "us": "70010000012332",
+    "eu": "70010000012331",
+    "jp": "70010000012085",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 59.99,
+     "usd": 59.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 84.99,
+     "usd": 60
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1229,
+     "usd": 70.17
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 329.9,
+     "usd": 64.54
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 84999,
+     "usd": 57.01
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 61990,
+     "usd": 66.95
+    },
+    "co": {
+     "cur": "COP",
+     "price": 279900,
+     "usd": 85.43
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 239,
+     "usd": 70.4
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 59.99,
+     "usd": 80.31
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 289.8,
+     "usd": 76.22
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 769,
+     "usd": 78.64
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 69.9,
+     "usd": 86.37
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1329,
+     "usd": 81.27
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 89.95,
+     "usd": 62.42
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 99.95,
+     "usd": 57.55
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 7920,
+     "usd": 48.93
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "xenoblade-chronicles-3": {
+   "label": "异度神剑 3",
+   "nsuid": {
+    "us": "70010000053336",
+    "eu": "70010000053337",
+    "jp": "70010000053335",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 59.99,
+     "usd": 59.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 84.99,
+     "usd": 60
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1229,
+     "usd": 70.17
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 329.9,
+     "usd": 64.54
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 84999,
+     "usd": 57.01
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 61990,
+     "usd": 66.95
+    },
+    "co": {
+     "cur": "COP",
+     "price": 279900,
+     "usd": 85.43
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 239,
+     "usd": 70.4
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 49.99,
+     "usd": 66.92
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 59.99,
+     "usd": 68.42
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 249.8,
+     "usd": 65.7
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 659,
+     "usd": 67.39
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 59.9,
+     "usd": 74.02
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1129,
+     "usd": 69.04
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 79.95,
+     "usd": 55.48
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 89.95,
+     "usd": 51.79
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 8700,
+     "usd": 53.74
+    },
+    "hk": null,
+    "kr": null
+   }
+  },
+  "zelda-tears-of-the-kingdom": {
+   "label": "塞尔达传说 王国之泪",
+   "nsuid": {
+    "us": "70010000063714",
+    "eu": "70010000063715",
+    "jp": "70010000063713",
+    "hk": null,
+    "kr": null
+   },
+   "regions": {
+    "us": {
+     "cur": "USD",
+     "price": 69.99,
+     "usd": 69.99
+    },
+    "ca": {
+     "cur": "CAD",
+     "price": 99.99,
+     "usd": 70.59
+    },
+    "mx": {
+     "cur": "MXN",
+     "price": 1449,
+     "usd": 82.73
+    },
+    "br": {
+     "cur": "BRL",
+     "price": 389.9,
+     "usd": 76.28
+    },
+    "ar": {
+     "cur": "ARS",
+     "price": 99199,
+     "usd": 66.54
+    },
+    "cl": {
+     "cur": "CLP",
+     "price": 71990,
+     "usd": 77.74
+    },
+    "co": {
+     "cur": "COP",
+     "price": 324900,
+     "usd": 99.16
+    },
+    "pe": {
+     "cur": "PEN",
+     "price": 279,
+     "usd": 82.18
+    },
+    "gb": {
+     "cur": "GBP",
+     "price": 59.99,
+     "usd": 80.31
+    },
+    "de": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "fr": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "es": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "it": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "nl": {
+     "cur": "EUR",
+     "price": 69.99,
+     "usd": 79.83
+    },
+    "pl": {
+     "cur": "PLN",
+     "price": 289.8,
+     "usd": 76.22
+    },
+    "no": {
+     "cur": "NOK",
+     "price": 769,
+     "usd": 78.64
+    },
+    "ch": {
+     "cur": "CHF",
+     "price": 69.9,
+     "usd": 86.37
+    },
+    "za": {
+     "cur": "ZAR",
+     "price": 1329,
+     "usd": 81.27
+    },
+    "au": {
+     "cur": "AUD",
+     "price": 89.95,
+     "usd": 62.42
+    },
+    "nz": {
+     "cur": "NZD",
+     "price": 99.95,
+     "usd": 57.55
+    },
+    "jp": {
+     "cur": "JPY",
+     "price": 7900,
+     "usd": 48.8
+    },
+    "hk": null,
+    "kr": null
+   }
+  }
+ },
+ "warnings": [
+  "nintendo-switch-online: 订阅制会员，无 GAME 类目录条目可发现 NSUID，价格接口无法核验 → 全部 null（待核验）"
+ ]
+}
