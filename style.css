@@ -616,3 +616,4 @@ b, strong { font-weight: 650; }
 .lb-pc { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px; }
 .lb-pc ul { margin: 6px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.7; color: var(--ink-2); }
 @media (max-width: 640px) { .lb-pc { grid-template-columns: 1fr; } }
+.art-p { font-size: 15px; line-height: 1.85; color: var(--ink-2); margin: 0 0 14px; }

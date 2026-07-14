@@ -93,7 +93,7 @@ async function buildGiftCards() {
 }
 
 /* ================= 换区指南（T8） ================= */
-async function buildGuide() {
+async function buildGuide(articles = []) {
   const d = await readJSON("data/content/guide-apple-id.json");
   let body;
   if (!d) body = `<section class="index-hero"><div class="wrap"><h1>Apple ID 换区注册完整指南</h1></div></section>` + pendingBlock("指南内容");
@@ -126,6 +126,7 @@ async function buildGuide() {
     <p class="fine" style="margin:10px 0 12px">${d.addressTools.note}</p>
     <div class="chips">${chips}</div>
   </div>
+  ${articles.length ? `<div class="panel" style="margin-bottom:18px"><h2 class="panel-h">相关攻略</h2><div class="chips" style="margin-top:10px">${articles.map(([slug, label]) => `<a class="chip" href="${slug}.html">${label}</a>`).join("")}</div></div>` : ""}
   <h2 style="margin-top:32px">常见问题</h2>
   <div class="faq-list">${faq}</div>
   <p class="fine" style="margin-top:20px">${d.disclaimer}</p>
@@ -275,8 +276,51 @@ async function buildCountryPages() {
   }
 }
 
+/* ================= 攻略长尾页 ×3（内容 JSON 到货才生成，不留死链） ================= */
+const ARTICLES = [
+  ["article-claude-guest-pass", "claude-guest-pass", "claude", "Claude 免费试用现状"],
+  ["article-gemini-student-discount", "gemini-student-discount", "gemini", "Gemini 学生优惠"],
+  ["article-grok-discount-guide", "grok-discount-guide", "grok", "Grok 省钱指南"],
+];
+
+async function buildArticles() {
+  const built = [];
+  for (const [src, slug, productKey, shortLabel] of ARTICLES) {
+    const d = await readJSON(`data/content/${src}.json`);
+    if (!d) continue;
+    const p = prices.products[productKey];
+    const sections = d.sections.map(sec => `
+      <h2 style="margin-top:34px">${sec.h2}</h2>
+      ${(sec.paras || []).map(t => `<p class="art-p">${t}</p>`).join("")}
+      ${sec.steps ? `<div class="howto-grid" style="margin-top:14px">${sec.steps.map((st, i) =>
+        `<div class="step-card"><div class="step-num">${i + 1}</div><h3>${st.title}</h3><p>${st.detail}</p></div>`).join("")}</div>` : ""}
+      ${sec.callout ? `<div class="callout" style="margin-top:14px">💡 ${sec.callout}</div>` : ""}`).join("\n");
+    const faq = (d.faq || []).map((f, i) => `<details${i === 0 ? " open" : ""}><summary>${f.q}</summary><p>${f.a}</p></details>`).join("\n");
+    const body = `
+<section class="index-hero"><div class="wrap">
+  <h1>${d.title}</h1>
+  <p class="section-sub">${d.intro}</p>
+</div></section>
+<section class="section" style="padding-top:8px"><div class="wrap" style="max-width:820px">
+  ${sections}
+  ${faq ? `<h2 style="margin-top:34px">常见问题</h2><div class="faq-list">${faq}</div>` : ""}
+  <p class="fine" style="margin-top:22px">${d.verifiedNote || ""}</p>
+  <p class="fine">${d.disclaimer || ""}</p>
+  <p style="margin-top:16px"><a href="${productKey}.html">← 查看 ${p.label} 全球价格对比</a> · <a href="apple-id-registration.html">Apple ID 换区指南</a></p>
+</div></section>`;
+    await writeFile(path.join(ROOT, `${slug}.html`), shell({
+      title: `${d.title} | AI 定价站`,
+      desc: d.intro.slice(0, 110),
+      body, crumbs: [{ label: "首页", href: "index.html" }, { label: "AI 区域定价", href: "ai.html" }, { label: shortLabel }],
+    }));
+    built.push([slug, shortLabel]);
+  }
+  return built;
+}
+
+const builtArticles = await buildArticles();
 await buildGiftCards();
-await buildGuide();
+await buildGuide(builtArticles);
 await buildVPN();
 await buildCountryPages();
-console.log("extra pages built");
+console.log("extra pages built" + (builtArticles.length ? ` (+${builtArticles.length} articles)` : ""));
