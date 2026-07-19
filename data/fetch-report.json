@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-07-18T05:36:45.457Z",
+  "ranAt": "2026-07-19T06:08:16.322Z",
   "apple": {
     "claude": {
       "us": {
@@ -1249,7 +1249,7 @@
           "₹ 1,950",
           "₹ 59",
           "₹ 149",
-          "₹ 749",
+          "₹ 4,000",
           "₹ 999"
         ]
       },
@@ -1300,8 +1300,8 @@
         "probe": [
           "R$ 24,99",
           "R$ 96,90",
-          "R$ 49,99",
           "R$ 9,99",
+          "R$ 49,99",
           "US$ 1,99"
         ]
       },
@@ -1402,11 +1402,11 @@
             "price": "USD 20.00"
           },
           {
-            "name": "Perplexity Max",
+            "name": "Perplexity Pro",
             "price": "USD 200.00"
           },
           {
-            "name": "Perplexity Pro",
+            "name": "Perplexity Max",
             "price": "USD 200.00"
           }
         ]
@@ -2288,8 +2288,8 @@
         "iaps": [],
         "probe": [
           "¥1,500",
-          "¥150",
           "¥15,000",
+          "¥150",
           "¥500",
           "¥800",
           "¥8,000",
@@ -2326,8 +2326,8 @@
         "iaps": [],
         "probe": [
           "₱ 499.00",
-          "₱ 49.00",
           "₱ 4,990.00",
+          "₱ 49.00",
           "₱ 199.00",
           "₱ 299.00",
           "₱ 599.00",
@@ -2367,8 +2367,8 @@
         "probe": [
           "₦ 4,900.00",
           "₦ 1,500.00",
-          "₦ 7,900.00",
           "₦ 149,900.00",
+          "₦ 7,900.00",
           "₦ 79,900.00",
           "₦ 39,900.00",
           "₦ 14,900.00"
@@ -2973,6 +2973,10 @@
           {
             "name": "Standard Membership - one week",
             "price": "₱ 99.00"
+          },
+          {
+            "name": "Standard Membership-one week",
+            "price": "₱ 49.00"
           }
         ]
       },
@@ -3206,10 +3210,10 @@
           "₱ 2,490.00",
           "₱ 5,990.00",
           "₱ 9,990.00",
+          "₱ 22,990.00",
           "¥59",
           "¥109",
-          "¥399",
-          "¥19"
+          "¥399"
         ]
       },
       "in": {
@@ -3232,10 +3236,10 @@
         "probe": [
           "₺799,99",
           "₺1.799,99",
-          "₺8.999,99",
           "₺4.999,99",
-          "₺19.999,99",
+          "₺8.999,99",
           "₺9.999,99",
+          "₺19.999,99",
           "₺49,99",
           "₺39,99"
         ]
@@ -3315,8 +3319,8 @@
           "R$ 119,90",
           "R$ 249,90",
           "R$ 599,90",
-          "R$ 1.299,90",
           "R$ 1.199,90",
+          "R$ 1.299,90",
           "R$ 2.499,90",
           "¥59",
           "¥109"
@@ -3992,31 +3996,39 @@
         "iaps": [
           {
             "name": "Manus Pro",
-            "price": "$10,000.00"
+            "price": "$39.99"
           },
           {
             "name": "Manus Pro",
-            "price": "$7,499.99"
+            "price": "$40.00"
+          },
+          {
+            "name": "Manus Basic - Monthly",
+            "price": "$19.00"
+          },
+          {
+            "name": "Manus Plus - Monthly",
+            "price": "$39.00"
           },
           {
             "name": "Manus Pro",
-            "price": "$4,999.99"
+            "price": "$60.00"
           },
           {
             "name": "Manus Pro",
-            "price": "$2,999.99"
+            "price": "$20.00"
           },
           {
             "name": "Manus Pro",
-            "price": "$1,999.99"
+            "price": "$80.00"
           },
           {
             "name": "Manus Pro",
-            "price": "$3,999.99"
+            "price": "$100.00"
           },
           {
             "name": "Manus Pro",
-            "price": "$1,499.99"
+            "price": "$200.00"
           }
         ]
       },
@@ -4062,27 +4074,31 @@
         "iaps": [
           {
             "name": "Manus Pro",
-            "price": "Rs 4,900.00"
+            "price": "Rs 2,699,900.00"
           },
           {
             "name": "Manus Pro",
-            "price": "Rs 9,900.00"
-          },
-          {
-            "name": "Manus Basic - Monthly",
-            "price": "Rs 4,900.00"
-          },
-          {
-            "name": "Manus Plus - Monthly",
-            "price": "Rs 9,900.00"
+            "price": "Rs 1,999,900.00"
           },
           {
             "name": "Manus Pro",
-            "price": "Rs 14,900.00"
+            "price": "Rs 1,299,900.00"
           },
           {
             "name": "Manus Pro",
-            "price": "Rs 24,900.00"
+            "price": "Rs 799,900.00"
+          },
+          {
+            "name": "Manus Pro",
+            "price": "Rs 499,900.00"
+          },
+          {
+            "name": "Manus Pro",
+            "price": "Rs 1,099,900.00"
+          },
+          {
+            "name": "Manus Pro",
+            "price": "Rs 399,900.00"
           }
         ]
       },
@@ -4143,20 +4159,20 @@
             "price": "USD 40.00"
           },
           {
-            "name": "Manus Pro",
-            "price": "USD 20.00"
-          },
-          {
             "name": "Manus Plus - Monthly",
             "price": "USD 39.00"
           },
           {
             "name": "Manus Pro",
-            "price": "USD 60.00"
+            "price": "USD 20.00"
           },
           {
             "name": "Manus Pro",
             "price": "USD 80.00"
+          },
+          {
+            "name": "Manus Pro",
+            "price": "USD 60.00"
           },
           {
             "name": "Manus Pro",
@@ -4193,15 +4209,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "EGP 9,999.99"
-          },
-          {
-            "name": "Manus Pro",
-            "price": "EGP 4,999.99"
-          },
-          {
-            "name": "Manus Pro",
             "price": "EGP 3,999.99"
+          },
+          {
+            "name": "Manus Pro",
+            "price": "EGP 9,999.99"
           }
         ]
       },
@@ -4270,12 +4282,12 @@
             "price": "₱ 5,990.00"
           },
           {
-            "name": "Manus Basic - Monthly",
-            "price": "₱ 1,190.00"
-          },
-          {
             "name": "Manus Pro",
             "price": "₱ 12,990.00"
+          },
+          {
+            "name": "Manus Basic - Monthly",
+            "price": "₱ 1,190.00"
           },
           {
             "name": "Manus Plus - Monthly",
@@ -4349,7 +4361,7 @@
           },
           {
             "name": "Manus Pro",
-            "price": "₺3.999,99"
+            "price": "₺9.999,99"
           }
         ]
       },
@@ -4370,15 +4382,15 @@
           },
           {
             "name": "Manus Pro",
+            "price": "₦ 149,900.00"
+          },
+          {
+            "name": "Manus Pro",
             "price": "₦ 99,900.00"
           },
           {
             "name": "Manus Plus - Monthly",
             "price": "₦ 59,900.00"
-          },
-          {
-            "name": "Manus Pro",
-            "price": "₦ 299,900.00"
           }
         ]
       },
@@ -4417,10 +4429,6 @@
           {
             "name": "Manus Pro",
             "price": "$1,799.00"
-          },
-          {
-            "name": "Manus Pro",
-            "price": "$1,999.00"
           }
         ]
       },
@@ -4531,11 +4539,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "R$ 599,90"
+            "price": "R$ 499,90"
           },
           {
             "name": "Manus Pro",
-            "price": "R$ 499,90"
+            "price": "R$ 599,90"
           },
           {
             "name": "Manus Pro - Monthly",
@@ -4572,15 +4580,15 @@
           },
           {
             "name": "Manus Pro",
-            "price": "£80.00"
-          },
-          {
-            "name": "Manus Pro",
             "price": "£100.00"
           },
           {
             "name": "Manus Pro",
             "price": "£200.00"
+          },
+          {
+            "name": "Manus Pro",
+            "price": "£80.00"
           }
         ]
       },
@@ -4597,15 +4605,15 @@
           },
           {
             "name": "Manus Pro",
-            "price": "179,00 kr"
-          },
-          {
-            "name": "Manus Pro",
             "price": "899,00 kr"
           },
           {
             "name": "Manus Pro",
             "price": "499,00 kr"
+          },
+          {
+            "name": "Manus Pro",
+            "price": "179,00 kr"
           },
           {
             "name": "Manus Plus - Monthly",
@@ -4906,10 +4914,6 @@
           {
             "name": "Super Chat",
             "price": "₦ 900.00"
-          },
-          {
-            "name": "Super Chat",
-            "price": "₦ 2,500.00"
           }
         ]
       },
@@ -5407,6 +5411,7 @@
         "iaps": [],
         "probe": [
           "£30.99",
+          "£15",
           "£1"
         ]
       },
@@ -6469,7 +6474,7 @@
       },
       "de": {
         "ok": true,
-        "range": "€3.39 - €799.99"
+        "range": "€0.59 - €2,199.99"
       },
       "fr": {
         "ok": true,
@@ -7066,7 +7071,7 @@
       },
       "mx": {
         "ok": true,
-        "range": "MX$1.20 - MX$17,200.00"
+        "range": "MX$74.00 - MX$2,860.00"
       },
       "de": {
         "ok": true,
@@ -7122,8 +7127,8 @@
   },
   "warnings": [
     "discoverApple(sora): 候选 id6744034028 校验不符（无结果 / ）",
-    "discoverApple(sora): 未找到开发商匹配（候选：Dora - AI Video Generator 2/SMART WIDGET LABS COMPANY LIMITED; ChatGPT/OpenAI OpCo, LLC; Grok AI/X Corp.）",
-    "discoverApple(catcosplay): 未找到开发商匹配（候选：Cat Fishing 2/Nestle Purina Petcare Company; Games for Cats!/Matas Cuplinskas; Cat Game - The Cats Collector!/MinoMonsters Inc.）",
+    "discoverApple(sora): 未找到开发商匹配（候选：Dora - AI Video Generator 2/SMART WIDGET LABS COMPANY LIMITED; Grok AI/X Corp.; ChatGPT/OpenAI OpCo, LLC）",
+    "discoverApple(catcosplay): 未找到开发商匹配（候选：Games for Cats!/Matas Cuplinskas; Cat Fishing 2/Nestle Purina Petcare Company; Cat Game - The Cats Collector!/MinoMonsters Inc.）",
     "discoverPlay(sora): 候选包名均未命中",
     "discoverPlay(glm): 候选包名均未命中",
     "discoverPlay(catcosplay): 候选包名均未命中"
