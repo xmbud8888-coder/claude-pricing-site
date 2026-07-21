@@ -1,0 +1,201 @@
+{
+ "updatedAt": "2026-07-14",
+ "vpns": [
+  {
+   "name": "Mullvad",
+   "site": "https://mullvad.net/",
+   "jurisdiction": "瑞典",
+   "protocols": [
+    "WireGuard",
+    "OpenVPN"
+   ],
+   "openSource": "full",
+   "latestAudit": {
+    "firm": "X41 / Cure53",
+    "year": 2024,
+    "url": null
+   },
+   "freeTier": null,
+   "zhNote": "匿名账号、€5 一口价、2023 年搜查令无功而返；大陆直连基本不可用，需自备桥接。"
+  },
+  {
+   "name": "ProtonVPN",
+   "site": "https://protonvpn.com/",
+   "jurisdiction": "瑞士",
+   "protocols": [
+    "WireGuard",
+    "OpenVPN",
+    "Stealth"
+   ],
+   "openSource": "full",
+   "latestAudit": {
+    "firm": "Securitum",
+    "year": 2024,
+    "url": null
+   },
+   "freeTier": {
+    "limit": "不限流量（节点少、单设备）"
+   },
+   "zhNote": "最能打的免费层；大陆需 Stealth 协议且不稳定。"
+  },
+  {
+   "name": "NordVPN",
+   "site": "https://nordvpn.com/",
+   "jurisdiction": "巴拿马",
+   "protocols": [
+    "NordLynx",
+    "OpenVPN"
+   ],
+   "openSource": null,
+   "latestAudit": {
+    "firm": "Deloitte",
+    "year": 2024,
+    "url": null
+   },
+   "freeTier": null,
+   "zhNote": "六次无日志审计；大陆时好时坏，促销价波动大（以官网实时价为准）。"
+  },
+  {
+   "name": "IVPN",
+   "site": "https://www.ivpn.net/",
+   "jurisdiction": "直布罗陀",
+   "protocols": [
+    "WireGuard",
+    "OpenVPN"
+   ],
+   "openSource": "full",
+   "latestAudit": null,
+   "freeTier": null,
+   "zhNote": "隐私极简派：无邮箱注册、定期公开审计（最新一期年份待核验）。"
+  },
+  {
+   "name": "Surfshark",
+   "site": "https://surfshark.com/",
+   "jurisdiction": "荷兰",
+   "protocols": [
+    "WireGuard",
+    "OpenVPN",
+    "IKEv2"
+   ],
+   "openSource": "no",
+   "latestAudit": {
+    "firm": "Deloitte",
+    "year": 2023,
+    "url": null
+   },
+   "freeTier": null,
+   "zhNote": "不限设备数、Camouflage 混淆；大陆可用性起伏。"
+  },
+  {
+   "name": "Private Internet Access",
+   "site": "https://www.privateinternetaccess.com/",
+   "jurisdiction": "美国",
+   "protocols": [
+    "WireGuard",
+    "OpenVPN"
+   ],
+   "openSource": "client",
+   "latestAudit": {
+    "firm": "Deloitte",
+    "year": 2024,
+    "url": null
+   },
+   "freeTier": null,
+   "zhNote": "法庭传票两次证实无日志；介意美国辖区者绕行。"
+  },
+  {
+   "name": "Windscribe",
+   "site": "https://windscribe.com/",
+   "jurisdiction": "加拿大",
+   "protocols": [
+    "WireGuard",
+    "OpenVPN",
+    "Stealth"
+   ],
+   "openSource": "client",
+   "latestAudit": null,
+   "freeTier": {
+    "limit": "每月 10GB"
+   },
+   "zhNote": "免费档实用主义之选；无日志专项审计存在性待核验。"
+  },
+  {
+   "name": "OVPN",
+   "site": "https://www.ovpn.com/",
+   "jurisdiction": "瑞典",
+   "protocols": [
+    "WireGuard",
+    "OpenVPN"
+   ],
+   "openSource": null,
+   "latestAudit": null,
+   "freeTier": null,
+   "zhNote": "2020 年瑞典法庭案例证实无日志；小而硬核，节点少。"
+  },
+  {
+   "name": "ExpressVPN",
+   "site": "https://www.expressvpn.com/",
+   "jurisdiction": "英属维尔京群岛",
+   "protocols": [
+    "Lightway",
+    "OpenVPN"
+   ],
+   "openSource": "client",
+   "latestAudit": {
+    "firm": "KPMG",
+    "year": 2024,
+    "url": null
+   },
+   "freeTier": null,
+   "zhNote": "Lightway 协议开源、TrustedServer 内存运行；价格贵，大陆可用性口碑相对稳。"
+  },
+  {
+   "name": "Astrill VPN",
+   "site": "https://www.astrill.com/",
+   "jurisdiction": "塞舌尔",
+   "protocols": [
+    "OpenWeb",
+    "StealthVPN",
+    "WireGuard"
+   ],
+   "openSource": "no",
+   "latestAudit": null,
+   "freeTier": null,
+   "zhNote": "大陆可用性的老牌答案，也是全场最贵；无公开审计。"
+  },
+  {
+   "name": "TunnelBear",
+   "site": "https://www.tunnelbear.com/",
+   "jurisdiction": "加拿大",
+   "protocols": [
+    "WireGuard",
+    "OpenVPN"
+   ],
+   "openSource": "no",
+   "latestAudit": {
+    "firm": "Cure53",
+    "year": 2024,
+    "url": null
+   },
+   "freeTier": {
+    "limit": "每月 2GB"
+   },
+   "zhNote": "连续多年公开全量审计的独苗；大陆基本不可用。"
+  },
+  {
+   "name": "PrivadoVPN",
+   "site": "https://privadovpn.com/",
+   "jurisdiction": "瑞士",
+   "protocols": [
+    "WireGuard",
+    "OpenVPN"
+   ],
+   "openSource": "no",
+   "latestAudit": null,
+   "freeTier": {
+    "limit": "每月 10GB"
+   },
+   "zhNote": "免费档少见地支持流媒体解锁；审计记录待核验。"
+  }
+ ]
+}

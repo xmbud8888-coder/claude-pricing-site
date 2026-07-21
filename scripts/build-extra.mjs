@@ -161,7 +161,7 @@ async function buildVPN() {
       <td>${v.jurisdiction || "—"}</td>
       <td>${(v.protocols || []).join(" / ") || "—"}</td>
       <td>${v.openSource === "full" ? "全开源" : v.openSource === "client" ? "客户端开源" : v.openSource === "no" ? "闭源" : "待核验"}</td>
-      <td>${v.latestAudit ? `<a href="${v.latestAudit.url}" target="_blank" rel="noopener">${v.latestAudit.firm} ${v.latestAudit.year} ↗</a>` : "无公开审计"}</td>
+      <td>${v.latestAudit ? (v.latestAudit.url ? `<a href="${v.latestAudit.url}" target="_blank" rel="noopener">${v.latestAudit.firm} ${v.latestAudit.year} ↗</a>` : `${v.latestAudit.firm} ${v.latestAudit.year}`) : "无公开审计"}</td>
       <td>${v.freeTier ? (v.freeTier.limit || "有") : "无"}</td>
       <td class="pt-tax">${v.zhNote || ""}</td>
     </tr>`).join("");
