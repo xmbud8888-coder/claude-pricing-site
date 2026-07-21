@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20",
+  "updatedAt": "2026-07-21",
   "policy": "所有数字必须核验自官方来源才展示；未核验的字段为 null，由管线抓官方页面后回填",
   "provenance": [
     {
@@ -20,7 +20,7 @@
       ],
       "label": "Claude · App Store 各区内购价",
       "status": "verified",
-      "verifiedAt": "2026-07-20",
+      "verifiedAt": "2026-07-21",
       "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算"
     },
     {
@@ -30,7 +30,7 @@
       ],
       "label": "Claude · Google Play 各区内购区间",
       "status": "verified",
-      "verifiedAt": "2026-07-20",
+      "verifiedAt": "2026-07-21",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）"
     },
     {
@@ -41,7 +41,7 @@
       "label": "ChatGPT · App Store 各区内购价",
       "status": "verified",
       "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "play-chatgpt",
@@ -51,7 +51,7 @@
       "label": "ChatGPT · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "appstore-grok",
@@ -61,7 +61,7 @@
       "label": "Grok · App Store 各区内购价",
       "status": "verified",
       "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "play-grok",
@@ -71,7 +71,7 @@
       "label": "Grok · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "chatgpt-web",
@@ -113,7 +113,7 @@
       ],
       "label": "购买力平价换算率（IMF PPPEX）",
       "status": "verified",
-      "verifiedAt": "2026-07-20",
+      "verifiedAt": "2026-07-21",
       "source": "IMF DataMapper API（PPPEX，2026 年值）"
     },
     {
@@ -142,7 +142,7 @@
       "label": "Perplexity · App Store 各区内购价",
       "status": "verified",
       "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "play-perplexity",
@@ -152,7 +152,7 @@
       "label": "Perplexity · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "appstore-copilot",
@@ -172,7 +172,7 @@
       "label": "Copilot · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "appstore-capcut",
@@ -182,7 +182,7 @@
       "label": "CapCut · App Store 各区内购价",
       "status": "verified",
       "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "play-capcut",
@@ -192,7 +192,7 @@
       "label": "CapCut · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，16/18 区）",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "appstore-characterai",
@@ -211,7 +211,7 @@
       "label": "Character.AI · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "appstore-suno",
@@ -221,7 +221,7 @@
       "label": "Suno · App Store 各区内购价",
       "status": "verified",
       "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "play-suno",
@@ -231,7 +231,7 @@
       "label": "Suno · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "appstore-kling",
@@ -241,7 +241,7 @@
       "label": "Kling AI · App Store 各区内购价",
       "status": "verified",
       "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "play-kling",
@@ -251,7 +251,7 @@
       "label": "Kling AI · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "appstore-sora",
@@ -288,7 +288,7 @@
       "label": "Kimi · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "appstore-glm",
@@ -316,7 +316,7 @@
       "label": "Leonardo AI · App Store 各区内购价",
       "status": "verified",
       "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "play-leonardo",
@@ -326,7 +326,7 @@
       "label": "Leonardo AI · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "appstore-manus",
@@ -336,7 +336,7 @@
       "label": "Manus · App Store 各区内购价",
       "status": "verified",
       "source": "apps.apple.com 各区商店页（管线直抓）+ 公开汇率折算",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "play-manus",
@@ -346,7 +346,7 @@
       "label": "Manus · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-      "verifiedAt": "2026-07-20"
+      "verifiedAt": "2026-07-21"
     },
     {
       "key": "appstore-catcosplay",
@@ -721,29 +721,29 @@
           "ppp": 20
         },
         "jp": {
-          "pro": 18.46,
+          "pro": 18.47,
           "local": "¥3,000",
           "localAmount": 3000,
-          "max5x": 123.09,
-          "max20x": 246.17,
+          "max5x": 123.1,
+          "max20x": 246.2,
           "play": "¥3,400 - ¥42,500",
           "ppp": 32.15
         },
         "pk": {
-          "pro": 17.61,
+          "pro": 17.63,
           "local": "Rs 4,900.00",
           "localAmount": 4900,
-          "max5x": 125.46,
-          "max20x": 251.29,
+          "max5x": 125.6,
+          "max20x": 251.55,
           "play": "Rs 4,900 - Rs 61,250",
           "ppp": 69.18
         },
         "ca": {
-          "pro": 19.97,
+          "pro": 19.92,
           "local": "$28.00",
           "localAmount": 28,
-          "max5x": 128.38,
-          "max20x": 249.63,
+          "max5x": 128.06,
+          "max20x": 249.02,
           "play": "$28.00 - $350.00",
           "ppp": 23.85
         },
@@ -757,38 +757,38 @@
           "ppp": 40.61
         },
         "eg": {
-          "pro": 19.91,
+          "pro": 19.57,
           "local": "EGP 999.99",
           "localAmount": 999.99,
-          "max5x": 137.87,
-          "max20x": 256.04,
+          "max5x": 137.01,
+          "max20x": 254.44,
           "play": "EGP 1,099.99 - EGP 13,749.88",
           "ppp": 120.6
         },
         "au": {
-          "pro": 20.92,
+          "pro": 21,
           "local": "$30.00",
           "localAmount": 30,
-          "max5x": 139.48,
-          "max20x": 278.97,
+          "max5x": 139.99,
+          "max20x": 279.99,
           "play": "$33.99 - $424.88",
           "ppp": 20.88
         },
         "ph": {
-          "pro": 20.92,
+          "pro": 20.91,
           "local": "₱ 1,290.00",
           "localAmount": 1290,
-          "max5x": 129.55,
-          "max20x": 243.06,
+          "max5x": 129.49,
+          "max20x": 242.94,
           "play": "₱1,300.00 - ₱16,250.00",
           "ppp": 67.12
         },
         "in": {
-          "pro": 20.72,
+          "pro": 20.71,
           "local": "₹ 1,999",
           "localAmount": 1999,
-          "max5x": 133.7,
-          "max20x": 258.08,
+          "max5x": 133.64,
+          "max20x": 257.95,
           "play": "₹1,999.00 - ₹24,987.50",
           "ppp": 98.26
         },
@@ -796,17 +796,17 @@
           "pro": 21.19,
           "local": "₺999,99",
           "localAmount": 999.99,
-          "max5x": 148.35,
-          "max20x": 275.5,
+          "max5x": 148.34,
+          "max20x": 275.49,
           "play": "TRY 799.99 - TRY 9,999.88",
           "ppp": 49.49
         },
         "ng": {
-          "pro": 21.67,
+          "pro": 21.69,
           "local": "₦ 29,900.00",
           "localAmount": 29900,
-          "max5x": 144.86,
-          "max20x": 289.79,
+          "max5x": 144.99,
+          "max20x": 290.06,
           "play": "₦33,500.00 - ₦418,750.00",
           "ppp": 136.94
         },
@@ -820,56 +820,56 @@
           "ppp": null
         },
         "mx": {
-          "pro": 22.74,
+          "pro": 22.88,
           "local": "$399.00",
           "localAmount": 399,
-          "max5x": 142.44,
-          "max20x": 284.93,
+          "max5x": 143.27,
+          "max20x": 286.6,
           "play": "MX$399.00 - MX$4,987.50",
           "ppp": 37.97
         },
         "de": {
-          "pro": 25.14,
+          "pro": 25.12,
           "local": "22,00 €",
           "localAmount": 22,
-          "max5x": 171.41,
-          "max20x": 342.84,
+          "max5x": 171.26,
+          "max20x": 342.54,
           "play": "€22.00 - €275.00",
           "ppp": 30.47
         },
         "fr": {
-          "pro": 25.14,
+          "pro": 25.12,
           "local": "22,00 €",
           "localAmount": 22,
-          "max5x": 171.41,
-          "max20x": 342.84,
+          "max5x": 171.26,
+          "max20x": 342.54,
           "play": "€22.00 - €275.00",
           "ppp": 34.16
         },
         "br": {
-          "pro": 25.41,
+          "pro": 25.48,
           "local": "R$ 129,90",
           "localAmount": 129.9,
-          "max5x": 156.45,
-          "max20x": 293.36,
+          "max5x": 156.88,
+          "max20x": 294.17,
           "play": "R$110.00 - R$1,375.00",
           "ppp": 49.71
         },
         "gb": {
-          "pro": 26.89,
+          "pro": 26.87,
           "local": "£20.00",
           "localAmount": 20,
-          "max5x": 161.31,
-          "max20x": 336.07,
+          "max5x": 161.2,
+          "max20x": 335.84,
           "play": "£18.00 - £225.00",
           "ppp": 30.08
         },
         "dk": {
-          "pro": 27.42,
+          "pro": 27.39,
           "local": "179,00 kr",
           "localAmount": 179,
-          "max5x": 153.03,
-          "max20x": 306.22,
+          "max5x": 152.85,
+          "max20x": 305.86,
           "play": "179,00 kr. - 2.237,50 kr.",
           "ppp": 30.44
         }
@@ -925,65 +925,65 @@
         },
         "jp": {
           "play": "¥1,400 - ¥30,000",
-          "plus": 18.46,
+          "plus": 18.47,
           "local": "¥3,000",
           "localAmount": 3000,
           "go": 8.62,
-          "pro": 184.63,
+          "pro": 184.65,
           "ppp": 32.15
         },
         "pk": {
           "play": "Rs 1,400 - Rs 49,900",
-          "go": 5.03,
-          "plus": 17.62,
+          "go": 5.04,
+          "plus": 17.63,
           "local": "Rs 4,900.00",
           "localAmount": 4900,
-          "pro": 179.39,
+          "pro": 179.58,
           "ppp": 69.18
         },
         "ca": {
           "play": "$11.00 - $249.00",
-          "plus": 17.82,
+          "plus": 17.78,
           "local": "$24.99",
           "localAmount": 24.99,
-          "go": 9.27,
-          "pro": 177.6,
+          "go": 9.24,
+          "pro": 177.16,
           "ppp": 21.29
         },
         "eg": {
           "play": "EGP 220.00 - EGP 9,999.99",
-          "go": 4.92,
-          "plus": 19.7,
+          "go": 4.89,
+          "plus": 19.57,
           "local": "EGP 999.99",
           "localAmount": 999.99,
-          "pro": 106.35,
+          "pro": 105.69,
           "ppp": 120.6
         },
         "au": {
           "play": "$13.00 - $300.00",
-          "plus": 20.92,
+          "plus": 20.99,
           "local": "$29.99",
           "localAmount": 29.99,
-          "go": 9.07,
-          "pro": 108.1,
+          "go": 9.1,
+          "pro": 210,
           "ppp": 20.87
         },
         "ph": {
           "play": "₱300.00 - ₱9,990.00",
           "go": 4.86,
-          "plus": 16.2,
+          "plus": 16.19,
           "local": "₱ 999.00",
           "localAmount": 999,
-          "pro": 161.98,
+          "pro": 161.9,
           "ppp": 51.98
         },
         "in": {
           "play": "₹399.00 - ₹19,900.00",
-          "go": 4.14,
-          "plus": 20.72,
+          "go": 4.13,
+          "plus": 20.71,
           "local": "₹ 1,999",
           "localAmount": 1999,
-          "pro": 110.89,
+          "pro": 110.84,
           "ppp": 98.26
         },
         "tr": {
@@ -992,16 +992,16 @@
           "local": "₺999,99",
           "localAmount": 999.99,
           "go": 5.3,
-          "pro": 211.93,
+          "pro": 211.92,
           "ppp": 49.49
         },
         "ng": {
-          "play": "₦150.00 - ₦429,500.00",
-          "plus": 22.83,
+          "play": "₦7,000.00 - ₦299,900.00",
+          "plus": 22.85,
           "local": "₦ 31,500.00",
           "localAmount": 31500,
           "go": 5,
-          "pro": 105,
+          "pro": 105.1,
           "ppp": 144.27
         },
         "kr": {
@@ -1009,56 +1009,56 @@
         },
         "mx": {
           "play": "MX$129.00 - MX$3,999.00",
-          "plus": 22.74,
+          "plus": 22.88,
           "local": "$399.00",
           "localAmount": 399,
-          "go": 7.35,
-          "pro": 227.93,
+          "go": 7.4,
+          "pro": 229.27,
           "ppp": 37.97
         },
         "de": {
           "play": "€7.99 - €229.00",
-          "plus": 26.27,
+          "plus": 26.25,
           "local": "22,99 €",
           "localAmount": 22.99,
-          "go": 9.13,
-          "pro": 117.7,
+          "go": 9.12,
+          "pro": 117.6,
           "ppp": 31.84
         },
         "fr": {
-          "play": "€7.99 - €229.00",
-          "plus": 26.27,
+          "play": "€0.29 - €769.99",
+          "plus": 26.25,
           "local": "22,99 €",
           "localAmount": 22.99,
-          "go": 9.13,
-          "pro": 261.71,
+          "go": 9.12,
+          "pro": 261.48,
           "ppp": 35.7
         },
         "br": {
           "play": "R$39.99 - R$999.90",
-          "plus": 19.54,
+          "plus": 19.59,
           "local": "R$ 99,90",
           "localAmount": 99.9,
-          "go": 7.8,
-          "pro": 195.57,
+          "go": 7.83,
+          "pro": 196.11,
           "ppp": 38.23
         },
         "gb": {
-          "play": "£6.99 - £200.00",
-          "plus": 26.87,
+          "play": "£0.05 - £6,480.06",
+          "plus": 26.85,
           "local": "£19.99",
           "localAmount": 19.99,
-          "go": 9.4,
-          "pro": 268.87,
+          "go": 9.39,
+          "pro": 268.68,
           "ppp": 30.06
         },
         "dk": {
           "play": "64,00 kr. - 1.799,00 kr.",
-          "plus": 27.42,
+          "plus": 27.39,
           "local": "179,00 kr",
           "localAmount": 179,
-          "go": 9.8,
-          "pro": 120.86,
+          "go": 9.79,
+          "pro": 120.72,
           "ppp": 30.44
         },
         "ar": {
@@ -1116,58 +1116,58 @@
         },
         "jp": {
           "play": "¥900 - ¥48,300",
-          "supergrok": 30.77,
+          "supergrok": 30.78,
           "local": "¥5,000",
           "localAmount": 5000,
-          "heavy": 307.71,
+          "heavy": 307.75,
           "ppp": 53.59
         },
         "pk": {
           "play": "Rs 1,400 - Rs 85,300",
-          "supergrok": 28.4,
+          "supergrok": 28.43,
           "local": "Rs 7,900.00",
           "localAmount": 7900,
-          "heavy": 287.24,
+          "heavy": 287.54,
           "ppp": 111.54
         },
         "ca": {
           "play": "$6.99 - $424.99",
-          "supergrok": 28.53,
+          "supergrok": 28.46,
           "local": "$40.00",
           "localAmount": 40,
-          "heavy": 285.3,
+          "heavy": 284.6,
           "ppp": 34.07
         },
         "eg": {
           "play": "EGP 279.99 - EGP 17,299.99",
-          "supergrok": 29.54,
+          "supergrok": 29.36,
           "local": "EGP 1,499.99",
           "localAmount": 1499.99,
-          "heavy": 295.43,
+          "heavy": 293.59,
           "ppp": 180.9
         },
         "au": {
           "play": "$7.99 - $499.99",
-          "supergrok": 34.87,
+          "supergrok": 35,
           "local": "$50.00",
           "localAmount": 50,
-          "heavy": 348.72,
+          "heavy": 350,
           "ppp": 34.79
         },
         "ph": {
           "play": "₱345.00 - ₱17,350.00",
-          "supergrok": 29.02,
+          "supergrok": 29.01,
           "local": "₱ 1,790.00",
           "localAmount": 1790,
-          "heavy": 243.06,
+          "heavy": 242.94,
           "ppp": 93.14
         },
         "in": {
           "play": "₹550.00 - ₹30,300.00",
-          "supergrok": 7.26,
+          "supergrok": 7.25,
           "local": "₹ 700",
           "localAmount": 700,
-          "heavy": 309.9,
+          "heavy": 309.75,
           "ppp": 34.41
         },
         "tr": {
@@ -1175,15 +1175,15 @@
           "supergrok": 27.55,
           "local": "₺1.299,99",
           "localAmount": 1299.99,
-          "heavy": 275.5,
+          "heavy": 275.49,
           "ppp": 64.34
         },
         "ng": {
           "play": "₦7,420.00 - ₦493,000.00",
-          "supergrok": 36.16,
+          "supergrok": 36.19,
           "local": "₦ 49,900.00",
           "localAmount": 49900,
-          "heavy": 362.25,
+          "heavy": 362.59,
           "ppp": 228.54
         },
         "kr": {
@@ -1191,50 +1191,50 @@
         },
         "mx": {
           "play": "MX$99.00 - MX$7,049.00",
-          "supergrok": 34.14,
+          "supergrok": 34.34,
           "local": "$599.00",
           "localAmount": 599,
-          "heavy": 341.92,
+          "heavy": 343.93,
           "ppp": 57.01
         },
         "de": {
           "play": "€4.99 - €339.99",
-          "supergrok": 40,
+          "supergrok": 39.96,
           "local": "35,00 €",
           "localAmount": 35,
-          "heavy": 398.85,
+          "heavy": 398.5,
           "ppp": 48.48
         },
         "fr": {
           "play": "€5.49 - €344.99",
-          "supergrok": 40,
+          "supergrok": 39.96,
           "local": "35,00 €",
           "localAmount": 35,
-          "heavy": 398.85,
+          "heavy": 398.5,
           "ppp": 54.35
         },
         "br": {
           "play": "R$25.99 - R$1,699.99",
-          "supergrok": 29.32,
+          "supergrok": 29.4,
           "local": "R$ 149,90",
           "localAmount": 149.9,
-          "heavy": 391.16,
+          "heavy": 392.23,
           "ppp": 57.37
         },
         "gb": {
           "play": "£4.49 - £284.99",
-          "supergrok": 40.33,
+          "supergrok": 40.3,
           "local": "£30.00",
           "localAmount": 30,
-          "heavy": 403.3,
+          "heavy": 403.02,
           "ppp": 45.11
         },
         "dk": {
           "play": "41,00 kr. - 2.649,00 kr.",
-          "supergrok": 38.14,
+          "supergrok": 38.1,
           "local": "249,00 kr",
           "localAmount": 249,
-          "heavy": 382.81,
+          "heavy": 382.36,
           "ppp": 42.34
         },
         "ar": {
@@ -1242,7 +1242,7 @@
           "local": "USD 30.00",
           "localAmount": 30,
           "heavy": 300,
-          "ppp": 60.91
+          "ppp": 60.92
         }
       },
       "store": {
@@ -1337,58 +1337,58 @@
         },
         "jp": {
           "play": "¥720 - ¥342,500",
-          "pro": 18.46,
+          "pro": 18.47,
           "local": "¥3,000",
           "localAmount": 3000,
-          "max": 184.63,
+          "max": 184.65,
           "ppp": 32.15
         },
         "pk": {
           "play": "Rs 1,400 - Rs 559,700",
-          "pro": 17.62,
+          "pro": 17.63,
           "local": "Rs 4,900.00",
           "localAmount": 4900,
-          "max": 179.39,
+          "max": 179.58,
           "ppp": 69.18
         },
         "ca": {
           "play": "$6.49 - $2,749.99",
-          "pro": 17.83,
+          "pro": 17.79,
           "local": "$25.00",
           "localAmount": 25,
-          "max": 177.6,
+          "max": 177.16,
           "ppp": 21.29
         },
         "eg": {
           "play": "EGP 279.99 - EGP 107,099.99",
-          "pro": 19.7,
+          "pro": 19.57,
           "local": "EGP 999.99",
           "localAmount": 999.99,
-          "max": 196.95,
+          "max": 195.73,
           "ppp": 120.6
         },
         "au": {
           "play": "$7.99 - $3,149.99",
-          "pro": 20.92,
+          "pro": 21,
           "local": "$30.00",
           "localAmount": 30,
-          "max": 209.23,
+          "max": 210,
           "ppp": 20.88
         },
         "ph": {
           "play": "₱280.00 - ₱131,950.00",
-          "pro": 20.92,
+          "pro": 20.91,
           "local": "₱ 1,290.00",
           "localAmount": 1290,
-          "max": 210.63,
+          "max": 210.52,
           "ppp": 67.12
         },
         "in": {
           "play": "₹490.00 - ₹28,000.00",
-          "pro": 20.72,
+          "pro": 20.71,
           "local": "₹ 1,999",
           "localAmount": 1999,
-          "max": 206.26,
+          "max": 206.16,
           "ppp": 98.26
         },
         "tr": {
@@ -1396,63 +1396,63 @@
           "pro": 21.19,
           "local": "₺999,99",
           "localAmount": 999.99,
-          "max": 211.93,
+          "max": 211.92,
           "ppp": 49.49
         },
         "ng": {
           "play": "₦7,430.00 - ₦2,982,000.00",
-          "pro": 21.67,
+          "pro": 21.69,
           "local": "₦ 29,900.00",
           "localAmount": 29900,
           "ppp": 136.94,
-          "max": 217.32
+          "max": 217.53
         },
         "kr": {
           "play": "₩7,500 - ₩420,000"
         },
         "mx": {
           "play": "MX$105.00 - MX$39,949.00",
-          "pro": 22.74,
+          "pro": 22.88,
           "local": "$399.00",
           "localAmount": 399,
-          "max": 227.93,
+          "max": 229.27,
           "ppp": 37.97
         },
         "de": {
           "play": "€4.99 - €1,999.99",
-          "pro": 25.14,
+          "pro": 25.12,
           "local": "22,00 €",
           "localAmount": 22,
-          "max": 261.71,
+          "max": 261.48,
           "ppp": 30.47
         },
         "fr": {
           "play": "€4.99 - €2,049.99",
-          "pro": 25.14,
+          "pro": 25.12,
           "local": "22,00 €",
           "localAmount": 22,
-          "max": 261.71,
+          "max": 261.48,
           "ppp": 34.16
         },
         "br": {
           "play": "R$25.99 - R$10,449.99",
-          "pro": 25.41,
+          "pro": 25.48,
           "local": "R$ 129,90",
           "localAmount": 129.9,
-          "max": 254.25,
+          "max": 254.94,
           "ppp": 49.71
         },
         "gb": {
           "play": "£4.49 - £1,749.99",
-          "pro": 26.89,
+          "pro": 26.87,
           "local": "£20.00",
           "localAmount": 20,
-          "max": 268.87,
+          "max": 268.68,
           "ppp": 30.08
         },
         "dk": {
           "play": "41,00 kr. - 15.799,00 kr.",
-          "pro": 27.42,
+          "pro": 27.39,
           "local": "179,00 kr",
           "localAmount": 179,
           "max": 275.73,
@@ -1656,28 +1656,28 @@
         },
         "pk": {
           "play": "Rs 12 - Rs 179,900",
-          "pro": 7.91,
+          "pro": 7.92,
           "local": "Rs 2,200.00",
           "localAmount": 2200,
           "ppp": 31.06
         },
         "ca": {
           "play": "$0.39 - $909.00",
-          "pro": 19.96,
+          "pro": 19.91,
           "local": "$27.99",
           "localAmount": 27.99,
           "ppp": 23.84
         },
         "eg": {
           "play": "EGP 9.99 - EGP 34,999.99",
-          "pro": 9.85,
+          "pro": 9.79,
           "local": "EGP 499.99",
           "localAmount": 499.99,
           "ppp": 60.3
         },
         "au": {
           "play": "$0.49 - $1,000.00",
-          "pro": 20.92,
+          "pro": 20.99,
           "local": "$29.99",
           "localAmount": 29.99,
           "ppp": 20.87
@@ -1698,7 +1698,7 @@
         },
         "ng": {
           "play": "₦30.00 - ₦1,099,000.00",
-          "pro": 10.8,
+          "pro": 10.81,
           "local": "₦ 14,900.00",
           "localAmount": 14900,
           "ppp": 68.24
@@ -1708,42 +1708,42 @@
         },
         "mx": {
           "play": "MX$5.00 - MX$14,999.00",
-          "pro": 18.81,
+          "pro": 18.92,
           "local": "$330.00",
           "localAmount": 330,
           "ppp": 31.41
         },
         "de": {
-          "play": "€0.29 - €769.99",
-          "pro": 27.42,
+          "play": "€3.09 - €149.99",
+          "pro": 27.39,
           "local": "23,99 €",
           "localAmount": 23.99,
           "ppp": 33.23
         },
         "fr": {
           "play": "€0.29 - €769.99",
-          "pro": 27.42,
+          "pro": 27.39,
           "local": "23,99 €",
           "localAmount": 23.99,
           "ppp": 37.25
         },
         "br": {
           "play": "R$0.90 - R$3,299.90",
-          "pro": 12.89,
+          "pro": 12.92,
           "local": "R$ 65,90",
           "localAmount": 65.9,
           "ppp": 25.22
         },
         "gb": {
           "play": "£0.29 - £700.00",
-          "pro": 29.56,
+          "pro": 29.54,
           "local": "£21.99",
           "localAmount": 21.99,
           "ppp": 33.07
         },
         "dk": {
           "play": "2,00 kr. - 6.999,00 kr.",
-          "pro": 35.08,
+          "pro": 35.04,
           "local": "229,00 kr",
           "localAmount": 229,
           "ppp": 38.94
@@ -1885,39 +1885,39 @@
           "local": "¥1,500",
           "localAmount": 1500,
           "ppp": 16.08,
-          "premier": 30.77
+          "premier": 30.78
         },
         "pk": {
           "play": "Rs 1,100 - Rs 81,100",
-          "pro": 10.43,
+          "pro": 10.44,
           "local": "Rs 2,900.00",
           "localAmount": 2900,
           "ppp": 40.94,
-          "premier": 28.4
+          "premier": 28.43
         },
         "ca": {
           "play": "$5.49 - $399.99",
-          "pro": 9.99,
+          "pro": 9.96,
           "local": "$14.00",
           "localAmount": 14,
           "ppp": 11.93,
-          "premier": 28.53
+          "premier": 28.46
         },
         "eg": {
           "play": "EGP 229.99 - EGP 16,999.99",
-          "pro": 9.85,
+          "pro": 9.79,
           "local": "EGP 499.99",
           "localAmount": 499.99,
           "ppp": 60.3,
-          "premier": 29.54
+          "premier": 29.36
         },
         "au": {
           "play": "$6.99 - $479.99",
-          "pro": 10.46,
+          "pro": 10.5,
           "local": "$15.00",
           "localAmount": 15,
           "ppp": 10.44,
-          "premier": 34.87
+          "premier": 35
         },
         "ph": {
           "play": "₱235.00 - ₱19,350.00",
@@ -1925,7 +1925,7 @@
           "local": "₱ 599.00",
           "localAmount": 599,
           "ppp": 31.17,
-          "premier": 32.27
+          "premier": 32.25
         },
         "in": {
           "play": "₹400.00 - ₹31,800.00",
@@ -1933,7 +1933,7 @@
           "local": "₹ 999",
           "localAmount": 999,
           "ppp": 49.11,
-          "premier": 31.08
+          "premier": 31.07
         },
         "tr": {
           "play": "TRY 164.99 - TRY 15,509.99",
@@ -1945,68 +1945,68 @@
         },
         "ng": {
           "play": "₦7,160.00 - ₦461,500.00",
-          "pro": 10.8,
+          "pro": 10.81,
           "local": "₦ 14,900.00",
           "localAmount": 14900,
           "ppp": 68.24,
-          "premier": 36.16
+          "premier": 36.19
         },
         "kr": {
           "play": "₩6,000 - ₩470,000"
         },
         "mx": {
           "play": "MX$95.00 - MX$6,149.00",
-          "pro": 11.34,
+          "pro": 11.41,
           "local": "$199.00",
           "localAmount": 199,
           "ppp": 18.94,
-          "premier": 34.14
+          "premier": 34.34
         },
         "de": {
           "play": "€4.49 - €289.99",
-          "pro": 11.43,
+          "pro": 11.42,
           "local": "10,00 €",
           "localAmount": 10,
           "ppp": 13.85,
-          "premier": 40
+          "premier": 39.96
         },
         "fr": {
           "play": "€4.59 - €294.99",
-          "pro": 11.43,
+          "pro": 11.42,
           "local": "10,00 €",
           "localAmount": 10,
           "ppp": 15.53,
-          "premier": 40
+          "premier": 39.96
         },
         "br": {
           "play": "R$22.99 - R$1,499.99",
-          "pro": 11.72,
+          "pro": 11.75,
           "local": "R$ 59,90",
           "localAmount": 59.9,
           "ppp": 22.92,
-          "premier": 39.1
+          "premier": 39.21
         },
         "gb": {
           "play": "£3.79 - £254.99",
-          "pro": 13.44,
+          "pro": 13.43,
           "local": "£10.00",
           "localAmount": 10,
           "ppp": 15.04,
-          "premier": 40.33
+          "premier": 40.3
         },
         "dk": {
           "play": "35,00 kr. - 2.299,00 kr.",
-          "pro": 13.63,
+          "pro": 13.62,
           "local": "89,00 kr",
           "localAmount": 89,
           "ppp": 15.13,
-          "premier": 38.14
+          "premier": 38.1
         },
         "ar": {
           "pro": 10,
           "local": "USD 10.00",
           "localAmount": 10,
-          "ppp": 20.3,
+          "ppp": 20.31,
           "premier": 30
         }
       }
@@ -2087,7 +2087,7 @@
         },
         "eg": {
           "play": "EGP 35.99 - EGP 128,599.99",
-          "standard": 1.18,
+          "standard": 1.17,
           "local": "EGP 59.99",
           "localAmount": 59.99,
           "ppp": 7.23
@@ -2132,7 +2132,7 @@
         },
         "mx": {
           "play": "MX$12.00 - MX$43,349.00",
-          "standard": 1.65,
+          "standard": 1.66,
           "local": "$29.00",
           "localAmount": 29,
           "ppp": 2.76
@@ -2382,42 +2382,42 @@
         },
         "pk": {
           "play": "Rs 2,650 - Rs 130,300",
-          "premium": 35.59,
+          "premium": 35.63,
           "local": "Rs 9,900.00",
           "localAmount": 9900,
           "ppp": 139.78
         },
         "ca": {
           "play": "$12.99 - $649.99",
-          "premium": 35.66,
+          "premium": 35.57,
           "local": "$49.99",
           "localAmount": 49.99,
           "ppp": 42.58
         },
         "eg": {
           "play": "EGP 509.99 - EGP 25,249.99",
-          "premium": 23.63,
+          "premium": 23.49,
           "local": "EGP 1,199.99",
           "localAmount": 1199.99,
           "ppp": 144.72
         },
         "au": {
           "play": "$13.99 - $699.99",
-          "premium": 41.84,
+          "premium": 41.99,
           "local": "$59.99",
           "localAmount": 59.99,
           "ppp": 41.75
         },
         "ph": {
           "play": "₱595.00 - ₱29,550.00",
-          "premium": 37.13,
+          "premium": 37.11,
           "local": "₱ 2,290.00",
           "localAmount": 2290,
           "ppp": 119.16
         },
         "in": {
           "play": "₹950.00 - ₹18,700.00",
-          "premium": 41.45,
+          "premium": 41.43,
           "local": "₹ 3,999",
           "localAmount": 3999,
           "ppp": 196.58
@@ -2431,7 +2431,7 @@
         },
         "ng": {
           "play": "₦15,000.00 - ₦743,000.00",
-          "premium": 14.42,
+          "premium": 14.43,
           "local": "₦ 19,900.00",
           "localAmount": 19900,
           "ppp": 91.14
@@ -2441,42 +2441,42 @@
         },
         "mx": {
           "play": "MX$199.00 - MX$9,849.00",
-          "premium": 51.24,
+          "premium": 51.54,
           "local": "$899.00",
           "localAmount": 899,
           "ppp": 85.56
         },
         "de": {
           "play": "€9.49 - €464.99",
-          "premium": 51.42,
+          "premium": 51.37,
           "local": "44,99 €",
           "localAmount": 44.99,
           "ppp": 62.31
         },
         "fr": {
           "play": "€9.49 - €469.99",
-          "premium": 51.42,
+          "premium": 51.37,
           "local": "44,99 €",
           "localAmount": 44.99,
           "ppp": 69.86
         },
         "br": {
           "play": "R$49.99 - R$2,449.99",
-          "premium": 39.1,
+          "premium": 39.21,
           "local": "R$ 199,90",
           "localAmount": 199.9,
           "ppp": 76.5
         },
         "gb": {
           "play": "£7.99 - £404.99",
-          "premium": 53.76,
+          "premium": 53.72,
           "local": "£39.99",
           "localAmount": 39.99,
           "ppp": 60.14
         },
         "dk": {
           "play": "75,00 kr. - 3.649,00 kr.",
-          "premium": 53.46,
+          "premium": 53.4,
           "local": "349,00 kr",
           "localAmount": 349,
           "ppp": 59.34
@@ -2535,42 +2535,42 @@
         },
         "pk": {
           "play": "Rs 5,300 - Rs 1,394,600",
-          "pro": 35.59,
-          "local": "Rs 9,900.00",
-          "localAmount": 9900,
-          "ppp": 139.78
+          "pro": 17.63,
+          "local": "Rs 4,900.00",
+          "localAmount": 4900,
+          "ppp": 69.18
         },
         "ca": {
           "play": "$26.99 - $6,799.99",
-          "pro": 35.66,
+          "pro": 35.57,
           "local": "$49.99",
           "localAmount": 49.99,
           "ppp": 42.58
         },
         "eg": {
           "play": "EGP 1,049.99 - EGP 304,449.99",
-          "pro": 19.7,
+          "pro": 19.57,
           "local": "EGP 999.99",
           "localAmount": 999.99,
           "ppp": 120.6
         },
         "au": {
           "play": "$31.99 - $7,649.99",
-          "pro": 41.84,
+          "pro": 41.99,
           "local": "$59.99",
           "localAmount": 59.99,
           "ppp": 41.75
         },
         "ph": {
           "play": "₱1,250.00 - ₱344,950.00",
-          "pro": 20.92,
+          "pro": 20.91,
           "local": "₱ 1,290.00",
           "localAmount": 1290,
           "ppp": 67.12
         },
         "in": {
-          "play": "₹399.00 - ₹19,900.00",
-          "pro": 20.72,
+          "play": "₹2,000.00 - ₹5,60,800.00",
+          "pro": 20.71,
           "local": "₹ 1,999",
           "localAmount": 1999,
           "ppp": 98.26
@@ -2584,52 +2584,52 @@
         },
         "ng": {
           "play": "₦30,000.00 - ₦7,395,000.00",
-          "pro": 50.65,
-          "local": "₦ 69,900.00",
-          "localAmount": 69900,
-          "ppp": 320.14
+          "pro": 21.69,
+          "local": "₦ 29,900.00",
+          "localAmount": 29900,
+          "ppp": 136.94
         },
         "kr": {
           "play": "₩30,000 - ₩570,000"
         },
         "mx": {
           "play": "MX$405.00 - MX$101,299.00",
-          "pro": 51.24,
+          "pro": 51.54,
           "local": "$899.00",
           "localAmount": 899,
           "ppp": 85.56
         },
         "de": {
           "play": "€18.99 - €5,099.99",
-          "pro": 51.42,
+          "pro": 51.37,
           "local": "44,99 €",
           "localAmount": 44.99,
           "ppp": 62.31
         },
         "fr": {
           "play": "€18.99 - €5,099.99",
-          "pro": 51.42,
+          "pro": 51.37,
           "local": "44,99 €",
           "localAmount": 44.99,
           "ppp": 69.86
         },
         "br": {
           "play": "R$99.99 - R$24,799.99",
-          "pro": 48.88,
+          "pro": 49.01,
           "local": "R$ 249,90",
           "localAmount": 249.9,
           "ppp": 95.64
         },
         "gb": {
           "play": "£16.99 - £4,399.99",
-          "pro": 53.76,
+          "pro": 53.72,
           "local": "£39.99",
           "localAmount": 39.99,
           "ppp": 60.14
         },
         "dk": {
           "play": "149,00 kr. - 39.849,00 kr.",
-          "pro": 53.46,
+          "pro": 53.4,
           "local": "349,00 kr",
           "localAmount": 349,
           "ppp": 59.34
@@ -2724,7 +2724,7 @@
         },
         "pk": {
           "play": "Rs 10 - Rs 279,000",
-          "premium": 2.33,
+          "premium": 2.34,
           "local": "Rs 649.00",
           "localAmount": 649,
           "family": 4.31,
@@ -2732,26 +2732,26 @@
         },
         "ca": {
           "play": "$0.10 - $1,380.00",
-          "premium": 12.12,
+          "premium": 12.09,
           "local": "$16.99",
           "localAmount": 16.99,
-          "family": 21.39,
+          "family": 21.34,
           "ppp": 14.47
         },
         "eg": {
           "play": "EGP 0.90 - EGP 49,000.00",
-          "premium": 2.26,
+          "premium": 2.25,
           "local": "EGP 114.99",
           "localAmount": 114.99,
-          "family": 4.14,
+          "family": 4.11,
           "ppp": 13.87
         },
         "au": {
           "play": "$0.10 - $1,550.00",
-          "premium": 16.03,
+          "premium": 16.09,
           "local": "$22.99",
           "localAmount": 22.99,
-          "family": 36.26,
+          "family": 36.39,
           "ppp": 16
         },
         "ph": {
@@ -2771,7 +2771,7 @@
           "ppp": 9.59
         },
         "tr": {
-          "play": "TRY 12.99 - TRY 10,669.99",
+          "play": "TRY 0.59 - TRY 40,800.00",
           "premium": 3.39,
           "local": "₺159,99",
           "localAmount": 159.99,
@@ -2780,7 +2780,7 @@
         },
         "ng": {
           "play": "₦25.00 - ₦1,490,000.00",
-          "premium": 1.59,
+          "premium": 1.6,
           "local": "₦ 2,200.00",
           "localAmount": 2200,
           "family": 2.61,
@@ -2791,50 +2791,50 @@
         },
         "mx": {
           "play": "MX$1.20 - MX$17,200.00",
-          "premium": 11.91,
+          "premium": 11.98,
           "local": "$209.00",
           "localAmount": 209,
-          "family": 23.88,
+          "family": 24.02,
           "ppp": 19.89
         },
         "de": {
           "play": "€0.05 - €940.00",
-          "premium": 22.85,
+          "premium": 22.83,
           "local": "19,99 €",
           "localAmount": 19.99,
-          "family": 42.27,
+          "family": 42.24,
           "ppp": 27.69
         },
         "fr": {
           "play": "€0.05 - €940.00",
-          "premium": 19.42,
+          "premium": 19.4,
           "local": "16,99 €",
           "localAmount": 16.99,
-          "family": 44.56,
+          "family": 44.52,
           "ppp": 26.38
         },
         "br": {
           "play": "R$0.30 - R$5,200.00",
-          "premium": 6.83,
+          "premium": 6.84,
           "local": "R$ 34,90",
           "localAmount": 34.9,
-          "family": 13.67,
+          "family": 13.71,
           "ppp": 13.36
         },
         "gb": {
           "play": "£0.05 - £810.00",
-          "premium": 22.84,
+          "premium": 22.82,
           "local": "£16.99",
           "localAmount": 16.99,
-          "family": 34.94,
+          "family": 34.92,
           "ppp": 25.55
         },
         "dk": {
           "play": "0,40 kr. - 7.000,00 kr.",
-          "premium": 27.42,
+          "premium": 27.39,
           "local": "179,00 kr",
           "localAmount": 179,
-          "family": 51.93,
+          "family": 51.87,
           "ppp": 30.44
         },
         "ar": {
@@ -2910,7 +2910,7 @@
           "play": "₱49.00 - ₱34,400.00"
         },
         "in": {
-          "play": "₹85.00 - ₹56,200.00"
+          "play": "₹29.99 - ₹28,700.00"
         },
         "tr": {
           "play": "TRY 9.99 - TRY 28,079.99"
@@ -2937,7 +2937,7 @@
           "play": "£0.89 - £456.00"
         },
         "dk": {
-          "play": "8,00 kr. - 4.099,00 kr."
+          "play": "0,40 kr. - 56.000,56 kr."
         }
       }
     },
@@ -3005,7 +3005,7 @@
         },
         "au": {
           "play": "$3.79 - $229.99",
-          "ads": 8.36
+          "ads": 8.39
         },
         "ph": {
           "play": "₱130.00 - ₱7,850.00"
@@ -3039,7 +3039,7 @@
         },
         "dk": {
           "play": "19,00 kr. - 1.249,00 kr.",
-          "ads": 12.1
+          "ads": 12.09
         }
       }
     },
@@ -3093,45 +3093,45 @@
           "ppp": 19.99
         },
         "pk": {
-          "premium": 3.95,
+          "premium": 3.96,
           "standard": 2.88,
           "local": "Rs 800.00",
           "localAmount": 800,
           "ppp": 11.3
         },
         "ca": {
-          "standard": 13.54,
+          "standard": 13.51,
           "local": "$18.99",
           "localAmount": 18.99,
-          "premium": 17.11,
+          "premium": 17.07,
           "ppp": 16.18
         },
         "ar": {
           "premium": 13.9
         },
         "eg": {
-          "premium": 5.32,
-          "standard": 3.74,
+          "premium": 5.28,
+          "standard": 3.72,
           "local": "EGP 190.00",
           "localAmount": 190,
           "ppp": 22.91
         },
         "au": {
-          "standard": 14.64,
+          "standard": 14.69,
           "local": "$20.99",
           "localAmount": 20.99,
-          "premium": 20.22,
+          "premium": 20.29,
           "ppp": 14.61
         },
         "ph": {
-          "premium": 10.04,
+          "premium": 10.03,
           "standard": 7.28,
           "local": "₱ 449.00",
           "localAmount": 449,
           "ppp": 23.36
         },
         "in": {
-          "premium": 6.73,
+          "premium": 6.72,
           "standard": 5.17,
           "local": "₹ 499",
           "localAmount": 499,
@@ -3145,48 +3145,48 @@
           "ppp": 14.35
         },
         "ng": {
-          "premium": 6.16,
+          "premium": 6.17,
           "standard": 4.71,
           "local": "₦ 6,500.00",
           "localAmount": 6500,
           "ppp": 29.77
         },
         "mx": {
-          "premium": 21.03
+          "premium": 21.16
         },
         "de": {
-          "standard": 15.99,
+          "standard": 15.97,
           "local": "13,99 €",
           "localAmount": 13.99,
-          "premium": 22.85,
+          "premium": 22.83,
           "ppp": 19.38
         },
         "fr": {
-          "standard": 17.13,
+          "standard": 17.12,
           "local": "14,99 €",
           "localAmount": 14.99,
-          "premium": 25.13,
+          "premium": 25.11,
           "ppp": 23.28
         },
         "br": {
-          "standard": 8.78,
+          "standard": 8.81,
           "local": "R$ 44,90",
           "localAmount": 44.9,
-          "premium": 10.93,
+          "premium": 10.96,
           "ppp": 17.18
         },
         "gb": {
-          "standard": 17.46,
+          "standard": 17.45,
           "local": "£12.99",
           "localAmount": 12.99,
-          "premium": 25.53,
+          "premium": 25.51,
           "ppp": 19.53
         },
         "dk": {
-          "standard": 22.82,
+          "standard": 22.8,
           "local": "149,00 kr",
           "localAmount": 149,
-          "premium": 28.95,
+          "premium": 28.92,
           "ppp": 25.34
         }
       }
@@ -3243,10 +3243,10 @@
           "play": "Rs 199 - Rs 29,700"
         },
         "ca": {
-          "play": "$6.39 - $144.99"
+          "play": "$0.29 - $499.99"
         },
         "eg": {
-          "play": "EGP 39.00 - EGP 5,899.99"
+          "play": "EGP 4.99 - EGP 14,049.99"
         },
         "au": {
           "play": "$7.99 - $251.99"
