@@ -23,12 +23,13 @@
       "claude-mode",
       "claude-textarea"
     ],
-    "at": "2026-07-28T06:13:12.378Z"
+    "at": "2026-07-29T06:18:08.231Z"
   },
   "openai-api-pricing": {
-    "hash": "26b462f86191ff83",
+    "hash": "adbf12eb6daeb74c",
     "tokens": [
       "$0.003",
+      "$0.0045",
       "$0.006",
       "$0.01",
       "$0.017",
@@ -124,16 +125,18 @@
       "gpt-image-1-mini",
       "gpt-image-1.5",
       "gpt-image-2",
+      "gpt-live-transcribe",
       "gpt-oss",
       "gpt-realtime-2.1",
       "gpt-realtime-2.1-mini",
       "gpt-realtime-translate",
-      "gpt-realtime-whisper"
+      "gpt-realtime-whisper",
+      "gpt-transcribe"
     ],
-    "at": "2026-07-28T06:13:12.637Z"
+    "at": "2026-07-29T06:18:08.539Z"
   },
   "xai-models": {
-    "hash": "3f47cfc5757a9790",
+    "hash": "6ab64402a70ca895",
     "tokens": [
       "$0.02",
       "$0.05",
@@ -141,10 +144,11 @@
       "$0.20",
       "$1",
       "$15.00",
-      "$19",
+      "$17",
       "$2.00",
       "$3",
-      "$35",
+      "$3.00",
+      "$34",
       "$6.00",
       "grok-4.20",
       "grok-4.20-0309",
@@ -198,10 +202,13 @@
       "grok-imagine-video-1.5-2026-05-30",
       "grok-imagine-video-1.5-preview",
       "grok-latest",
+      "grok-realtime",
       "grok-stt",
-      "grok-tts"
+      "grok-tts",
+      "grok-voice-latest",
+      "grok-voice-think-fast-1.0"
     ],
-    "at": "2026-07-28T06:13:12.941Z"
+    "at": "2026-07-29T06:18:08.771Z"
   },
   "anthropic-api-docs": {
     "hash": "1f66a0ced287c3f5",
@@ -251,6 +258,6 @@
       "claude-sonnet-5-introductory-pricing",
       "claude-sonnet-53"
     ],
-    "at": "2026-07-28T06:13:12.526Z"
+    "at": "2026-07-29T06:18:08.418Z"
   }
 }
