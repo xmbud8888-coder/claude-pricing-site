@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13",
+  "updatedAt": "2026-08-14",
   "policy": "所有数字必须核验自任天堂官方价格接口才展示；拿不到的 国家×游戏 为 null（站上显示待核验），绝不估算",
   "source": {
     "prices": "api.ec.nintendo.com/v1/price（任天堂官方 eShop 价格接口，逐国批量直抓，主字段为 regular_price 常规价）",
@@ -61,99 +61,99 @@
         "mx": {
           "cur": "MXN",
           "price": 1229,
-          "usd": 72.04
+          "usd": 72.12
         },
         "br": {
           "cur": "BRL",
           "price": 329.9,
-          "usd": 63.92
+          "usd": 63.65
         },
         "ar": {
           "cur": "ARS",
           "price": 84999,
-          "usd": 56.95
+          "usd": 56.98
         },
         "cl": {
           "cur": "CLP",
           "price": 61990,
-          "usd": 67.84
+          "usd": 67.79
         },
         "co": {
           "cur": "COP",
           "price": 279900,
-          "usd": 89.37
+          "usd": 89.13
         },
         "pe": {
           "cur": "PEN",
           "price": 239,
-          "usd": 70.9
+          "usd": 70.86
         },
         "gb": {
           "cur": "GBP",
           "price": 49.99,
-          "usd": 67.51
+          "usd": 67.44
         },
         "de": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "fr": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "es": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "it": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "nl": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "pl": {
           "cur": "PLN",
           "price": 249.8,
-          "usd": 66.95
+          "usd": 66.87
         },
         "no": {
           "cur": "NOK",
           "price": 659,
-          "usd": 69.44
+          "usd": 69.3
         },
         "ch": {
           "cur": "CHF",
           "price": 59.9,
-          "usd": 73.7
+          "usd": 73.63
         },
         "za": {
           "cur": "ZAR",
           "price": 1129,
-          "usd": 69.95
+          "usd": 69.78
         },
         "au": {
           "cur": "AUD",
           "price": 79.95,
-          "usd": 56.48
+          "usd": 56.43
         },
         "nz": {
           "cur": "NZD",
           "price": 89.95,
-          "usd": 52.73
+          "usd": 52.62
         },
         "jp": {
           "cur": "JPY",
           "price": 6578,
-          "usd": 41.3,
+          "usd": 41.27,
           "discountPrice": 4604,
-          "discountUsd": 28.9
+          "discountUsd": 28.88
         },
         "hk": null,
         "kr": null
@@ -182,97 +182,97 @@
         "mx": {
           "cur": "MXN",
           "price": 800,
-          "usd": 46.89
+          "usd": 46.95
         },
         "br": {
           "cur": "BRL",
           "price": 284.9,
-          "usd": 55.2
+          "usd": 54.97
         },
         "ar": {
           "cur": "ARS",
           "price": 72499,
-          "usd": 48.57
+          "usd": 48.6
         },
         "cl": {
           "cur": "CLP",
           "price": 45799,
-          "usd": 50.12
+          "usd": 50.09
         },
         "co": {
           "cur": "COP",
           "price": 191000,
-          "usd": 60.98
+          "usd": 60.82
         },
         "pe": {
           "cur": "PEN",
           "price": 170,
-          "usd": 50.43
+          "usd": 50.4
         },
         "gb": {
           "cur": "GBP",
           "price": 49.99,
-          "usd": 67.51
+          "usd": 67.44
         },
         "de": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "fr": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "es": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "it": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "nl": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "pl": {
           "cur": "PLN",
           "price": 259,
-          "usd": 69.41
+          "usd": 69.33
         },
         "no": {
           "cur": "NOK",
           "price": 649,
-          "usd": 68.39
+          "usd": 68.25
         },
         "ch": {
           "cur": "CHF",
           "price": 59.9,
-          "usd": 73.7
+          "usd": 73.63
         },
         "za": {
           "cur": "ZAR",
           "price": 1149,
-          "usd": 71.19
+          "usd": 71.02
         },
         "au": {
           "cur": "AUD",
           "price": 84.95,
-          "usd": 60.01
+          "usd": 59.96
         },
         "nz": {
           "cur": "NZD",
           "price": 104.95,
-          "usd": 61.52
+          "usd": 61.4
         },
         "jp": {
           "cur": "JPY",
           "price": 6578,
-          "usd": 41.3
+          "usd": 41.27
         },
         "hk": null,
         "kr": null
@@ -301,97 +301,97 @@
         "mx": {
           "cur": "MXN",
           "price": 1229,
-          "usd": 72.04
+          "usd": 72.12
         },
         "br": {
           "cur": "BRL",
           "price": 329.9,
-          "usd": 63.92
+          "usd": 63.65
         },
         "ar": {
           "cur": "ARS",
           "price": 84999,
-          "usd": 56.95
+          "usd": 56.98
         },
         "cl": {
           "cur": "CLP",
           "price": 61990,
-          "usd": 67.84
+          "usd": 67.79
         },
         "co": {
           "cur": "COP",
           "price": 279900,
-          "usd": 89.37
+          "usd": 89.13
         },
         "pe": {
           "cur": "PEN",
           "price": 239,
-          "usd": 70.9
+          "usd": 70.86
         },
         "gb": {
           "cur": "GBP",
           "price": 49.99,
-          "usd": 67.51
+          "usd": 67.44
         },
         "de": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "fr": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "es": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "it": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "nl": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "pl": {
           "cur": "PLN",
           "price": 249.8,
-          "usd": 66.95
+          "usd": 66.87
         },
         "no": {
           "cur": "NOK",
           "price": 659,
-          "usd": 69.44
+          "usd": 69.3
         },
         "ch": {
           "cur": "CHF",
           "price": 59.9,
-          "usd": 73.7
+          "usd": 73.63
         },
         "za": {
           "cur": "ZAR",
           "price": 1129,
-          "usd": 69.95
+          "usd": 69.78
         },
         "au": {
           "cur": "AUD",
           "price": 79.95,
-          "usd": 56.48
+          "usd": 56.43
         },
         "nz": {
           "cur": "NZD",
           "price": 89.95,
-          "usd": 52.73
+          "usd": 52.62
         },
         "jp": {
           "cur": "JPY",
           "price": 6500,
-          "usd": 40.81
+          "usd": 40.78
         },
         "hk": null,
         "kr": null
@@ -420,97 +420,97 @@
         "mx": {
           "cur": "MXN",
           "price": 1229,
-          "usd": 72.04
+          "usd": 72.12
         },
         "br": {
           "cur": "BRL",
           "price": 329.9,
-          "usd": 63.92
+          "usd": 63.65
         },
         "ar": {
           "cur": "ARS",
           "price": 84999,
-          "usd": 56.95
+          "usd": 56.98
         },
         "cl": {
           "cur": "CLP",
           "price": 61990,
-          "usd": 67.84
+          "usd": 67.79
         },
         "co": {
           "cur": "COP",
           "price": 279900,
-          "usd": 89.37
+          "usd": 89.13
         },
         "pe": {
           "cur": "PEN",
           "price": 239,
-          "usd": 70.9
+          "usd": 70.86
         },
         "gb": {
           "cur": "GBP",
           "price": 49.99,
-          "usd": 67.51
+          "usd": 67.44
         },
         "de": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "fr": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "es": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "it": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "nl": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "pl": {
           "cur": "PLN",
           "price": 249.8,
-          "usd": 66.95
+          "usd": 66.87
         },
         "no": {
           "cur": "NOK",
           "price": 659,
-          "usd": 69.44
+          "usd": 69.3
         },
         "ch": {
           "cur": "CHF",
           "price": 59.9,
-          "usd": 73.7
+          "usd": 73.63
         },
         "za": {
           "cur": "ZAR",
           "price": 1129,
-          "usd": 69.95
+          "usd": 69.78
         },
         "au": {
           "cur": "AUD",
           "price": 79.95,
-          "usd": 56.48
+          "usd": 56.43
         },
         "nz": {
           "cur": "NZD",
           "price": 89.95,
-          "usd": 52.73
+          "usd": 52.62
         },
         "jp": {
           "cur": "JPY",
           "price": 6578,
-          "usd": 41.3
+          "usd": 41.27
         },
         "hk": null,
         "kr": null
@@ -543,133 +543,133 @@
         "mx": {
           "cur": "MXN",
           "price": 805,
-          "usd": 47.19,
+          "usd": 47.24,
           "discountPrice": 161,
-          "discountUsd": 9.44
+          "discountUsd": 9.45
         },
         "br": {
           "cur": "BRL",
           "price": 184,
-          "usd": 35.65,
+          "usd": 35.5,
           "discountPrice": 36.8,
-          "discountUsd": 7.13
+          "discountUsd": 7.1
         },
         "ar": {
           "cur": "ARS",
           "price": 11767,
-          "usd": 7.88,
+          "usd": 7.89,
           "discountPrice": 2799.99,
           "discountUsd": 1.88
         },
         "cl": {
           "cur": "CLP",
           "price": 36355,
-          "usd": 39.79,
+          "usd": 39.76,
           "discountPrice": 7271,
-          "discountUsd": 7.96
+          "discountUsd": 7.95
         },
         "co": {
           "cur": "COP",
           "price": 173870,
-          "usd": 55.51,
+          "usd": 55.37,
           "discountPrice": 34774,
-          "discountUsd": 11.1
+          "discountUsd": 11.07
         },
         "pe": {
           "cur": "PEN",
           "price": 154,
-          "usd": 45.68,
+          "usd": 45.66,
           "discountPrice": 30.8,
-          "discountUsd": 9.14
+          "discountUsd": 9.13
         },
         "gb": {
           "cur": "GBP",
           "price": 34.99,
-          "usd": 47.25,
+          "usd": 47.2,
           "discountPrice": 6.99,
-          "discountUsd": 9.44
+          "discountUsd": 9.43
         },
         "de": {
           "cur": "EUR",
           "price": 39.99,
           "usd": 46.12,
           "discountPrice": 7.99,
-          "discountUsd": 9.22
+          "discountUsd": 9.21
         },
         "fr": {
           "cur": "EUR",
           "price": 39.99,
           "usd": 46.12,
           "discountPrice": 7.99,
-          "discountUsd": 9.22
+          "discountUsd": 9.21
         },
         "es": {
           "cur": "EUR",
           "price": 39.99,
           "usd": 46.12,
           "discountPrice": 7.99,
-          "discountUsd": 9.22
+          "discountUsd": 9.21
         },
         "it": {
           "cur": "EUR",
           "price": 39.99,
           "usd": 46.12,
           "discountPrice": 7.99,
-          "discountUsd": 9.22
+          "discountUsd": 9.21
         },
         "nl": {
           "cur": "EUR",
           "price": 39.99,
           "usd": 46.12,
           "discountPrice": 7.99,
-          "discountUsd": 9.22
+          "discountUsd": 9.21
         },
         "pl": {
           "cur": "PLN",
           "price": 169.8,
-          "usd": 45.51,
+          "usd": 45.45,
           "discountPrice": 33.96,
-          "discountUsd": 9.1
+          "discountUsd": 9.09
         },
         "no": {
           "cur": "NOK",
           "price": 399,
-          "usd": 42.05,
+          "usd": 41.96,
           "discountPrice": 79,
-          "discountUsd": 8.32
+          "discountUsd": 8.31
         },
         "ch": {
           "cur": "CHF",
           "price": 51.9,
-          "usd": 63.86,
+          "usd": 63.8,
           "discountPrice": 10.38,
-          "discountUsd": 12.77
+          "discountUsd": 12.76
         },
         "za": {
           "cur": "ZAR",
           "price": 729,
-          "usd": 45.17,
+          "usd": 45.06,
           "discountPrice": 145.8,
-          "discountUsd": 9.03
+          "discountUsd": 9.01
         },
         "au": {
           "cur": "AUD",
           "price": 59.95,
-          "usd": 42.35,
+          "usd": 42.32,
           "discountPrice": 11.99,
-          "discountUsd": 8.47
+          "discountUsd": 8.46
         },
         "nz": {
           "cur": "NZD",
           "price": 69.95,
-          "usd": 41,
+          "usd": 40.92,
           "discountPrice": 13.99,
-          "discountUsd": 8.2
+          "discountUsd": 8.18
         },
         "jp": {
           "cur": "JPY",
           "price": 3990,
-          "usd": 25.05
+          "usd": 25.03
         },
         "hk": null,
         "kr": null
@@ -715,7 +715,7 @@
       "label": "Pokémon Legends: Z-A",
       "nsuid": {
         "us": "70010000094234",
-        "eu": "70010000094235",
+        "eu": null,
         "jp": "70010000094233",
         "hk": null,
         "kr": null
@@ -734,97 +734,49 @@
         "mx": {
           "cur": "MXN",
           "price": 1229,
-          "usd": 72.04
+          "usd": 72.12
         },
         "br": {
           "cur": "BRL",
           "price": 329.9,
-          "usd": 63.92
+          "usd": 63.65
         },
         "ar": {
           "cur": "ARS",
           "price": 84999,
-          "usd": 56.95
+          "usd": 56.98
         },
         "cl": {
           "cur": "CLP",
           "price": 61990,
-          "usd": 67.84
+          "usd": 67.79
         },
         "co": {
           "cur": "COP",
           "price": 279900,
-          "usd": 89.37
+          "usd": 89.13
         },
         "pe": {
           "cur": "PEN",
           "price": 239,
-          "usd": 70.9
+          "usd": 70.86
         },
-        "gb": {
-          "cur": "GBP",
-          "price": 49.99,
-          "usd": 67.51
-        },
-        "de": {
-          "cur": "EUR",
-          "price": 59.99,
-          "usd": 69.19
-        },
-        "fr": {
-          "cur": "EUR",
-          "price": 59.99,
-          "usd": 69.19
-        },
-        "es": {
-          "cur": "EUR",
-          "price": 59.99,
-          "usd": 69.19
-        },
-        "it": {
-          "cur": "EUR",
-          "price": 59.99,
-          "usd": 69.19
-        },
-        "nl": {
-          "cur": "EUR",
-          "price": 59.99,
-          "usd": 69.19
-        },
-        "pl": {
-          "cur": "PLN",
-          "price": 249.8,
-          "usd": 66.95
-        },
-        "no": {
-          "cur": "NOK",
-          "price": 659,
-          "usd": 69.44
-        },
-        "ch": {
-          "cur": "CHF",
-          "price": 59.9,
-          "usd": 73.7
-        },
-        "za": {
-          "cur": "ZAR",
-          "price": 1129,
-          "usd": 69.95
-        },
-        "au": {
-          "cur": "AUD",
-          "price": 89.95,
-          "usd": 63.54
-        },
-        "nz": {
-          "cur": "NZD",
-          "price": 99.95,
-          "usd": 58.59
-        },
+        "gb": null,
+        "de": null,
+        "fr": null,
+        "es": null,
+        "it": null,
+        "nl": null,
+        "pl": null,
+        "no": null,
+        "ch": null,
+        "za": null,
+        "au": null,
+        "nz": null,
         "jp": {
           "cur": "JPY",
           "price": 7100,
-          "usd": 44.57
+          "usd": 44.54
         },
         "hk": null,
         "kr": null
@@ -853,97 +805,97 @@
         "mx": {
           "cur": "MXN",
           "price": 1229,
-          "usd": 72.04
+          "usd": 72.12
         },
         "br": {
           "cur": "BRL",
           "price": 329.9,
-          "usd": 63.92
+          "usd": 63.65
         },
         "ar": {
           "cur": "ARS",
           "price": 84999,
-          "usd": 56.95
+          "usd": 56.98
         },
         "cl": {
           "cur": "CLP",
           "price": 61990,
-          "usd": 67.84
+          "usd": 67.79
         },
         "co": {
           "cur": "COP",
           "price": 279900,
-          "usd": 89.37
+          "usd": 89.13
         },
         "pe": {
           "cur": "PEN",
           "price": 239,
-          "usd": 70.9
+          "usd": 70.86
         },
         "gb": {
           "cur": "GBP",
           "price": 49.99,
-          "usd": 67.51
+          "usd": 67.44
         },
         "de": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "fr": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "es": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "it": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "nl": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "pl": {
           "cur": "PLN",
           "price": 249.8,
-          "usd": 66.95
+          "usd": 66.87
         },
         "no": {
           "cur": "NOK",
           "price": 659,
-          "usd": 69.44
+          "usd": 69.3
         },
         "ch": {
           "cur": "CHF",
           "price": 59.9,
-          "usd": 73.7
+          "usd": 73.63
         },
         "za": {
           "cur": "ZAR",
           "price": 1129,
-          "usd": 69.95
+          "usd": 69.78
         },
         "au": {
           "cur": "AUD",
           "price": 79.95,
-          "usd": 56.48
+          "usd": 56.43
         },
         "nz": {
           "cur": "NZD",
           "price": 89.95,
-          "usd": 52.73
+          "usd": 52.62
         },
         "jp": {
           "cur": "JPY",
           "price": 6500,
-          "usd": 40.81
+          "usd": 40.78
         },
         "hk": null,
         "kr": null
@@ -972,97 +924,97 @@
         "mx": {
           "cur": "MXN",
           "price": 1229,
-          "usd": 72.04
+          "usd": 72.12
         },
         "br": {
           "cur": "BRL",
           "price": 329.9,
-          "usd": 63.92
+          "usd": 63.65
         },
         "ar": {
           "cur": "ARS",
           "price": 84999,
-          "usd": 56.95
+          "usd": 56.98
         },
         "cl": {
           "cur": "CLP",
           "price": 61990,
-          "usd": 67.84
+          "usd": 67.79
         },
         "co": {
           "cur": "COP",
           "price": 279900,
-          "usd": 89.37
+          "usd": 89.13
         },
         "pe": {
           "cur": "PEN",
           "price": 239,
-          "usd": 70.9
+          "usd": 70.86
         },
         "gb": {
           "cur": "GBP",
           "price": 49.99,
-          "usd": 67.51
+          "usd": 67.44
         },
         "de": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "fr": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "es": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "it": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "nl": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "pl": {
           "cur": "PLN",
           "price": 249.8,
-          "usd": 66.95
+          "usd": 66.87
         },
         "no": {
           "cur": "NOK",
           "price": 659,
-          "usd": 69.44
+          "usd": 69.3
         },
         "ch": {
           "cur": "CHF",
           "price": 59.9,
-          "usd": 73.7
+          "usd": 73.63
         },
         "za": {
           "cur": "ZAR",
           "price": 1129,
-          "usd": 69.95
+          "usd": 69.78
         },
         "au": {
           "cur": "AUD",
           "price": 79.95,
-          "usd": 56.48
+          "usd": 56.43
         },
         "nz": {
           "cur": "NZD",
           "price": 89.95,
-          "usd": 52.73
+          "usd": 52.62
         },
         "jp": {
           "cur": "JPY",
           "price": 6500,
-          "usd": 40.81
+          "usd": 40.78
         },
         "hk": null,
         "kr": null
@@ -1091,97 +1043,97 @@
         "mx": {
           "cur": "MXN",
           "price": 1229,
-          "usd": 72.04
+          "usd": 72.12
         },
         "br": {
           "cur": "BRL",
           "price": 329.9,
-          "usd": 63.92
+          "usd": 63.65
         },
         "ar": {
           "cur": "ARS",
           "price": 84999,
-          "usd": 56.95
+          "usd": 56.98
         },
         "cl": {
           "cur": "CLP",
           "price": 61990,
-          "usd": 67.84
+          "usd": 67.79
         },
         "co": {
           "cur": "COP",
           "price": 279900,
-          "usd": 89.37
+          "usd": 89.13
         },
         "pe": {
           "cur": "PEN",
           "price": 239,
-          "usd": 70.9
+          "usd": 70.86
         },
         "gb": {
           "cur": "GBP",
           "price": 49.99,
-          "usd": 67.51
+          "usd": 67.44
         },
         "de": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "fr": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "es": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "it": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "nl": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "pl": {
           "cur": "PLN",
           "price": 249.8,
-          "usd": 66.95
+          "usd": 66.87
         },
         "no": {
           "cur": "NOK",
           "price": 659,
-          "usd": 69.44
+          "usd": 69.3
         },
         "ch": {
           "cur": "CHF",
           "price": 59.9,
-          "usd": 73.7
+          "usd": 73.63
         },
         "za": {
           "cur": "ZAR",
           "price": 1129,
-          "usd": 69.95
+          "usd": 69.78
         },
         "au": {
           "cur": "AUD",
           "price": 79.95,
-          "usd": 56.48
+          "usd": 56.43
         },
         "nz": {
           "cur": "NZD",
           "price": 89.95,
-          "usd": 52.73
+          "usd": 52.62
         },
         "jp": {
           "cur": "JPY",
           "price": 6500,
-          "usd": 40.81
+          "usd": 40.78
         },
         "hk": null,
         "kr": null
@@ -1205,102 +1157,102 @@
         "ca": {
           "cur": "CAD",
           "price": 99.99,
-          "usd": 71.77
+          "usd": 71.76
         },
         "mx": {
           "cur": "MXN",
           "price": 1449,
-          "usd": 84.93
+          "usd": 85.03
         },
         "br": {
           "cur": "BRL",
           "price": 389.9,
-          "usd": 75.55
+          "usd": 75.22
         },
         "ar": {
           "cur": "ARS",
           "price": 99199,
-          "usd": 66.46
+          "usd": 66.49
         },
         "cl": {
           "cur": "CLP",
           "price": 71990,
-          "usd": 78.79
+          "usd": 78.73
         },
         "co": {
           "cur": "COP",
           "price": 324900,
-          "usd": 103.74
+          "usd": 103.46
         },
         "pe": {
           "cur": "PEN",
           "price": 279,
-          "usd": 82.76
+          "usd": 82.72
         },
         "gb": {
           "cur": "GBP",
           "price": 58.99,
-          "usd": 79.66
+          "usd": 79.58
         },
         "de": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "fr": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "es": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "it": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "nl": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "pl": {
           "cur": "PLN",
           "price": 297.8,
-          "usd": 79.81
+          "usd": 79.72
         },
         "no": {
           "cur": "NOK",
           "price": 829,
-          "usd": 87.36
+          "usd": 87.18
         },
         "ch": {
           "cur": "CHF",
           "price": 69.9,
-          "usd": 86.01
+          "usd": 85.92
         },
         "za": {
           "cur": "ZAR",
           "price": 1469,
-          "usd": 91.02
+          "usd": 90.79
         },
         "au": {
           "cur": "AUD",
           "price": 89.95,
-          "usd": 63.54
+          "usd": 63.49
         },
         "nz": {
           "cur": "NZD",
           "price": 99.95,
-          "usd": 58.59
+          "usd": 58.47
         },
         "jp": {
           "cur": "JPY",
           "price": 7980,
-          "usd": 50.1
+          "usd": 50.06
         },
         "hk": null,
         "kr": null
@@ -1329,97 +1281,97 @@
         "mx": {
           "cur": "MXN",
           "price": 1229,
-          "usd": 72.04
+          "usd": 72.12
         },
         "br": {
           "cur": "BRL",
           "price": 329.9,
-          "usd": 63.92
+          "usd": 63.65
         },
         "ar": {
           "cur": "ARS",
           "price": 84999,
-          "usd": 56.95
+          "usd": 56.98
         },
         "cl": {
           "cur": "CLP",
           "price": 61990,
-          "usd": 67.84
+          "usd": 67.79
         },
         "co": {
           "cur": "COP",
           "price": 279900,
-          "usd": 89.37
+          "usd": 89.13
         },
         "pe": {
           "cur": "PEN",
           "price": 239,
-          "usd": 70.9
+          "usd": 70.86
         },
         "gb": {
           "cur": "GBP",
           "price": 49.99,
-          "usd": 67.51
+          "usd": 67.44
         },
         "de": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "fr": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "es": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "it": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "nl": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "pl": {
           "cur": "PLN",
           "price": 249.8,
-          "usd": 66.95
+          "usd": 66.87
         },
         "no": {
           "cur": "NOK",
           "price": 659,
-          "usd": 69.44
+          "usd": 69.3
         },
         "ch": {
           "cur": "CHF",
           "price": 59.9,
-          "usd": 73.7
+          "usd": 73.63
         },
         "za": {
           "cur": "ZAR",
           "price": 1129,
-          "usd": 69.95
+          "usd": 69.78
         },
         "au": {
           "cur": "AUD",
           "price": 79.95,
-          "usd": 56.48
+          "usd": 56.43
         },
         "nz": {
           "cur": "NZD",
           "price": 89.95,
-          "usd": 52.73
+          "usd": 52.62
         },
         "jp": {
           "cur": "JPY",
           "price": 6578,
-          "usd": 41.3
+          "usd": 41.27
         },
         "hk": null,
         "kr": null
@@ -1448,97 +1400,97 @@
         "mx": {
           "cur": "MXN",
           "price": 1229,
-          "usd": 72.04
+          "usd": 72.12
         },
         "br": {
           "cur": "BRL",
           "price": 329.9,
-          "usd": 63.92
+          "usd": 63.65
         },
         "ar": {
           "cur": "ARS",
           "price": 84999,
-          "usd": 56.95
+          "usd": 56.98
         },
         "cl": {
           "cur": "CLP",
           "price": 61990,
-          "usd": 67.84
+          "usd": 67.79
         },
         "co": {
           "cur": "COP",
           "price": 279900,
-          "usd": 89.37
+          "usd": 89.13
         },
         "pe": {
           "cur": "PEN",
           "price": 239,
-          "usd": 70.9
+          "usd": 70.86
         },
         "gb": {
           "cur": "GBP",
           "price": 49.99,
-          "usd": 67.51
+          "usd": 67.44
         },
         "de": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "fr": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "es": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "it": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "nl": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "pl": {
           "cur": "PLN",
           "price": 249.8,
-          "usd": 66.95
+          "usd": 66.87
         },
         "no": {
           "cur": "NOK",
           "price": 659,
-          "usd": 69.44
+          "usd": 69.3
         },
         "ch": {
           "cur": "CHF",
           "price": 59.9,
-          "usd": 73.7
+          "usd": 73.63
         },
         "za": {
           "cur": "ZAR",
           "price": 1129,
-          "usd": 69.95
+          "usd": 69.78
         },
         "au": {
           "cur": "AUD",
           "price": 79.95,
-          "usd": 56.48
+          "usd": 56.43
         },
         "nz": {
           "cur": "NZD",
           "price": 89.95,
-          "usd": 52.73
+          "usd": 52.62
         },
         "jp": {
           "cur": "JPY",
           "price": 7100,
-          "usd": 44.57
+          "usd": 44.54
         },
         "hk": null,
         "kr": null
@@ -1567,97 +1519,97 @@
         "mx": {
           "cur": "MXN",
           "price": 1229,
-          "usd": 72.04
+          "usd": 72.12
         },
         "br": {
           "cur": "BRL",
           "price": 329.9,
-          "usd": 63.92
+          "usd": 63.65
         },
         "ar": {
           "cur": "ARS",
           "price": 84999,
-          "usd": 56.95
+          "usd": 56.98
         },
         "cl": {
           "cur": "CLP",
           "price": 61990,
-          "usd": 67.84
+          "usd": 67.79
         },
         "co": {
           "cur": "COP",
           "price": 279900,
-          "usd": 89.37
+          "usd": 89.13
         },
         "pe": {
           "cur": "PEN",
           "price": 239,
-          "usd": 70.9
+          "usd": 70.86
         },
         "gb": {
           "cur": "GBP",
           "price": 59.99,
-          "usd": 81.01
+          "usd": 80.93
         },
         "de": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "fr": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "es": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "it": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "nl": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "pl": {
           "cur": "PLN",
           "price": 289.8,
-          "usd": 77.67
+          "usd": 77.58
         },
         "no": {
           "cur": "NOK",
           "price": 769,
-          "usd": 81.03
+          "usd": 80.87
         },
         "ch": {
           "cur": "CHF",
           "price": 69.9,
-          "usd": 86.01
+          "usd": 85.92
         },
         "za": {
           "cur": "ZAR",
           "price": 1329,
-          "usd": 82.34
+          "usd": 82.14
         },
         "au": {
           "cur": "AUD",
           "price": 89.95,
-          "usd": 63.54
+          "usd": 63.49
         },
         "nz": {
           "cur": "NZD",
           "price": 99.95,
-          "usd": 58.59
+          "usd": 58.47
         },
         "jp": {
           "cur": "JPY",
           "price": 7920,
-          "usd": 49.72
+          "usd": 49.69
         },
         "hk": null,
         "kr": null
@@ -1686,97 +1638,97 @@
         "mx": {
           "cur": "MXN",
           "price": 1229,
-          "usd": 72.04
+          "usd": 72.12
         },
         "br": {
           "cur": "BRL",
           "price": 329.9,
-          "usd": 63.92
+          "usd": 63.65
         },
         "ar": {
           "cur": "ARS",
           "price": 84999,
-          "usd": 56.95
+          "usd": 56.98
         },
         "cl": {
           "cur": "CLP",
           "price": 61990,
-          "usd": 67.84
+          "usd": 67.79
         },
         "co": {
           "cur": "COP",
           "price": 279900,
-          "usd": 89.37
+          "usd": 89.13
         },
         "pe": {
           "cur": "PEN",
           "price": 239,
-          "usd": 70.9
+          "usd": 70.86
         },
         "gb": {
           "cur": "GBP",
           "price": 49.99,
-          "usd": 67.51
+          "usd": 67.44
         },
         "de": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "fr": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "es": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "it": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "nl": {
           "cur": "EUR",
           "price": 59.99,
-          "usd": 69.19
+          "usd": 69.18
         },
         "pl": {
           "cur": "PLN",
           "price": 249.8,
-          "usd": 66.95
+          "usd": 66.87
         },
         "no": {
           "cur": "NOK",
           "price": 659,
-          "usd": 69.44
+          "usd": 69.3
         },
         "ch": {
           "cur": "CHF",
           "price": 59.9,
-          "usd": 73.7
+          "usd": 73.63
         },
         "za": {
           "cur": "ZAR",
           "price": 1129,
-          "usd": 69.95
+          "usd": 69.78
         },
         "au": {
           "cur": "AUD",
           "price": 79.95,
-          "usd": 56.48
+          "usd": 56.43
         },
         "nz": {
           "cur": "NZD",
           "price": 89.95,
-          "usd": 52.73
+          "usd": 52.62
         },
         "jp": {
           "cur": "JPY",
           "price": 8700,
-          "usd": 54.62
+          "usd": 54.58
         },
         "hk": null,
         "kr": null
@@ -1800,102 +1752,102 @@
         "ca": {
           "cur": "CAD",
           "price": 99.99,
-          "usd": 71.77
+          "usd": 71.76
         },
         "mx": {
           "cur": "MXN",
           "price": 1449,
-          "usd": 84.93
+          "usd": 85.03
         },
         "br": {
           "cur": "BRL",
           "price": 389.9,
-          "usd": 75.55
+          "usd": 75.22
         },
         "ar": {
           "cur": "ARS",
           "price": 99199,
-          "usd": 66.46
+          "usd": 66.49
         },
         "cl": {
           "cur": "CLP",
           "price": 71990,
-          "usd": 78.79
+          "usd": 78.73
         },
         "co": {
           "cur": "COP",
           "price": 324900,
-          "usd": 103.74
+          "usd": 103.46
         },
         "pe": {
           "cur": "PEN",
           "price": 279,
-          "usd": 82.76
+          "usd": 82.72
         },
         "gb": {
           "cur": "GBP",
           "price": 59.99,
-          "usd": 81.01
+          "usd": 80.93
         },
         "de": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "fr": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "es": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "it": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "nl": {
           "cur": "EUR",
           "price": 69.99,
-          "usd": 80.72
+          "usd": 80.71
         },
         "pl": {
           "cur": "PLN",
           "price": 289.8,
-          "usd": 77.67
+          "usd": 77.58
         },
         "no": {
           "cur": "NOK",
           "price": 769,
-          "usd": 81.03
+          "usd": 80.87
         },
         "ch": {
           "cur": "CHF",
           "price": 69.9,
-          "usd": 86.01
+          "usd": 85.92
         },
         "za": {
           "cur": "ZAR",
           "price": 1329,
-          "usd": 82.34
+          "usd": 82.14
         },
         "au": {
           "cur": "AUD",
           "price": 89.95,
-          "usd": 63.54
+          "usd": 63.49
         },
         "nz": {
           "cur": "NZD",
           "price": 99.95,
-          "usd": 58.59
+          "usd": 58.47
         },
         "jp": {
           "cur": "JPY",
           "price": 7900,
-          "usd": 49.59
+          "usd": 49.56
         },
         "hk": null,
         "kr": null
@@ -1903,6 +1855,7 @@
     }
   },
   "warnings": [
-    "nintendo-switch-online: 订阅制会员，无 GAME 类目录条目可发现 NSUID，价格接口无法核验 → 全部 null（待核验）"
+    "nintendo-switch-online: 订阅制会员，无 GAME 类目录条目可发现 NSUID，价格接口无法核验 → 全部 null（待核验）",
+    "discover pokemon-legends-z-a [eu]: EU Solr: HTTP 403"
   ]
 }
