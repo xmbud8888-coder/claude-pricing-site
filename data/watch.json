@@ -1,28 +1,52 @@
 {
   "claude-pricing": {
-    "hash": "4e2c4eaeafa235db",
+    "hash": "114c2cd3dd5faaec",
     "tokens": [
       "$0",
       "$0.05",
       "$0.08",
+      "$0.10",
+      "$0.20",
+      "$0.25",
+      "$0.30",
+      "$0.50",
+      "$1",
+      "$1.25",
+      "$1.50",
       "$10",
       "$100",
+      "$11",
+      "$12.50",
       "$125",
+      "$13",
+      "$15",
       "$17",
+      "$18.75",
+      "$19",
+      "$2",
+      "$2.50",
       "$20",
       "$200",
       "$25",
+      "$3",
+      "$3.75",
       "$5",
-      "claude-animations.js",
-      "claude-button",
-      "claude-form",
-      "claude-mode",
-      "claude-textarea"
+      "$50",
+      "$6.25",
+      "$75",
+      "$8",
+      "claude-code",
+      "claude-com",
+      "claude-for-microsoft-365",
+      "claude-for-slack",
+      "claude-in-chrome",
+      "claude-science",
+      "claude-security"
     ],
-    "at": "2026-09-03T08:13:52.287Z"
+    "at": "2026-09-04T08:09:24.431Z"
   },
   "openai-api-pricing": {
-    "hash": "25219439a83c1a68",
+    "hash": "9c4483ba27e81dc5",
     "tokens": [
       "$0.003",
       "$0.0045",
@@ -67,6 +91,7 @@
       "$14.00",
       "$15.00",
       "$15.625",
+      "$150.00",
       "$16.00",
       "$18.00",
       "$2.00",
@@ -81,10 +106,13 @@
       "$30.00",
       "$32.00",
       "$36.00",
+      "$37.50",
       "$4.00",
       "$40.00",
       "$5.00",
+      "$50.00",
       "$6.00",
+      "$6.25",
       "$60.00",
       "$64.00",
       "$75.00",
@@ -101,6 +129,8 @@
       "gpt-5.6-luna",
       "gpt-5.6-sol",
       "gpt-5.6-terra",
+      "gpt-6",
+      "gpt-6-astra",
       "gpt-daybreak-blue-latest",
       "gpt-daybreak-red-latest",
       "gpt-image-2",
@@ -112,10 +142,10 @@
       "gpt-realtime-whisper",
       "gpt-transcribe"
     ],
-    "at": "2026-09-03T08:13:52.867Z"
+    "at": "2026-09-04T08:09:24.840Z"
   },
   "xai-models": {
-    "hash": "e146cc1a0db4eea3",
+    "hash": "be96ac17900327e2",
     "tokens": [
       "$0.02",
       "$0.05",
@@ -124,8 +154,8 @@
       "$1",
       "$15.00",
       "$2.00",
-      "$33",
-      "$41",
+      "$32",
+      "$40",
       "$6.00",
       "grok-4.20",
       "grok-4.20-0309",
@@ -187,7 +217,7 @@
       "grok-voice-think-fast-1.0",
       "grok-voice-think-fast-2.0"
     ],
-    "at": "2026-09-03T08:13:53.090Z"
+    "at": "2026-09-04T08:09:24.982Z"
   },
   "anthropic-api-docs": {
     "hash": "40959979249f4f7b",
@@ -209,6 +239,6 @@
       "claude-prompting-best-practices",
       "claude-sonnet-5"
     ],
-    "at": "2026-09-03T08:13:52.701Z"
+    "at": "2026-09-04T08:09:24.775Z"
   }
 }
