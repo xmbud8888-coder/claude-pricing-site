@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-09-07T08:19:22.045Z",
+  "ranAt": "2026-09-08T08:05:46.343Z",
   "apple": {
     "claude": {
       "us": {
@@ -161,12 +161,12 @@
             "price": "₱ 7,990.00"
           },
           {
-            "name": "Claude Max 20x - Monthly",
-            "price": "₱ 14,990.00"
-          },
-          {
             "name": "Claude Pro - Annual",
             "price": "₱ 12,990.00"
+          },
+          {
+            "name": "Claude Max 20x - Monthly",
+            "price": "₱ 14,990.00"
           }
         ]
       },
@@ -392,8 +392,29 @@
         ]
       },
       "jp": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "ChatGPT Plus",
+            "price": "¥3,000"
+          },
+          {
+            "name": "ChatGPT Go",
+            "price": "¥1,400"
+          },
+          {
+            "name": "ChatGPT Pro 5x",
+            "price": "¥16,800"
+          },
+          {
+            "name": "ChatGPT Pro 20x",
+            "price": "¥30,000"
+          },
+          {
+            "name": "ChatGPT Plus",
+            "price": "¥30,000"
+          }
+        ]
       },
       "pk": {
         "ok": true,
@@ -421,20 +442,104 @@
         ]
       },
       "ca": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "ChatGPT Plus",
+            "price": "$24.99"
+          },
+          {
+            "name": "ChatGPT Go",
+            "price": "$12.99"
+          },
+          {
+            "name": "ChatGPT Pro 5x",
+            "price": "$152.99"
+          },
+          {
+            "name": "ChatGPT Pro 20x",
+            "price": "$249.00"
+          },
+          {
+            "name": "ChatGPT Plus",
+            "price": "$249.00"
+          }
+        ]
       },
       "ar": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "ChatGPT Plus",
+            "price": "USD 19.99"
+          },
+          {
+            "name": "ChatGPT Go",
+            "price": "USD 5.99"
+          },
+          {
+            "name": "ChatGPT Pro 5x",
+            "price": "USD 100.00"
+          },
+          {
+            "name": "ChatGPT Pro 20x",
+            "price": "USD 200.00"
+          },
+          {
+            "name": "ChatGPT Plus",
+            "price": "USD 200.00"
+          }
+        ]
       },
       "eg": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "ChatGPT Go",
+            "price": "EGP 249.99"
+          },
+          {
+            "name": "ChatGPT Plus",
+            "price": "EGP 999.99"
+          },
+          {
+            "name": "ChatGPT Pro 5x",
+            "price": "EGP 5,399.99"
+          },
+          {
+            "name": "ChatGPT Pro 20x",
+            "price": "EGP 9,999.99"
+          },
+          {
+            "name": "ChatGPT Plus",
+            "price": "EGP 9,999.99"
+          }
+        ]
       },
       "au": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "ChatGPT Plus",
+            "price": "$29.99"
+          },
+          {
+            "name": "ChatGPT Go",
+            "price": "$13.00"
+          },
+          {
+            "name": "ChatGPT Pro 5x",
+            "price": "$154.99"
+          },
+          {
+            "name": "ChatGPT Pro 20x",
+            "price": "$300.00"
+          },
+          {
+            "name": "ChatGPT Plus",
+            "price": "$300.00"
+          }
+        ]
       },
       "ph": {
         "ok": true,
@@ -462,8 +567,29 @@
         ]
       },
       "in": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "ChatGPT Go",
+            "price": "₹ 399"
+          },
+          {
+            "name": "ChatGPT Plus",
+            "price": "₹ 1,999"
+          },
+          {
+            "name": "ChatGPT Pro 5x",
+            "price": "₹ 10,699"
+          },
+          {
+            "name": "ChatGPT Pro 20x",
+            "price": "₹ 19,900"
+          },
+          {
+            "name": "ChatGPT Plus",
+            "price": "₹ 19,900"
+          }
+        ]
       },
       "tr": {
         "ok": true,
@@ -736,12 +862,12 @@
             "price": "Rs 2,900.00"
           },
           {
-            "name": "SuperGrok Plus",
-            "price": "Rs 24,900.00"
-          },
-          {
             "name": "SuperGrok Heavy",
             "price": "Rs 79,900.00"
+          },
+          {
+            "name": "SuperGrok Plus",
+            "price": "Rs 24,900.00"
           },
           {
             "name": "SuperGrok",
@@ -1001,12 +1127,12 @@
             "price": "10,00 €"
           },
           {
-            "name": "SuperGrok Heavy",
-            "price": "349,00 €"
-          },
-          {
             "name": "SuperGrok Plus",
             "price": "100,00 €"
+          },
+          {
+            "name": "SuperGrok Heavy",
+            "price": "349,00 €"
           },
           {
             "name": "SuperGrok",
@@ -1101,12 +1227,12 @@
             "price": "89,00 kr"
           },
           {
-            "name": "SuperGrok Heavy",
-            "price": "2.499,00 kr"
-          },
-          {
             "name": "SuperGrok Plus",
             "price": "899,00 kr"
+          },
+          {
+            "name": "SuperGrok Heavy",
+            "price": "2.499,00 kr"
           },
           {
             "name": "SuperGrok",
@@ -1166,7 +1292,7 @@
           "₱ 285.00",
           "₱ 1,100.00",
           "₱ 119.00",
-          "₱ 179.00"
+          "₱ 11,900.00"
         ]
       },
       "in": {
@@ -1241,9 +1367,9 @@
         "probe": [
           "£18.99",
           "£4.49",
-          "£1.79",
           "£189.99",
-          "£44.99"
+          "£1.79",
+          "£7.99"
         ]
       },
       "dk": {
@@ -1817,20 +1943,54 @@
         ]
       },
       "ng": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "Standard Monthly Subscription",
+            "price": "₦ 6,900.00"
+          },
+          {
+            "name": "Pro Monthly Subscription",
+            "price": "₦ 14,900.00"
+          },
+          {
+            "name": "Monthly Subscription",
+            "price": "₦ 9,900.00"
+          }
+        ]
       },
       "kr": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          ", 원"
+        ]
       },
       "mx": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "Standard Monthly Subscription",
+            "price": "$165.00"
+          },
+          {
+            "name": "Pro Monthly Subscription",
+            "price": "$330.00"
+          }
+        ]
       },
       "de": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "Standard Monthly Subscription",
+            "price": "11,99 €"
+          },
+          {
+            "name": "Pro Monthly Subscription",
+            "price": "23,99 €"
+          }
+        ]
       },
       "fr": {
         "ok": true,
@@ -1863,12 +2023,42 @@
         ]
       },
       "gb": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "Standard Monthly Subscription",
+            "price": "£10.99"
+          },
+          {
+            "name": "Monthly Subscription",
+            "price": "£10.99"
+          },
+          {
+            "name": "Pro Monthly Subscription",
+            "price": "£21.99"
+          }
+        ]
       },
       "dk": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "Standard Monthly Subscription",
+            "price": "119,00 kr"
+          },
+          {
+            "name": "Monthly Subscription",
+            "price": "89,00 kr"
+          },
+          {
+            "name": "Monthly Subscription",
+            "price": "179,00 kr"
+          },
+          {
+            "name": "Pro Monthly Subscription",
+            "price": "229,00 kr"
+          }
+        ]
       }
     },
     "characterai": {
@@ -1878,8 +2068,17 @@
         "probe": []
       },
       "jp": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          "¥1,500",
+          "¥150",
+          "¥15,000",
+          "¥500",
+          "¥800",
+          "¥400",
+          "¥8,000"
+        ]
       },
       "pk": {
         "ok": true,
@@ -1892,8 +2091,9 @@
         "probe": []
       },
       "ar": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": []
       },
       "eg": {
         "ok": true,
@@ -1920,54 +2120,140 @@
         ]
       },
       "in": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          "₹ 999",
+          "₹ 299",
+          "₹ 99",
+          "₹ 149",
+          "₹ 9,900",
+          "₹ 499",
+          "₹ 4,999"
+        ]
       },
       "tr": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          "₺249,99",
+          "₺49,99",
+          "₺149,99",
+          "₺2.499,99",
+          "₺99,99",
+          "₺499,99",
+          "₺199,99",
+          "₺4.999,99"
+        ]
       },
       "ng": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          "₦ 4,900.00",
+          "₦ 1,500.00",
+          "₦ 149,900.00",
+          "₦ 7,900.00",
+          "₦ 2,500.00",
+          "₦ 79,900.00",
+          "₦ 39,900.00"
+        ]
       },
       "kr": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": []
       },
       "mx": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": []
       },
       "de": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": []
       },
       "fr": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": []
       },
       "br": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          "R$ 49,90",
+          "R$ 6,90",
+          "R$ 24,90",
+          "R$ 12,90",
+          "R$ 19,90",
+          "R$ 499,90",
+          "R$ 59,90",
+          "R$ 29,90"
+        ]
       },
       "gb": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          "£9.99",
+          "£0.99",
+          "£2.99",
+          "£99.99",
+          "£4.99",
+          "£1.99",
+          "£49.99"
+        ]
       },
       "dk": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": []
       }
     },
     "suno": {
       "us": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "Pro Plan",
+            "price": "$10.00"
+          },
+          {
+            "name": "Premier Plan",
+            "price": "$30.00"
+          },
+          {
+            "name": "Pro Plan",
+            "price": "$96.00"
+          },
+          {
+            "name": "Premier Plan",
+            "price": "$289.00"
+          }
+        ]
       },
       "jp": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "Pro Plan",
+            "price": "¥1,500"
+          },
+          {
+            "name": "Premier Plan",
+            "price": "¥5,000"
+          },
+          {
+            "name": "Pro Plan",
+            "price": "¥15,000"
+          },
+          {
+            "name": "Premier Plan",
+            "price": "¥45,000"
+          }
+        ]
       },
       "pk": {
         "ok": true,
@@ -2109,14 +2395,6 @@
           {
             "name": "Pro Plan",
             "price": "₹ 9,900"
-          },
-          {
-            "name": "Premier Plan",
-            "price": "₹ 29,900"
-          },
-          {
-            "name": "Pro Plan",
-            "price": "₹ 1,299"
           }
         ]
       },
@@ -2414,6 +2692,10 @@
           {
             "name": "Standard Membership - one week",
             "price": "₱ 99.00"
+          },
+          {
+            "name": "Standard Membership-one week",
+            "price": "₱ 49.00"
           }
         ]
       },
@@ -3346,11 +3628,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "$20.00"
+            "price": "$40.00"
           },
           {
             "name": "Manus Pro",
-            "price": "$40.00"
+            "price": "$20.00"
           },
           {
             "name": "Manus Basic - Monthly",
@@ -3505,12 +3787,12 @@
             "price": "USD 19.00"
           },
           {
-            "name": "Manus Pro",
-            "price": "USD 60.00"
-          },
-          {
             "name": "Manus Plus - Monthly",
             "price": "USD 39.00"
+          },
+          {
+            "name": "Manus Pro",
+            "price": "USD 60.00"
           },
           {
             "name": "Manus Pro",
@@ -3547,11 +3829,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "EGP 4,999.99"
+            "price": "EGP 9,999.99"
           },
           {
             "name": "Manus Pro",
-            "price": "EGP 9,999.99"
+            "price": "EGP 4,999.99"
           }
         ]
       },
@@ -3612,12 +3894,12 @@
             "price": "₱ 3,990.00"
           },
           {
-            "name": "Manus Plus - Monthly",
-            "price": "₱ 2,490.00"
-          },
-          {
             "name": "Manus Basic - Monthly",
             "price": "₱ 1,190.00"
+          },
+          {
+            "name": "Manus Plus - Monthly",
+            "price": "₱ 2,490.00"
           },
           {
             "name": "Manus Pro",
@@ -3695,11 +3977,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "₺3.999,99"
+            "price": "₺9.999,99"
           },
           {
             "name": "Manus Pro",
-            "price": "₺9.999,99"
+            "price": "₺3.999,99"
           }
         ]
       },
@@ -3719,12 +4001,12 @@
             "price": "₦ 29,900.00"
           },
           {
-            "name": "Manus Plus - Monthly",
-            "price": "₦ 59,900.00"
-          },
-          {
             "name": "Manus Pro",
             "price": "₦ 99,900.00"
+          },
+          {
+            "name": "Manus Plus - Monthly",
+            "price": "₦ 59,900.00"
           }
         ]
       },
@@ -3898,11 +4180,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "£80.00"
+            "price": "£200.00"
           },
           {
             "name": "Manus Pro",
-            "price": "£200.00"
+            "price": "£100.00"
           }
         ]
       },
@@ -4074,20 +4356,108 @@
         ]
       },
       "eg": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "YouTube Premium",
+            "price": "EGP 114.99"
+          },
+          {
+            "name": "Youtube Premium Family",
+            "price": "EGP 209.99"
+          },
+          {
+            "name": "YouTube Premium Family",
+            "price": "EGP 209.99"
+          },
+          {
+            "name": "Premium Lite",
+            "price": "EGP 68.99"
+          },
+          {
+            "name": "Super Chat",
+            "price": "EGP 59.99"
+          },
+          {
+            "name": "Super Chat",
+            "price": "EGP 149.99"
+          }
+        ]
       },
       "au": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "YouTube Premium",
+            "price": "$22.99"
+          },
+          {
+            "name": "Youtube Premium Family",
+            "price": "$51.99"
+          },
+          {
+            "name": "Premium Lite",
+            "price": "$11.99"
+          },
+          {
+            "name": "YouTube Premium Family",
+            "price": "$51.99"
+          }
+        ]
       },
       "ph": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "YouTube Premium",
+            "price": "₱ 249.00"
+          },
+          {
+            "name": "Youtube Premium Family",
+            "price": "₱ 489.00"
+          },
+          {
+            "name": "YouTube Premium Family",
+            "price": "₱ 489.00"
+          },
+          {
+            "name": "Premium Lite",
+            "price": "₱ 149.00"
+          },
+          {
+            "name": "YouTube Premium",
+            "price": "₱ 629.00"
+          }
+        ]
       },
       "in": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "YouTube Premium",
+            "price": "₹ 195"
+          },
+          {
+            "name": "YouTube Premium Family",
+            "price": "₹ 389"
+          },
+          {
+            "name": "Youtube Premium Family",
+            "price": "₹ 389"
+          },
+          {
+            "name": "YouTube Premium Two-person",
+            "price": "₹ 289"
+          },
+          {
+            "name": "Premium Lite",
+            "price": "₹ 119"
+          },
+          {
+            "name": "Super Chat",
+            "price": "₹ 29"
+          }
+        ]
       },
       "tr": {
         "ok": true,
@@ -4145,8 +4515,25 @@
         ]
       },
       "mx": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "YouTube Premium",
+            "price": "$209.00"
+          },
+          {
+            "name": "YouTube Premium Family",
+            "price": "$419.00"
+          },
+          {
+            "name": "Youtube Premium Family",
+            "price": "$419.00"
+          },
+          {
+            "name": "Premium Lite",
+            "price": "$129.00"
+          }
+        ]
       },
       "de": {
         "ok": true,
@@ -4174,8 +4561,29 @@
         ]
       },
       "fr": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "YouTube Premium",
+            "price": "16,99 €"
+          },
+          {
+            "name": "Youtube Premium Family",
+            "price": "38,99 €"
+          },
+          {
+            "name": "Premium Lite",
+            "price": "9,99 €"
+          },
+          {
+            "name": "YouTube Premium Family",
+            "price": "38,99 €"
+          },
+          {
+            "name": "Super Chat",
+            "price": "2,49 €"
+          }
+        ]
       },
       "br": {
         "ok": true,
@@ -4207,8 +4615,33 @@
         ]
       },
       "gb": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "YouTube Premium",
+            "price": "£16.99"
+          },
+          {
+            "name": "Youtube Premium Family",
+            "price": "£25.99"
+          },
+          {
+            "name": "Super Chat",
+            "price": "£1.99"
+          },
+          {
+            "name": "YouTube Premium Family",
+            "price": "£25.99"
+          },
+          {
+            "name": "Premium Lite",
+            "price": "£10.49"
+          },
+          {
+            "name": "Super Chat",
+            "price": "£4.99"
+          }
+        ]
       },
       "dk": {
         "ok": true,
@@ -4235,8 +4668,18 @@
         "probe": []
       },
       "jp": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          "¥1,270",
+          "¥450",
+          "¥12,700",
+          "¥8,000",
+          "¥1,500",
+          "¥4,500",
+          "¥4,000",
+          "¥100"
+        ]
       },
       "pk": {
         "ok": true,
@@ -4301,8 +4744,13 @@
         ]
       },
       "in": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "Promote Post",
+            "price": "₹ 999"
+          }
+        ]
       },
       "tr": {
         "ok": true,
@@ -4314,8 +4762,13 @@
         ]
       },
       "ng": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [
+          {
+            "name": "Promote Post",
+            "price": "₦ 14,900.00"
+          }
+        ]
       },
       "kr": {
         "ok": true,
@@ -5951,7 +6404,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 160.00 - Rs 279,000.00"
+        "range": "Rs 160 - Rs 279,000"
       },
       "ca": {
         "ok": true,
@@ -6217,7 +6670,7 @@
       },
       "de": {
         "ok": true,
-        "range": "€6.99 - €109.99"
+        "range": "€0.29 - €349.99"
       },
       "fr": {
         "ok": true,
@@ -6225,7 +6678,7 @@
       },
       "br": {
         "ok": true,
-        "range": "R$0.90 - R$1,449.99"
+        "range": "R$18.90 - R$599.00"
       },
       "gb": {
         "ok": true,
@@ -6261,10 +6714,16 @@
     },
     "xai-models": {
       "ok": true,
-      "hash": "6b680bc2ca58b848",
-      "changedSinceLastRun": false,
-      "added": [],
-      "removed": []
+      "hash": "e146cc1a0db4eea3",
+      "changedSinceLastRun": true,
+      "added": [
+        "$33",
+        "$41"
+      ],
+      "removed": [
+        "$3",
+        "$31"
+      ]
     }
   },
   "warnings": [
