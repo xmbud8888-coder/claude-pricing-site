@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-09-08T08:05:46.343Z",
+  "ranAt": "2026-09-09T08:09:41.920Z",
   "apple": {
     "claude": {
       "us": {
@@ -999,8 +999,8 @@
             "price": "₱ 14,990.00"
           },
           {
-            "name": "SuperGrok Lite",
-            "price": "₱ 5,990.00"
+            "name": "SuperGrok Plus",
+            "price": "₱ 59,900.00"
           }
         ]
       },
@@ -1177,12 +1177,12 @@
             "price": "R$ 59,90"
           },
           {
-            "name": "SuperGrok Heavy",
-            "price": "R$ 1.999,90"
-          },
-          {
             "name": "SuperGrok Plus",
             "price": "R$ 599,90"
+          },
+          {
+            "name": "SuperGrok Heavy",
+            "price": "R$ 1.999,90"
           },
           {
             "name": "SuperGrok",
@@ -1227,12 +1227,12 @@
             "price": "89,00 kr"
           },
           {
-            "name": "SuperGrok Plus",
-            "price": "899,00 kr"
-          },
-          {
             "name": "SuperGrok Heavy",
             "price": "2.499,00 kr"
+          },
+          {
+            "name": "SuperGrok Plus",
+            "price": "899,00 kr"
           },
           {
             "name": "SuperGrok",
@@ -1292,7 +1292,7 @@
           "₱ 285.00",
           "₱ 1,100.00",
           "₱ 119.00",
-          "₱ 11,900.00"
+          "₱ 179.00"
         ]
       },
       "in": {
@@ -1369,7 +1369,7 @@
           "£4.49",
           "£189.99",
           "£1.79",
-          "£7.99"
+          "£44.99"
         ]
       },
       "dk": {
@@ -1421,11 +1421,11 @@
             "price": "Rs 4,900.00"
           },
           {
-            "name": "Perplexity Pro",
+            "name": "Perplexity Max",
             "price": "Rs 49,900.00"
           },
           {
-            "name": "Perplexity Max",
+            "name": "Perplexity Pro",
             "price": "Rs 49,900.00"
           }
         ]
@@ -1659,11 +1659,11 @@
             "price": "£20.00"
           },
           {
-            "name": "Perplexity Pro",
+            "name": "Perplexity Max",
             "price": "£200.00"
           },
           {
-            "name": "Perplexity Max",
+            "name": "Perplexity Pro",
             "price": "£200.00"
           }
         ]
@@ -2252,6 +2252,10 @@
           {
             "name": "Premier Plan",
             "price": "¥45,000"
+          },
+          {
+            "name": "Pro Plan",
+            "price": "¥2,000"
           }
         ]
       },
@@ -2749,7 +2753,8 @@
           "2200원",
           "6,600원",
           "6600원",
-          "6000원"
+          "6000원",
+          ". 원"
         ]
       },
       "mx": {
@@ -3779,12 +3784,16 @@
             "price": "USD 20.00"
           },
           {
+            "name": "Manus Basic - Monthly",
+            "price": "USD 19.00"
+          },
+          {
             "name": "Manus Pro",
             "price": "USD 40.00"
           },
           {
-            "name": "Manus Basic - Monthly",
-            "price": "USD 19.00"
+            "name": "Manus Pro",
+            "price": "USD 60.00"
           },
           {
             "name": "Manus Plus - Monthly",
@@ -3792,11 +3801,7 @@
           },
           {
             "name": "Manus Pro",
-            "price": "USD 60.00"
-          },
-          {
-            "name": "Manus Pro",
-            "price": "USD 200.00"
+            "price": "USD 80.00"
           }
         ]
       },
@@ -3825,15 +3830,15 @@
           },
           {
             "name": "Manus Pro",
-            "price": "EGP 3,999.99"
-          },
-          {
-            "name": "Manus Pro",
             "price": "EGP 9,999.99"
           },
           {
             "name": "Manus Pro",
             "price": "EGP 4,999.99"
+          },
+          {
+            "name": "Manus Pro",
+            "price": "EGP 3,999.99"
           }
         ]
       },
@@ -3857,12 +3862,12 @@
             "price": "$59.00"
           },
           {
-            "name": "Manus Pro",
-            "price": "$100.00"
-          },
-          {
             "name": "Manus Basic - Monthly",
             "price": "$29.00"
+          },
+          {
+            "name": "Manus Pro",
+            "price": "$100.00"
           },
           {
             "name": "Manus Pro",
@@ -3890,10 +3895,6 @@
             "price": "₱ 2,490.00"
           },
           {
-            "name": "Manus Pro",
-            "price": "₱ 3,990.00"
-          },
-          {
             "name": "Manus Basic - Monthly",
             "price": "₱ 1,190.00"
           },
@@ -3903,15 +3904,11 @@
           },
           {
             "name": "Manus Pro",
+            "price": "₱ 3,990.00"
+          },
+          {
+            "name": "Manus Pro",
             "price": "₱ 5,990.00"
-          },
-          {
-            "name": "Manus Pro",
-            "price": "₱ 4,990.00"
-          },
-          {
-            "name": "Manus Pro",
-            "price": "₱ 12,990.00"
           }
         ]
       },
@@ -3944,11 +3941,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "₹ 19,900"
+            "price": "₹ 7,900"
           },
           {
             "name": "Manus Pro",
-            "price": "₹ 7,900"
+            "price": "₹ 19,900"
           }
         ]
       },
@@ -3977,11 +3974,15 @@
           },
           {
             "name": "Manus Pro",
+            "price": "₺3.999,99"
+          },
+          {
+            "name": "Manus Pro",
             "price": "₺9.999,99"
           },
           {
             "name": "Manus Pro",
-            "price": "₺3.999,99"
+            "price": "₺4.999,99"
           }
         ]
       },
@@ -4001,12 +4002,12 @@
             "price": "₦ 29,900.00"
           },
           {
-            "name": "Manus Pro",
-            "price": "₦ 99,900.00"
-          },
-          {
             "name": "Manus Plus - Monthly",
             "price": "₦ 59,900.00"
+          },
+          {
+            "name": "Manus Pro",
+            "price": "₦ 99,900.00"
           }
         ]
       },
@@ -4031,12 +4032,12 @@
             "price": "$399.00"
           },
           {
-            "name": "Manus Pro",
-            "price": "$1,299.00"
-          },
-          {
             "name": "Manus Plus - Monthly",
             "price": "$799.00"
+          },
+          {
+            "name": "Manus Pro",
+            "price": "$1,299.00"
           },
           {
             "name": "Manus Pro",
@@ -4045,10 +4046,6 @@
           {
             "name": "Manus Pro",
             "price": "$1,999.00"
-          },
-          {
-            "name": "Manus Pro",
-            "price": "$3,999.00"
           }
         ]
       },
@@ -4146,8 +4143,8 @@
             "price": "R$ 399,90"
           },
           {
-            "name": "Manus Pro - Monthly",
-            "price": "R$ 1.299,90"
+            "name": "Manus Pro",
+            "price": "R$ 499,90"
           }
         ]
       },
@@ -4180,11 +4177,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "£200.00"
+            "price": "£100.00"
           },
           {
             "name": "Manus Pro",
-            "price": "£100.00"
+            "price": "£200.00"
           }
         ]
       },
@@ -4208,16 +4205,12 @@
             "price": "499,00 kr"
           },
           {
-            "name": "Manus Plus - Monthly",
-            "price": "349,00 kr"
-          },
-          {
             "name": "Manus Pro",
             "price": "699,00 kr"
           },
           {
-            "name": "Manus Pro",
-            "price": "1.799,00 kr"
+            "name": "Manus Plus - Monthly",
+            "price": "349,00 kr"
           }
         ]
       }
@@ -4342,11 +4335,11 @@
             "price": "USD 4.99"
           },
           {
-            "name": "Youtube Premium Family",
+            "name": "YouTube Premium Family",
             "price": "USD 9.49"
           },
           {
-            "name": "YouTube Premium Family",
+            "name": "Youtube Premium Family",
             "price": "USD 9.49"
           },
           {
@@ -5359,7 +5352,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 4,900 - Rs 61,250"
+        "range": "Rs 4,900.00 - Rs 61,250.00"
       },
       "ca": {
         "ok": true,
@@ -5433,7 +5426,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 1,400 - Rs 49,900"
+        "range": "Rs 1,400.00 - Rs 49,900.00"
       },
       "ca": {
         "ok": true,
@@ -5507,7 +5500,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 1,400 - Rs 277,900"
+        "range": "Rs 1,400.00 - Rs 277,900.00"
       },
       "ca": {
         "ok": true,
@@ -5655,7 +5648,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 1,400 - Rs 559,700"
+        "range": "Rs 1,400.00 - Rs 559,700.00"
       },
       "ca": {
         "ok": true,
@@ -5803,7 +5796,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 12 - Rs 249,900"
+        "range": "Rs 12.00 - Rs 249,900.00"
       },
       "ca": {
         "ok": true,
@@ -5877,7 +5870,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 280 - Rs 27,800"
+        "range": "Rs 280.00 - Rs 27,800.00"
       },
       "ca": {
         "ok": true,
@@ -5951,7 +5944,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 820 - Rs 199,900"
+        "range": "Rs 820.00 - Rs 199,900.00"
       },
       "ca": {
         "ok": true,
@@ -6025,7 +6018,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 160 - Rs 1,072,900"
+        "range": "Rs 160.00 - Rs 1,072,900.00"
       },
       "ca": {
         "ok": true,
@@ -6102,7 +6095,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 5,300 - Rs 104,600"
+        "range": "Rs 5,300.00 - Rs 104,600.00"
       },
       "ca": {
         "ok": true,
@@ -6179,7 +6172,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 2,650 - Rs 208,300"
+        "range": "Rs 2,650.00 - Rs 208,300.00"
       },
       "ca": {
         "ok": true,
@@ -6253,7 +6246,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 5,300 - Rs 1,394,600"
+        "range": "Rs 5,300.00 - Rs 1,394,600.00"
       },
       "ca": {
         "ok": true,
@@ -6330,7 +6323,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 10 - Rs 279,000"
+        "range": "Rs 10.00 - Rs 279,000.00"
       },
       "ca": {
         "ok": true,
@@ -6404,7 +6397,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 160 - Rs 279,000"
+        "range": "Rs 160.00 - Rs 279,000.00"
       },
       "ca": {
         "ok": true,
@@ -6478,7 +6471,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 460 - Rs 27,800"
+        "range": "Rs 460.00 - Rs 27,800.00"
       },
       "ca": {
         "ok": true,
@@ -6626,7 +6619,7 @@
       },
       "pk": {
         "ok": true,
-        "range": "Rs 199 - Rs 29,700"
+        "range": "Rs 199.00 - Rs 29,700.00"
       },
       "ca": {
         "ok": true,
@@ -6670,7 +6663,7 @@
       },
       "de": {
         "ok": true,
-        "range": "€0.29 - €349.99"
+        "range": "€6.99 - €109.99"
       },
       "fr": {
         "ok": true,
@@ -6707,22 +6700,25 @@
     },
     "openai-api-pricing": {
       "ok": true,
-      "hash": "9c4483ba27e81dc5",
-      "changedSinceLastRun": false,
-      "added": [],
+      "hash": "77d2c3e3ba6d5b6f",
+      "changedSinceLastRun": true,
+      "added": [
+        "gpt-image-2.5-flare",
+        "gpt-image-2.5-sunburst"
+      ],
       "removed": []
     },
     "xai-models": {
       "ok": true,
-      "hash": "e146cc1a0db4eea3",
+      "hash": "be96ac17900327e2",
       "changedSinceLastRun": true,
       "added": [
-        "$33",
-        "$41"
+        "$32",
+        "$40"
       ],
       "removed": [
-        "$3",
-        "$31"
+        "$33",
+        "$41"
       ]
     }
   },
