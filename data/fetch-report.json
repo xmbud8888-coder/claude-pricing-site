@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-09-11T08:04:10.287Z",
+  "ranAt": "2026-09-12T07:55:59.023Z",
   "apple": {
     "claude": {
       "us": {
@@ -140,12 +140,12 @@
             "price": "$199.99"
           },
           {
-            "name": "Claude Pro - Annual",
-            "price": "$349.99"
-          },
-          {
             "name": "Claude Max 20x - Monthly",
             "price": "$399.99"
+          },
+          {
+            "name": "Claude Pro - Annual",
+            "price": "$349.99"
           }
         ]
       },
@@ -161,12 +161,12 @@
             "price": "₱ 7,990.00"
           },
           {
-            "name": "Claude Pro - Annual",
-            "price": "₱ 12,990.00"
-          },
-          {
             "name": "Claude Max 20x - Monthly",
             "price": "₱ 14,990.00"
+          },
+          {
+            "name": "Claude Pro - Annual",
+            "price": "₱ 12,990.00"
           }
         ]
       },
@@ -553,12 +553,12 @@
             "price": "₱ 999.00"
           },
           {
-            "name": "ChatGPT Pro 20x",
-            "price": "₱ 9,990.00"
-          },
-          {
             "name": "ChatGPT Pro 5x",
             "price": "₱ 6,490.00"
+          },
+          {
+            "name": "ChatGPT Pro 20x",
+            "price": "₱ 9,990.00"
           },
           {
             "name": "ChatGPT Plus",
@@ -699,54 +699,12 @@
         ]
       },
       "fr": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "ChatGPT Plus",
-            "price": "22,99 €"
-          },
-          {
-            "name": "ChatGPT Go",
-            "price": "7,99 €"
-          },
-          {
-            "name": "ChatGPT Pro 5x",
-            "price": "102,99 €"
-          },
-          {
-            "name": "ChatGPT Pro 20x",
-            "price": "229,00 €"
-          },
-          {
-            "name": "ChatGPT Plus",
-            "price": "229,00 €"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "br": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "ChatGPT Plus",
-            "price": "R$ 99,90"
-          },
-          {
-            "name": "ChatGPT Go",
-            "price": "R$ 39,90"
-          },
-          {
-            "name": "ChatGPT Pro 5x",
-            "price": "R$ 524,90"
-          },
-          {
-            "name": "ChatGPT Pro 20x",
-            "price": "R$ 999,90"
-          },
-          {
-            "name": "ChatGPT Plus",
-            "price": "R$ 999,90"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "gb": {
         "ok": true,
@@ -774,29 +732,8 @@
         ]
       },
       "dk": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "ChatGPT Plus",
-            "price": "179,00 kr"
-          },
-          {
-            "name": "ChatGPT Go",
-            "price": "64,00 kr"
-          },
-          {
-            "name": "ChatGPT Pro 5x",
-            "price": "789,00 kr"
-          },
-          {
-            "name": "ChatGPT Pro 20x",
-            "price": "1.799,00 kr"
-          },
-          {
-            "name": "ChatGPT Plus",
-            "price": "1.799,00 kr"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       }
     },
     "grok": {
@@ -851,29 +788,8 @@
         ]
       },
       "pk": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "SuperGrok",
-            "price": "Rs 7,900.00"
-          },
-          {
-            "name": "SuperGrok Lite",
-            "price": "Rs 2,900.00"
-          },
-          {
-            "name": "SuperGrok Heavy",
-            "price": "Rs 79,900.00"
-          },
-          {
-            "name": "SuperGrok Plus",
-            "price": "Rs 24,900.00"
-          },
-          {
-            "name": "SuperGrok",
-            "price": "Rs 79,900.00"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "ca": {
         "ok": true,
@@ -912,12 +828,12 @@
             "price": "USD 10.00"
           },
           {
-            "name": "SuperGrok Heavy",
-            "price": "USD 300.00"
-          },
-          {
             "name": "SuperGrok Plus",
             "price": "USD 100.00"
+          },
+          {
+            "name": "SuperGrok Heavy",
+            "price": "USD 300.00"
           },
           {
             "name": "SuperGrok",
@@ -1051,29 +967,8 @@
         ]
       },
       "ng": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "SuperGrok",
-            "price": "₦ 49,900.00"
-          },
-          {
-            "name": "SuperGrok Lite",
-            "price": "₦ 14,900.00"
-          },
-          {
-            "name": "SuperGrok Plus",
-            "price": "₦ 149,900.00"
-          },
-          {
-            "name": "SuperGrok Heavy",
-            "price": "₦ 499,900.00"
-          },
-          {
-            "name": "SuperGrok",
-            "price": "₦ 499,900.00"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "kr": {
         "ok": true,
@@ -1169,12 +1064,12 @@
             "price": "R$ 59,90"
           },
           {
-            "name": "SuperGrok Heavy",
-            "price": "R$ 1.999,90"
-          },
-          {
             "name": "SuperGrok Plus",
             "price": "R$ 599,90"
+          },
+          {
+            "name": "SuperGrok Heavy",
+            "price": "R$ 1.999,90"
           },
           {
             "name": "SuperGrok",
@@ -1379,11 +1274,11 @@
             "price": "$20.00"
           },
           {
-            "name": "Perplexity Pro",
+            "name": "Perplexity Max",
             "price": "$200.00"
           },
           {
-            "name": "Perplexity Max",
+            "name": "Perplexity Pro",
             "price": "$200.00"
           }
         ]
@@ -1434,12 +1329,12 @@
             "price": "$249.00"
           },
           {
-            "name": "Perplexity Pro",
-            "price": "$6.99"
-          },
-          {
             "name": "Perplexity Max",
             "price": "$249.00"
+          },
+          {
+            "name": "Perplexity Pro",
+            "price": "$6.99"
           }
         ]
       },
@@ -1630,11 +1525,11 @@
             "price": "R$ 129,90"
           },
           {
-            "name": "Perplexity Pro",
+            "name": "Perplexity Max",
             "price": "R$ 1.299,90"
           },
           {
-            "name": "Perplexity Max",
+            "name": "Perplexity Pro",
             "price": "R$ 1.299,90"
           },
           {
@@ -1824,115 +1719,38 @@
             "price": "$13.49"
           },
           {
-            "name": "Monthly Subscription",
-            "price": "$9.99"
-          },
-          {
             "name": "Pro Monthly Subscription",
             "price": "$27.99"
+          },
+          {
+            "name": "Monthly Subscription",
+            "price": "$9.99"
           }
         ]
       },
       "ar": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "Capcut Pro",
-            "price": "USD 6.99"
-          },
-          {
-            "name": "Standard Monthly Subscription",
-            "price": "USD 6.99"
-          },
-          {
-            "name": "Pro Monthly Subscription",
-            "price": "USD 13.99"
-          },
-          {
-            "name": "Monthly Subscription",
-            "price": "USD 19.99"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "eg": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "Monthly Subscription",
-            "price": "EGP 349.99"
-          },
-          {
-            "name": "Standard Monthly Subscription",
-            "price": "EGP 249.99"
-          },
-          {
-            "name": "Pro Monthly Subscription",
-            "price": "EGP 499.99"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "au": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "Monthly Subscription",
-            "price": "$14.99"
-          },
-          {
-            "name": "Standard Monthly Subscription",
-            "price": "$14.99"
-          },
-          {
-            "name": "Pro Monthly Subscription",
-            "price": "$29.99"
-          },
-          {
-            "name": "Monthly Subscription",
-            "price": "$12.99"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "ph": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "Standard Monthly Subscription",
-            "price": "₱ 250.00"
-          },
-          {
-            "name": "Pro Monthly Subscription",
-            "price": "₱ 480.00"
-          },
-          {
-            "name": "Monthly Subscription",
-            "price": "₱ 359.00"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "in": {
         "ok": false,
         "reason": "HTTP 404"
       },
       "tr": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "Standard Monthly Subscription",
-            "price": "₺199,99"
-          },
-          {
-            "name": "Monthly Subscription",
-            "price": "₺249,99"
-          },
-          {
-            "name": "Monthly Subscription",
-            "price": "₺184,99"
-          },
-          {
-            "name": "Pro Monthly Subscription",
-            "price": "₺399,99"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "ng": {
         "ok": true,
@@ -1972,64 +1790,20 @@
         ]
       },
       "de": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "Standard Monthly Subscription",
-            "price": "11,99 €"
-          },
-          {
-            "name": "Pro Monthly Subscription",
-            "price": "23,99 €"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "fr": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "Standard Monthly Subscription",
-            "price": "11,99 €"
-          },
-          {
-            "name": "Pro Monthly Subscription",
-            "price": "23,99 €"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "br": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "Monthly Subscription",
-            "price": "R$ 32,90"
-          },
-          {
-            "name": "Standard Monthly Subscription",
-            "price": "R$ 32,90"
-          },
-          {
-            "name": "Pro Monthly Subscription",
-            "price": "R$ 65,90"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "gb": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "Standard Monthly Subscription",
-            "price": "£10.99"
-          },
-          {
-            "name": "Monthly Subscription",
-            "price": "£10.99"
-          },
-          {
-            "name": "Pro Monthly Subscription",
-            "price": "£21.99"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "dk": {
         "ok": true,
@@ -2043,12 +1817,12 @@
             "price": "89,00 kr"
           },
           {
-            "name": "Monthly Subscription",
-            "price": "179,00 kr"
-          },
-          {
             "name": "Pro Monthly Subscription",
             "price": "229,00 kr"
+          },
+          {
+            "name": "Monthly Subscription",
+            "price": "179,00 kr"
           }
         ]
       }
@@ -2112,17 +1886,8 @@
         ]
       },
       "in": {
-        "ok": true,
-        "iaps": [],
-        "probe": [
-          "₹ 999",
-          "₹ 299",
-          "₹ 99",
-          "₹ 149",
-          "₹ 9,900",
-          "₹ 499",
-          "₹ 4,999"
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "tr": {
         "ok": true,
@@ -2152,9 +1917,8 @@
         ]
       },
       "kr": {
-        "ok": true,
-        "iaps": [],
-        "probe": []
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "mx": {
         "ok": true,
@@ -2562,10 +2326,6 @@
           {
             "name": "Pro Plan",
             "price": "799,00 kr"
-          },
-          {
-            "name": "Premier Plan",
-            "price": "2.499,00 kr"
           }
         ]
       }
@@ -2708,12 +2468,12 @@
         "ok": true,
         "iaps": [
           {
-            "name": "Standard Membership-one week",
-            "price": "₺59,99"
-          },
-          {
             "name": "Standard Membership - one week",
             "price": "₺79,99"
+          },
+          {
+            "name": "Standard Membership-one week",
+            "price": "₺59,99"
           }
         ]
       },
@@ -3313,29 +3073,8 @@
         ]
       },
       "ng": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "连续包月会员",
-            "price": "₦ 14,900.00"
-          },
-          {
-            "name": "清言SVIP月卡",
-            "price": "₦ 49,900.00"
-          },
-          {
-            "name": "清言连续包年SVIP",
-            "price": "₦ 599,900.00"
-          },
-          {
-            "name": "清言SVIP连续包年",
-            "price": "₦ 599,900.00"
-          },
-          {
-            "name": "清言SVIP连续包月",
-            "price": "₦ 49,900.00"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "kr": {
         "ok": true,
@@ -3528,13 +3267,8 @@
         ]
       },
       "tr": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "Premium",
-            "price": "₺999,99"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "ng": {
         "ok": true,
@@ -3617,11 +3351,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "$40.00"
+            "price": "$20.00"
           },
           {
             "name": "Manus Pro",
-            "price": "$20.00"
+            "price": "$40.00"
           },
           {
             "name": "Manus Basic - Monthly",
@@ -3644,8 +3378,8 @@
             "price": "$100.00"
           },
           {
-            "name": "Manus Pro - Monthly",
-            "price": "$199.00"
+            "name": "Manus Pro",
+            "price": "$200.00"
           }
         ]
       },
@@ -3731,12 +3465,12 @@
             "price": "$50.00"
           },
           {
-            "name": "Manus Basic - Monthly",
-            "price": "$25.00"
-          },
-          {
             "name": "Manus Pro",
             "price": "$80.00"
+          },
+          {
+            "name": "Manus Basic - Monthly",
+            "price": "$25.00"
           },
           {
             "name": "Manus Plus - Monthly",
@@ -3801,12 +3535,16 @@
             "price": "EGP 999.99"
           },
           {
+            "name": "Manus Pro",
+            "price": "EGP 1,999.99"
+          },
+          {
             "name": "Manus Basic - Monthly",
             "price": "EGP 999.99"
           },
           {
             "name": "Manus Pro",
-            "price": "EGP 1,999.99"
+            "price": "EGP 2,999.99"
           },
           {
             "name": "Manus Plus - Monthly",
@@ -3814,7 +3552,7 @@
           },
           {
             "name": "Manus Pro",
-            "price": "EGP 2,999.99"
+            "price": "EGP 9,999.99"
           },
           {
             "name": "Manus Pro",
@@ -3823,10 +3561,6 @@
           {
             "name": "Manus Pro",
             "price": "EGP 4,999.99"
-          },
-          {
-            "name": "Manus Pro",
-            "price": "EGP 9,999.99"
           }
         ]
       },
@@ -3839,11 +3573,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "$60.00"
+            "price": "$30.00"
           },
           {
             "name": "Manus Pro",
-            "price": "$30.00"
+            "price": "$60.00"
           },
           {
             "name": "Manus Pro",
@@ -3859,11 +3593,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "$129.00"
+            "price": "$150.00"
           },
           {
             "name": "Manus Pro",
-            "price": "$150.00"
+            "price": "$129.00"
           },
           {
             "name": "Manus Pro",
@@ -3974,7 +3708,7 @@
           },
           {
             "name": "Manus Pro",
-            "price": "₺3.999,99"
+            "price": "₺4.999,99"
           }
         ]
       },
@@ -4024,12 +3758,16 @@
             "price": "$399.00"
           },
           {
+            "name": "Manus Pro",
+            "price": "$1,299.00"
+          },
+          {
             "name": "Manus Plus - Monthly",
             "price": "$799.00"
           },
           {
             "name": "Manus Pro",
-            "price": "$1,299.00"
+            "price": "$1,999.00"
           },
           {
             "name": "Manus Pro",
@@ -4037,7 +3775,7 @@
           },
           {
             "name": "Manus Pro",
-            "price": "$1,999.00"
+            "price": "$5,999.00"
           }
         ]
       },
@@ -4136,11 +3874,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "R$ 599,90"
+            "price": "R$ 499,90"
           },
           {
             "name": "Manus Pro",
-            "price": "R$ 499,90"
+            "price": "R$ 599,90"
           }
         ]
       },
@@ -4237,6 +3975,10 @@
           {
             "name": "Super Chat",
             "price": "$4.99"
+          },
+          {
+            "name": "Premium Lite",
+            "price": "$11.99"
           }
         ]
       },
@@ -4567,10 +4309,6 @@
           {
             "name": "YouTube Premium Family",
             "price": "38,99 €"
-          },
-          {
-            "name": "Super Chat",
-            "price": "2,49 €"
           }
         ]
       },
@@ -5067,13 +4805,8 @@
         ]
       },
       "ar": {
-        "ok": true,
-        "iaps": [
-          {
-            "name": "Netflix Premium",
-            "price": "USD 13.90"
-          }
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "eg": {
         "ok": true,
@@ -5484,19 +5217,19 @@
     "grok": {
       "us": {
         "ok": true,
-        "range": "$4.99 - $2,000.00"
+        "range": "$4.99 - $1,999.99"
       },
       "jp": {
         "ok": true,
-        "range": "¥900 - ¥180,000"
+        "range": "¥900 - ¥337,900"
       },
       "pk": {
         "ok": true,
-        "range": "Rs 1,400.00 - Rs 277,900.00"
+        "range": "Rs 1,400.00 - Rs 555,200.00"
       },
       "ca": {
         "ok": true,
-        "range": "$6.99 - $1,399.99"
+        "range": "$6.99 - $2,749.99"
       },
       "ar": {
         "ok": false,
@@ -5504,27 +5237,27 @@
       },
       "eg": {
         "ok": true,
-        "range": "EGP 279.99 - EGP 57,799.99"
+        "range": "EGP 279.99 - EGP 117,099.99"
       },
       "au": {
         "ok": true,
-        "range": "$7.99 - $1,549.99"
+        "range": "$7.99 - $3,049.99"
       },
       "ph": {
         "ok": true,
-        "range": "₱345.00 - ₱69,100.00"
+        "range": "₱345.00 - ₱140,450.00"
       },
       "in": {
         "ok": true,
-        "range": "₹550.00 - ₹2,24,500.00"
+        "range": "₹550.00 - ₹1,13,200.00"
       },
       "tr": {
         "ok": true,
-        "range": "TRY 279.99 - TRY 56,829.99"
+        "range": "TRY 279.99 - TRY 116,449.99"
       },
       "ng": {
         "ok": true,
-        "range": "₦7,420.00 - ₦1,463,500.00"
+        "range": "₦7,420.00 - ₦2,852,000.00"
       },
       "kr": {
         "ok": true,
@@ -5532,27 +5265,27 @@
       },
       "mx": {
         "ok": true,
-        "range": "MX$99.00 - MX$20,249.00"
+        "range": "MX$99.00 - MX$39,349.00"
       },
       "de": {
         "ok": true,
-        "range": "€4.99 - €1,049.99"
+        "range": "€4.99 - €2,049.99"
       },
       "fr": {
         "ok": true,
-        "range": "€5.49 - €1,049.99"
+        "range": "€5.49 - €2,049.99"
       },
       "br": {
         "ok": true,
-        "range": "R$25.99 - R$5,099.99"
+        "range": "R$25.99 - R$10,249.99"
       },
       "gb": {
         "ok": true,
-        "range": "£4.49 - £2,000.00"
+        "range": "£4.49 - £1,749.99"
       },
       "dk": {
         "ok": true,
-        "range": "41,00 kr. - 8.199,00 kr."
+        "range": "41,00 kr. - 16.099,00 kr."
       }
     },
     "gemini": {
@@ -6375,25 +6108,25 @@
       },
       "dk": {
         "ok": true,
-        "range": "0,40 kr. - 7.000,00 kr."
+        "range": "65,00 kr. - 849,00 kr."
       }
     },
     "x": {
       "us": {
         "ok": true,
-        "range": "$0.99 - $2,000.00"
+        "range": "$0.99 - $1,999.99"
       },
       "jp": {
         "ok": true,
-        "range": "¥120 - ¥90,000"
+        "range": "¥120 - ¥337,900"
       },
       "pk": {
         "ok": true,
-        "range": "Rs 160.00 - Rs 279,000.00"
+        "range": "Rs 160.00 - Rs 555,200.00"
       },
       "ca": {
         "ok": true,
-        "range": "$1.19 - $700.00"
+        "range": "$1.19 - $2,749.99"
       },
       "ar": {
         "ok": false,
@@ -6401,27 +6134,27 @@
       },
       "eg": {
         "ok": true,
-        "range": "EGP 15.99 - EGP 28,000.00"
+        "range": "EGP 15.99 - EGP 117,099.99"
       },
       "au": {
         "ok": true,
-        "range": "$1.49 - $1,550.00"
+        "range": "$1.49 - $3,049.99"
       },
       "ph": {
         "ok": true,
-        "range": "₱49.00 - ₱35,000.00"
+        "range": "₱49.00 - ₱140,450.00"
       },
       "in": {
         "ok": true,
-        "range": "₹85.00 - ₹2,24,500.00"
+        "range": "₹85.00 - ₹60,000.00"
       },
       "tr": {
         "ok": true,
-        "range": "TRY 9.99 - TRY 29,000.00"
+        "range": "TRY 9.99 - TRY 116,449.99"
       },
       "ng": {
         "ok": true,
-        "range": "₦405.00 - ₦1,490,000.00"
+        "range": "₦405.00 - ₦2,852,000.00"
       },
       "kr": {
         "ok": true,
@@ -6429,33 +6162,33 @@
       },
       "mx": {
         "ok": true,
-        "range": "MX$19.00 - MX$11,000.00"
+        "range": "MX$19.00 - MX$39,349.00"
       },
       "de": {
         "ok": true,
-        "range": "€0.99 - €500.00"
+        "range": "€0.99 - €2,049.99"
       },
       "fr": {
         "ok": true,
-        "range": "€0.99 - €500.00"
+        "range": "€0.99 - €2,049.99"
       },
       "br": {
         "ok": true,
-        "range": "R$4.69 - R$5,200.00"
+        "range": "R$4.69 - R$10,249.99"
       },
       "gb": {
         "ok": true,
-        "range": "£0.89 - £2,000.00"
+        "range": "£0.89 - £1,749.99"
       },
       "dk": {
         "ok": true,
-        "range": "8,00 kr. - 4.100,00 kr."
+        "range": "8,00 kr. - 16.099,00 kr."
       }
     },
     "hbo-max": {
       "us": {
         "ok": true,
-        "range": "$0.05 - $349.99"
+        "range": "$2.49 - $229.99"
       },
       "jp": {
         "ok": true,
@@ -6679,11 +6412,9 @@
     "claude-pricing": {
       "ok": true,
       "hash": "15da53ffed7d30f8",
-      "changedSinceLastRun": true,
+      "changedSinceLastRun": false,
       "added": [],
-      "removed": [
-        "claude-com"
-      ]
+      "removed": []
     },
     "anthropic-api-docs": {
       "ok": true,
@@ -6694,11 +6425,11 @@
     },
     "openai-api-pricing": {
       "ok": true,
-      "hash": "edee7613bf4cf1c6",
+      "hash": "93e085dacfe8848d",
       "changedSinceLastRun": true,
       "added": [
-        "gpt-live",
-        "gpt-live-1"
+        "gpt-rosalind",
+        "gpt-rosalind-research"
       ],
       "removed": []
     },
@@ -6712,7 +6443,7 @@
   },
   "warnings": [
     "discoverApple(sora): 候选 id6744034028 校验不符（无结果 / ）",
-    "discoverApple(sora): 未找到开发商匹配（候选：SorAI - AI Video Generator/DES GRADNJE d.o.o.; ChatGPT/OpenAI OpCo, LLC; Dora - AI Video Generator 2/SMART WIDGET LABS COMPANY LIMITED）",
+    "discoverApple(sora): 未找到开发商匹配（候选：SorAI - AI Video Generator/DES GRADNJE d.o.o.; Dora - AI Video Generator 2/SMART WIDGET LABS COMPANY LIMITED; ChatGPT/OpenAI OpCo, LLC）",
     "discoverApple(catcosplay): 未找到开发商匹配（候选：The Battle Cats/ponos corporation; Cat Game - The Cats Collector!/MinoMonsters Inc.; Games for Cats!/Matas Cuplinskas）",
     "discoverPlay(sora): 候选包名均未命中",
     "discoverPlay(glm): 候选包名均未命中",
