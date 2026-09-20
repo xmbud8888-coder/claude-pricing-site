@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-09-19T08:04:02.898Z",
+  "ranAt": "2026-09-20T08:36:14.026Z",
   "apple": {
     "claude": {
       "us": {
@@ -997,10 +997,6 @@
           {
             "name": "SuperGrok Plus",
             "price": "₱ 5,990.00"
-          },
-          {
-            "name": "SuperGrok Plus",
-            "price": "₱ 59,900.00"
           }
         ]
       },
@@ -1360,8 +1356,8 @@
         "probe": [
           "£18.99",
           "£4.49",
-          "£1.79",
-          "£189.99"
+          "£189.99",
+          "£1.79"
         ]
       },
       "dk": {
@@ -1655,11 +1651,11 @@
             "price": "£20.00"
           },
           {
-            "name": "Perplexity Max",
+            "name": "Perplexity Pro",
             "price": "£200.00"
           },
           {
-            "name": "Perplexity Pro",
+            "name": "Perplexity Max",
             "price": "£200.00"
           }
         ]
@@ -2110,8 +2106,8 @@
           "₱ 99.00",
           "₱ 199.00",
           "₱ 4,990.00",
-          "₱ 599.00",
           "₱ 299.00",
+          "₱ 599.00",
           "₱ 5,990.00"
         ]
       },
@@ -2136,8 +2132,8 @@
           "₺49,99",
           "₺149,99",
           "₺2.499,99",
-          "₺99,99",
           "₺199,99",
+          "₺99,99",
           "₺499,99",
           "₺4.999,99"
         ]
@@ -2301,12 +2297,12 @@
             "price": "USD 10.00"
           },
           {
-            "name": "Pro Plan",
-            "price": "USD 96.00"
-          },
-          {
             "name": "Premier Plan",
             "price": "USD 30.00"
+          },
+          {
+            "name": "Pro Plan",
+            "price": "USD 96.00"
           },
           {
             "name": "Premier Plan",
@@ -2867,6 +2863,10 @@
           {
             "name": "Plus",
             "price": "$25.00"
+          },
+          {
+            "name": "Pro",
+            "price": "$49.00"
           }
         ]
       },
@@ -2891,12 +2891,12 @@
         "ok": true,
         "iaps": [
           {
-            "name": "Max Annual Pass",
-            "price": "EGP 49,999.99"
+            "name": "Plus",
+            "price": "EGP 999.99"
           },
           {
-            "name": "Max",
-            "price": "EGP 4,999.99"
+            "name": "Max Annual Pass",
+            "price": "EGP 49,999.99"
           }
         ]
       },
@@ -2906,6 +2906,10 @@
           {
             "name": "Plus",
             "price": "$29.00"
+          },
+          {
+            "name": "Pro",
+            "price": "$59.00"
           }
         ]
       },
@@ -2930,8 +2934,8 @@
             "price": "₹ 1,999"
           },
           {
-            "name": "Max Annual Pass",
-            "price": "₹ 99,900"
+            "name": "Pro",
+            "price": "₹ 3,999"
           }
         ]
       },
@@ -2948,6 +2952,10 @@
         "ok": true,
         "iaps": [
           {
+            "name": "Plus",
+            "price": "₦ 29,900.00"
+          },
+          {
             "name": "Max Annual Pass",
             "price": "₦ 1,499,000.00"
           },
@@ -2958,10 +2966,6 @@
           {
             "name": "Pro Annual Pass",
             "price": "₦ 599,900.00"
-          },
-          {
-            "name": "Pro",
-            "price": "₦ 59,900.00"
           }
         ]
       },
@@ -3007,6 +3011,14 @@
           {
             "name": "Plus",
             "price": "22,00 €"
+          },
+          {
+            "name": "Pro",
+            "price": "45,00 €"
+          },
+          {
+            "name": "Plus Annual Pass",
+            "price": "199,99 €"
           }
         ]
       },
@@ -3025,6 +3037,10 @@
           {
             "name": "Plus",
             "price": "£19.00"
+          },
+          {
+            "name": "Pro",
+            "price": "£39.00"
           }
         ]
       },
@@ -3032,16 +3048,16 @@
         "ok": true,
         "iaps": [
           {
+            "name": "Plus",
+            "price": "179,00 kr"
+          },
+          {
             "name": "Max Annual Pass",
             "price": "7.999,00 kr"
           },
           {
             "name": "Max",
             "price": "899,00 kr"
-          },
-          {
-            "name": "Pro Annual Pass",
-            "price": "2.999,00 kr"
           }
         ]
       }
@@ -3680,11 +3696,11 @@
         "iaps": [
           {
             "name": "Manus Pro",
-            "price": "Rs 4,900.00"
+            "price": "Rs 9,900.00"
           },
           {
             "name": "Manus Pro",
-            "price": "Rs 9,900.00"
+            "price": "Rs 4,900.00"
           },
           {
             "name": "Manus Basic - Monthly",
@@ -3732,12 +3748,12 @@
             "price": "$25.00"
           },
           {
-            "name": "Manus Plus - Monthly",
-            "price": "$49.00"
-          },
-          {
             "name": "Manus Pro",
             "price": "$80.00"
+          },
+          {
+            "name": "Manus Plus - Monthly",
+            "price": "$49.00"
           },
           {
             "name": "Manus Pro",
@@ -3761,16 +3777,16 @@
             "price": "USD 39.99"
           },
           {
+            "name": "Manus Pro",
+            "price": "USD 20.00"
+          },
+          {
             "name": "Manus Basic - Monthly",
             "price": "USD 19.00"
           },
           {
             "name": "Manus Pro",
             "price": "USD 40.00"
-          },
-          {
-            "name": "Manus Pro",
-            "price": "USD 20.00"
           },
           {
             "name": "Manus Pro",
@@ -3840,11 +3856,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "$60.00"
+            "price": "$30.00"
           },
           {
             "name": "Manus Pro",
-            "price": "$30.00"
+            "price": "$60.00"
           },
           {
             "name": "Manus Plus - Monthly",
@@ -3864,11 +3880,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "$300.00"
+            "price": "$129.00"
           },
           {
             "name": "Manus Pro",
-            "price": "$129.00"
+            "price": "$300.00"
           }
         ]
       },
@@ -3980,10 +3996,6 @@
           {
             "name": "Manus Pro",
             "price": "₺9.999,99"
-          },
-          {
-            "name": "Manus Pro",
-            "price": "₺14.999,99"
           }
         ]
       },
@@ -4121,10 +4133,6 @@
           {
             "name": "Manus Pro",
             "price": "100,00 €"
-          },
-          {
-            "name": "Manus Pro",
-            "price": "229,00 €"
           }
         ]
       },
@@ -4165,16 +4173,16 @@
             "price": "£39.99"
           },
           {
+            "name": "Manus Pro",
+            "price": "£40.00"
+          },
+          {
             "name": "Manus Basic - Monthly",
             "price": "£19.00"
           },
           {
             "name": "Manus Pro",
             "price": "£20.00"
-          },
-          {
-            "name": "Manus Pro",
-            "price": "£40.00"
           },
           {
             "name": "Manus Plus - Monthly",
@@ -4186,11 +4194,11 @@
           },
           {
             "name": "Manus Pro",
-            "price": "£100.00"
+            "price": "£80.00"
           },
           {
             "name": "Manus Pro",
-            "price": "£80.00"
+            "price": "£100.00"
           }
         ]
       },
@@ -4202,11 +4210,11 @@
             "price": "349,00 kr"
           },
           {
-            "name": "Manus Basic - Monthly",
+            "name": "Manus Pro",
             "price": "179,00 kr"
           },
           {
-            "name": "Manus Pro",
+            "name": "Manus Basic - Monthly",
             "price": "179,00 kr"
           },
           {
@@ -4574,12 +4582,12 @@
             "price": "38,99 €"
           },
           {
-            "name": "YouTube Premium Family",
-            "price": "38,99 €"
-          },
-          {
             "name": "Premium Lite",
             "price": "9,99 €"
+          },
+          {
+            "name": "YouTube Premium Family",
+            "price": "38,99 €"
           },
           {
             "name": "Super Chat",
@@ -5497,19 +5505,19 @@
     "grok": {
       "us": {
         "ok": true,
-        "range": "$4.99 - $1,999.99"
+        "range": "$4.99 - $2,850.00"
       },
       "jp": {
         "ok": true,
-        "range": "¥900 - ¥337,900"
+        "range": "¥900 - ¥460,000"
       },
       "pk": {
         "ok": true,
-        "range": "Rs 1,400.00 - Rs 555,200.00"
+        "range": "Rs 1,400.00 - Rs 800,000.00"
       },
       "ca": {
         "ok": true,
-        "range": "$6.99 - $2,749.99"
+        "range": "$6.99 - $4,000.00"
       },
       "ar": {
         "ok": false,
@@ -5517,15 +5525,15 @@
       },
       "eg": {
         "ok": true,
-        "range": "EGP 279.99 - EGP 117,099.99"
+        "range": "EGP 245.00 - EGP 170,000.00"
       },
       "au": {
         "ok": true,
-        "range": "$7.99 - $3,049.99"
+        "range": "$7.99 - $4,550.00"
       },
       "ph": {
         "ok": true,
-        "range": "₱345.00 - ₱140,450.00"
+        "range": "₱345.00 - ₱170,000.00"
       },
       "in": {
         "ok": true,
@@ -5533,39 +5541,39 @@
       },
       "tr": {
         "ok": true,
-        "range": "TRY 279.99 - TRY 116,449.99"
+        "range": "TRY 150.00 - TRY 170,000.00"
       },
       "ng": {
         "ok": true,
-        "range": "₦7,420.00 - ₦2,852,000.00"
+        "range": "₦3,700.00 - ₦4,600,000.00"
       },
       "kr": {
         "ok": true,
-        "range": "₩8,500 - ₩480,000"
+        "range": "₩8,500 - ₩510,000"
       },
       "mx": {
         "ok": true,
-        "range": "MX$99.00 - MX$39,349.00"
+        "range": "MX$99.00 - MX$57,000.00"
       },
       "de": {
         "ok": true,
-        "range": "€4.99 - €2,049.99"
+        "range": "€4.99 - €3,400.00"
       },
       "fr": {
         "ok": true,
-        "range": "€5.49 - €2,049.99"
+        "range": "€5.49 - €3,400.00"
       },
       "br": {
         "ok": true,
-        "range": "R$25.99 - R$10,249.99"
+        "range": "R$25.99 - R$15,000.00"
       },
       "gb": {
         "ok": true,
-        "range": "£4.49 - £1,749.99"
+        "range": "£4.49 - £2,850.00"
       },
       "dk": {
         "ok": true,
-        "range": "41,00 kr. - 16.099,00 kr."
+        "range": "41,00 kr. - 23.000,00 kr."
       }
     },
     "gemini": {
@@ -6394,19 +6402,19 @@
     "x": {
       "us": {
         "ok": true,
-        "range": "$0.99 - $1,999.99"
+        "range": "$0.99 - $2,850.00"
       },
       "jp": {
         "ok": true,
-        "range": "¥120 - ¥337,900"
+        "range": "¥120 - ¥460,000"
       },
       "pk": {
         "ok": true,
-        "range": "Rs 160.00 - Rs 555,200.00"
+        "range": "Rs 160.00 - Rs 800,000.00"
       },
       "ca": {
         "ok": true,
-        "range": "$1.19 - $2,749.99"
+        "range": "$1.19 - $4,000.00"
       },
       "ar": {
         "ok": false,
@@ -6414,15 +6422,15 @@
       },
       "eg": {
         "ok": true,
-        "range": "EGP 15.99 - EGP 117,099.99"
+        "range": "EGP 15.99 - EGP 170,000.00"
       },
       "au": {
         "ok": true,
-        "range": "$1.49 - $3,049.99"
+        "range": "$1.49 - $4,550.00"
       },
       "ph": {
         "ok": true,
-        "range": "₱49.00 - ₱140,450.00"
+        "range": "₱49.00 - ₱170,000.00"
       },
       "in": {
         "ok": true,
@@ -6430,11 +6438,11 @@
       },
       "tr": {
         "ok": true,
-        "range": "TRY 9.99 - TRY 116,449.99"
+        "range": "TRY 9.99 - TRY 170,000.00"
       },
       "ng": {
         "ok": true,
-        "range": "₦405.00 - ₦2,852,000.00"
+        "range": "₦405.00 - ₦4,600,000.00"
       },
       "kr": {
         "ok": true,
@@ -6442,27 +6450,27 @@
       },
       "mx": {
         "ok": true,
-        "range": "MX$19.00 - MX$39,349.00"
+        "range": "MX$19.00 - MX$57,000.00"
       },
       "de": {
         "ok": true,
-        "range": "€0.99 - €2,049.99"
+        "range": "€0.99 - €3,400.00"
       },
       "fr": {
         "ok": true,
-        "range": "€0.99 - €2,049.99"
+        "range": "€0.99 - €3,400.00"
       },
       "br": {
         "ok": true,
-        "range": "R$4.69 - R$10,249.99"
+        "range": "R$4.69 - R$15,000.00"
       },
       "gb": {
         "ok": true,
-        "range": "£0.89 - £1,749.99"
+        "range": "£0.89 - £2,850.00"
       },
       "dk": {
         "ok": true,
-        "range": "8,00 kr. - 16.099,00 kr."
+        "range": "8,00 kr. - 23.000,00 kr."
       }
     },
     "hbo-max": {
