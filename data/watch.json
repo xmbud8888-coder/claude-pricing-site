@@ -1,15 +1,18 @@
 {
   "claude-pricing": {
-    "hash": "1638430d69f9dbe7",
+    "hash": "4a300fb90d553d67",
     "tokens": [
       "$0",
+      "$0.01",
       "$0.05",
       "$0.08",
       "$0.10",
+      "$0.125",
       "$0.20",
       "$0.25",
       "$0.30",
       "$0.50",
+      "$0.625",
       "$1",
       "$1.25",
       "$10",
@@ -41,7 +44,7 @@
       "claude-science",
       "claude-security"
     ],
-    "at": "2026-10-07T10:27:00.046Z"
+    "at": "2026-10-08T10:46:03.322Z"
   },
   "openai-api-pricing": {
     "hash": "0d0cef1ba7e885c6",
@@ -143,7 +146,7 @@
       "gpt-rosalind-research",
       "gpt-transcribe"
     ],
-    "at": "2026-10-07T10:27:00.473Z"
+    "at": "2026-10-08T10:46:03.701Z"
   },
   "xai-models": {
     "hash": "d005c438ceca9ce0",
@@ -219,21 +222,20 @@
       "grok-voice-think-fast-2.0",
       "grok-voice-transcribe-2.0"
     ],
-    "at": "2026-10-07T10:27:00.755Z"
+    "at": "2026-10-08T10:46:04.142Z"
   },
   "anthropic-api-docs": {
-    "hash": "198b68d49acae4c4",
+    "hash": "7113d25a00c76b12",
     "tokens": [
-      "$1",
+      "$0.10",
+      "$0.50",
       "$10",
       "$2",
       "$20",
       "$4",
-      "$5",
       "$50",
       "claude-fable-5-1",
-      "claude-haiku-4-5",
-      "claude-haiku-4-5-20251001",
+      "claude-haiku-5-5",
       "claude-in-amazon-bedrock",
       "claude-in-microsoft-foundry",
       "claude-on-vertex-ai",
@@ -242,6 +244,6 @@
       "claude-prompting-best-practices",
       "claude-sonnet-5-5"
     ],
-    "at": "2026-10-07T10:27:00.385Z"
+    "at": "2026-10-08T10:46:03.595Z"
   }
 }
