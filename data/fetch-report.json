@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-15T08:19:12.993Z",
+  "ranAt": "2026-10-16T08:11:48.821Z",
   "apple": {
     "claude": {
       "us": {
@@ -615,8 +615,8 @@
         "probe": [
           "₱ 1,290.00",
           "₱ 299.00",
-          "₱ 599.00",
           "₱ 12,990.00",
+          "₱ 599.00",
           "₱ 1,490.00",
           "₱ 999.00",
           "₱ 2,990.00"
@@ -689,8 +689,8 @@
           "R$ 149,90",
           "R$ 1.299,90",
           "R$ 299,90",
-          "R$ 99,90",
-          "R$ 599,90"
+          "R$ 599,90",
+          "R$ 99,90"
         ]
       },
       "gb": {
@@ -784,7 +784,7 @@
       },
       "dk": {
         "ok": false,
-        "reason": "HTTP 404"
+        "reason": "HTTP 429"
       }
     },
     "capcut": {
@@ -820,9 +820,8 @@
         "probe": []
       },
       "eg": {
-        "ok": true,
-        "iaps": [],
-        "probe": []
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "au": {
         "ok": true,
@@ -885,9 +884,8 @@
         "probe": []
       },
       "fr": {
-        "ok": true,
-        "iaps": [],
-        "probe": []
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "br": {
         "ok": true,
@@ -924,12 +922,22 @@
         "probe": []
       },
       "jp": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          "¥1,500",
+          "¥800",
+          "¥150",
+          "¥400",
+          "¥15,000",
+          "¥500",
+          "¥8,000"
+        ]
       },
       "pk": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": []
       },
       "ca": {
         "ok": true,
@@ -1049,8 +1057,8 @@
           "£1.99",
           "£4.99",
           "£99.99",
-          "£24.99",
-          "£49.99"
+          "£49.99",
+          "£24.99"
         ]
       },
       "dk": {
@@ -1110,8 +1118,8 @@
         "probe": [
           "₱ 599.00",
           "₱ 1,990.00",
-          "₱ 5,990.00",
           "₱ 299.00",
+          "₱ 5,990.00",
           "₱ 249.00",
           "₱ 199.00",
           "₱ 499.00",
@@ -1205,8 +1213,8 @@
           "£30.00",
           "£4.00",
           "£99.00",
-          "£2.99",
           "£8.00",
+          "£2.99",
           "£4.99"
         ]
       },
@@ -1371,7 +1379,7 @@
           "£20.00",
           "£39.00",
           "£50.00",
-          "£99.00",
+          "£100.00",
           "£10"
         ]
       },
@@ -1908,8 +1916,8 @@
         "probe": [
           "₦ 7,900.00",
           "₦ 19,900.00",
-          "₦ 99,900.00",
           "₦ 39,900.00",
+          "₦ 99,900.00",
           "₦ 79,900.00",
           "₦ 199,900.00",
           "₦ 399,900.00"
@@ -1983,8 +1991,8 @@
           "¥6,000",
           "¥3,000",
           "¥10,000",
-          "¥13,000",
-          "¥15,000"
+          "¥15,000",
+          "¥13,000"
         ]
       },
       "pk": {
@@ -2020,8 +2028,8 @@
           "₱ 2,490.00",
           "₱ 3,990.00",
           "₱ 1,190.00",
-          "₱ 4,990.00",
           "₱ 12,990.00",
+          "₱ 4,990.00",
           "₱ 24,990.00"
         ]
       },
@@ -2099,11 +2107,11 @@
           "£100",
           "£39.99",
           "£20.00",
-          "£19.00",
           "£40.00",
+          "£19.00",
           "£39.00",
           "£60.00",
-          "£100.00"
+          "£80.00"
         ]
       },
       "dk": {
@@ -2240,8 +2248,13 @@
         ]
       },
       "kr": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          "US$ 30.99",
+          "US$ 15.99",
+          "US$ 2.99"
+        ]
       },
       "mx": {
         "ok": true,
@@ -2253,13 +2266,8 @@
         ]
       },
       "de": {
-        "ok": true,
-        "iaps": [],
-        "probe": [
-          "US$ 30.99",
-          "US$ 15.99",
-          "US$ 2.99"
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "fr": {
         "ok": true,
@@ -2271,18 +2279,8 @@
         ]
       },
       "br": {
-        "ok": true,
-        "iaps": [],
-        "probe": [
-          "R$ 34,90",
-          "R$ 69,90",
-          "R$ 21,90",
-          "R$ 10,90",
-          "R$ 2,90",
-          "US$ 1,99",
-          "US$ 30.99",
-          "US$ 15.99"
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "gb": {
         "ok": true,
@@ -2823,7 +2821,7 @@
     "claude": {
       "us": {
         "ok": true,
-        "range": "$20.00 - $250.00"
+        "range": "$20.00 - $700.00"
       },
       "jp": {
         "ok": true,
@@ -2897,7 +2895,7 @@
     "chatgpt": {
       "us": {
         "ok": true,
-        "range": "$8.00 - $500.00"
+        "range": "$0.05 - $999.99"
       },
       "jp": {
         "ok": true,
@@ -3405,7 +3403,7 @@
       },
       "gb": {
         "ok": true,
-        "range": "£0.49 - £184.99"
+        "range": "£0.89 - £90.99"
       },
       "dk": {
         "ok": true,
@@ -4187,23 +4185,15 @@
     "xai-models": {
       "ok": true,
       "hash": "0d418429639ddcbc",
-      "changedSinceLastRun": true,
-      "added": [
-        "$44",
-        "grok-voice-2.0",
-        "grok-voice-3.0"
-      ],
-      "removed": [
-        "$45",
-        "grok-voice-latest",
-        "grok-voice-think-fast-2.0"
-      ]
+      "changedSinceLastRun": false,
+      "added": [],
+      "removed": []
     }
   },
   "warnings": [
     "discoverApple(sora): 候选 id6744034028 校验不符（无结果 / ）",
     "discoverApple(sora): 未找到开发商匹配（候选：SorAI - AI Video Generator/DES GRADNJE d.o.o.; ChatGPT/OpenAI OpCo, LLC; Dora - AI Video Generator 2/SMART WIDGET LABS COMPANY LIMITED）",
-    "discoverApple(catcosplay): 未找到开发商匹配（候选：Cats Tower: The Cat Game!/Rhino Games LLC; Cat Game - The Cats Collector!/MinoMonsters Inc.; Laser Pointer for Cat/Astrologic Games LTDA）",
+    "discoverApple(catcosplay): 未找到开发商匹配（候选：Meow Match/Ember Entertainment, Inc.; Cat Game - The Cats Collector!/MinoMonsters Inc.; Laser Pointer for Cat/Astrologic Games LTDA）",
     "discoverPlay(sora): 候选包名均未命中",
     "discoverPlay(glm): 候选包名均未命中",
     "discoverPlay(catcosplay): 候选包名均未命中"
