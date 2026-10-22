@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-21T08:35:28.157Z",
+  "ranAt": "2026-10-22T08:37:31.463Z",
   "apple": {
     "claude": {
       "us": {
@@ -333,8 +333,8 @@
           "₱ 599.00",
           "₱ 14,990.00",
           "₱ 1,290.00",
-          "₱ 2,990.00",
-          "₱ 5,990.00"
+          "₱ 5,990.00",
+          "₱ 2,990.00"
         ]
       },
       "in": {
@@ -359,8 +359,8 @@
           "₺249,99",
           "₺999,99",
           "₺499,99",
-          "₺12.999,99",
           "₺4.999,99",
+          "₺12.999,99",
           "₺2.499,99"
         ]
       },
@@ -561,7 +561,7 @@
           "£4.49",
           "£1.79",
           "£189.99",
-          "£7.99",
+          "£2.99",
           "£475"
         ]
       },
@@ -620,8 +620,8 @@
           "₱ 1,290.00",
           "₱ 299.00",
           "₱ 599.00",
-          "₱ 12,990.00",
           "₱ 1,490.00",
+          "₱ 12,990.00",
           "₱ 999.00",
           "₱ 2,990.00",
           "₱ 5,990.00"
@@ -660,8 +660,8 @@
         "probe": [
           "₦ 29,900.00",
           "₦ 7,900.00",
-          "₦ 299,900.00",
           "₦ 14,900.00",
+          "₦ 299,900.00",
           "₦ 39,900.00",
           "₦ 149,900.00"
         ]
@@ -694,8 +694,8 @@
           "R$ 29,90",
           "R$ 149,90",
           "R$ 59,90",
-          "R$ 299,90",
           "R$ 1.299,90",
+          "R$ 299,90",
           "R$ 599,90",
           "R$ 99,90"
         ]
@@ -1901,8 +1901,8 @@
         "probe": [
           "₹ 1,499",
           "₹ 3,999",
-          "₹ 7,900",
           "₹ 6,900",
+          "₹ 7,900",
           "₹ 14,900",
           "₹ 1,299",
           "₹ 24,900",
@@ -2042,8 +2042,8 @@
           "₱ 3,990.00",
           "₱ 1,190.00",
           "₱ 5,990.00",
-          "₱ 4,990.00",
-          "₱ 12,990.00"
+          "₱ 12,990.00",
+          "₱ 4,990.00"
         ]
       },
       "in": {
@@ -2053,8 +2053,8 @@
           "₹ 1,999",
           "₹ 3,999",
           "₹ 5,900",
-          "₹ 7,900",
           "₹ 9,900",
+          "₹ 7,900",
           "₹ 19,900"
         ]
       },
@@ -2075,8 +2075,8 @@
         "probe": [
           "₦ 29,900.00",
           "₦ 69,900.00",
-          "₦ 129,900.00",
           "₦ 99,900.00",
+          "₦ 129,900.00",
           "₦ 59,900.00",
           "₦ 299,900.00"
         ]
@@ -2111,7 +2111,7 @@
           "R$ 249,90",
           "R$ 129,90",
           "R$ 399,90",
-          "R$ 1.299,90"
+          "R$ 499,90"
         ]
       },
       "gb": {
@@ -2393,8 +2393,8 @@
           "₱ 2,890.00",
           "₱ 3,490.00",
           "₱ 599.00",
-          "₱ 1,320.00",
-          "₱ 199.00"
+          "₱ 199.00",
+          "₱ 1,320.00"
         ]
       },
       "in": {
@@ -3629,7 +3629,7 @@
       },
       "in": {
         "ok": true,
-        "range": "₹2,000.00 - ₹42,000.00"
+        "range": "₹9.00 - ₹25,800.00"
       },
       "tr": {
         "ok": true,
@@ -3816,7 +3816,7 @@
       },
       "dk": {
         "ok": true,
-        "range": "85,00 kr. - 41.749,00 kr."
+        "range": "75,00 kr. - 5.999,00 kr."
       }
     },
     "catcosplay": {
@@ -4196,10 +4196,10 @@
   "watch": {
     "claude-pricing": {
       "ok": true,
-      "hash": "bef994cbeb1c7fb5",
+      "hash": "267bb1952e8f4e4f",
       "changedSinceLastRun": true,
       "added": [
-        "claude-managed-agents"
+        "claude-duet"
       ],
       "removed": []
     },
@@ -4213,23 +4213,9 @@
     "openai-api-pricing": {
       "ok": true,
       "hash": "8103e0db635ec7a8",
-      "changedSinceLastRun": true,
-      "added": [
-        "$31.25"
-      ],
-      "removed": [
-        "$0.04",
-        "$0.375",
-        "$0.75",
-        "$1.20",
-        "$1.50",
-        "$120.00",
-        "$37.50",
-        "$40.00",
-        "$450.00",
-        "$7.50",
-        "$90.00"
-      ]
+      "changedSinceLastRun": false,
+      "added": [],
+      "removed": []
     },
     "xai-models": {
       "ok": true,
@@ -4241,8 +4227,8 @@
   },
   "warnings": [
     "discoverApple(sora): 候选 id6744034028 校验不符（无结果 / ）",
-    "discoverApple(sora): 未找到开发商匹配（候选：SorAI - AI Video Generator/DES GRADNJE d.o.o.; ChatGPT/OpenAI OpCo, LLC; Dora - AI Video Generator 2/SMART WIDGET LABS COMPANY LIMITED）",
-    "discoverApple(catcosplay): 未找到开发商匹配（候选：Kitten Match/Special Hong Kong Co., Limited; Meow Match/Ember Entertainment, Inc.; Cat Game - The Cats Collector!/MinoMonsters Inc.）",
+    "discoverApple(sora): 未找到开发商匹配（候选：SorAI - AI Video Generator/DES GRADNJE d.o.o.; ChatGPT/OpenAI OpCo, LLC; Grok AI/X Corp.）",
+    "discoverApple(catcosplay): 未找到开发商匹配（候选：The Battle Cats/ponos corporation; Laser Pointer for Cat/Astrologic Games LTDA; Neko Atsume: Kitty Collector/Hit-Point Co., Ltd.）",
     "discoverPlay(sora): 候选包名均未命中",
     "discoverPlay(glm): 候选包名均未命中",
     "discoverPlay(catcosplay): 候选包名均未命中"
