@@ -1,6 +1,6 @@
 {
   "claude-pricing": {
-    "hash": "a4348d3696cba0e2",
+    "hash": "b22312d797a6e20f",
     "tokens": [
       "$0",
       "$0.01",
@@ -43,20 +43,18 @@
       "claude-for-google-workspace",
       "claude-for-microsoft-365",
       "claude-in-chrome",
+      "claude-managed",
       "claude-managed-agents",
       "claude-on-aws",
       "claude-science",
       "claude-security"
     ],
-    "at": "2026-11-09T11:44:13.094Z"
+    "at": "2026-11-10T11:23:53.458Z"
   },
   "openai-api-pricing": {
-    "hash": "a97a1e0f25e285c6",
+    "hash": "745dcb9e6ddcf32e",
     "tokens": [
-      "$0.003",
-      "$0.0045",
       "$0.005",
-      "$0.006",
       "$0.01",
       "$0.017",
       "$0.02",
@@ -70,11 +68,9 @@
       "$0.10",
       "$0.12",
       "$0.125",
-      "$0.175",
       "$0.20",
       "$0.25",
       "$0.30",
-      "$0.35",
       "$0.40",
       "$0.48",
       "$0.50",
@@ -86,13 +82,11 @@
       "$1.25",
       "$1.50",
       "$1.60",
-      "$1.75",
       "$1.92",
       "$10.00",
       "$100.00",
       "$12.00",
       "$12.50",
-      "$14.00",
       "$15.00",
       "$150.00",
       "$18.75",
@@ -102,10 +96,8 @@
       "$20.00",
       "$24.00",
       "$25.00",
-      "$28.00",
       "$3.00",
       "$3.20",
-      "$3.50",
       "$30.00",
       "$300.00",
       "$32.00",
@@ -123,12 +115,7 @@
       "gpt-4.1-mini",
       "gpt-4.1-mini-2025-04-14",
       "gpt-4o-mini",
-      "gpt-4o-mini-transcribe",
-      "gpt-4o-transcribe",
-      "gpt-5",
-      "gpt-5.3-codex",
       "gpt-5.6",
-      "gpt-5.6-sol",
       "gpt-6",
       "gpt-6-astra",
       "gpt-6-astra-law",
@@ -138,8 +125,6 @@
       "gpt-6.1-sol",
       "gpt-6.1-terra",
       "gpt-image-2",
-      "gpt-image-2.5-flare",
-      "gpt-image-2.5-sunburst",
       "gpt-image-2.6-flare",
       "gpt-image-2.6-sunburst",
       "gpt-live",
@@ -148,14 +133,9 @@
       "gpt-oss",
       "gpt-realtime-2.1",
       "gpt-realtime-2.1-mini",
-      "gpt-realtime-translate",
-      "gpt-realtime-whisper",
-      "gpt-rosalind",
-      "gpt-rosalind-discovery",
-      "gpt-rosalind-research",
-      "gpt-transcribe"
+      "gpt-realtime-translate"
     ],
-    "at": "2026-11-09T11:44:13.449Z"
+    "at": "2026-11-10T11:23:53.805Z"
   },
   "xai-models": {
     "hash": "72d36a9e8d1d53c4",
@@ -252,10 +232,10 @@
       "grok-voice-3.0",
       "grok-voice-transcribe-2.0"
     ],
-    "at": "2026-11-09T11:44:13.595Z"
+    "at": "2026-11-10T11:23:53.933Z"
   },
   "anthropic-api-docs": {
-    "hash": "f07f734ca2d284f1",
+    "hash": "d9d61119c5d4e124",
     "tokens": [
       "$0.10",
       "$0.50",
@@ -263,8 +243,9 @@
       "$2",
       "$20",
       "$4",
-      "$50",
-      "claude-fable-5-1",
+      "$40",
+      "$8",
+      "claude-fable-5-2",
       "claude-haiku-5-5",
       "claude-in-amazon-bedrock",
       "claude-in-microsoft-foundry",
@@ -274,6 +255,6 @@
       "claude-prompting-best-practices",
       "claude-sonnet-5-5"
     ],
-    "at": "2026-11-09T11:44:13.310Z"
+    "at": "2026-11-10T11:23:53.675Z"
   }
 }
