@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10",
+  "updatedAt": "2026-11-11",
   "policy": "所有数字必须核验自官方来源才展示；未核验的字段为 null，由管线抓官方页面后回填",
   "provenance": [
     {
@@ -30,7 +30,7 @@
       ],
       "label": "Claude · Google Play 各区内购区间",
       "status": "verified",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-11",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）"
     },
     {
@@ -51,7 +51,7 @@
       "label": "ChatGPT · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-10"
+      "verifiedAt": "2026-11-11"
     },
     {
       "key": "appstore-grok",
@@ -71,7 +71,7 @@
       "label": "Grok · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-10"
+      "verifiedAt": "2026-11-11"
     },
     {
       "key": "chatgpt-web",
@@ -113,7 +113,7 @@
       ],
       "label": "购买力平价换算率（IMF PPPEX）",
       "status": "verified",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-11",
       "source": "IMF DataMapper API（PPPEX，2026 年值）"
     },
     {
@@ -152,7 +152,7 @@
       "label": "Perplexity · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-10"
+      "verifiedAt": "2026-11-11"
     },
     {
       "key": "appstore-copilot",
@@ -192,7 +192,7 @@
       "label": "CapCut · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-      "verifiedAt": "2026-11-10"
+      "verifiedAt": "2026-11-11"
     },
     {
       "key": "appstore-characterai",
@@ -211,7 +211,7 @@
       "label": "Character.AI · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-10"
+      "verifiedAt": "2026-11-11"
     },
     {
       "key": "appstore-suno",
@@ -231,7 +231,7 @@
       "label": "Suno · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-10"
+      "verifiedAt": "2026-11-11"
     },
     {
       "key": "appstore-kling",
@@ -251,7 +251,7 @@
       "label": "Kling AI · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-10"
+      "verifiedAt": "2026-11-11"
     },
     {
       "key": "appstore-sora",
@@ -289,7 +289,7 @@
       "label": "Kimi · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-10"
+      "verifiedAt": "2026-11-11"
     },
     {
       "key": "appstore-glm",
@@ -327,7 +327,7 @@
       "label": "Leonardo AI · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-10"
+      "verifiedAt": "2026-11-11"
     },
     {
       "key": "appstore-manus",
@@ -347,7 +347,7 @@
       "label": "Manus · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-10"
+      "verifiedAt": "2026-11-11"
     },
     {
       "key": "appstore-catcosplay",
@@ -1414,7 +1414,7 @@
           "play": "₩8,500 - ₩420,000"
         },
         "mx": {
-          "play": "MX$105.00 - MX$39,949.00",
+          "play": "MX$129.00 - MX$9,899.00",
           "pro": 22.07,
           "local": "$399.00",
           "localAmount": 399,
@@ -3021,7 +3021,7 @@
           "play": "£0.89 - £1,950.00"
         },
         "dk": {
-          "play": "0,40 kr. - 70.000,00 kr."
+          "play": "8,00 kr. - 16.790,00 kr."
         },
         "ar": {
           "play": "ARS 1,480.05 - ARS 3,900,000.00"
@@ -3082,7 +3082,7 @@
           "play": "¥310 - ¥19,200"
         },
         "pk": {
-          "play": "Rs 15.00 - Rs 28,200.00"
+          "play": "Rs 460.00 - Rs 27,800.00"
         },
         "ca": {
           "play": "$3.09 - $189.99"
@@ -3324,7 +3324,7 @@
       "web": null,
       "regions": {
         "us": {
-          "play": "$4.99 - $203.88"
+          "play": "$5.88 - $329.41"
         },
         "jp": {
           "play": "¥580 - ¥17,200"
@@ -3351,7 +3351,7 @@
           "play": "TRY 60.00 - TRY 5,209.99"
         },
         "ng": {
-          "play": "₦800.00 - ₦172,000.00"
+          "play": "₦7,000.00 - ₦699,900.00"
         },
         "kr": {
           "play": "₩8,690 - ₩160,000"
