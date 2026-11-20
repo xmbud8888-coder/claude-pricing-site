@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-11-19T11:40:54.419Z",
+  "ranAt": "2026-11-20T11:41:18.515Z",
   "apple": {
     "claude": {
       "us": {
@@ -159,25 +159,16 @@
         "probe": []
       },
       "jp": {
-        "ok": true,
-        "iaps": [],
-        "probe": [
-          "¥3,000",
-          "¥1,400",
-          "¥16,800",
-          "¥30,000",
-          "¥84,000"
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "pk": {
-        "ok": true,
-        "iaps": [],
-        "probe": []
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "ca": {
-        "ok": true,
-        "iaps": [],
-        "probe": []
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "ar": {
         "ok": true,
@@ -295,9 +286,8 @@
     },
     "grok": {
       "us": {
-        "ok": true,
-        "iaps": [],
-        "probe": []
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "jp": {
         "ok": true,
@@ -347,8 +337,8 @@
           "₱ 599.00",
           "₱ 1,290.00",
           "₱ 14,990.00",
-          "₱ 5,990.00",
-          "₱ 2,990.00"
+          "₱ 2,990.00",
+          "₱ 5,990.00"
         ]
       },
       "in": {
@@ -537,7 +527,9 @@
       "kr": {
         "ok": true,
         "iaps": [],
-        "probe": []
+        "probe": [
+          ". 원"
+        ]
       },
       "mx": {
         "ok": true,
@@ -550,12 +542,20 @@
         "probe": []
       },
       "fr": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": []
       },
       "br": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          "R$ 96,90",
+          "R$ 24,99",
+          "R$ 49,99",
+          "R$ 9,99",
+          "US$ 1,99"
+        ]
       },
       "gb": {
         "ok": true,
@@ -619,8 +619,18 @@
         "probe": []
       },
       "ph": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          "₱ 1,290.00",
+          "₱ 299.00",
+          "₱ 599.00",
+          "₱ 12,990.00",
+          "₱ 1,490.00",
+          "₱ 999.00",
+          "₱ 2,990.00",
+          "₱ 5,990.00"
+        ]
       },
       "in": {
         "ok": true,
@@ -972,11 +982,11 @@
         "probe": [
           "₱ 499.00",
           "₱ 49.00",
-          "₱ 199.00",
           "₱ 99.00",
+          "₱ 199.00",
           "₱ 4,990.00",
-          "₱ 599.00",
           "₱ 299.00",
+          "₱ 599.00",
           "₱ 5,990.00"
         ]
       },
@@ -985,8 +995,8 @@
         "iaps": [],
         "probe": [
           "₹ 999",
-          "₹ 299",
           "₹ 99",
+          "₹ 299",
           "₹ 149",
           "₹ 9,900",
           "₹ 499",
@@ -1050,8 +1060,8 @@
           "R$ 12,90",
           "R$ 19,90",
           "R$ 499,90",
-          "R$ 59,90",
-          "R$ 29,90"
+          "R$ 29,90",
+          "R$ 59,90"
         ]
       },
       "gb": {
@@ -1090,8 +1100,8 @@
           "¥600",
           "¥1,300",
           "¥500",
-          "¥800",
-          "¥45,000"
+          "¥3,000",
+          "¥800"
         ]
       },
       "pk": {
@@ -1139,12 +1149,12 @@
         "probe": [
           "₹ 999",
           "₹ 2,999",
+          "₹ 399",
           "₹ 9,900",
           "₹ 499",
-          "₹ 399",
           "₹ 299",
           "₹ 799",
-          "₹ 1,499"
+          "₹ 1,999"
         ]
       },
       "tr": {
@@ -1158,7 +1168,7 @@
           "₺399,99",
           "₺249,99",
           "₺149,99",
-          "₺14.999,99"
+          "₺999,99"
         ]
       },
       "ng": {
@@ -1261,14 +1271,12 @@
         "probe": []
       },
       "ar": {
-        "ok": true,
-        "iaps": [],
-        "probe": []
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "eg": {
-        "ok": true,
-        "iaps": [],
-        "probe": []
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "au": {
         "ok": true,
@@ -1321,9 +1329,9 @@
         "ok": true,
         "iaps": [],
         "probe": [
-          "₦ 14,900.00",
           "₦ 1,900.00",
           "₦ 7,900.00",
+          "₦ 14,900.00",
           "₦ 2,500.00",
           "₦ 29,900.00",
           "₦ 59,900.00",
@@ -1413,18 +1421,8 @@
         ]
       },
       "jp": {
-        "ok": true,
-        "iaps": [],
-        "probe": [
-          "¥3,000",
-          "¥6,000",
-          "¥30,000",
-          "¥15,000",
-          "¥150",
-          "¥59",
-          "¥109",
-          "¥399"
-        ]
+        "ok": false,
+        "reason": "HTTP 429"
       },
       "pk": {
         "ok": true,
@@ -1523,8 +1521,8 @@
           "₺1.799,99",
           "₺1.999,99",
           "₺4.999,99",
-          "₺9.999,99",
           "₺8.999,99",
+          "₺9.999,99",
           "₺7.699,99"
         ]
       },
@@ -1844,13 +1842,13 @@
         "iaps": [],
         "probe": [
           "¥2,200",
-          "¥11,000",
           "¥6,000",
+          "¥11,000",
           "¥12,000",
           "¥40,000",
           "¥22,000",
           "¥2,000",
-          "¥110,000"
+          "¥60,000"
         ]
       },
       "pk": {
@@ -1869,12 +1867,14 @@
         "probe": []
       },
       "eg": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": []
       },
       "au": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": []
       },
       "ph": {
         "ok": true,
@@ -1925,8 +1925,8 @@
           "₦ 7,900.00",
           "₦ 19,900.00",
           "₦ 39,900.00",
-          "₦ 79,900.00",
           "₦ 99,900.00",
+          "₦ 79,900.00",
           "₦ 199,900.00",
           "₦ 399,900.00"
         ]
@@ -1975,8 +1975,8 @@
           "£69.00",
           "£79.99",
           "£149.99",
-          "£249.00",
           "£12.00",
+          "£249.00",
           "£399.99"
         ]
       },
@@ -2038,7 +2038,6 @@
           "₱ 1,190.00",
           "₱ 5,990.00",
           "₱ 12,990.00",
-          "₱ 24,990.00",
           "₱ 4,990.00"
         ]
       },
@@ -2050,8 +2049,8 @@
           "₹ 3,999",
           "₹ 5,900",
           "₹ 7,900",
-          "₹ 19,900",
-          "₹ 9,900"
+          "₹ 9,900",
+          "₹ 19,900"
         ]
       },
       "tr": {
@@ -2071,8 +2070,8 @@
         "probe": [
           "₦ 29,900.00",
           "₦ 69,900.00",
-          "₦ 59,900.00",
           "₦ 99,900.00",
+          "₦ 59,900.00",
           "₦ 129,900.00"
         ]
       },
@@ -2106,7 +2105,7 @@
           "R$ 249,90",
           "R$ 129,90",
           "R$ 399,90",
-          "R$ 499,90"
+          "R$ 1.299,90"
         ]
       },
       "gb": {
@@ -2837,12 +2836,17 @@
         "probe": []
       },
       "ng": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": []
       },
       "kr": {
-        "ok": false,
-        "reason": "HTTP 429"
+        "ok": true,
+        "iaps": [],
+        "probe": [
+          "0원",
+          ", 원"
+        ]
       },
       "mx": {
         "ok": true,
@@ -3568,7 +3572,7 @@
       },
       "eg": {
         "ok": true,
-        "range": "EGP 49.99 - EGP 12,249.99"
+        "range": "EGP 35.99 - EGP 224,149.99"
       },
       "au": {
         "ok": true,
@@ -3576,7 +3580,7 @@
       },
       "ph": {
         "ok": true,
-        "range": "₱59.00 - ₱13,500.00"
+        "range": "₱41.00 - ₱266,850.00"
       },
       "in": {
         "ok": true,
@@ -4296,13 +4300,8 @@
     "claude-pricing": {
       "ok": true,
       "hash": "d57fb073badc4fba",
-      "changedSinceLastRun": true,
-      "added": [
-        "claude-fable-5-on-your-plan",
-        "claude-plan",
-        "claude-plans",
-        "claude-subscription"
-      ],
+      "changedSinceLastRun": false,
+      "added": [],
       "removed": []
     },
     "anthropic-api-docs": {
@@ -4314,28 +4313,36 @@
     },
     "openai-api-pricing": {
       "ok": true,
-      "hash": "338cfdb3830b3899",
-      "changedSinceLastRun": false,
-      "added": [],
+      "hash": "8b8a7ce4797bb09e",
+      "changedSinceLastRun": true,
+      "added": [
+        "$0.02",
+        "gpt-live-1.1"
+      ],
       "removed": []
     },
     "xai-models": {
       "ok": true,
-      "hash": "877b52c74f3c6e54",
-      "changedSinceLastRun": false,
+      "hash": "08ddc4c22a168520",
+      "changedSinceLastRun": true,
       "added": [],
-      "removed": []
+      "removed": [
+        "grok-build-0.1",
+        "grok-code-fast",
+        "grok-code-fast-1",
+        "grok-code-fast-1-0825"
+      ]
     }
   },
   "warnings": [
     "discoverApple(sora): 候选 id6744034028 校验不符（无结果 / ）",
     "discoverApple(sora): 未找到开发商匹配（候选：ChatGPT/OpenAI OpCo, LLC; Dora - AI Video Generator 2/SMART WIDGET LABS COMPANY LIMITED; VideoGPT - AI Video Generator/ElevenThirteen LLC）",
-    "discoverApple(catcosplay): 未找到开发商匹配（候选：The Battle Cats/ponos corporation; Cat Game - The Cats Collector!/MinoMonsters Inc.; Meow Match/Ember Entertainment, Inc.）",
+    "discoverApple(catcosplay): 未找到开发商匹配（候选：The Battle Cats/ponos corporation; Cat Game - The Cats Collector!/MinoMonsters Inc.; Kitten Match/Special Hong Kong Co., Limited）",
     "discoverPlay(sora): 候选包名均未命中",
     "discoverPlay(catcosplay): 候选包名均未命中"
   ],
   "imfPPP": {
-    "ok": true,
-    "year": "2026"
+    "ok": false,
+    "reason": "HTTP 503"
   }
 }
