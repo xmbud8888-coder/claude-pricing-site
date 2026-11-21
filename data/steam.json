@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "source": "Steam 官方 storefront API（appdetails/price_overview），appid 经 storesearch 发现并名称防伪校验；USD 折算 open.er-api.com",
   "regions": [
     "us",
@@ -665,108 +665,150 @@
         "us": {
           "cur": "USD",
           "price": 69.99,
+          "discountPrice": 52.49,
+          "discountPct": 25,
           "usd": 69.99
         },
         "ar": {
           "cur": "USD",
           "price": 48.99,
+          "discountPrice": 36.74,
+          "discountPct": 25,
           "usd": 48.99
         },
         "tr": {
           "cur": "USD",
           "price": 48.99,
+          "discountPrice": 36.74,
+          "discountPct": 25,
           "usd": 48.99
         },
         "ru": null,
         "cn": {
           "cur": "CNY",
           "price": 298,
+          "discountPrice": 223.5,
+          "discountPct": 25,
           "usd": 44.53
         },
         "in": {
           "cur": "INR",
           "price": 5499,
+          "discountPrice": 4124,
+          "discountPct": 25,
           "usd": 58.89
         },
         "br": {
           "cur": "BRL",
           "price": 299,
+          "discountPrice": 224.25,
+          "discountPct": 25,
           "usd": 50.74
         },
         "ph": {
           "cur": "PHP",
           "price": 3490,
+          "discountPrice": 2617.5,
+          "discountPct": 25,
           "usd": 54.73
         },
         "vn": null,
         "id": {
           "cur": "IDR",
           "price": 899000,
+          "discountPrice": 674250,
+          "discountPct": 25,
           "usd": 49.23
         },
         "mx": {
           "cur": "MXN",
           "price": 1399,
+          "discountPrice": 1049.25,
+          "discountPct": 25,
           "usd": 73.52
         },
         "ca": {
           "cur": "CAD",
           "price": 89.99,
+          "discountPrice": 67.49,
+          "discountPct": 25,
           "usd": 62.82
         },
         "jp": {
           "cur": "JPY",
           "price": 9800,
+          "discountPrice": 7350,
+          "discountPct": 25,
           "usd": 61.35
         },
         "kr": {
           "cur": "KRW",
           "price": 79800,
+          "discountPrice": 59850,
+          "discountPct": 25,
           "usd": 59.96
         },
         "de": {
           "cur": "EUR",
           "price": 69.99,
+          "discountPrice": 52.49,
+          "discountPct": 25,
           "usd": 76.85
         },
         "fr": {
           "cur": "EUR",
           "price": 69.99,
+          "discountPrice": 52.49,
+          "discountPct": 25,
           "usd": 76.85
         },
         "gb": {
           "cur": "GBP",
           "price": 59.99,
+          "discountPrice": 44.99,
+          "discountPct": 25,
           "usd": 78.69
         },
         "pl": {
           "cur": "PLN",
           "price": 299,
+          "discountPrice": 224.25,
+          "discountPct": 25,
           "usd": 74.15
         },
         "au": {
           "cur": "AUD",
           "price": 109.95,
+          "discountPrice": 82.46,
+          "discountPct": 25,
           "usd": 73.36
         },
         "no": {
           "cur": "NOK",
           "price": 799,
+          "discountPrice": 599.25,
+          "discountPct": 25,
           "usd": 82.08
         },
         "ch": {
           "cur": "CHF",
           "price": 69.9,
+          "discountPrice": 52.42,
+          "discountPct": 25,
           "usd": 82.88
         },
         "eg": {
           "cur": "USD",
           "price": 48.99,
+          "discountPrice": 36.74,
+          "discountPct": 25,
           "usd": 48.99
         },
         "ng": {
           "cur": "USD",
           "price": 69.99,
+          "discountPrice": 52.49,
+          "discountPct": 25,
           "usd": 69.99
         }
       }

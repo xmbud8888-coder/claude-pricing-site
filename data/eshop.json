@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "policy": "所有数字必须核验自任天堂官方价格接口才展示；拿不到的 国家×游戏 为 null（站上显示待核验），绝不估算",
   "source": {
     "prices": "api.ec.nintendo.com/v1/price（任天堂官方 eShop 价格接口，逐国批量直抓，主字段为 regular_price 常规价）",
@@ -270,9 +270,7 @@
         "jp": {
           "cur": "JPY",
           "price": 6578,
-          "usd": 41.18,
-          "discountPrice": 986,
-          "discountUsd": 6.17
+          "usd": 41.18
         },
         "hk": null,
         "kr": null

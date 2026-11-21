@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "policy": "所有数字必须核验自官方来源才展示；未核验的字段为 null，由管线抓官方页面后回填",
   "provenance": [
     {
@@ -30,7 +30,7 @@
       ],
       "label": "Claude · Google Play 各区内购区间",
       "status": "verified",
-      "verifiedAt": "2026-11-20",
+      "verifiedAt": "2026-11-21",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）"
     },
     {
@@ -51,7 +51,7 @@
       "label": "ChatGPT · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-21"
     },
     {
       "key": "appstore-grok",
@@ -71,7 +71,7 @@
       "label": "Grok · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-21"
     },
     {
       "key": "chatgpt-web",
@@ -152,7 +152,7 @@
       "label": "Perplexity · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-21"
     },
     {
       "key": "appstore-copilot",
@@ -192,7 +192,7 @@
       "label": "CapCut · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，17/18 区）",
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-21"
     },
     {
       "key": "appstore-characterai",
@@ -211,7 +211,7 @@
       "label": "Character.AI · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-21"
     },
     {
       "key": "appstore-suno",
@@ -231,7 +231,7 @@
       "label": "Suno · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-21"
     },
     {
       "key": "appstore-kling",
@@ -251,7 +251,7 @@
       "label": "Kling AI · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-21"
     },
     {
       "key": "appstore-sora",
@@ -289,7 +289,7 @@
       "label": "Kimi · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-21"
     },
     {
       "key": "appstore-glm",
@@ -327,7 +327,7 @@
       "label": "Leonardo AI · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-21"
     },
     {
       "key": "appstore-manus",
@@ -347,7 +347,7 @@
       "label": "Manus · Google Play 各区内购区间",
       "status": "verified",
       "source": "play.google.com 各区商店页（管线直抓，18/18 区）",
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-21"
     },
     {
       "key": "appstore-catcosplay",
@@ -943,7 +943,7 @@
           "ppp": 70.15
         },
         "ca": {
-          "play": "$11.00 - $679.99",
+          "play": "$1.39 - $549.99",
           "plus": 17.58,
           "local": "$24.99",
           "localAmount": 24.99,
@@ -1036,7 +1036,7 @@
           "ppp": 35.75
         },
         "br": {
-          "play": "R$39.99 - R$2,599.90",
+          "play": "R$5.49 - R$2,199.99",
           "plus": 19.21,
           "local": "R$ 99,90",
           "localAmount": 99.9,
@@ -1652,7 +1652,7 @@
           "ppp": 19.99
         },
         "jp": {
-          "play": "¥12 - ¥144,800",
+          "play": "¥400 - ¥21,600",
           "pro": 13.86,
           "local": "¥2,180",
           "localAmount": 2180,
@@ -3110,7 +3110,7 @@
           "play": "₩3,400 - ₩210,000"
         },
         "mx": {
-          "play": "MX$59.00 - MX$3,599.00"
+          "play": "MX$1.20 - MX$2,199.00"
         },
         "de": {
           "play": "€2.79 - €169.99"
