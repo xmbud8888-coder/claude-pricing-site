@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-11-26T12:36:09.362Z",
+  "ranAt": "2026-11-27T12:22:24.727Z",
   "apple": {
     "claude": {
       "us": {
@@ -47,8 +47,8 @@
         "iaps": [],
         "probe": [
           "₱ 1,290.00",
-          "₱ 14,990.00",
           "₱ 7,990.00",
+          "₱ 14,990.00",
           "₱ 12,990.00",
           "₱ 2,990.00",
           "₱ 22,990.00",
@@ -519,8 +519,8 @@
           "₺199,99",
           "₺869,99",
           "₺359,99",
-          "₺539,99",
-          "₺84,99"
+          "₺84,99",
+          "₺539,99"
         ]
       },
       "ng": {
@@ -573,7 +573,8 @@
           "£18.99",
           "£4.49",
           "£189.99",
-          "£1.79"
+          "£1.79",
+          "£475"
         ]
       },
       "dk": {
@@ -634,8 +635,7 @@
           "₱ 12,990.00",
           "₱ 1,490.00",
           "₱ 2,990.00",
-          "₱ 999.00",
-          "₱ 5,990.00"
+          "₱ 999.00"
         ]
       },
       "in": {
@@ -646,8 +646,8 @@
           "₹ 499",
           "₹ 999",
           "₹ 2,499",
-          "₹ 4,999",
           "₹ 19,900",
+          "₹ 4,999",
           "₹ 9,900"
         ]
       },
@@ -659,8 +659,8 @@
           "₺249,99",
           "₺499,99",
           "₺1.299,99",
-          "₺9.999,99",
           "₺2.499,99",
+          "₺9.999,99",
           "₺4.999,99"
         ]
       },
@@ -709,7 +709,7 @@
           "R$ 1.299,90",
           "R$ 299,90",
           "R$ 99,90",
-          "R$ 599,90"
+          "R$ 1.499,90"
         ]
       },
       "gb": {
@@ -1029,8 +1029,8 @@
         "iaps": [],
         "probe": [
           "₦ 4,900.00",
-          "₦ 2,500.00",
           "₦ 1,500.00",
+          "₦ 2,500.00",
           "₦ 149,900.00",
           "₦ 7,900.00",
           "₦ 79,900.00",
@@ -1076,11 +1076,10 @@
         "iaps": [],
         "probe": [
           "£9.99",
+          "£99.99",
           "£0.99",
           "£2.99",
-          "£1.99",
           "£4.99",
-          "£99.99",
           "£24.99",
           "£49.99"
         ]
@@ -1185,10 +1184,10 @@
           "₦15,000.",
           "₦ 14,900.00",
           "₦ 49,900.00",
-          "₦ 4,900.00",
-          "₦ 6,900.00",
-          "₦ 7,900.00",
           "₦ 149,900.00",
+          "₦ 4,900.00",
+          "₦ 7,900.00",
+          "₦ 6,900.00",
           "₦ 12,900.00"
         ]
       },
@@ -1222,8 +1221,8 @@
           "R$ 199,90",
           "R$ 599,90",
           "R$ 29,90",
-          "R$ 24,90",
           "R$ 19,90",
+          "R$ 24,90",
           "R$ 49,90",
           "R$ 1.999,90"
         ]
@@ -2054,9 +2053,8 @@
           "₱ 2,490.00",
           "₱ 3,990.00",
           "₱ 1,190.00",
-          "₱ 5,990.00",
           "₱ 4,990.00",
-          "₱ 12,990.00"
+          "₱ 5,990.00"
         ]
       },
       "in": {
@@ -2090,8 +2088,8 @@
           "₦ 59,900.00",
           "₦ 129,900.00",
           "₦ 99,900.00",
-          "₦ 299,900.00",
-          "₦ 699,900.00"
+          "₦ 149,900.00",
+          "₦ 299,900.00"
         ]
       },
       "kr": {
@@ -2934,7 +2932,7 @@
     "chatgpt": {
       "us": {
         "ok": true,
-        "range": "$0.99 - $199.99"
+        "range": "$8.00 - $500.00"
       },
       "jp": {
         "ok": true,
@@ -3676,76 +3674,76 @@
     },
     "glm": {
       "us": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "$1.69 - $4.39"
       },
       "jp": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "¥290 - ¥760"
       },
       "pk": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "Rs 460.00 - Rs 1,200.00"
       },
       "ca": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "$2.39 - $6.49"
       },
       "ar": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "ARS 2,650.00 - ARS 6,950.00"
       },
       "eg": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "EGP 99.99 - EGP 269.99"
       },
       "au": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "$2.79 - $7.49"
       },
       "ph": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "₱120.00 - ₱315.00"
       },
       "in": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "₹180.00 - ₹480.00"
       },
       "tr": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "TRY 99.99 - TRY 264.99"
       },
       "ng": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "₦2,520.00 - ₦6,570.00"
       },
       "kr": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "₩2,500 - ₩6,500"
       },
       "mx": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "MX$38.00 - MX$99.00"
       },
       "de": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "€1.79 - €4.79"
       },
       "fr": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "€1.89 - €4.79"
       },
       "br": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "R$9.99 - R$25.99"
       },
       "gb": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "£1.59 - £3.99"
       },
       "dk": {
-        "ok": false,
-        "reason": "页面无 In-app purchases 字段"
+        "ok": true,
+        "range": "14,00 kr. - 37,00 kr."
       }
     },
     "leonardo": {
@@ -3774,8 +3772,8 @@
         "range": "EGP 509.99 - EGP 43,349.99"
       },
       "au": {
-        "ok": true,
-        "range": "$13.99 - $1,049.99"
+        "ok": false,
+        "reason": "页面无 In-app purchases 字段"
       },
       "ph": {
         "ok": true,
@@ -4004,7 +4002,7 @@
       },
       "ph": {
         "ok": true,
-        "range": "₱19.00 - ₱16,400.00"
+        "range": "₱49.00 - ₱159,900.00"
       },
       "in": {
         "ok": true,
@@ -4294,9 +4292,18 @@
     },
     "xai-models": {
       "ok": true,
-      "hash": "c4ae683e86b6130e",
+      "hash": "45a6317ce56cc970",
       "changedSinceLastRun": true,
       "added": [
+        "$20",
+        "$33",
+        "$4",
+        "$45",
+        "$5",
+        "$8",
+        "$9"
+      ],
+      "removed": [
         "$21",
         "$22",
         "$23",
@@ -4309,22 +4316,13 @@
         "$35",
         "$36",
         "$43"
-      ],
-      "removed": [
-        "$20",
-        "$33",
-        "$4",
-        "$45",
-        "$5",
-        "$8",
-        "$9"
       ]
     }
   },
   "warnings": [
     "discoverApple(sora): 候选 id6744034028 校验不符（无结果 / ）",
     "discoverApple(sora): 未找到开发商匹配（候选：ChatGPT/OpenAI OpCo, LLC; Dora - AI Video Generator 2/SMART WIDGET LABS COMPANY LIMITED; VideoGPT - AI Video Generator/ElevenThirteen LLC）",
-    "discoverApple(catcosplay): 未找到开发商匹配（候选：The Battle Cats/ponos corporation; Cat Game - The Cats Collector!/MinoMonsters Inc.; Meow Match/Ember Entertainment, Inc.）",
+    "discoverApple(catcosplay): 未找到开发商匹配（候选：Cat Game - The Cats Collector!/MinoMonsters Inc.; Meow Match/Ember Entertainment, Inc.; Neko Atsume: Kitty Collector/Hit-Point Co., Ltd.）",
     "discoverPlay(sora): 候选包名均未命中",
     "discoverPlay(catcosplay): 候选包名均未命中"
   ],
